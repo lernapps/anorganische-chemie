@@ -5,7 +5,7 @@ intro: |
   stellst einfache Reaktionsgleichungen auf. Auf jeder Seite übst du selbst.
   Für die unteren Klassenstufen (Klasse 7 und 8).
 languages: [de]
-chapters: [stoffe]
+chapters: [stoffe, teilchen]
 sources:
   - title: Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (KMK, 2004)
     url: https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Chemie.pdf

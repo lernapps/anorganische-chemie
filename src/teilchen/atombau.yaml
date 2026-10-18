@@ -1,0 +1,100 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title: Atombau
+description: "Atome bestehen aus Protonen, Neutronen und Elektronen. So baust du ein Atom."
+blocks:
+  - type: section
+    id: warum
+    title: Warum
+    blocks:
+      - type: text
+        text: |
+          Alle Stoffe bestehen aus Atomen. Wer weiß, wie ein Atom gebaut ist, kann erklären, warum sich Elemente
+          unterscheiden und wie das Periodensystem geordnet ist.
+  - type: section
+    id: regel
+    title: Regel
+    blocks:
+      - type: definition
+        term: Atomkern
+        explanation: Der Atomkern liegt in der Mitte des Atoms. Er besteht aus Protonen und Neutronen.
+      - type: definition
+        term: Proton
+        explanation: Ein Proton ist ein Teilchen im Atomkern mit einer positiven Ladung.
+      - type: definition
+        term: Neutron
+        explanation: Ein Neutron ist ein Teilchen im Atomkern ohne Ladung.
+      - type: definition
+        term: Elektron
+        explanation: Ein Elektron ist ein Teilchen in der Atomhülle mit einer negativen Ladung.
+      - type: definition
+        term: Ordnungszahl
+        explanation: Die Ordnungszahl sagt, wie viele Protonen ein Atom hat. Jedes Element hat seine eigene Ordnungszahl.
+      - type: definition
+        term: Massenzahl
+        explanation: Die Massenzahl ist die Zahl der Protonen und Neutronen zusammen.
+      - type: text
+        text: |
+          Ein Atom ist nach außen neutral: Es hat **gleich viele Protonen und Elektronen**. Die Elektronen bewegen
+          sich auf Schalen um den Kern. Die erste Schale (K) nimmt höchstens 2 Elektronen auf, die zweite (L) und die
+          dritte (M) bis zu 8.
+      - type: formula
+        formula: "A = Z + N"
+      - type: text
+        text: Dabei ist $A$ die Massenzahl, $Z$ die Ordnungszahl (Protonenzahl) und $N$ die Neutronenzahl.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Das Atom von Kohlenstoff
+        blocks:
+          - type: table
+            caption: Bausteine eines Kohlenstoff-Atoms (C)
+            rowHeaders: true
+            rows:
+              - [Protonen, "6 (die Ordnungszahl)"]
+              - [Neutronen, "6 (12 − 6)"]
+              - [Elektronen, "6 (gleich viele wie Protonen)"]
+              - [Schalen, "K: 2, L: 4"]
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: vue-component
+        component: AtomBuilder
+        id: atom-bauen
+        props:
+          labels:
+            protons: Protonen
+            neutrons: Neutronen
+            electrons: Elektronen
+            check: Prüfen
+            more: eins mehr
+            fewer: eins weniger
+            right: Richtig, das Atom ist neutral und hat die richtige Zahl an Neutronen.
+        examples:
+          accepted:
+            - { seed: 6, answer: { protons: 6, neutrons: 6, electrons: 6 } }
+          rejected:
+            - { seed: 6, answer: { protons: 6, neutrons: 6, electrons: 7 } }
+            - { seed: 6, answer: { protons: 6, neutrons: 12, electrons: 6 } }
+      - type: generated
+        id: neutronen-berechnen
+        given:
+          e: { pick: 1, from: { data: elemente } }
+        task:
+          text: "Wie viele Neutronen hat ein Atom {{e.name}} mit der Massenzahl {{e.massenzahl}} und der Ordnungszahl {{e.ordnungszahl}}?"
+        answer: { value: "e.massenzahl - e.ordnungszahl", compare: number }
+        mistakes:
+          - {
+              value: "e.massenzahl",
+              message: "Das ist die Massenzahl. Sie zählt Protonen und Neutronen zusammen. Ziehe die Protonen ab.",
+            }
+          - {
+              value: "e.massenzahl + e.ordnungszahl",
+              message: "Du hast die Protonen dazugezählt. Du musst sie abziehen: Neutronen = Massenzahl − Ordnungszahl.",
+            }
+        hint: "Neutronen = Massenzahl minus Ordnungszahl."
+        steps:
+          - "$N = A - Z$"
+          - "$N = {{e.massenzahl}} - {{e.ordnungszahl}} = {{answer}}$"

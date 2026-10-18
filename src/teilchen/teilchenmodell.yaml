@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title: Teilchenmodell
+description: "Stoffe bestehen aus winzigen Teilchen. So erklärst du fest, flüssig und gasförmig."
+blocks:
+  - type: section
+    id: warum
+    title: Warum
+    blocks:
+      - type: text
+        text: |
+          Warum fließt Wasser, aber ein Stein nicht? Warum füllt Luft einen ganzen Raum? Wir können die kleinsten Teile
+          der Stoffe nicht sehen. Mit einem Modell stellen wir sie uns vor und erklären damit, was wir beobachten.
+  - type: section
+    id: regel
+    title: Regel
+    blocks:
+      - type: definition
+        term: Teilchenmodell
+        explanation: Im Teilchenmodell besteht jeder Stoff aus sehr kleinen Teilchen, die man sich als Kugeln vorstellt.
+      - type: table
+        caption: Die drei Aggregatzustände im Teilchenmodell
+        header: [Zustand, Anordnung der Teilchen, Beweglichkeit]
+        rowHeaders: true
+        rows:
+          - [fest, "dicht an dicht, geordnet", "schwingen an ihrem Platz"]
+          - [flüssig, "dicht beieinander, ungeordnet", "wechseln ihre Plätze"]
+          - [gasförmig, "weit auseinander", "bewegen sich frei durch den Raum"]
+      - type: text
+        text: |
+          Wird ein Stoff wärmer, bewegen sich seine Teilchen schneller. Bei genug Wärme lösen sie sich aus der
+          festen Ordnung: Der Stoff schmilzt. Noch mehr Wärme, und sie fliegen auseinander: Der Stoff siedet.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Wasser wird erhitzt
+        blocks:
+          - type: text
+            text: |
+              Eis ist fest. Die Wasserteilchen sitzen dicht an dicht. Bei 0 °C schmilzt es, dann sind sie
+              beweglich und das Wasser fließt. Bei 100 °C siedet es: Die Teilchen fliegen auseinander, es ist
+              Wasserdampf.
+      - type: vue-component
+        component: ParticleModel
+        props:
+          labels:
+            temperature: Temperatur
+            solid: fest
+            liquid: flüssig
+            gas: gasförmig
+            solidText: Die Teilchen sitzen dicht an dicht und schwingen an ihrem Platz.
+            liquidText: Die Teilchen sind dicht beieinander und wechseln ihre Plätze.
+            gasText: Die Teilchen sind weit auseinander und bewegen sich frei.
+        nojs: |
+          Ein Kasten mit 30 Teilchen und ein Regler für die Temperatur. Bei niedriger Temperatur (fest) sitzen
+          die Teilchen dicht an dicht und schwingen an ihrem Platz. Bei mittlerer Temperatur (flüssig) sind sie
+          dicht beieinander und wechseln ihre Plätze. Bei hoher Temperatur (gasförmig) sind sie weit auseinander und
+          bewegen sich frei durch den ganzen Kasten.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: matching
+        id: zustand-beschreibung
+        text: Ordne jedem Zustand die passende Beschreibung im Teilchenmodell zu.
+        pairs:
+          - { left: fest, right: "Teilchen dicht an dicht, schwingen an ihrem Platz" }
+          - { left: flüssig, right: "Teilchen dicht beieinander, wechseln ihre Plätze" }
+          - { left: gasförmig, right: "Teilchen weit auseinander, frei beweglich" }
+        explanation: Je höher die Temperatur, desto beweglicher die Teilchen. Im festen Zustand haben sie feste Plätze, im flüssigen wechseln sie die Plätze, im gasförmigen fliegen sie frei.
+        links:
+          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }
+      - type: single-choice
+        id: wasser-fliesst
+        text: Warum fließt Wasser?
+        options:
+          - text: Die Teilchen sind dicht beieinander, wechseln aber ihre Plätze.
+            correct: true
+            info: In einer Flüssigkeit berühren sich die Teilchen, können aber aneinander vorbeigleiten. Darum fließt sie.
+          - text: Die Teilchen sitzen fest an einem Platz.
+            correct: false
+            info: Feste Plätze haben die Teilchen in einem festen Stoff, zum Beispiel in Eis. Darum behält Eis seine Form.
+          - text: Die Teilchen sind weit auseinander.
+            correct: false
+            info: Weit auseinander sind die Teilchen in einem Gas, zum Beispiel in Wasserdampf.
+        explanation: In einer Flüssigkeit wechseln die Teilchen ihre Plätze. Deshalb nimmt sie die Form ihres Gefäßes an und fließt.
+        links:
+          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }
+      - type: true-false
+        id: teilchen-groesser
+        text: Wenn ein Stoff erhitzt wird, werden seine Teilchen größer.
+        answer: false
+        explanation: Die Teilchen bleiben gleich groß. Sie bewegen sich nur schneller und brauchen deshalb oft mehr Platz.
+        links:
+          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }

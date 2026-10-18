@@ -1,0 +1,226 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# Elemente 1 bis 20. Quelle: de.wikipedia.org, Infobox der Artikel der Elemente (Ordnungszahl, Gruppe, Atommasse,
+# Elektronenkonfiguration; am 2026-10-18 geöffnet). massenzahl: die auf eine ganze Zahl gerundete Atommasse, das ist
+# die Massenzahl des häufigsten Isotops (H 1, He 4, Li 7, Be 9, B 11, …). neutronen = massenzahl − ordnungszahl.
+# schalen: Elektronen auf den Schalen K, L, M, N aus der Elektronenkonfiguration. art: metall, nichtmetall, halbmetall
+# (Wikipedia Halbmetalle: u. a. Bor, Silicium).
+- {
+    symbol: H,
+    name: Wasserstoff,
+    ordnungszahl: 1,
+    massenzahl: 1,
+    neutronen: 0,
+    schalen: "1",
+    gruppe: 1,
+    periode: 1,
+    art: nichtmetall,
+  }
+- {
+    symbol: He,
+    name: Helium,
+    ordnungszahl: 2,
+    massenzahl: 4,
+    neutronen: 2,
+    schalen: "2",
+    gruppe: 18,
+    periode: 1,
+    art: nichtmetall,
+  }
+- {
+    symbol: Li,
+    name: Lithium,
+    ordnungszahl: 3,
+    massenzahl: 7,
+    neutronen: 4,
+    schalen: "2, 1",
+    gruppe: 1,
+    periode: 2,
+    art: metall,
+  }
+- {
+    symbol: Be,
+    name: Beryllium,
+    ordnungszahl: 4,
+    massenzahl: 9,
+    neutronen: 5,
+    schalen: "2, 2",
+    gruppe: 2,
+    periode: 2,
+    art: metall,
+  }
+- {
+    symbol: B,
+    name: Bor,
+    ordnungszahl: 5,
+    massenzahl: 11,
+    neutronen: 6,
+    schalen: "2, 3",
+    gruppe: 13,
+    periode: 2,
+    art: halbmetall,
+  }
+- {
+    symbol: C,
+    name: Kohlenstoff,
+    ordnungszahl: 6,
+    massenzahl: 12,
+    neutronen: 6,
+    schalen: "2, 4",
+    gruppe: 14,
+    periode: 2,
+    art: nichtmetall,
+  }
+- {
+    symbol: N,
+    name: Stickstoff,
+    ordnungszahl: 7,
+    massenzahl: 14,
+    neutronen: 7,
+    schalen: "2, 5",
+    gruppe: 15,
+    periode: 2,
+    art: nichtmetall,
+  }
+- {
+    symbol: O,
+    name: Sauerstoff,
+    ordnungszahl: 8,
+    massenzahl: 16,
+    neutronen: 8,
+    schalen: "2, 6",
+    gruppe: 16,
+    periode: 2,
+    art: nichtmetall,
+  }
+- {
+    symbol: F,
+    name: Fluor,
+    ordnungszahl: 9,
+    massenzahl: 19,
+    neutronen: 10,
+    schalen: "2, 7",
+    gruppe: 17,
+    periode: 2,
+    art: nichtmetall,
+  }
+- {
+    symbol: Ne,
+    name: Neon,
+    ordnungszahl: 10,
+    massenzahl: 20,
+    neutronen: 10,
+    schalen: "2, 8",
+    gruppe: 18,
+    periode: 2,
+    art: nichtmetall,
+  }
+- {
+    symbol: Na,
+    name: Natrium,
+    ordnungszahl: 11,
+    massenzahl: 23,
+    neutronen: 12,
+    schalen: "2, 8, 1",
+    gruppe: 1,
+    periode: 3,
+    art: metall,
+  }
+- {
+    symbol: Mg,
+    name: Magnesium,
+    ordnungszahl: 12,
+    massenzahl: 24,
+    neutronen: 12,
+    schalen: "2, 8, 2",
+    gruppe: 2,
+    periode: 3,
+    art: metall,
+  }
+- {
+    symbol: Al,
+    name: Aluminium,
+    ordnungszahl: 13,
+    massenzahl: 27,
+    neutronen: 14,
+    schalen: "2, 8, 3",
+    gruppe: 13,
+    periode: 3,
+    art: metall,
+  }
+- {
+    symbol: Si,
+    name: Silicium,
+    ordnungszahl: 14,
+    massenzahl: 28,
+    neutronen: 14,
+    schalen: "2, 8, 4",
+    gruppe: 14,
+    periode: 3,
+    art: halbmetall,
+  }
+- {
+    symbol: P,
+    name: Phosphor,
+    ordnungszahl: 15,
+    massenzahl: 31,
+    neutronen: 16,
+    schalen: "2, 8, 5",
+    gruppe: 15,
+    periode: 3,
+    art: nichtmetall,
+  }
+- {
+    symbol: S,
+    name: Schwefel,
+    ordnungszahl: 16,
+    massenzahl: 32,
+    neutronen: 16,
+    schalen: "2, 8, 6",
+    gruppe: 16,
+    periode: 3,
+    art: nichtmetall,
+  }
+- {
+    symbol: Cl,
+    name: Chlor,
+    ordnungszahl: 17,
+    massenzahl: 35,
+    neutronen: 18,
+    schalen: "2, 8, 7",
+    gruppe: 17,
+    periode: 3,
+    art: nichtmetall,
+  }
+- {
+    symbol: Ar,
+    name: Argon,
+    ordnungszahl: 18,
+    massenzahl: 40,
+    neutronen: 22,
+    schalen: "2, 8, 8",
+    gruppe: 18,
+    periode: 3,
+    art: nichtmetall,
+  }
+- {
+    symbol: K,
+    name: Kalium,
+    ordnungszahl: 19,
+    massenzahl: 39,
+    neutronen: 20,
+    schalen: "2, 8, 8, 1",
+    gruppe: 1,
+    periode: 4,
+    art: metall,
+  }
+- {
+    symbol: Ca,
+    name: Calcium,
+    ordnungszahl: 20,
+    massenzahl: 40,
+    neutronen: 20,
+    schalen: "2, 8, 8, 2",
+    gruppe: 2,
+    periode: 4,
+    art: metall,
+  }

@@ -39,6 +39,8 @@ Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen
 Page and exercise ids (page file, exercise id):
 - Kapitel `stoffe`: `src/stoffe/reinstoffe-gemische.yaml` (`gemische-finden`, `salzwasser-reinstoff`) for Reinstoffe/Gemische;
   `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`) for Eigenschaften, Ordnen und Verwendung.
+- Kapitel `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component `ParticleModel`);
+  `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
 - Other chapters: added when their pages exist.
 
 ## Content structure
