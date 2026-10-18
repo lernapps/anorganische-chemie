@@ -97,8 +97,8 @@ Page and exercise ids (page file, exercise id):
 - Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
 - Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
-- Ausgleichen: a `formula` block with the equation and a blank `x` (`\ce{x H2 + O2 -> 2H2O}`) directly above a `number`
-  question "… in der Gleichung darüber?", e.g. `koeffizient-wasser` (quiz-type texts cannot show formulas); the typical
+- Ausgleichen: a `number` question with the equation and a blank `x` in its text (`x H₂ + O₂ → 2H₂O`, plain Unicode, see
+  "Rules learned"), e.g. `koeffizient-wasser`; the typical
   mistake per exercise has its message. The equations are fixed in the YAML (a placeholder cannot carry a formula);
   every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
 - Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
@@ -165,8 +165,9 @@ Page and exercise ids (page file, exercise id):
 
 - Texts of quiz-type exercises (`number`, `single-choice`, …) may contain `$…$` formulas with the template from
   cae5b90 on, but its end-to-end test "one <math> per formula" does not count them yet (issue lernapps/app-templates#47) and
-  fails the check. Until that is fixed: put the equation in a `formula` block directly above the question and write formulas in the
-  question text with Unicode subscripts and an arrow (`H₂ + O₂ → 2H₂O`).
+  fails the check. Until that is fixed: write formulas in the question text with Unicode subscripts and an arrow
+  (`x H₂ + O₂ → 2H₂O`), so the question stays complete inside its card. A `formula` block above the question is not used: on a phone
+  it scrolls out of sight. Once #47 is fixed, use `$\ce{…}$` in the text.
 - Every `generated` exercise sets `practice`, the sentence above its live task, naming what changes ("… mit immer neuen Elementen:",
   "… mit immer neuen Stoffen:"), in both languages. The worked tasks with solutions stay hidden with JavaScript (the template's
   default `workedTasks: without-javascript`); do not set `workedTasks: always`.
