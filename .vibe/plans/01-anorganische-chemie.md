@@ -167,7 +167,7 @@ summary:
   en: >-
     You learn what substances are made of: pure substances and mixtures, atoms, the main groups of the periodic
     table and simple reaction equations. You match, build atoms and calculate on your own.
-# url: nach der Veröffentlichung (Adresse aus dem Job "deploy")
+url: http://lernapps.net/anorganische-chemie/
 creator:
   name: Oliver (@mrsimpson)
 topics:
@@ -187,7 +187,7 @@ source: https://github.com/lernapps/anorganische-chemie
 fitness:
   account: false
   install: false
-  storage: device
+  storage: none
   thirdParty: none
   checked: false
 ```
@@ -290,17 +290,17 @@ fitness:
       change → note the creator's click (skill `lernapps-github`).
 - [x] **Checkpoint:** publish. Ask before the app goes online; wait for the yes. Put the noted clicks into the same
       question.
-- [ ] `git switch main`, `git merge --ff-only work`, `git push origin main`. Run started?
+- [x] `git switch main`, `git merge --ff-only work`, `git push origin main`. Run started?
       `gh run list --workflow Pages --branch main --commit "$(git rev-parse HEAD)"`; none after a minute →
       `gh workflow run Pages --ref main` (refused: creator clicks Actions → Pages → Run workflow). Watch it
       (`gh run watch`). Fails → read the failed step, fix, push. Admin-only Pages setting → the run deployed
       anyway; after the creator's click the app appears without a new run.
-- [ ] Open the address the job `deploy` printed ("published at ...", also in the run summary); confirm the app shows.
+- [x] Open the address the job `deploy` printed ("published at ...", also in the run summary); confirm the app shows.
       Use that address, never a derived one; follow redirects. Do not wait for it yourself.
-- [ ] Load skill `lernapps-listing`.
-- [ ] Complete the entry draft (e.g. the address).
+- [x] Load skill `lernapps-listing`.
+- [x] Complete the entry draft (e.g. the address).
 - [ ] **Checkpoint:** list. Ask before opening the listing pull request; wait for the yes.
-- [ ] Fill the retrospective.
+- [x] Fill the retrospective.
 - [ ] Commit this plan on `main` and push it (listing check and review read it there).
 - [ ] Open the listing pull request as the skill says; see it to "bestanden" (not "nicht bestanden") in the results
       comment.
@@ -314,16 +314,21 @@ fitness:
 
 ### Phases reached
 
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+commit, published; checkpoints passed: research, plan (and its addition for the interactive periodic table), publish (the creator confirmed it as "merge if it looks okay" after the preview review). Listing not yet done: checkpoint "list" is open.
 
 ### Failed checks
 
-<!-- Each failed check: rule id, count. E.g. "`no-request-before-click`: 2". Not the pre-push count. -->
+About: `accessible` (label-content-name-mismatch): 3; `checks-pass`: about 11 in total (content validation of the explainer: 6; unit tests: 1; vue-tsc: 1; end-to-end tests: 3, one of them a gap in the template's own test, app-templates#47).
 
 ### Creator turns after the plan
 
-<!-- Number of creator messages after the confirmation, topic of each. Target: max 3. -->
+About 12, above the target of 3: all main-group elements and two languages; why only elements 1–20; a preview of `work`; wording of exercises, interactive periodic table with profiles; wording of the practice sentence, worked examples and formulas in quiz texts (issue app-templates#45); formulas in texts; open the issue; update to the new template, review the preview, merge.
 
 ### Where I had to guess
 
-<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
+- Grades 7/8 (the creator said "untere Klassenstufen"); no state curriculum (creator's wish), KMK standards as orientation.
+- Languages: de and en (the creator said "mehrsprachig").
+- "Alle Hauptgruppen" first read as all eight groups, later clarified as all 44 elements; the neutron exercise stays at elements 1–20 because the most common isotope is not clear for heavier ones.
+- Borderline elements (B, Si, Ge, As, Se, Sb, Te, Bi, Po, At) shown as "Grenzfall (Halbmetall)" and left out of the metal/non-metal exercise, since the sources disagree.
+- Reaction equations as fixed `number` exercises (a placeholder cannot carry a formula); formulas in quiz-type texts as Unicode until app-templates#47 is fixed.
+- Element profiles written by four helper agents from the Wikipedia articles; every claim was checked by a quoted fragment, content only spot-checked.
