@@ -1,6 +1,6 @@
 # The eight main groups – tutor file
 
-> All eight main groups with their names and all their elements. The main group tells how many electrons are in the outer shell.
+> All eight main groups with all their elements. The main group tells how many electrons are in the outer shell.
 
 App: Inorganic chemistry – first steps. Page: [The eight main groups](./)
 
@@ -16,134 +16,93 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 
 ## Exercises
 
-### gruppe-name (matching)
+### hauptgruppe-finden (interactive exercise ElementFinder)
 
-- Link: [./#gruppe-name](./#gruppe-name), in the section „Practice“
-- Task: Match each group of the periodic table with its name.
-- Answer format: match each item on the left with one on the right
-- Solution: Group 1 – alkali metals (and hydrogen); Group 2 – alkaline earth metals; Group 16 – chalcogens; Group 17 – halogens; Group 18 – noble gases
-- Explanation: Groups 1 and 2 are the alkali and alkaline earth metals, group 16 the chalcogens, group 17 the halogens and group 18 the noble gases.
+- Link: [./#hauptgruppe-finden](./#hauptgruppe-finden), in the section „Practice“
+- What to do: Learners see a map of the elements of the eight main groups and tap the element or elements that fit the task: by name, atomic number, period and main group, all elements of one main group, outer electrons, or kind (metal, non-metal) in one period. Then they check.
+- Answer format: A selection of cells of the map: one element, or all elements of the group when the task asks for a main group.
+- What counts as right: The tapped element fits the property of the task (for outer electrons or kind any fitting element is enough). For a main group exactly all of its elements must be marked.
+- Typical mistakes and the app's message:
+  - An element with the wrong atomic number, period or main group is tapped.
+  - For a main group some elements are missing or elements of other groups are marked.
+  - The group number (1 to 18) and the main group (I to VIII) are mixed up.
+- Tasks by number, 1 to 67: each a different one (the app shows “Task no. …”):
+  - [Task no. 1](./?hauptgruppe-finden=1#hauptgruppe-finden): Tap all elements of main group I (alkali metals and hydrogen). → Solution: The right answers are: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), Caesium (Cs), Francium (Fr).
+  - [Task no. 2](./?hauptgruppe-finden=2#hauptgruppe-finden): Tap an element whose number of outer electrons is 6. → Solution: Right answers are, for example: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 3](./?hauptgruppe-finden=3#hauptgruppe-finden): Tap the element in period 3 and main group I. → Solution: The right answer is: Sodium (Na).
+  - [Task no. 4](./?hauptgruppe-finden=4#hauptgruppe-finden): Tap all elements of main group VIII (Noble gases). → Solution: The right answers are: Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn).
+  - [Task no. 5](./?hauptgruppe-finden=5#hauptgruppe-finden): Tap an element whose number of outer electrons is 5. → Solution: Right answers are, for example: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 6](./?hauptgruppe-finden=6#hauptgruppe-finden): Tap the element in period 3 and main group VIII. → Solution: The right answer is: Argon (Ar).
+  - [Task no. 7](./?hauptgruppe-finden=7#hauptgruppe-finden): Tap all elements of main group VII (Halogens). → Solution: The right answers are: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At).
+  - [Task no. 8](./?hauptgruppe-finden=8#hauptgruppe-finden): Tap an element whose number of outer electrons is 4. → Solution: Right answers are, for example: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 9](./?hauptgruppe-finden=9#hauptgruppe-finden): Tap the element in period 4 and main group VII. → Solution: The right answer is: Bromine (Br).
+  - [Task no. 10](./?hauptgruppe-finden=10#hauptgruppe-finden): Tap all elements of main group VI (Chalcogens). → Solution: The right answers are: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 11](./?hauptgruppe-finden=11#hauptgruppe-finden): Tap an element whose number of outer electrons is 3. → Solution: Right answers are, for example: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
+  - [Task no. 12](./?hauptgruppe-finden=12#hauptgruppe-finden): Tap the element in period 5 and main group VI. → Solution: The right answer is: Tellurium (Te).
+  - [Task no. 13](./?hauptgruppe-finden=13#hauptgruppe-finden): Tap all elements of main group V (Nitrogen–phosphorus group). → Solution: The right answers are: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 14](./?hauptgruppe-finden=14#hauptgruppe-finden): Tap an element whose number of outer electrons is 2. → Solution: Right answers are, for example: Helium (He), Beryllium (Be), Magnesium (Mg), Calcium (Ca), Strontium (Sr), ….
+  - [Task no. 15](./?hauptgruppe-finden=15#hauptgruppe-finden): Tap the element in period 6 and main group V. → Solution: The right answer is: Bismuth (Bi).
+  - [Task no. 16](./?hauptgruppe-finden=16#hauptgruppe-finden): Tap all elements of main group IV (Carbon–silicon group). → Solution: The right answers are: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 17](./?hauptgruppe-finden=17#hauptgruppe-finden): Tap an element whose number of outer electrons is 1. → Solution: Right answers are, for example: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), ….
+  - [Task no. 18](./?hauptgruppe-finden=18#hauptgruppe-finden): Tap the element in period 1 and main group VIII. → Solution: The right answer is: Helium (He).
+  - [Task no. 19](./?hauptgruppe-finden=19#hauptgruppe-finden): Tap all elements of main group III (Boron group). → Solution: The right answers are: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
+  - [Task no. 20](./?hauptgruppe-finden=20#hauptgruppe-finden): Tap an element whose number of outer electrons is 8. → Solution: Right answers are, for example: Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn).
+  - [Task no. 21](./?hauptgruppe-finden=21#hauptgruppe-finden): Tap the element in period 2 and main group VII. → Solution: The right answer is: Fluorine (F).
+  - [Task no. 22](./?hauptgruppe-finden=22#hauptgruppe-finden): Tap all elements of main group II (Alkaline earth metals). → Solution: The right answers are: Beryllium (Be), Magnesium (Mg), Calcium (Ca), Strontium (Sr), Barium (Ba), Radium (Ra).
+  - [Task no. 23](./?hauptgruppe-finden=23#hauptgruppe-finden): Tap an element whose number of outer electrons is 7. → Solution: Right answers are, for example: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At).
+  - [Task no. 24](./?hauptgruppe-finden=24#hauptgruppe-finden): Tap the element in period 3 and main group VI. → Solution: The right answer is: Sulfur (S).
+  - [Task no. 25](./?hauptgruppe-finden=25#hauptgruppe-finden): Tap all elements of main group I (alkali metals and hydrogen). → Solution: The right answers are: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), Caesium (Cs), Francium (Fr).
+  - [Task no. 26](./?hauptgruppe-finden=26#hauptgruppe-finden): Tap an element whose number of outer electrons is 6. → Solution: Right answers are, for example: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 27](./?hauptgruppe-finden=27#hauptgruppe-finden): Tap the element in period 4 and main group V. → Solution: The right answer is: Arsenic (As).
+  - [Task no. 28](./?hauptgruppe-finden=28#hauptgruppe-finden): Tap all elements of main group VIII (Noble gases). → Solution: The right answers are: Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn).
+  - [Task no. 29](./?hauptgruppe-finden=29#hauptgruppe-finden): Tap an element whose number of outer electrons is 5. → Solution: Right answers are, for example: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 30](./?hauptgruppe-finden=30#hauptgruppe-finden): Tap the element in period 5 and main group IV. → Solution: The right answer is: Tin (Sn).
+  - [Task no. 31](./?hauptgruppe-finden=31#hauptgruppe-finden): Tap all elements of main group VII (Halogens). → Solution: The right answers are: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At).
+  - [Task no. 32](./?hauptgruppe-finden=32#hauptgruppe-finden): Tap an element whose number of outer electrons is 4. → Solution: Right answers are, for example: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 33](./?hauptgruppe-finden=33#hauptgruppe-finden): Tap the element in period 6 and main group III. → Solution: The right answer is: Thallium (Tl).
+  - [Task no. 34](./?hauptgruppe-finden=34#hauptgruppe-finden): Tap all elements of main group VI (Chalcogens). → Solution: The right answers are: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 35](./?hauptgruppe-finden=35#hauptgruppe-finden): Tap an element whose number of outer electrons is 3. → Solution: Right answers are, for example: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
+  - [Task no. 36](./?hauptgruppe-finden=36#hauptgruppe-finden): Tap the element in period 7 and main group II. → Solution: The right answer is: Radium (Ra).
+  - [Task no. 37](./?hauptgruppe-finden=37#hauptgruppe-finden): Tap all elements of main group V (Nitrogen–phosphorus group). → Solution: The right answers are: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 38](./?hauptgruppe-finden=38#hauptgruppe-finden): Tap an element whose number of outer electrons is 2. → Solution: Right answers are, for example: Helium (He), Beryllium (Be), Magnesium (Mg), Calcium (Ca), Strontium (Sr), ….
+  - [Task no. 39](./?hauptgruppe-finden=39#hauptgruppe-finden): Tap the element in period 2 and main group V. → Solution: The right answer is: Nitrogen (N).
+  - [Task no. 40](./?hauptgruppe-finden=40#hauptgruppe-finden): Tap all elements of main group IV (Carbon–silicon group). → Solution: The right answers are: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 41](./?hauptgruppe-finden=41#hauptgruppe-finden): Tap an element whose number of outer electrons is 1. → Solution: Right answers are, for example: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), ….
+  - [Task no. 42](./?hauptgruppe-finden=42#hauptgruppe-finden): Tap the element in period 3 and main group IV. → Solution: The right answer is: Silicon (Si).
+  - [Task no. 43](./?hauptgruppe-finden=43#hauptgruppe-finden): Tap all elements of main group III (Boron group). → Solution: The right answers are: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
+  - [Task no. 44](./?hauptgruppe-finden=44#hauptgruppe-finden): Tap an element whose number of outer electrons is 8. → Solution: Right answers are, for example: Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn).
+  - [Task no. 45](./?hauptgruppe-finden=45#hauptgruppe-finden): Tap the element in period 4 and main group III. → Solution: The right answer is: Gallium (Ga).
+  - [Task no. 46](./?hauptgruppe-finden=46#hauptgruppe-finden): Tap all elements of main group II (Alkaline earth metals). → Solution: The right answers are: Beryllium (Be), Magnesium (Mg), Calcium (Ca), Strontium (Sr), Barium (Ba), Radium (Ra).
+  - [Task no. 47](./?hauptgruppe-finden=47#hauptgruppe-finden): Tap an element whose number of outer electrons is 7. → Solution: Right answers are, for example: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At).
+  - [Task no. 48](./?hauptgruppe-finden=48#hauptgruppe-finden): Tap the element in period 5 and main group II. → Solution: The right answer is: Strontium (Sr).
+  - [Task no. 49](./?hauptgruppe-finden=49#hauptgruppe-finden): Tap all elements of main group I (alkali metals and hydrogen). → Solution: The right answers are: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), Caesium (Cs), Francium (Fr).
+  - [Task no. 50](./?hauptgruppe-finden=50#hauptgruppe-finden): Tap an element whose number of outer electrons is 6. → Solution: Right answers are, for example: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 51](./?hauptgruppe-finden=51#hauptgruppe-finden): Tap the element in period 6 and main group I. → Solution: The right answer is: Caesium (Cs).
+  - [Task no. 52](./?hauptgruppe-finden=52#hauptgruppe-finden): Tap all elements of main group VIII (Noble gases). → Solution: The right answers are: Helium (He), Neon (Ne), Argon (Ar), Krypton (Kr), Xenon (Xe), Radon (Rn).
+  - [Task no. 53](./?hauptgruppe-finden=53#hauptgruppe-finden): Tap an element whose number of outer electrons is 5. → Solution: Right answers are, for example: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 54](./?hauptgruppe-finden=54#hauptgruppe-finden): Tap the element in period 6 and main group VIII. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 55](./?hauptgruppe-finden=55#hauptgruppe-finden): Tap all elements of main group VII (Halogens). → Solution: The right answers are: Fluorine (F), Chlorine (Cl), Bromine (Br), Iodine (I), Astatine (At).
+  - [Task no. 56](./?hauptgruppe-finden=56#hauptgruppe-finden): Tap an element whose number of outer electrons is 4. → Solution: Right answers are, for example: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 57](./?hauptgruppe-finden=57#hauptgruppe-finden): Tap the element in period 2 and main group III. → Solution: The right answer is: Boron (B).
+  - [Task no. 58](./?hauptgruppe-finden=58#hauptgruppe-finden): Tap all elements of main group VI (Chalcogens). → Solution: The right answers are: Oxygen (O), Sulfur (S), Selenium (Se), Tellurium (Te), Polonium (Po).
+  - [Task no. 59](./?hauptgruppe-finden=59#hauptgruppe-finden): Tap an element whose number of outer electrons is 3. → Solution: Right answers are, for example: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
+  - [Task no. 60](./?hauptgruppe-finden=60#hauptgruppe-finden): Tap the element in period 3 and main group II. → Solution: The right answer is: Magnesium (Mg).
+  - [Task no. 61](./?hauptgruppe-finden=61#hauptgruppe-finden): Tap all elements of main group V (Nitrogen–phosphorus group). → Solution: The right answers are: Nitrogen (N), Phosphorus (P), Arsenic (As), Antimony (Sb), Bismuth (Bi).
+  - [Task no. 62](./?hauptgruppe-finden=62#hauptgruppe-finden): Tap an element whose number of outer electrons is 2. → Solution: Right answers are, for example: Helium (He), Beryllium (Be), Magnesium (Mg), Calcium (Ca), Strontium (Sr), ….
+  - [Task no. 63](./?hauptgruppe-finden=63#hauptgruppe-finden): Tap the element in period 4 and main group I. → Solution: The right answer is: Potassium (K).
+  - [Task no. 64](./?hauptgruppe-finden=64#hauptgruppe-finden): Tap all elements of main group IV (Carbon–silicon group). → Solution: The right answers are: Carbon (C), Silicon (Si), Germanium (Ge), Tin (Sn), Lead (Pb).
+  - [Task no. 65](./?hauptgruppe-finden=65#hauptgruppe-finden): Tap an element whose number of outer electrons is 1. → Solution: Right answers are, for example: Hydrogen (H), Lithium (Li), Sodium (Na), Potassium (K), Rubidium (Rb), ….
+  - [Task no. 66](./?hauptgruppe-finden=66#hauptgruppe-finden): Tap the element in period 4 and main group VIII. → Solution: The right answer is: Krypton (Kr).
+  - [Task no. 67](./?hauptgruppe-finden=67#hauptgruppe-finden): Tap all elements of main group III (Boron group). → Solution: The right answers are: Boron (B), Aluminium (Al), Gallium (Ga), Indium (In), Thallium (Tl).
 
-### aussenelektronen (generated, number)
+### hauptgruppe-brom (single-choice)
 
-- Link: [./#aussenelektronen](./#aussenelektronen), in the section „Practice“
-- Answer format: type a number
-- Hint the app shows (template: {{…}} are the task's values): For the main groups the number of outer electrons is the number of the main group (I to VIII). Helium is the exception.
-- Steps of the solution (template: {{…}} are the task's values):
-  - {{e.name}} has {{answer}} outer electrons.
-- Tasks by number, 1 to 44: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?aussenelektronen=1#aussenelektronen): How many outer electrons does an atom of Caesium (symbol Cs) have? → Solution: 1
-  - [Task no. 2](./?aussenelektronen=2#aussenelektronen): How many outer electrons does an atom of Neon (symbol Ne) have? → Solution: 8
-  - [Task no. 3](./?aussenelektronen=3#aussenelektronen): How many outer electrons does an atom of Indium (symbol In) have? → Solution: 3
-  - [Task no. 4](./?aussenelektronen=4#aussenelektronen): How many outer electrons does an atom of Lead (symbol Pb) have? → Solution: 4
-  - [Task no. 5](./?aussenelektronen=5#aussenelektronen): How many outer electrons does an atom of Silicon (symbol Si) have? → Solution: 4
-  - [Task no. 6](./?aussenelektronen=6#aussenelektronen): How many outer electrons does an atom of Phosphorus (symbol P) have? → Solution: 5
-  - [Task no. 7](./?aussenelektronen=7#aussenelektronen): How many outer electrons does an atom of Arsenic (symbol As) have? → Solution: 5
-  - [Task no. 8](./?aussenelektronen=8#aussenelektronen): How many outer electrons does an atom of Sodium (symbol Na) have? → Solution: 1
-  - [Task no. 9](./?aussenelektronen=9#aussenelektronen): How many outer electrons does an atom of Francium (symbol Fr) have? → Solution: 1
-  - [Task no. 10](./?aussenelektronen=10#aussenelektronen): How many outer electrons does an atom of Nitrogen (symbol N) have? → Solution: 5
-  - [Task no. 11](./?aussenelektronen=11#aussenelektronen): How many outer electrons does an atom of Beryllium (symbol Be) have? → Solution: 2
-  - [Task no. 12](./?aussenelektronen=12#aussenelektronen): How many outer electrons does an atom of Tin (symbol Sn) have? → Solution: 4
-  - [Task no. 13](./?aussenelektronen=13#aussenelektronen): How many outer electrons does an atom of Strontium (symbol Sr) have? → Solution: 2
-  - [Task no. 14](./?aussenelektronen=14#aussenelektronen): How many outer electrons does an atom of Thallium (symbol Tl) have? → Solution: 3
-  - [Task no. 15](./?aussenelektronen=15#aussenelektronen): How many outer electrons does an atom of Hydrogen (symbol H) have? → Solution: 1
-  - [Task no. 16](./?aussenelektronen=16#aussenelektronen): How many outer electrons does an atom of Polonium (symbol Po) have? → Solution: 6
-  - [Task no. 17](./?aussenelektronen=17#aussenelektronen): How many outer electrons does an atom of Astatine (symbol At) have? → Solution: 7
-  - [Task no. 18](./?aussenelektronen=18#aussenelektronen): How many outer electrons does an atom of Lithium (symbol Li) have? → Solution: 1
-  - [Task no. 19](./?aussenelektronen=19#aussenelektronen): How many outer electrons does an atom of Fluorine (symbol F) have? → Solution: 7
-  - [Task no. 20](./?aussenelektronen=20#aussenelektronen): How many outer electrons does an atom of Chlorine (symbol Cl) have? → Solution: 7
-  - [Task no. 21](./?aussenelektronen=21#aussenelektronen): How many outer electrons does an atom of Xenon (symbol Xe) have? → Solution: 8
-  - [Task no. 22](./?aussenelektronen=22#aussenelektronen): How many outer electrons does an atom of Sulfur (symbol S) have? → Solution: 6
-  - [Task no. 23](./?aussenelektronen=23#aussenelektronen): How many outer electrons does an atom of Oxygen (symbol O) have? → Solution: 6
-  - [Task no. 24](./?aussenelektronen=24#aussenelektronen): How many outer electrons does an atom of Boron (symbol B) have? → Solution: 3
-  - [Task no. 25](./?aussenelektronen=25#aussenelektronen): How many outer electrons does an atom of Bismuth (symbol Bi) have? → Solution: 5
-  - [Task no. 26](./?aussenelektronen=26#aussenelektronen): How many outer electrons does an atom of Radium (symbol Ra) have? → Solution: 2
-  - [Task no. 27](./?aussenelektronen=27#aussenelektronen): How many outer electrons does an atom of Gallium (symbol Ga) have? → Solution: 3
-  - [Task no. 28](./?aussenelektronen=28#aussenelektronen): How many outer electrons does an atom of Potassium (symbol K) have? → Solution: 1
-  - [Task no. 29](./?aussenelektronen=29#aussenelektronen): How many outer electrons does an atom of Carbon (symbol C) have? → Solution: 4
-  - [Task no. 30](./?aussenelektronen=30#aussenelektronen): How many outer electrons does an atom of Radon (symbol Rn) have? → Solution: 8
-  - [Task no. 31](./?aussenelektronen=31#aussenelektronen): How many outer electrons does an atom of Magnesium (symbol Mg) have? → Solution: 2
-  - [Task no. 32](./?aussenelektronen=32#aussenelektronen): How many outer electrons does an atom of Selenium (symbol Se) have? → Solution: 6
-  - [Task no. 33](./?aussenelektronen=33#aussenelektronen): How many outer electrons does an atom of Calcium (symbol Ca) have? → Solution: 2
-  - [Task no. 34](./?aussenelektronen=34#aussenelektronen): How many outer electrons does an atom of Bromine (symbol Br) have? → Solution: 7
-  - [Task no. 35](./?aussenelektronen=35#aussenelektronen): How many outer electrons does an atom of Barium (symbol Ba) have? → Solution: 2
-  - [Task no. 36](./?aussenelektronen=36#aussenelektronen): How many outer electrons does an atom of Krypton (symbol Kr) have? → Solution: 8
-  - [Task no. 37](./?aussenelektronen=37#aussenelektronen): How many outer electrons does an atom of Germanium (symbol Ge) have? → Solution: 4
-  - [Task no. 38](./?aussenelektronen=38#aussenelektronen): How many outer electrons does an atom of Iodine (symbol I) have? → Solution: 7
-  - [Task no. 39](./?aussenelektronen=39#aussenelektronen): How many outer electrons does an atom of Antimony (symbol Sb) have? → Solution: 5
-  - [Task no. 40](./?aussenelektronen=40#aussenelektronen): How many outer electrons does an atom of Argon (symbol Ar) have? → Solution: 8
-  - [Task no. 41](./?aussenelektronen=41#aussenelektronen): How many outer electrons does an atom of Helium (symbol He) have? → Solution: 2
-  - [Task no. 42](./?aussenelektronen=42#aussenelektronen): How many outer electrons does an atom of Aluminium (symbol Al) have? → Solution: 3
-  - [Task no. 43](./?aussenelektronen=43#aussenelektronen): How many outer electrons does an atom of Rubidium (symbol Rb) have? → Solution: 1
-  - [Task no. 44](./?aussenelektronen=44#aussenelektronen): How many outer electrons does an atom of Tellurium (symbol Te) have? → Solution: 6
-
-### hauptgruppe-bestimmen (generated, number)
-
-- Link: [./#hauptgruppe-bestimmen](./#hauptgruppe-bestimmen), in the section „Practice“
-- Answer format: type a number
-- Hint the app shows (template: {{…}} are the task's values): For groups 13 to 18 you subtract 10.
-- Steps of the solution (template: {{…}} are the task's values):
-  - {{e.gruppe}} − 10 = {{answer}}
-- Tasks by number, 1 to 31: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?hauptgruppe-bestimmen=1#hauptgruppe-bestimmen): Radon is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 2](./?hauptgruppe-bestimmen=2#hauptgruppe-bestimmen): Boron is in group 13 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 3
-    - ✗ 13: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 3](./?hauptgruppe-bestimmen=3#hauptgruppe-bestimmen): Bismuth is in group 15 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 5
-    - ✗ 15: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 4](./?hauptgruppe-bestimmen=4#hauptgruppe-bestimmen): Oxygen is in group 16 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 6
-    - ✗ 16: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 5](./?hauptgruppe-bestimmen=5#hauptgruppe-bestimmen): Fluorine is in group 17 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 7
-    - ✗ 17: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 6](./?hauptgruppe-bestimmen=6#hauptgruppe-bestimmen): Xenon is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 7](./?hauptgruppe-bestimmen=7#hauptgruppe-bestimmen): Thallium is in group 13 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 3
-    - ✗ 13: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 8](./?hauptgruppe-bestimmen=8#hauptgruppe-bestimmen): Tin is in group 14 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 4
-    - ✗ 14: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 9](./?hauptgruppe-bestimmen=9#hauptgruppe-bestimmen): Neon is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 10](./?hauptgruppe-bestimmen=10#hauptgruppe-bestimmen): Bromine is in group 17 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 7
-    - ✗ 17: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 11](./?hauptgruppe-bestimmen=11#hauptgruppe-bestimmen): Germanium is in group 14 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 4
-    - ✗ 14: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 12](./?hauptgruppe-bestimmen=12#hauptgruppe-bestimmen): Krypton is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 13](./?hauptgruppe-bestimmen=13#hauptgruppe-bestimmen): Selenium is in group 16 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 6
-    - ✗ 16: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 14](./?hauptgruppe-bestimmen=14#hauptgruppe-bestimmen): Carbon is in group 14 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 4
-    - ✗ 14: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 15](./?hauptgruppe-bestimmen=15#hauptgruppe-bestimmen): Arsenic is in group 15 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 5
-    - ✗ 15: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 16](./?hauptgruppe-bestimmen=16#hauptgruppe-bestimmen): Gallium is in group 13 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 3
-    - ✗ 13: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 17](./?hauptgruppe-bestimmen=17#hauptgruppe-bestimmen): Silicon is in group 14 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 4
-    - ✗ 14: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 18](./?hauptgruppe-bestimmen=18#hauptgruppe-bestimmen): Phosphorus is in group 15 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 5
-    - ✗ 15: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 19](./?hauptgruppe-bestimmen=19#hauptgruppe-bestimmen): Sulfur is in group 16 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 6
-    - ✗ 16: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 20](./?hauptgruppe-bestimmen=20#hauptgruppe-bestimmen): Aluminium is in group 13 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 3
-    - ✗ 13: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 21](./?hauptgruppe-bestimmen=21#hauptgruppe-bestimmen): Tellurium is in group 16 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 6
-    - ✗ 16: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 22](./?hauptgruppe-bestimmen=22#hauptgruppe-bestimmen): Nitrogen is in group 15 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 5
-    - ✗ 15: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 23](./?hauptgruppe-bestimmen=23#hauptgruppe-bestimmen): Indium is in group 13 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 3
-    - ✗ 13: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 24](./?hauptgruppe-bestimmen=24#hauptgruppe-bestimmen): Iodine is in group 17 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 7
-    - ✗ 17: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 25](./?hauptgruppe-bestimmen=25#hauptgruppe-bestimmen): Antimony is in group 15 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 5
-    - ✗ 15: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 26](./?hauptgruppe-bestimmen=26#hauptgruppe-bestimmen): Helium is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 27](./?hauptgruppe-bestimmen=27#hauptgruppe-bestimmen): Argon is in group 18 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 8
-    - ✗ 18: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 28](./?hauptgruppe-bestimmen=28#hauptgruppe-bestimmen): Astatine is in group 17 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 7
-    - ✗ 17: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 29](./?hauptgruppe-bestimmen=29#hauptgruppe-bestimmen): Polonium is in group 16 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 6
-    - ✗ 16: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 30](./?hauptgruppe-bestimmen=30#hauptgruppe-bestimmen): Chlorine is in group 17 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 7
-    - ✗ 17: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
-  - [Task no. 31](./?hauptgruppe-bestimmen=31#hauptgruppe-bestimmen): Lead is in group 14 of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it? → Solution: 4
-    - ✗ 14: That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10.
+- Link: [./#hauptgruppe-brom](./#hauptgruppe-brom), in the section „Practice“
+- Task: Bromine is in group 17 of the periodic table. In which main group is it?
+- Answer format: choose one answer
+- Choices (✓ right, ✗ wrong, with the app's message):
+  - ✓ Main group VII – Group 17 is main group VII (17 − 10 = 7). Bromine has 7 outer electrons and is a halogen.
+  - ✗ Main group VIII – Main group VIII is group 18, the noble gases. Bromine is next to it on the left.
+  - ✗ Main group VI – Main group VI is group 16, the chalcogens with oxygen and sulfur.
+- Solution: Main group VII
+- Explanation: For groups 13 to 18 you subtract 10 to get the main group.

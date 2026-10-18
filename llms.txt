@@ -32,19 +32,21 @@ English: en/llms.txt
 
 ## Periodensystem
 
-- [Periodensystem lesen](periodensystem/periodensystem-lesen/): Das Periodensystem ordnet alle Elemente. So liest du Ordnungszahl, Symbol, Periode und Gruppe ab.
+- [Periodensystem lesen](periodensystem/periodensystem-lesen/): Finde jedes Element auf der Karte: Ordnungszahl, Symbol, Periode und Gruppe.
   - [Warum](periodensystem/periodensystem-lesen/#warum)
+  - [Entdecke die Elemente](periodensystem/periodensystem-lesen/#entdecken)
   - [Regel](periodensystem/periodensystem-lesen/#regel)
   - [Beispiel](periodensystem/periodensystem-lesen/#beispiel)
   - [Übung](periodensystem/periodensystem-lesen/#uebung)
-- [Die acht Hauptgruppen](periodensystem/hauptgruppen/): Alle acht Hauptgruppen mit Namen und allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
+- [Die acht Hauptgruppen](periodensystem/hauptgruppen/): Alle acht Hauptgruppen mit allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
   - [Warum](periodensystem/hauptgruppen/#warum)
   - [Entdecke die Elemente](periodensystem/hauptgruppen/#entdecken)
   - [Regel](periodensystem/hauptgruppen/#regel)
   - [Beispiel](periodensystem/hauptgruppen/#beispiel)
   - [Übung](periodensystem/hauptgruppen/#uebung)
-- [Metalle und Nichtmetalle](periodensystem/metalle-nichtmetalle/): Metalle, Nichtmetalle und Halbmetalle: So erkennst du sie an ihren Eigenschaften und ihrem Platz im Periodensystem.
+- [Metalle und Nichtmetalle](periodensystem/metalle-nichtmetalle/): Metalle, Nichtmetalle und Grenzfälle auf der Karte: so erkennst du sie an Eigenschaften und Platz.
   - [Warum](periodensystem/metalle-nichtmetalle/#warum)
+  - [Entdecke die Elemente](periodensystem/metalle-nichtmetalle/#entdecken)
   - [Regel](periodensystem/metalle-nichtmetalle/#regel)
   - [Beispiel](periodensystem/metalle-nichtmetalle/#beispiel)
   - [Übung](periodensystem/metalle-nichtmetalle/#uebung)

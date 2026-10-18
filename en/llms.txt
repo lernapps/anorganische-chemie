@@ -32,19 +32,21 @@ Deutsch: ../llms.txt
 
 ## Periodic table
 
-- [Reading the periodic table](periodensystem/periodensystem-lesen/): The periodic table orders all elements. This is how you read the atomic number, symbol, period and group.
+- [Reading the periodic table](periodensystem/periodensystem-lesen/): Find every element on the map: atomic number, symbol, period and group.
   - [Why](periodensystem/periodensystem-lesen/#warum)
+  - [Explore the elements](periodensystem/periodensystem-lesen/#entdecken)
   - [Rule](periodensystem/periodensystem-lesen/#regel)
   - [Example](periodensystem/periodensystem-lesen/#beispiel)
   - [Practice](periodensystem/periodensystem-lesen/#uebung)
-- [The eight main groups](periodensystem/hauptgruppen/): All eight main groups with their names and all their elements. The main group tells how many electrons are in the outer shell.
+- [The eight main groups](periodensystem/hauptgruppen/): All eight main groups with all their elements. The main group tells how many electrons are in the outer shell.
   - [Why](periodensystem/hauptgruppen/#warum)
   - [Explore the elements](periodensystem/hauptgruppen/#entdecken)
   - [Rule](periodensystem/hauptgruppen/#regel)
   - [Example](periodensystem/hauptgruppen/#beispiel)
   - [Practice](periodensystem/hauptgruppen/#uebung)
-- [Metals and non-metals](periodensystem/metalle-nichtmetalle/): Metals, non-metals and metalloids: this is how you recognise them by their properties and their place in the periodic table.
+- [Metals and non-metals](periodensystem/metalle-nichtmetalle/): Metals, non-metals and borderline cases on the map: this is how you recognise them by properties and place.
   - [Why](periodensystem/metalle-nichtmetalle/#warum)
+  - [Explore the elements](periodensystem/metalle-nichtmetalle/#entdecken)
   - [Rule](periodensystem/metalle-nichtmetalle/#regel)
   - [Example](periodensystem/metalle-nichtmetalle/#beispiel)
   - [Practice](periodensystem/metalle-nichtmetalle/#uebung)

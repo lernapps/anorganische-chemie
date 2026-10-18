@@ -26,7 +26,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
   - The mass number is entered as the number of neutrons.
   - The number of protons does not match the atomic number of the element.
 - Tasks by number, 1 to 10: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?atom-bauen=1#atom-bauen): Build a neutral atom of Hydrogen (H) with mass number 1. Set the number of protons, neutrons and electrons. → Solution: Hydrogen has 1 protons, 0 neutrons and 1 electrons.
+  - [Task no. 1](./?atom-bauen=1#atom-bauen): Build a neutral atom of Hydrogen (H) with mass number 1. Set the number of protons, neutrons and electrons. → Solution: Hydrogen has 1 proton, 0 neutrons and 1 electron.
   - [Task no. 2](./?atom-bauen=2#atom-bauen): Build a neutral atom of Helium (He) with mass number 4. Set the number of protons, neutrons and electrons. → Solution: Helium has 2 protons, 2 neutrons and 2 electrons.
   - [Task no. 3](./?atom-bauen=3#atom-bauen): Build a neutral atom of Lithium (Li) with mass number 7. Set the number of protons, neutrons and electrons. → Solution: Lithium has 3 protons, 4 neutrons and 3 electrons.
   - [Task no. 4](./?atom-bauen=4#atom-bauen): Build a neutral atom of Beryllium (Be) with mass number 9. Set the number of protons, neutrons and electrons. → Solution: Beryllium has 4 protons, 5 neutrons and 4 electrons.

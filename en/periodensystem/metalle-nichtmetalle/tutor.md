@@ -1,6 +1,6 @@
 # Metals and non-metals – tutor file
 
-> Metals, non-metals and metalloids: this is how you recognise them by their properties and their place in the periodic table.
+> Metals, non-metals and borderline cases on the map: this is how you recognise them by properties and place.
 
 App: Inorganic chemistry – first steps. Page: [Metals and non-metals](./)
 
@@ -9,54 +9,91 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ## Sections
 
 - [Why](./#warum)
+- [Explore the elements](./#entdecken)
 - [Rule](./#regel)
 - [Example](./#beispiel)
 - [Practice](./#uebung)
 
 ## Exercises
 
-### metall-oder-nichtmetall (generated, choice)
+### art-finden (interactive exercise ElementFinder)
 
-- Link: [./#metall-oder-nichtmetall](./#metall-oder-nichtmetall), in the section „Practice“
-- Answer format: choose one answer
-- Hint the app shows (template: {{…}} are the task's values): Look at which side of the line from boron to astatine {{e.name}} is on.
-- Steps of the solution (template: {{…}} are the task's values):
-  - {{e.name}} is a {{answer}}.
-- Tasks by number, 1 to 34: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?metall-oder-nichtmetall=1#metall-oder-nichtmetall): Is Indium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 2](./?metall-oder-nichtmetall=2#metall-oder-nichtmetall): Is Magnesium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 3](./?metall-oder-nichtmetall=3#metall-oder-nichtmetall): Is Fluorine a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 4](./?metall-oder-nichtmetall=4#metall-oder-nichtmetall): Is Tin a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 5](./?metall-oder-nichtmetall=5#metall-oder-nichtmetall): Is Francium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 6](./?metall-oder-nichtmetall=6#metall-oder-nichtmetall): Is Argon a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 7](./?metall-oder-nichtmetall=7#metall-oder-nichtmetall): Is Neon a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 8](./?metall-oder-nichtmetall=8#metall-oder-nichtmetall): Is Bromine a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 9](./?metall-oder-nichtmetall=9#metall-oder-nichtmetall): Is Carbon a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 10](./?metall-oder-nichtmetall=10#metall-oder-nichtmetall): Is Aluminium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 11](./?metall-oder-nichtmetall=11#metall-oder-nichtmetall): Is Radium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 12](./?metall-oder-nichtmetall=12#metall-oder-nichtmetall): Is Oxygen a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 13](./?metall-oder-nichtmetall=13#metall-oder-nichtmetall): Is Iodine a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 14](./?metall-oder-nichtmetall=14#metall-oder-nichtmetall): Is Hydrogen a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 15](./?metall-oder-nichtmetall=15#metall-oder-nichtmetall): Is Lead a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 16](./?metall-oder-nichtmetall=16#metall-oder-nichtmetall): Is Sulfur a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 17](./?metall-oder-nichtmetall=17#metall-oder-nichtmetall): Is Rubidium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 18](./?metall-oder-nichtmetall=18#metall-oder-nichtmetall): Is Xenon a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 19](./?metall-oder-nichtmetall=19#metall-oder-nichtmetall): Is Chlorine a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 20](./?metall-oder-nichtmetall=20#metall-oder-nichtmetall): Is Caesium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 21](./?metall-oder-nichtmetall=21#metall-oder-nichtmetall): Is Phosphorus a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 22](./?metall-oder-nichtmetall=22#metall-oder-nichtmetall): Is Potassium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 23](./?metall-oder-nichtmetall=23#metall-oder-nichtmetall): Is Calcium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 24](./?metall-oder-nichtmetall=24#metall-oder-nichtmetall): Is Lithium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 25](./?metall-oder-nichtmetall=25#metall-oder-nichtmetall): Is Sodium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 26](./?metall-oder-nichtmetall=26#metall-oder-nichtmetall): Is Helium a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 27](./?metall-oder-nichtmetall=27#metall-oder-nichtmetall): Is Radon a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 28](./?metall-oder-nichtmetall=28#metall-oder-nichtmetall): Is Nitrogen a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 29](./?metall-oder-nichtmetall=29#metall-oder-nichtmetall): Is Beryllium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 30](./?metall-oder-nichtmetall=30#metall-oder-nichtmetall): Is Krypton a metal or a non-metal? Choices: metal; non-metal. → Solution: non-metal
-  - [Task no. 31](./?metall-oder-nichtmetall=31#metall-oder-nichtmetall): Is Strontium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 32](./?metall-oder-nichtmetall=32#metall-oder-nichtmetall): Is Thallium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 33](./?metall-oder-nichtmetall=33#metall-oder-nichtmetall): Is Gallium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
-  - [Task no. 34](./?metall-oder-nichtmetall=34#metall-oder-nichtmetall): Is Barium a metal or a non-metal? Choices: metal; non-metal. → Solution: metal
+- Link: [./#art-finden](./#art-finden), in the section „Practice“
+- What to do: Learners see a map of the elements of the eight main groups and tap the element or elements that fit the task: by name, atomic number, period and main group, all elements of one main group, outer electrons, or kind (metal, non-metal) in one period. Then they check.
+- Answer format: A selection of cells of the map: one element, or all elements of the group when the task asks for a main group.
+- What counts as right: The tapped element fits the property of the task (for outer electrons or kind any fitting element is enough). For a main group exactly all of its elements must be marked.
+- Typical mistakes and the app's message:
+  - An element with the wrong atomic number, period or main group is tapped.
+  - For a main group some elements are missing or elements of other groups are marked.
+  - The group number (1 to 18) and the main group (I to VIII) are mixed up.
+- Tasks by number, 1 to 67: each a different one (the app shows “Task no. …”):
+  - [Task no. 1](./?art-finden=1#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 2](./?art-finden=2#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 3](./?art-finden=3#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 4](./?art-finden=4#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 5](./?art-finden=5#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 6](./?art-finden=6#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 7](./?art-finden=7#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
+  - [Task no. 8](./?art-finden=8#art-finden): Tap a metal in period 3. → Solution: Right answers are, for example: Sodium (Na), Magnesium (Mg), Aluminium (Al).
+  - [Task no. 9](./?art-finden=9#art-finden): Tap a non-metal in period 3. → Solution: Right answers are, for example: Phosphorus (P), Sulfur (S), Chlorine (Cl), Argon (Ar).
+  - [Task no. 10](./?art-finden=10#art-finden): Tap a metal in period 5. → Solution: Right answers are, for example: Rubidium (Rb), Strontium (Sr), Indium (In), Tin (Sn).
+  - [Task no. 11](./?art-finden=11#art-finden): Tap a non-metal in period 5. → Solution: Right answers are, for example: Iodine (I), Xenon (Xe).
+  - [Task no. 12](./?art-finden=12#art-finden): Tap a metal in period 7. → Solution: Right answers are, for example: Francium (Fr), Radium (Ra).
+  - [Task no. 13](./?art-finden=13#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 14](./?art-finden=14#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 15](./?art-finden=15#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 16](./?art-finden=16#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 17](./?art-finden=17#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 18](./?art-finden=18#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 19](./?art-finden=19#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
+  - [Task no. 20](./?art-finden=20#art-finden): Tap a metal in period 3. → Solution: Right answers are, for example: Sodium (Na), Magnesium (Mg), Aluminium (Al).
+  - [Task no. 21](./?art-finden=21#art-finden): Tap a non-metal in period 3. → Solution: Right answers are, for example: Phosphorus (P), Sulfur (S), Chlorine (Cl), Argon (Ar).
+  - [Task no. 22](./?art-finden=22#art-finden): Tap a metal in period 5. → Solution: Right answers are, for example: Rubidium (Rb), Strontium (Sr), Indium (In), Tin (Sn).
+  - [Task no. 23](./?art-finden=23#art-finden): Tap a non-metal in period 5. → Solution: Right answers are, for example: Iodine (I), Xenon (Xe).
+  - [Task no. 24](./?art-finden=24#art-finden): Tap a metal in period 7. → Solution: Right answers are, for example: Francium (Fr), Radium (Ra).
+  - [Task no. 25](./?art-finden=25#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 26](./?art-finden=26#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 27](./?art-finden=27#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 28](./?art-finden=28#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 29](./?art-finden=29#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 30](./?art-finden=30#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 31](./?art-finden=31#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
+  - [Task no. 32](./?art-finden=32#art-finden): Tap a metal in period 3. → Solution: Right answers are, for example: Sodium (Na), Magnesium (Mg), Aluminium (Al).
+  - [Task no. 33](./?art-finden=33#art-finden): Tap a non-metal in period 3. → Solution: Right answers are, for example: Phosphorus (P), Sulfur (S), Chlorine (Cl), Argon (Ar).
+  - [Task no. 34](./?art-finden=34#art-finden): Tap a metal in period 5. → Solution: Right answers are, for example: Rubidium (Rb), Strontium (Sr), Indium (In), Tin (Sn).
+  - [Task no. 35](./?art-finden=35#art-finden): Tap a non-metal in period 5. → Solution: Right answers are, for example: Iodine (I), Xenon (Xe).
+  - [Task no. 36](./?art-finden=36#art-finden): Tap a metal in period 7. → Solution: Right answers are, for example: Francium (Fr), Radium (Ra).
+  - [Task no. 37](./?art-finden=37#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 38](./?art-finden=38#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 39](./?art-finden=39#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 40](./?art-finden=40#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 41](./?art-finden=41#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 42](./?art-finden=42#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 43](./?art-finden=43#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
+  - [Task no. 44](./?art-finden=44#art-finden): Tap a metal in period 3. → Solution: Right answers are, for example: Sodium (Na), Magnesium (Mg), Aluminium (Al).
+  - [Task no. 45](./?art-finden=45#art-finden): Tap a non-metal in period 3. → Solution: Right answers are, for example: Phosphorus (P), Sulfur (S), Chlorine (Cl), Argon (Ar).
+  - [Task no. 46](./?art-finden=46#art-finden): Tap a metal in period 5. → Solution: Right answers are, for example: Rubidium (Rb), Strontium (Sr), Indium (In), Tin (Sn).
+  - [Task no. 47](./?art-finden=47#art-finden): Tap a non-metal in period 5. → Solution: Right answers are, for example: Iodine (I), Xenon (Xe).
+  - [Task no. 48](./?art-finden=48#art-finden): Tap a metal in period 7. → Solution: Right answers are, for example: Francium (Fr), Radium (Ra).
+  - [Task no. 49](./?art-finden=49#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 50](./?art-finden=50#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 51](./?art-finden=51#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 52](./?art-finden=52#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 53](./?art-finden=53#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 54](./?art-finden=54#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 55](./?art-finden=55#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
+  - [Task no. 56](./?art-finden=56#art-finden): Tap a metal in period 3. → Solution: Right answers are, for example: Sodium (Na), Magnesium (Mg), Aluminium (Al).
+  - [Task no. 57](./?art-finden=57#art-finden): Tap a non-metal in period 3. → Solution: Right answers are, for example: Phosphorus (P), Sulfur (S), Chlorine (Cl), Argon (Ar).
+  - [Task no. 58](./?art-finden=58#art-finden): Tap a metal in period 5. → Solution: Right answers are, for example: Rubidium (Rb), Strontium (Sr), Indium (In), Tin (Sn).
+  - [Task no. 59](./?art-finden=59#art-finden): Tap a non-metal in period 5. → Solution: Right answers are, for example: Iodine (I), Xenon (Xe).
+  - [Task no. 60](./?art-finden=60#art-finden): Tap a metal in period 7. → Solution: Right answers are, for example: Francium (Fr), Radium (Ra).
+  - [Task no. 61](./?art-finden=61#art-finden): Tap a metal in period 2. → Solution: Right answers are, for example: Lithium (Li), Beryllium (Be).
+  - [Task no. 62](./?art-finden=62#art-finden): Tap a non-metal in period 2. → Solution: Right answers are, for example: Carbon (C), Nitrogen (N), Oxygen (O), Fluorine (F), Neon (Ne).
+  - [Task no. 63](./?art-finden=63#art-finden): Tap a metal in period 4. → Solution: Right answers are, for example: Potassium (K), Calcium (Ca), Gallium (Ga).
+  - [Task no. 64](./?art-finden=64#art-finden): Tap a non-metal in period 4. → Solution: Right answers are, for example: Bromine (Br), Krypton (Kr).
+  - [Task no. 65](./?art-finden=65#art-finden): Tap a metal in period 6. → Solution: Right answers are, for example: Caesium (Cs), Barium (Ba), Thallium (Tl), Lead (Pb).
+  - [Task no. 66](./?art-finden=66#art-finden): Tap a non-metal in period 6. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 67](./?art-finden=67#art-finden): Tap a non-metal in period 1. → Solution: Right answers are, for example: Hydrogen (H), Helium (He).
 
 ### metalle-fest (true-false)
 

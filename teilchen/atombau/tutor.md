@@ -26,7 +26,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
   - Die Massenzahl wird als Neutronenzahl eingetragen.
   - Die Protonenzahl passt nicht zur Ordnungszahl des Elements.
 - Aufgaben nach Nummer, 1 bis 10: jede eine andere (die App zeigt „Aufgabe Nr. …“):
-  - [Aufgabe Nr. 1](./?atom-bauen=1#atom-bauen): Baue ein neutrales Atom von Wasserstoff (H) mit der Massenzahl 1. Stelle die Zahl der Protonen, Neutronen und Elektronen ein. → Lösung: Wasserstoff hat 1 Protonen, 0 Neutronen und 1 Elektronen.
+  - [Aufgabe Nr. 1](./?atom-bauen=1#atom-bauen): Baue ein neutrales Atom von Wasserstoff (H) mit der Massenzahl 1. Stelle die Zahl der Protonen, Neutronen und Elektronen ein. → Lösung: Wasserstoff hat 1 Proton, 0 Neutronen und 1 Elektron.
   - [Aufgabe Nr. 2](./?atom-bauen=2#atom-bauen): Baue ein neutrales Atom von Helium (He) mit der Massenzahl 4. Stelle die Zahl der Protonen, Neutronen und Elektronen ein. → Lösung: Helium hat 2 Protonen, 2 Neutronen und 2 Elektronen.
   - [Aufgabe Nr. 3](./?atom-bauen=3#atom-bauen): Baue ein neutrales Atom von Lithium (Li) mit der Massenzahl 7. Stelle die Zahl der Protonen, Neutronen und Elektronen ein. → Lösung: Lithium hat 3 Protonen, 4 Neutronen und 3 Elektronen.
   - [Aufgabe Nr. 4](./?atom-bauen=4#atom-bauen): Baue ein neutrales Atom von Beryllium (Be) mit der Massenzahl 9. Stelle die Zahl der Protonen, Neutronen und Elektronen ein. → Lösung: Beryllium hat 4 Protonen, 5 Neutronen und 4 Elektronen.

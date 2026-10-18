@@ -1,6 +1,6 @@
 # Reading the periodic table – tutor file
 
-> The periodic table orders all elements. This is how you read the atomic number, symbol, period and group.
+> Find every element on the map: atomic number, symbol, period and group.
 
 App: Inorganic chemistry – first steps. Page: [Reading the periodic table](./)
 
@@ -9,114 +9,100 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ## Sections
 
 - [Why](./#warum)
+- [Explore the elements](./#entdecken)
 - [Rule](./#regel)
 - [Example](./#beispiel)
 - [Practice](./#uebung)
 
 ## Exercises
 
-### ordnungszahl-ablesen (generated, number)
+### element-finden (interactive exercise ElementFinder)
 
-- Link: [./#ordnungszahl-ablesen](./#ordnungszahl-ablesen), in the section „Practice“
-- Answer format: type a number
-- Hint the app shows (template: {{…}} are the task's values): Look for the symbol {{e.symbol}} in the table. The number in brackets is the atomic number.
-- Steps of the solution (template: {{…}} are the task's values):
-  - {{e.name}} has the atomic number {{answer}}.
-- Tasks by number, 1 to 44: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?ordnungszahl-ablesen=1#ordnungszahl-ablesen): What is the atomic number of Oxygen (symbol O)? → Solution: 8
-  - [Task no. 2](./?ordnungszahl-ablesen=2#ordnungszahl-ablesen): What is the atomic number of Barium (symbol Ba)? → Solution: 56
-  - [Task no. 3](./?ordnungszahl-ablesen=3#ordnungszahl-ablesen): What is the atomic number of Indium (symbol In)? → Solution: 49
-  - [Task no. 4](./?ordnungszahl-ablesen=4#ordnungszahl-ablesen): What is the atomic number of Chlorine (symbol Cl)? → Solution: 17
-  - [Task no. 5](./?ordnungszahl-ablesen=5#ordnungszahl-ablesen): What is the atomic number of Argon (symbol Ar)? → Solution: 18
-  - [Task no. 6](./?ordnungszahl-ablesen=6#ordnungszahl-ablesen): What is the atomic number of Aluminium (symbol Al)? → Solution: 13
-  - [Task no. 7](./?ordnungszahl-ablesen=7#ordnungszahl-ablesen): What is the atomic number of Bromine (symbol Br)? → Solution: 35
-  - [Task no. 8](./?ordnungszahl-ablesen=8#ordnungszahl-ablesen): What is the atomic number of Nitrogen (symbol N)? → Solution: 7
-  - [Task no. 9](./?ordnungszahl-ablesen=9#ordnungszahl-ablesen): What is the atomic number of Calcium (symbol Ca)? → Solution: 20
-  - [Task no. 10](./?ordnungszahl-ablesen=10#ordnungszahl-ablesen): What is the atomic number of Polonium (symbol Po)? → Solution: 84
-  - [Task no. 11](./?ordnungszahl-ablesen=11#ordnungszahl-ablesen): What is the atomic number of Sodium (symbol Na)? → Solution: 11
-  - [Task no. 12](./?ordnungszahl-ablesen=12#ordnungszahl-ablesen): What is the atomic number of Germanium (symbol Ge)? → Solution: 32
-  - [Task no. 13](./?ordnungszahl-ablesen=13#ordnungszahl-ablesen): What is the atomic number of Iodine (symbol I)? → Solution: 53
-  - [Task no. 14](./?ordnungszahl-ablesen=14#ordnungszahl-ablesen): What is the atomic number of Sulfur (symbol S)? → Solution: 16
-  - [Task no. 15](./?ordnungszahl-ablesen=15#ordnungszahl-ablesen): What is the atomic number of Beryllium (symbol Be)? → Solution: 4
-  - [Task no. 16](./?ordnungszahl-ablesen=16#ordnungszahl-ablesen): What is the atomic number of Helium (symbol He)? → Solution: 2
-  - [Task no. 17](./?ordnungszahl-ablesen=17#ordnungszahl-ablesen): What is the atomic number of Selenium (symbol Se)? → Solution: 34
-  - [Task no. 18](./?ordnungszahl-ablesen=18#ordnungszahl-ablesen): What is the atomic number of Thallium (symbol Tl)? → Solution: 81
-  - [Task no. 19](./?ordnungszahl-ablesen=19#ordnungszahl-ablesen): What is the atomic number of Potassium (symbol K)? → Solution: 19
-  - [Task no. 20](./?ordnungszahl-ablesen=20#ordnungszahl-ablesen): What is the atomic number of Rubidium (symbol Rb)? → Solution: 37
-  - [Task no. 21](./?ordnungszahl-ablesen=21#ordnungszahl-ablesen): What is the atomic number of Xenon (symbol Xe)? → Solution: 54
-  - [Task no. 22](./?ordnungszahl-ablesen=22#ordnungszahl-ablesen): What is the atomic number of Arsenic (symbol As)? → Solution: 33
-  - [Task no. 23](./?ordnungszahl-ablesen=23#ordnungszahl-ablesen): What is the atomic number of Carbon (symbol C)? → Solution: 6
-  - [Task no. 24](./?ordnungszahl-ablesen=24#ordnungszahl-ablesen): What is the atomic number of Boron (symbol B)? → Solution: 5
-  - [Task no. 25](./?ordnungszahl-ablesen=25#ordnungszahl-ablesen): What is the atomic number of Radium (symbol Ra)? → Solution: 88
-  - [Task no. 26](./?ordnungszahl-ablesen=26#ordnungszahl-ablesen): What is the atomic number of Caesium (symbol Cs)? → Solution: 55
-  - [Task no. 27](./?ordnungszahl-ablesen=27#ordnungszahl-ablesen): What is the atomic number of Fluorine (symbol F)? → Solution: 9
-  - [Task no. 28](./?ordnungszahl-ablesen=28#ordnungszahl-ablesen): What is the atomic number of Hydrogen (symbol H)? → Solution: 1
-  - [Task no. 29](./?ordnungszahl-ablesen=29#ordnungszahl-ablesen): What is the atomic number of Bismuth (symbol Bi)? → Solution: 83
-  - [Task no. 30](./?ordnungszahl-ablesen=30#ordnungszahl-ablesen): What is the atomic number of Krypton (symbol Kr)? → Solution: 36
-  - [Task no. 31](./?ordnungszahl-ablesen=31#ordnungszahl-ablesen): What is the atomic number of Francium (symbol Fr)? → Solution: 87
-  - [Task no. 32](./?ordnungszahl-ablesen=32#ordnungszahl-ablesen): What is the atomic number of Gallium (symbol Ga)? → Solution: 31
-  - [Task no. 33](./?ordnungszahl-ablesen=33#ordnungszahl-ablesen): What is the atomic number of Neon (symbol Ne)? → Solution: 10
-  - [Task no. 34](./?ordnungszahl-ablesen=34#ordnungszahl-ablesen): What is the atomic number of Strontium (symbol Sr)? → Solution: 38
-  - [Task no. 35](./?ordnungszahl-ablesen=35#ordnungszahl-ablesen): What is the atomic number of Tin (symbol Sn)? → Solution: 50
-  - [Task no. 36](./?ordnungszahl-ablesen=36#ordnungszahl-ablesen): What is the atomic number of Phosphorus (symbol P)? → Solution: 15
-  - [Task no. 37](./?ordnungszahl-ablesen=37#ordnungszahl-ablesen): What is the atomic number of Lead (symbol Pb)? → Solution: 82
-  - [Task no. 38](./?ordnungszahl-ablesen=38#ordnungszahl-ablesen): What is the atomic number of Silicon (symbol Si)? → Solution: 14
-  - [Task no. 39](./?ordnungszahl-ablesen=39#ordnungszahl-ablesen): What is the atomic number of Tellurium (symbol Te)? → Solution: 52
-  - [Task no. 40](./?ordnungszahl-ablesen=40#ordnungszahl-ablesen): What is the atomic number of Radon (symbol Rn)? → Solution: 86
-  - [Task no. 41](./?ordnungszahl-ablesen=41#ordnungszahl-ablesen): What is the atomic number of Magnesium (symbol Mg)? → Solution: 12
-  - [Task no. 42](./?ordnungszahl-ablesen=42#ordnungszahl-ablesen): What is the atomic number of Astatine (symbol At)? → Solution: 85
-  - [Task no. 43](./?ordnungszahl-ablesen=43#ordnungszahl-ablesen): What is the atomic number of Lithium (symbol Li)? → Solution: 3
-  - [Task no. 44](./?ordnungszahl-ablesen=44#ordnungszahl-ablesen): What is the atomic number of Antimony (symbol Sb)? → Solution: 51
+- Link: [./#element-finden](./#element-finden), in the section „Practice“
+- What to do: Learners see a map of the elements of the eight main groups and tap the element or elements that fit the task: by name, atomic number, period and main group, all elements of one main group, outer electrons, or kind (metal, non-metal) in one period. Then they check.
+- Answer format: A selection of cells of the map: one element, or all elements of the group when the task asks for a main group.
+- What counts as right: The tapped element fits the property of the task (for outer electrons or kind any fitting element is enough). For a main group exactly all of its elements must be marked.
+- Typical mistakes and the app's message:
+  - An element with the wrong atomic number, period or main group is tapped.
+  - For a main group some elements are missing or elements of other groups are marked.
+  - The group number (1 to 18) and the main group (I to VIII) are mixed up.
+- Tasks by number, 1 to 67: each a different one (the app shows “Task no. …”):
+  - [Task no. 1](./?element-finden=1#element-finden): Tap Hydrogen. → Solution: The right answer is: Hydrogen (H).
+  - [Task no. 2](./?element-finden=2#element-finden): Tap the element with atomic number 6. → Solution: The right answer is: Carbon (C).
+  - [Task no. 3](./?element-finden=3#element-finden): Tap the element in period 3 and main group I. → Solution: The right answer is: Sodium (Na).
+  - [Task no. 4](./?element-finden=4#element-finden): Tap Oxygen. → Solution: The right answer is: Oxygen (O).
+  - [Task no. 5](./?element-finden=5#element-finden): Tap the element with atomic number 13. → Solution: The right answer is: Aluminium (Al).
+  - [Task no. 6](./?element-finden=6#element-finden): Tap the element in period 3 and main group VIII. → Solution: The right answer is: Argon (Ar).
+  - [Task no. 7](./?element-finden=7#element-finden): Tap Phosphorus. → Solution: The right answer is: Phosphorus (P).
+  - [Task no. 8](./?element-finden=8#element-finden): Tap the element with atomic number 20. → Solution: The right answer is: Calcium (Ca).
+  - [Task no. 9](./?element-finden=9#element-finden): Tap the element in period 4 and main group VII. → Solution: The right answer is: Bromine (Br).
+  - [Task no. 10](./?element-finden=10#element-finden): Tap Germanium. → Solution: The right answer is: Germanium (Ge).
+  - [Task no. 11](./?element-finden=11#element-finden): Tap the element with atomic number 37. → Solution: The right answer is: Rubidium (Rb).
+  - [Task no. 12](./?element-finden=12#element-finden): Tap the element in period 5 and main group VI. → Solution: The right answer is: Tellurium (Te).
+  - [Task no. 13](./?element-finden=13#element-finden): Tap Indium. → Solution: The right answer is: Indium (In).
+  - [Task no. 14](./?element-finden=14#element-finden): Tap the element with atomic number 54. → Solution: The right answer is: Xenon (Xe).
+  - [Task no. 15](./?element-finden=15#element-finden): Tap the element in period 6 and main group V. → Solution: The right answer is: Bismuth (Bi).
+  - [Task no. 16](./?element-finden=16#element-finden): Tap Barium. → Solution: The right answer is: Barium (Ba).
+  - [Task no. 17](./?element-finden=17#element-finden): Tap the element with atomic number 85. → Solution: The right answer is: Astatine (At).
+  - [Task no. 18](./?element-finden=18#element-finden): Tap the element in period 1 and main group VIII. → Solution: The right answer is: Helium (He).
+  - [Task no. 19](./?element-finden=19#element-finden): Tap Francium. → Solution: The right answer is: Francium (Fr).
+  - [Task no. 20](./?element-finden=20#element-finden): Tap the element with atomic number 4. → Solution: The right answer is: Beryllium (Be).
+  - [Task no. 21](./?element-finden=21#element-finden): Tap the element in period 2 and main group VII. → Solution: The right answer is: Fluorine (F).
+  - [Task no. 22](./?element-finden=22#element-finden): Tap Carbon. → Solution: The right answer is: Carbon (C).
+  - [Task no. 23](./?element-finden=23#element-finden): Tap the element with atomic number 11. → Solution: The right answer is: Sodium (Na).
+  - [Task no. 24](./?element-finden=24#element-finden): Tap the element in period 3 and main group VI. → Solution: The right answer is: Sulfur (S).
+  - [Task no. 25](./?element-finden=25#element-finden): Tap Aluminium. → Solution: The right answer is: Aluminium (Al).
+  - [Task no. 26](./?element-finden=26#element-finden): Tap the element with atomic number 18. → Solution: The right answer is: Argon (Ar).
+  - [Task no. 27](./?element-finden=27#element-finden): Tap the element in period 4 and main group V. → Solution: The right answer is: Arsenic (As).
+  - [Task no. 28](./?element-finden=28#element-finden): Tap Calcium. → Solution: The right answer is: Calcium (Ca).
+  - [Task no. 29](./?element-finden=29#element-finden): Tap the element with atomic number 35. → Solution: The right answer is: Bromine (Br).
+  - [Task no. 30](./?element-finden=30#element-finden): Tap the element in period 5 and main group IV. → Solution: The right answer is: Tin (Sn).
+  - [Task no. 31](./?element-finden=31#element-finden): Tap Rubidium. → Solution: The right answer is: Rubidium (Rb).
+  - [Task no. 32](./?element-finden=32#element-finden): Tap the element with atomic number 52. → Solution: The right answer is: Tellurium (Te).
+  - [Task no. 33](./?element-finden=33#element-finden): Tap the element in period 6 and main group III. → Solution: The right answer is: Thallium (Tl).
+  - [Task no. 34](./?element-finden=34#element-finden): Tap Xenon. → Solution: The right answer is: Xenon (Xe).
+  - [Task no. 35](./?element-finden=35#element-finden): Tap the element with atomic number 83. → Solution: The right answer is: Bismuth (Bi).
+  - [Task no. 36](./?element-finden=36#element-finden): Tap the element in period 7 and main group II. → Solution: The right answer is: Radium (Ra).
+  - [Task no. 37](./?element-finden=37#element-finden): Tap Astatine. → Solution: The right answer is: Astatine (At).
+  - [Task no. 38](./?element-finden=38#element-finden): Tap the element with atomic number 2. → Solution: The right answer is: Helium (He).
+  - [Task no. 39](./?element-finden=39#element-finden): Tap the element in period 2 and main group V. → Solution: The right answer is: Nitrogen (N).
+  - [Task no. 40](./?element-finden=40#element-finden): Tap Beryllium. → Solution: The right answer is: Beryllium (Be).
+  - [Task no. 41](./?element-finden=41#element-finden): Tap the element with atomic number 9. → Solution: The right answer is: Fluorine (F).
+  - [Task no. 42](./?element-finden=42#element-finden): Tap the element in period 3 and main group IV. → Solution: The right answer is: Silicon (Si).
+  - [Task no. 43](./?element-finden=43#element-finden): Tap Sodium. → Solution: The right answer is: Sodium (Na).
+  - [Task no. 44](./?element-finden=44#element-finden): Tap the element with atomic number 16. → Solution: The right answer is: Sulfur (S).
+  - [Task no. 45](./?element-finden=45#element-finden): Tap the element in period 4 and main group III. → Solution: The right answer is: Gallium (Ga).
+  - [Task no. 46](./?element-finden=46#element-finden): Tap Argon. → Solution: The right answer is: Argon (Ar).
+  - [Task no. 47](./?element-finden=47#element-finden): Tap the element with atomic number 33. → Solution: The right answer is: Arsenic (As).
+  - [Task no. 48](./?element-finden=48#element-finden): Tap the element in period 5 and main group II. → Solution: The right answer is: Strontium (Sr).
+  - [Task no. 49](./?element-finden=49#element-finden): Tap Bromine. → Solution: The right answer is: Bromine (Br).
+  - [Task no. 50](./?element-finden=50#element-finden): Tap the element with atomic number 50. → Solution: The right answer is: Tin (Sn).
+  - [Task no. 51](./?element-finden=51#element-finden): Tap the element in period 6 and main group I. → Solution: The right answer is: Caesium (Cs).
+  - [Task no. 52](./?element-finden=52#element-finden): Tap Tellurium. → Solution: The right answer is: Tellurium (Te).
+  - [Task no. 53](./?element-finden=53#element-finden): Tap the element with atomic number 81. → Solution: The right answer is: Thallium (Tl).
+  - [Task no. 54](./?element-finden=54#element-finden): Tap the element in period 6 and main group VIII. → Solution: The right answer is: Radon (Rn).
+  - [Task no. 55](./?element-finden=55#element-finden): Tap Bismuth. → Solution: The right answer is: Bismuth (Bi).
+  - [Task no. 56](./?element-finden=56#element-finden): Tap the element with atomic number 88. → Solution: The right answer is: Radium (Ra).
+  - [Task no. 57](./?element-finden=57#element-finden): Tap the element in period 2 and main group III. → Solution: The right answer is: Boron (B).
+  - [Task no. 58](./?element-finden=58#element-finden): Tap Helium. → Solution: The right answer is: Helium (He).
+  - [Task no. 59](./?element-finden=59#element-finden): Tap the element with atomic number 7. → Solution: The right answer is: Nitrogen (N).
+  - [Task no. 60](./?element-finden=60#element-finden): Tap the element in period 3 and main group II. → Solution: The right answer is: Magnesium (Mg).
+  - [Task no. 61](./?element-finden=61#element-finden): Tap Fluorine. → Solution: The right answer is: Fluorine (F).
+  - [Task no. 62](./?element-finden=62#element-finden): Tap the element with atomic number 14. → Solution: The right answer is: Silicon (Si).
+  - [Task no. 63](./?element-finden=63#element-finden): Tap the element in period 4 and main group I. → Solution: The right answer is: Potassium (K).
+  - [Task no. 64](./?element-finden=64#element-finden): Tap Sulfur. → Solution: The right answer is: Sulfur (S).
+  - [Task no. 65](./?element-finden=65#element-finden): Tap the element with atomic number 31. → Solution: The right answer is: Gallium (Ga).
+  - [Task no. 66](./?element-finden=66#element-finden): Tap the element in period 4 and main group VIII. → Solution: The right answer is: Krypton (Kr).
+  - [Task no. 67](./?element-finden=67#element-finden): Tap Arsenic. → Solution: The right answer is: Arsenic (As).
 
-### periode-bestimmen (generated, number)
+### periode-bedeutung (single-choice)
 
-- Link: [./#periode-bestimmen](./#periode-bestimmen), in the section „Practice“
-- Answer format: type a number
-- Hint the app shows (template: {{…}} are the task's values): The period is the row of the table in which the symbol {{e.symbol}} stands. It is also the number of electron shells.
-- Steps of the solution (template: {{…}} are the task's values):
-  - {{e.name}} is in period {{answer}}.
-- Tasks by number, 1 to 44: each a different one (the app shows “Task no. …”):
-  - [Task no. 1](./?periode-bestimmen=1#periode-bestimmen): In which period is Sodium (symbol Na)? → Solution: 3
-  - [Task no. 2](./?periode-bestimmen=2#periode-bestimmen): In which period is Bismuth (symbol Bi)? → Solution: 6
-  - [Task no. 3](./?periode-bestimmen=3#periode-bestimmen): In which period is Helium (symbol He)? → Solution: 1
-  - [Task no. 4](./?periode-bestimmen=4#periode-bestimmen): In which period is Krypton (symbol Kr)? → Solution: 4
-  - [Task no. 5](./?periode-bestimmen=5#periode-bestimmen): In which period is Radium (symbol Ra)? → Solution: 7
-  - [Task no. 6](./?periode-bestimmen=6#periode-bestimmen): In which period is Oxygen (symbol O)? → Solution: 2
-  - [Task no. 7](./?periode-bestimmen=7#periode-bestimmen): In which period is Antimony (symbol Sb)? → Solution: 5
-  - [Task no. 8](./?periode-bestimmen=8#periode-bestimmen): In which period is Thallium (symbol Tl)? → Solution: 6
-  - [Task no. 9](./?periode-bestimmen=9#periode-bestimmen): In which period is Beryllium (symbol Be)? → Solution: 2
-  - [Task no. 10](./?periode-bestimmen=10#periode-bestimmen): In which period is Germanium (symbol Ge)? → Solution: 4
-  - [Task no. 11](./?periode-bestimmen=11#periode-bestimmen): In which period is Phosphorus (symbol P)? → Solution: 3
-  - [Task no. 12](./?periode-bestimmen=12#periode-bestimmen): In which period is Chlorine (symbol Cl)? → Solution: 3
-  - [Task no. 13](./?periode-bestimmen=13#periode-bestimmen): In which period is Lithium (symbol Li)? → Solution: 2
-  - [Task no. 14](./?periode-bestimmen=14#periode-bestimmen): In which period is Nitrogen (symbol N)? → Solution: 2
-  - [Task no. 15](./?periode-bestimmen=15#periode-bestimmen): In which period is Argon (symbol Ar)? → Solution: 3
-  - [Task no. 16](./?periode-bestimmen=16#periode-bestimmen): In which period is Indium (symbol In)? → Solution: 5
-  - [Task no. 17](./?periode-bestimmen=17#periode-bestimmen): In which period is Iodine (symbol I)? → Solution: 5
-  - [Task no. 18](./?periode-bestimmen=18#periode-bestimmen): In which period is Barium (symbol Ba)? → Solution: 6
-  - [Task no. 19](./?periode-bestimmen=19#periode-bestimmen): In which period is Astatine (symbol At)? → Solution: 6
-  - [Task no. 20](./?periode-bestimmen=20#periode-bestimmen): In which period is Polonium (symbol Po)? → Solution: 6
-  - [Task no. 21](./?periode-bestimmen=21#periode-bestimmen): In which period is Aluminium (symbol Al)? → Solution: 3
-  - [Task no. 22](./?periode-bestimmen=22#periode-bestimmen): In which period is Xenon (symbol Xe)? → Solution: 5
-  - [Task no. 23](./?periode-bestimmen=23#periode-bestimmen): In which period is Gallium (symbol Ga)? → Solution: 4
-  - [Task no. 24](./?periode-bestimmen=24#periode-bestimmen): In which period is Tellurium (symbol Te)? → Solution: 5
-  - [Task no. 25](./?periode-bestimmen=25#periode-bestimmen): In which period is Francium (symbol Fr)? → Solution: 7
-  - [Task no. 26](./?periode-bestimmen=26#periode-bestimmen): In which period is Calcium (symbol Ca)? → Solution: 4
-  - [Task no. 27](./?periode-bestimmen=27#periode-bestimmen): In which period is Rubidium (symbol Rb)? → Solution: 5
-  - [Task no. 28](./?periode-bestimmen=28#periode-bestimmen): In which period is Caesium (symbol Cs)? → Solution: 6
-  - [Task no. 29](./?periode-bestimmen=29#periode-bestimmen): In which period is Radon (symbol Rn)? → Solution: 6
-  - [Task no. 30](./?periode-bestimmen=30#periode-bestimmen): In which period is Sulfur (symbol S)? → Solution: 3
-  - [Task no. 31](./?periode-bestimmen=31#periode-bestimmen): In which period is Silicon (symbol Si)? → Solution: 3
-  - [Task no. 32](./?periode-bestimmen=32#periode-bestimmen): In which period is Hydrogen (symbol H)? → Solution: 1
-  - [Task no. 33](./?periode-bestimmen=33#periode-bestimmen): In which period is Neon (symbol Ne)? → Solution: 2
-  - [Task no. 34](./?periode-bestimmen=34#periode-bestimmen): In which period is Strontium (symbol Sr)? → Solution: 5
-  - [Task no. 35](./?periode-bestimmen=35#periode-bestimmen): In which period is Selenium (symbol Se)? → Solution: 4
-  - [Task no. 36](./?periode-bestimmen=36#periode-bestimmen): In which period is Carbon (symbol C)? → Solution: 2
-  - [Task no. 37](./?periode-bestimmen=37#periode-bestimmen): In which period is Magnesium (symbol Mg)? → Solution: 3
-  - [Task no. 38](./?periode-bestimmen=38#periode-bestimmen): In which period is Lead (symbol Pb)? → Solution: 6
-  - [Task no. 39](./?periode-bestimmen=39#periode-bestimmen): In which period is Tin (symbol Sn)? → Solution: 5
-  - [Task no. 40](./?periode-bestimmen=40#periode-bestimmen): In which period is Potassium (symbol K)? → Solution: 4
-  - [Task no. 41](./?periode-bestimmen=41#periode-bestimmen): In which period is Fluorine (symbol F)? → Solution: 2
-  - [Task no. 42](./?periode-bestimmen=42#periode-bestimmen): In which period is Bromine (symbol Br)? → Solution: 4
-  - [Task no. 43](./?periode-bestimmen=43#periode-bestimmen): In which period is Boron (symbol B)? → Solution: 2
-  - [Task no. 44](./?periode-bestimmen=44#periode-bestimmen): In which period is Arsenic (symbol As)? → Solution: 4
+- Link: [./#periode-bedeutung](./#periode-bedeutung), in the section „Practice“
+- Task: What does the number of the period tell you about an atom?
+- Answer format: choose one answer
+- Choices (✓ right, ✗ wrong, with the app's message):
+  - ✓ How many electron shells it has. – The number of the period is the number of shells. Sodium is in period 3 and has three shells.
+  - ✗ How many protons it has. – The number of protons is the atomic number. Sodium has 11 protons but is in period 3.
+  - ✗ How many outer electrons it has. – The number of outer electrons is given by the main group. Sodium has 1 outer electron and is in main group I.
+- Solution: How many electron shells it has.
+- Explanation: The period is the row in the periodic table. Its number is the number of electron shells.
