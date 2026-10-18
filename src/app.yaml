@@ -1,13 +1,26 @@
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Anorganische Chemie – Einstieg
-intro: |
-  Woraus bestehen Stoffe? Du lernst Reinstoffe und Gemische kennen, baust Atome, liest das Periodensystem und
-  stellst einfache Reaktionsgleichungen auf. Auf jeder Seite übst du selbst.
-  Für die unteren Klassenstufen (Klasse 7 und 8).
-languages: [de]
-chapters: [stoffe, teilchen]
+title:
+  de: Anorganische Chemie – Einstieg
+  en: Inorganic chemistry – first steps
+intro:
+  de: |
+    Woraus bestehen Stoffe? Du lernst Reinstoffe und Gemische kennen, baust Atome, liest das Periodensystem und stellst einfache Reaktionsgleichungen auf. Auf jeder Seite übst du selbst.
+    Für die unteren Klassenstufen (Klasse 7 und 8).
+  en: |
+    What are substances made of? You learn about pure substances and mixtures, build atoms, read the periodic table and write simple reaction equations. You practise on every page.
+    For the lower grades (grades 7 and 8).
+languages:
+  - de
+  - en
+chapters:
+  - stoffe
+  - teilchen
 sources:
-  - title: Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (KMK, 2004)
+  - title:
+      de: Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (KMK, 2004)
+      en: Educational standards in chemistry for the intermediate school leaving certificate (KMK, 2004, German)
     url: https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Chemie.pdf
-  - title: Chemie (Serlo, CC BY-SA 4.0)
+  - title:
+      de: Chemie (Serlo, CC BY-SA 4.0)
+      en: Chemistry (Serlo, CC BY-SA 4.0, German)
     url: https://de.serlo.org/chemie

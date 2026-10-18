@@ -1,95 +1,187 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Stoffeigenschaften
-description: "Aggregatzustand, Schmelz- und Siedetemperatur: Daran erkennst du Stoffe und schließt auf ihre Verwendung."
+title:
+  de: Stoffeigenschaften
+  en: Properties of substances
+description:
+  de: "Aggregatzustand, Schmelz- und Siedetemperatur: Daran erkennst du Stoffe und schließt auf ihre Verwendung."
+  en: "State of matter, melting and boiling point: this is how you recognise substances and infer their use."
 blocks:
   - type: section
     id: warum
-    title: Warum
+    title:
+      de: Warum
+      en: Why
     blocks:
       - type: text
-        text: |
-          Warum sind Stromkabel aus Kupfer und Töpfe aus Metall, aber Getränke aus Flüssigkeiten? Jeder Stoff hat
-          Eigenschaften, an denen man ihn erkennt und die zeigen, wofür er sich eignet.
+        text:
+          de: |
+            Warum sind Stromkabel aus Kupfer und Töpfe aus Metall, aber Getränke aus Flüssigkeiten? Jeder Stoff hat Eigenschaften, an denen man ihn erkennt und die zeigen, wofür er sich eignet.
+          en: |
+            Why are power cables made of copper and pots made of metal, but drinks made of liquids? Every substance has properties that help you recognise it and that show what it is good for.
   - type: section
     id: regel
-    title: Regel
+    title:
+      de: Regel
+      en: Rule
     blocks:
       - type: text
-        text: |
-          Drei Eigenschaften helfen beim Ordnen:
-          - Der **Aggregatzustand** bei Zimmertemperatur (20 °C): fest, flüssig oder gasförmig.
-          - Die **Schmelztemperatur**: Ab dieser Temperatur wird ein fester Stoff flüssig.
-          - Die **Siedetemperatur**: Ab dieser Temperatur wird ein flüssiger Stoff gasförmig.
+        text:
+          de: |
+            Drei Eigenschaften helfen beim Ordnen:
+            - Der **Aggregatzustand** bei Zimmertemperatur (20 °C): fest, flüssig oder gasförmig.
+            - Die **Schmelztemperatur**: Ab dieser Temperatur wird ein fester Stoff flüssig.
+            - Die **Siedetemperatur**: Ab dieser Temperatur wird ein flüssiger Stoff gasförmig.
+          en: |
+            Three properties help to sort substances:
+            - The **state of matter** at room temperature (20 °C): solid, liquid or gaseous.
+            - The **melting point**: from this temperature a solid becomes liquid.
+            - The **boiling point**: from this temperature a liquid becomes gaseous.
       - type: definition
-        term: Schmelztemperatur
-        explanation: Die Temperatur, bei der ein fester Stoff flüssig wird. Für einen Reinstoff ist sie immer gleich.
+        term:
+          de: Schmelztemperatur
+          en: Melting point
+        explanation:
+          de: Die Temperatur, bei der ein fester Stoff flüssig wird. Für einen Reinstoff ist sie immer gleich.
+          en: The temperature at which a solid becomes liquid. For a pure substance it is always the same.
       - type: definition
-        term: Siedetemperatur
-        explanation: Die Temperatur, bei der ein flüssiger Stoff gasförmig wird. Für einen Reinstoff ist sie immer gleich.
+        term:
+          de: Siedetemperatur
+          en: Boiling point
+        explanation:
+          de: Die Temperatur, bei der ein flüssiger Stoff gasförmig wird. Für einen Reinstoff ist sie immer gleich.
+          en: The temperature at which a liquid becomes gaseous. For a pure substance it is always the same.
       - type: note
-        title: Merkhilfe
+        title:
+          de: Merkhilfe
+          en: Memory aid
         blocks:
           - type: text
-            text: |
-              Liegt die Zimmertemperatur (20 °C) unter der Schmelztemperatur, ist der Stoff fest. Liegt sie zwischen
-              Schmelz- und Siedetemperatur, ist er flüssig. Liegt sie darüber, ist er gasförmig.
+            text:
+              de: |
+                Liegt die Zimmertemperatur (20 °C) unter der Schmelztemperatur, ist der Stoff fest. Liegt sie zwischen Schmelz- und Siedetemperatur, ist er flüssig. Liegt sie darüber, ist er gasförmig.
+              en: |
+                If room temperature (20 °C) is below the melting point, the substance is solid. If it lies between the melting and the boiling point, it is liquid. If it is above, it is gaseous.
   - type: section
     id: beispiel
-    title: Beispiel
+    title:
+      de: Beispiel
+      en: Example
     blocks:
       - type: example
-        title: Warum ist Wasser bei 20 °C flüssig?
+        title:
+          de: Warum ist Wasser bei 20 °C flüssig?
+          en: Why is water liquid at 20 °C?
         blocks:
           - type: text
-            text: |
-              Wasser schmilzt bei 0 °C und siedet bei 100 °C. Zimmertemperatur (20 °C) liegt dazwischen. Darum ist
-              Wasser bei 20 °C flüssig.
+            text:
+              de: |
+                Wasser schmilzt bei 0 °C und siedet bei 100 °C. Zimmertemperatur (20 °C) liegt dazwischen. Darum ist Wasser bei 20 °C flüssig.
+              en: |
+                Water melts at 0 °C and boils at 100 °C. Room temperature (20 °C) lies in between. That is why water is liquid at 20 °C.
   - type: section
     id: uebung
-    title: Übung
+    title:
+      de: Übung
+      en: Practice
     blocks:
       - type: generated
         id: zustand-bestimmen
         given:
-          e: { pick: 1, from: { data: stoffe } }
+          e:
+            pick: 1
+            from:
+              data: stoffe
         task:
-          text: "Ist {{e.name}} bei Zimmertemperatur (20 °C) fest, flüssig oder gasförmig?"
-        answer: { value: "e.zustand", compare: { choice: [fest, flüssig, gasförmig] } }
-        hint: "Vergleiche 20 °C mit der Schmelztemperatur und der Siedetemperatur von {{e.name}}."
+          text:
+            de: Ist {{e.name}} bei Zimmertemperatur (20 °C) fest, flüssig oder gasförmig?
+            en: Is {{e.name}} solid, liquid or gaseous at room temperature (20 °C)?
+        answer:
+          value: e.zustand
+          compare:
+            choice:
+              - de: fest
+                en: solid
+              - de: flüssig
+                en: liquid
+              - de: gasförmig
+                en: gaseous
+        hint:
+          de: Vergleiche 20 °C mit der Schmelztemperatur und der Siedetemperatur von {{e.name}}.
+          en: Compare 20 °C with the melting point and the boiling point of {{e.name}}.
         steps:
-          - "{{e.name}} schmilzt bei {{e.schmelz}} °C und siedet bei {{e.siede}} °C."
-          - "Bei 20 °C ist {{e.name}} also {{answer}}."
+          - de: "{{e.name}} schmilzt bei {{e.schmelz}} °C und siedet bei {{e.siede}} °C."
+            en: "{{e.name}} melts at {{e.schmelz}} °C and boils at {{e.siede}} °C."
+          - de: Bei 20 °C ist {{e.name}} also {{answer}}.
+            en: So at 20 °C {{e.name}} is {{answer}}.
       - type: generated
         id: siedetemperatur-ordnen
         given:
-          a: { pick: 1, from: { data: stoffe } }
-          b: { pick: 1, from: { data: stoffe } }
-          c: { pick: 1, from: { data: stoffe } }
-        where: ["a.name != b.name", "a.name != c.name", "b.name != c.name"]
+          a:
+            pick: 1
+            from:
+              data: stoffe
+          b:
+            pick: 1
+            from:
+              data: stoffe
+          c:
+            pick: 1
+            from:
+              data: stoffe
+        where:
+          - a.name != b.name
+          - a.name != c.name
+          - b.name != c.name
         task:
-          text: "Ordne diese Stoffe nach ihrer Siedetemperatur, den mit der niedrigsten zuerst: {{a.name}}, {{b.name}} und {{c.name}}."
-        answer: { value: "map(sortBy([a, b, c], siede), name)", compare: order }
+          text:
+            de: "Ordne diese Stoffe nach ihrer Siedetemperatur, den mit der niedrigsten zuerst: {{a.name}}, {{b.name}} und {{c.name}}."
+            en: "Put these substances in order of their boiling point, the lowest first: {{a.name}}, {{b.name}} and {{c.name}}."
+        answer:
+          value: map(sortBy([a, b, c], siede), name)
+          compare: order
         mistakes:
-          - {
-              value: "map(reverse(sortBy([a, b, c], siede)), name)",
-              message: "Du hast von hoch nach niedrig geordnet. Gefragt ist die niedrigste Siedetemperatur zuerst.",
-            }
-        hint: "Der Stoff, der am leichtesten gasförmig wird, hat die niedrigste Siedetemperatur."
+          - value: map(reverse(sortBy([a, b, c], siede)), name)
+            message:
+              de: Du hast von hoch nach niedrig geordnet. Gefragt ist die niedrigste Siedetemperatur zuerst.
+              en: You ordered from high to low. The lowest boiling point comes first.
+        hint:
+          de: Der Stoff, der am leichtesten gasförmig wird, hat die niedrigste Siedetemperatur.
+          en: The substance that turns gaseous most easily has the lowest boiling point.
         steps:
-          - "Sortiere nach der Siedetemperatur, von niedrig nach hoch."
+          - de: Sortiere nach der Siedetemperatur, von niedrig nach hoch.
+            en: Sort by boiling point, from low to high.
       - type: single-choice
         id: kupfer-kabel
-        text: Warum werden Stromkabel aus Kupfer gemacht?
+        text:
+          de: Warum werden Stromkabel aus Kupfer gemacht?
+          en: Why are power cables made of copper?
         options:
-          - text: Kupfer leitet den elektrischen Strom gut.
+          - text:
+              de: Kupfer leitet den elektrischen Strom gut.
+              en: Copper conducts electric current well.
             correct: true
-            info: Kupfer ist ein Metall, das den Strom sehr gut leitet. Deshalb steckt es in Leitungen und Kabeln.
-          - text: Kupfer ist bei Zimmertemperatur flüssig.
+            info:
+              de: Kupfer ist ein Metall, das den Strom sehr gut leitet. Deshalb steckt es in Leitungen und Kabeln.
+              en: Copper is a metal that conducts current very well. That is why it is used in wires and cables.
+          - text:
+              de: Kupfer ist bei Zimmertemperatur flüssig.
+              en: Copper is liquid at room temperature.
             correct: false
-            info: Kupfer ist bei 20 °C fest. Es schmilzt erst bei etwa 1085 °C.
-          - text: Kupfer hat eine sehr niedrige Siedetemperatur.
+            info:
+              de: Kupfer ist bei 20 °C fest. Es schmilzt erst bei etwa 1085 °C.
+              en: Copper is solid at 20 °C. It only melts at about 1085 °C.
+          - text:
+              de: Kupfer hat eine sehr niedrige Siedetemperatur.
+              en: Copper has a very low boiling point.
             correct: false
-            info: Kupfer siedet erst bei etwa 2595 °C. Eine niedrige Siedetemperatur wäre für ein Kabel auch kein Vorteil.
-        explanation: Man wählt einen Stoff nach der Eigenschaft, die man braucht. Ein Kabel muss den Strom gut leiten, und das kann Kupfer.
+            info:
+              de: Kupfer siedet erst bei etwa 2595 °C. Eine niedrige Siedetemperatur wäre für ein Kabel auch kein Vorteil.
+              en: Copper only boils at about 2595 °C. A low boiling point would be no advantage for a cable anyway.
+        explanation:
+          de: Man wählt einen Stoff nach der Eigenschaft, die man braucht. Ein Kabel muss den Strom gut leiten, und das kann Kupfer.
+          en: You choose a substance for the property you need. A cable has to conduct current well, and copper does.
         links:
-          - { title: Kupfer (Wikipedia), url: "https://de.wikipedia.org/wiki/Kupfer" }
+          - title:
+              de: Kupfer (Wikipedia)
+              en: Copper (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Kupfer

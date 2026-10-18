@@ -1,96 +1,196 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Teilchenmodell
-description: "Stoffe bestehen aus winzigen Teilchen. So erklärst du fest, flüssig und gasförmig."
+title:
+  de: Teilchenmodell
+  en: Particle model
+description:
+  de: Stoffe bestehen aus winzigen Teilchen. So erklärst du fest, flüssig und gasförmig.
+  en: Substances consist of tiny particles. This is how you explain solid, liquid and gaseous.
 blocks:
   - type: section
     id: warum
-    title: Warum
+    title:
+      de: Warum
+      en: Why
     blocks:
       - type: text
-        text: |
-          Warum fließt Wasser, aber ein Stein nicht? Warum füllt Luft einen ganzen Raum? Wir können die kleinsten Teile
-          der Stoffe nicht sehen. Mit einem Modell stellen wir sie uns vor und erklären damit, was wir beobachten.
+        text:
+          de: |
+            Warum fließt Wasser, aber ein Stein nicht? Warum füllt Luft einen ganzen Raum? Wir können die kleinsten Teile der Stoffe nicht sehen. Mit einem Modell stellen wir sie uns vor und erklären damit, was wir beobachten.
+          en: |
+            Why does water flow, but a stone does not? Why does air fill a whole room? We cannot see the smallest parts of substances. With a model we imagine them and use it to explain what we observe.
   - type: section
     id: regel
-    title: Regel
+    title:
+      de: Regel
+      en: Rule
     blocks:
       - type: definition
-        term: Teilchenmodell
-        explanation: Im Teilchenmodell besteht jeder Stoff aus sehr kleinen Teilchen, die man sich als Kugeln vorstellt.
+        term:
+          de: Teilchenmodell
+          en: Particle model
+        explanation:
+          de: Im Teilchenmodell besteht jeder Stoff aus sehr kleinen Teilchen, die man sich als Kugeln vorstellt.
+          en: In the particle model every substance consists of very small particles, which you imagine as balls.
       - type: table
-        caption: Die drei Aggregatzustände im Teilchenmodell
-        header: [Zustand, Anordnung der Teilchen, Beweglichkeit]
+        caption:
+          de: Die drei Aggregatzustände im Teilchenmodell
+          en: The three states of matter in the particle model
+        header:
+          - de: Zustand
+            en: State
+          - de: Anordnung der Teilchen
+            en: Arrangement of the particles
+          - de: Beweglichkeit
+            en: Movement
         rowHeaders: true
         rows:
-          - [fest, "dicht an dicht, geordnet", "schwingen an ihrem Platz"]
-          - [flüssig, "dicht beieinander, ungeordnet", "wechseln ihre Plätze"]
-          - [gasförmig, "weit auseinander", "bewegen sich frei durch den Raum"]
+          - - de: fest
+              en: solid
+            - de: dicht an dicht, geordnet
+              en: close together, in order
+            - de: schwingen an ihrem Platz
+              en: vibrate in place
+          - - de: flüssig
+              en: liquid
+            - de: dicht beieinander, ungeordnet
+              en: close together, not in order
+            - de: wechseln ihre Plätze
+              en: change places
+          - - de: gasförmig
+              en: gaseous
+            - de: weit auseinander
+              en: far apart
+            - de: bewegen sich frei durch den Raum
+              en: move freely through the space
       - type: text
-        text: |
-          Wird ein Stoff wärmer, bewegen sich seine Teilchen schneller. Bei genug Wärme lösen sie sich aus der
-          festen Ordnung: Der Stoff schmilzt. Noch mehr Wärme, und sie fliegen auseinander: Der Stoff siedet.
+        text:
+          de: |
+            Wird ein Stoff wärmer, bewegen sich seine Teilchen schneller. Bei genug Wärme lösen sie sich aus der festen Ordnung: Der Stoff schmilzt. Noch mehr Wärme, und sie fliegen auseinander: Der Stoff siedet.
+          en: |
+            When a substance gets warmer, its particles move faster. With enough heat they break out of their fixed order: the substance melts. With even more heat they fly apart: the substance boils.
   - type: section
     id: beispiel
-    title: Beispiel
+    title:
+      de: Beispiel
+      en: Example
     blocks:
       - type: example
-        title: Wasser wird erhitzt
+        title:
+          de: Wasser wird erhitzt
+          en: Water is heated
         blocks:
           - type: text
-            text: |
-              Eis ist fest. Die Wasserteilchen sitzen dicht an dicht. Bei 0 °C schmilzt es, dann sind sie
-              beweglich und das Wasser fließt. Bei 100 °C siedet es: Die Teilchen fliegen auseinander, es ist
-              Wasserdampf.
+            text:
+              de: |
+                Eis ist fest. Die Wasserteilchen sitzen dicht an dicht. Bei 0 °C schmilzt es, dann sind sie beweglich und das Wasser fließt. Bei 100 °C siedet es: Die Teilchen fliegen auseinander, es ist Wasserdampf.
+              en: |
+                Ice is solid. The water particles sit close together. At 0 °C it melts, then they are mobile and the water flows. At 100 °C it boils: the particles fly apart and it is water vapour.
       - type: vue-component
         component: ParticleModel
         props:
           labels:
-            temperature: Temperatur
-            solid: fest
-            liquid: flüssig
-            gas: gasförmig
-            solidText: Die Teilchen sitzen dicht an dicht und schwingen an ihrem Platz.
-            liquidText: Die Teilchen sind dicht beieinander und wechseln ihre Plätze.
-            gasText: Die Teilchen sind weit auseinander und bewegen sich frei.
-        nojs: |
-          Ein Kasten mit 30 Teilchen und ein Regler für die Temperatur. Bei niedriger Temperatur (fest) sitzen
-          die Teilchen dicht an dicht und schwingen an ihrem Platz. Bei mittlerer Temperatur (flüssig) sind sie
-          dicht beieinander und wechseln ihre Plätze. Bei hoher Temperatur (gasförmig) sind sie weit auseinander und
-          bewegen sich frei durch den ganzen Kasten.
+            temperature:
+              de: Temperatur
+              en: Temperature
+            solid:
+              de: fest
+              en: solid
+            liquid:
+              de: flüssig
+              en: liquid
+            gas:
+              de: gasförmig
+              en: gaseous
+            solidText:
+              de: Die Teilchen sitzen dicht an dicht und schwingen an ihrem Platz.
+              en: The particles sit close together and vibrate in place.
+            liquidText:
+              de: Die Teilchen sind dicht beieinander und wechseln ihre Plätze.
+              en: The particles are close together and change places.
+            gasText:
+              de: Die Teilchen sind weit auseinander und bewegen sich frei.
+              en: The particles are far apart and move freely.
+        nojs:
+          de: |
+            Ein Kasten mit 30 Teilchen und ein Regler für die Temperatur. Bei niedriger Temperatur (fest) sitzen die Teilchen dicht an dicht und schwingen an ihrem Platz. Bei mittlerer Temperatur (flüssig) sind sie dicht beieinander und wechseln ihre Plätze. Bei hoher Temperatur (gasförmig) sind sie weit auseinander und bewegen sich frei durch den ganzen Kasten.
+          en: |
+            A box with 30 particles and a slider for the temperature. At a low temperature (solid) the particles sit close together and vibrate in place. At a medium temperature (liquid) they are close together and change places. At a high temperature (gaseous) they are far apart and move freely through the whole box.
   - type: section
     id: uebung
-    title: Übung
+    title:
+      de: Übung
+      en: Practice
     blocks:
       - type: matching
         id: zustand-beschreibung
-        text: Ordne jedem Zustand die passende Beschreibung im Teilchenmodell zu.
+        text:
+          de: Ordne jedem Zustand die passende Beschreibung im Teilchenmodell zu.
+          en: Match each state with the fitting description in the particle model.
         pairs:
-          - { left: fest, right: "Teilchen dicht an dicht, schwingen an ihrem Platz" }
-          - { left: flüssig, right: "Teilchen dicht beieinander, wechseln ihre Plätze" }
-          - { left: gasförmig, right: "Teilchen weit auseinander, frei beweglich" }
-        explanation: Je höher die Temperatur, desto beweglicher die Teilchen. Im festen Zustand haben sie feste Plätze, im flüssigen wechseln sie die Plätze, im gasförmigen fliegen sie frei.
-        links:
-          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }
+          - left:
+              de: fest
+              en: solid
+            right:
+              de: Teilchen dicht an dicht, schwingen an ihrem Platz
+              en: particles close together, vibrate in place
+          - left:
+              de: flüssig
+              en: liquid
+            right:
+              de: Teilchen dicht beieinander, wechseln ihre Plätze
+              en: particles close together, change places
+          - left:
+              de: gasförmig
+              en: gaseous
+            right:
+              de: Teilchen weit auseinander, frei beweglich
+              en: particles far apart, free to move
+        explanation:
+          de: Je höher die Temperatur, desto beweglicher die Teilchen. Im festen Zustand haben sie feste Plätze, im flüssigen wechseln sie die Plätze, im gasförmigen fliegen sie frei.
+          en: The higher the temperature, the more mobile the particles. In the solid state they have fixed places, in the liquid state they change places, in the gaseous state they fly freely.
+        links: &a1
+          - title:
+              de: Aggregatzustand (Wikipedia)
+              en: State of matter (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Aggregatzustand
       - type: single-choice
         id: wasser-fliesst
-        text: Warum fließt Wasser?
+        text:
+          de: Warum fließt Wasser?
+          en: Why does water flow?
         options:
-          - text: Die Teilchen sind dicht beieinander, wechseln aber ihre Plätze.
+          - text:
+              de: Die Teilchen sind dicht beieinander, wechseln aber ihre Plätze.
+              en: The particles are close together but change places.
             correct: true
-            info: In einer Flüssigkeit berühren sich die Teilchen, können aber aneinander vorbeigleiten. Darum fließt sie.
-          - text: Die Teilchen sitzen fest an einem Platz.
+            info:
+              de: In einer Flüssigkeit berühren sich die Teilchen, können aber aneinander vorbeigleiten. Darum fließt sie.
+              en: In a liquid the particles touch but can slide past each other. That is why it flows.
+          - text:
+              de: Die Teilchen sitzen fest an einem Platz.
+              en: The particles sit fixed in one place.
             correct: false
-            info: Feste Plätze haben die Teilchen in einem festen Stoff, zum Beispiel in Eis. Darum behält Eis seine Form.
-          - text: Die Teilchen sind weit auseinander.
+            info:
+              de: Feste Plätze haben die Teilchen in einem festen Stoff, zum Beispiel in Eis. Darum behält Eis seine Form.
+              en: Particles have fixed places in a solid, for example in ice. That is why ice keeps its shape.
+          - text:
+              de: Die Teilchen sind weit auseinander.
+              en: The particles are far apart.
             correct: false
-            info: Weit auseinander sind die Teilchen in einem Gas, zum Beispiel in Wasserdampf.
-        explanation: In einer Flüssigkeit wechseln die Teilchen ihre Plätze. Deshalb nimmt sie die Form ihres Gefäßes an und fließt.
-        links:
-          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }
+            info:
+              de: Weit auseinander sind die Teilchen in einem Gas, zum Beispiel in Wasserdampf.
+              en: Particles are far apart in a gas, for example in water vapour.
+        explanation:
+          de: In einer Flüssigkeit wechseln die Teilchen ihre Plätze. Deshalb nimmt sie die Form ihres Gefäßes an und fließt.
+          en: In a liquid the particles change places. That is why it takes the shape of its container and flows.
+        links: *a1
       - type: true-false
         id: teilchen-groesser
-        text: Wenn ein Stoff erhitzt wird, werden seine Teilchen größer.
+        text:
+          de: Wenn ein Stoff erhitzt wird, werden seine Teilchen größer.
+          en: When a substance is heated, its particles get bigger.
         answer: false
-        explanation: Die Teilchen bleiben gleich groß. Sie bewegen sich nur schneller und brauchen deshalb oft mehr Platz.
-        links:
-          - { title: Aggregatzustand (Wikipedia), url: "https://de.wikipedia.org/wiki/Aggregatzustand" }
+        explanation:
+          de: Die Teilchen bleiben gleich groß. Sie bewegen sich nur schneller und brauchen deshalb oft mehr Platz.
+          en: The particles stay the same size. They only move faster and therefore often need more room.
+        links: *a1

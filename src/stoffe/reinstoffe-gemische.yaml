@@ -1,74 +1,146 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Reinstoffe und Gemische
-description: Reinstoffe bestehen aus einer einzigen Stoffart, Gemische aus mehreren. So erkennst du den Unterschied.
+title:
+  de: Reinstoffe und Gemische
+  en: Pure substances and mixtures
+description:
+  de: Reinstoffe bestehen aus einer einzigen Stoffart, Gemische aus mehreren. So erkennst du den Unterschied.
+  en: Pure substances consist of a single kind of substance, mixtures of several. This is how you tell them apart.
 blocks:
   - type: section
     id: warum
-    title: Warum
+    title:
+      de: Warum
+      en: Why
     blocks:
       - type: text
-        text: |
-          Fast alles um dich herum ist ein Stoff: Wasser, Luft, Metall, Milch. Wer Stoffe ordnen will, fragt zuerst:
-          Ist das eine einzige Stoffart oder sind mehrere gemischt?
+        text:
+          de: |
+            Fast alles um dich herum ist ein Stoff: Wasser, Luft, Metall, Milch. Wer Stoffe ordnen will, fragt zuerst: Ist das eine einzige Stoffart oder sind mehrere gemischt?
+          en: |
+            Almost everything around you is a substance: water, air, metal, milk. To sort substances, first ask: is this a single kind of substance, or are several mixed together?
   - type: section
     id: regel
-    title: Regel
+    title:
+      de: Regel
+      en: Rule
     blocks:
       - type: definition
-        term: Reinstoff
-        explanation: Ein Reinstoff besteht nur aus einer Stoffart, zum Beispiel reines Wasser oder reiner Sauerstoff.
+        term:
+          de: Reinstoff
+          en: Pure substance
+        explanation:
+          de: Ein Reinstoff besteht nur aus einer Stoffart, zum Beispiel reines Wasser oder reiner Sauerstoff.
+          en: A pure substance consists of only one kind of substance, for example pure water or pure oxygen.
       - type: definition
-        term: Gemisch
-        explanation: Ein Gemisch besteht aus mehreren Stoffen, zum Beispiel Luft, Milch oder Granit.
+        term:
+          de: Gemisch
+          en: Mixture
+        explanation:
+          de: Ein Gemisch besteht aus mehreren Stoffen, zum Beispiel Luft, Milch oder Granit.
+          en: A mixture consists of several substances, for example air, milk or granite.
       - type: text
-        text: |
-          Ein Reinstoff hat immer dieselben Eigenschaften, zum Beispiel einen festen Siedepunkt. Die Stoffe eines
-          Gemischs lassen sich oft ohne chemische Reaktion wieder trennen, etwa durch Filtern oder Verdampfen.
+        text:
+          de: |
+            Ein Reinstoff hat immer dieselben Eigenschaften, zum Beispiel einen festen Siedepunkt. Die Stoffe eines Gemischs lassen sich oft ohne chemische Reaktion wieder trennen, etwa durch Filtern oder Verdampfen.
+          en: |
+            A pure substance always has the same properties, for example a fixed boiling point. The substances in a mixture can often be separated again without a chemical reaction, for example by filtering or evaporating.
       - type: table
-        caption: Reinstoffe und Gemische im Vergleich
-        header: [Merkmal, Reinstoff, Gemisch]
+        caption:
+          de: Reinstoffe und Gemische im Vergleich
+          en: Pure substances and mixtures compared
+        header:
+          - de: Merkmal
+            en: Feature
+          - de: Reinstoff
+            en: Pure substance
+          - de: Gemisch
+            en: Mixture
         rowHeaders: true
         rows:
-          - [Bestandteile, eine Stoffart, mehrere Stoffe]
-          - [Beispiele, "reines Wasser, Sauerstoff, Kochsalz", "Luft, Milch, Granit"]
+          - - de: Bestandteile
+              en: Ingredients
+            - de: eine Stoffart
+              en: one kind of substance
+            - de: mehrere Stoffe
+              en: several substances
+          - - de: Beispiele
+              en: Examples
+            - de: reines Wasser, Sauerstoff, Kochsalz
+              en: pure water, oxygen, table salt
+            - de: Luft, Milch, Granit
+              en: air, milk, granite
   - type: section
     id: beispiel
-    title: Beispiel
+    title:
+      de: Beispiel
+      en: Example
     blocks:
       - type: example
-        title: Ist Luft ein Reinstoff?
+        title:
+          de: Ist Luft ein Reinstoff?
+          en: Is air a pure substance?
         blocks:
           - type: text
-            text: |
-              Luft besteht vor allem aus Stickstoff und Sauerstoff, dazu kommen weitere Gase. Es sind also mehrere
-              Stoffe gemischt. Luft ist deshalb ein **Gemisch**, kein Reinstoff.
+            text:
+              de: |
+                Luft besteht vor allem aus Stickstoff und Sauerstoff, dazu kommen weitere Gase. Es sind also mehrere Stoffe gemischt. Luft ist deshalb ein **Gemisch**, kein Reinstoff.
+              en: |
+                Air consists mainly of nitrogen and oxygen, plus other gases. So several substances are mixed. Air is therefore a **mixture**, not a pure substance.
   - type: section
     id: uebung
-    title: Übung
+    title:
+      de: Übung
+      en: Practice
     blocks:
       - type: multiple-choice
         id: gemische-finden
-        text: Welche dieser Stoffe sind Gemische?
+        text:
+          de: Welche dieser Stoffe sind Gemische?
+          en: Which of these substances are mixtures?
         options:
-          - text: Luft
+          - text:
+              de: Luft
+              en: air
             correct: true
-            info: Luft besteht aus Stickstoff, Sauerstoff und weiteren Gasen. Es sind mehrere Stoffe gemischt.
-          - text: Milch
+            info:
+              de: Luft besteht aus Stickstoff, Sauerstoff und weiteren Gasen. Es sind mehrere Stoffe gemischt.
+              en: Air consists of nitrogen, oxygen and other gases. Several substances are mixed.
+          - text:
+              de: Milch
+              en: milk
             correct: true
-            info: Milch enthält unter anderem Wasser, Fette und Eiweiße. Sie ist ein Gemisch.
-          - text: reines Wasser
+            info:
+              de: Milch enthält unter anderem Wasser, Fette und Eiweiße. Sie ist ein Gemisch.
+              en: Milk contains water, fats and proteins, among other things. It is a mixture.
+          - text:
+              de: reines Wasser
+              en: pure water
             correct: false
-            info: Reines (destilliertes) Wasser besteht nur aus Wasser. Es ist ein Reinstoff.
-          - text: reiner Sauerstoff
+            info:
+              de: Reines (destilliertes) Wasser besteht nur aus Wasser. Es ist ein Reinstoff.
+              en: Pure (distilled) water consists only of water. It is a pure substance.
+          - text:
+              de: reiner Sauerstoff
+              en: pure oxygen
             correct: false
-            info: Reiner Sauerstoff besteht nur aus einer Stoffart. Er ist ein Reinstoff.
-        explanation: Gemische bestehen aus mehreren Stoffen. Luft und Milch sind Gemische, reines Wasser und reiner Sauerstoff sind Reinstoffe.
-        links:
-          - { title: Reinstoff (Wikipedia), url: "https://de.wikipedia.org/wiki/Reinstoff" }
+            info:
+              de: Reiner Sauerstoff besteht nur aus einer Stoffart. Er ist ein Reinstoff.
+              en: Pure oxygen consists of only one kind of substance. It is a pure substance.
+        explanation:
+          de: Gemische bestehen aus mehreren Stoffen. Luft und Milch sind Gemische, reines Wasser und reiner Sauerstoff sind Reinstoffe.
+          en: Mixtures consist of several substances. Air and milk are mixtures; pure water and pure oxygen are pure substances.
+        links: &a1
+          - title:
+              de: Reinstoff (Wikipedia)
+              en: Pure substance (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reinstoff
       - type: true-false
         id: salzwasser-reinstoff
-        text: Salzwasser ist ein Reinstoff.
+        text:
+          de: Salzwasser ist ein Reinstoff.
+          en: Salt water is a pure substance.
         answer: false
-        explanation: Salzwasser besteht aus Wasser und Salz. Es sind zwei Stoffe gemischt, also ein Gemisch. Durch Verdampfen des Wassers bleibt das Salz zurück.
-        links:
-          - { title: Reinstoff (Wikipedia), url: "https://de.wikipedia.org/wiki/Reinstoff" }
+        explanation:
+          de: Salzwasser besteht aus Wasser und Salz. Es sind zwei Stoffe gemischt, also ein Gemisch. Durch Verdampfen des Wassers bleibt das Salz zurück.
+          en: Salt water consists of water and salt. Two substances are mixed, so it is a mixture. If the water evaporates, the salt stays behind.
+        links: *a1

@@ -4,6 +4,7 @@ import { MAXIMUM, check, describe, generate, reason, shells, type Answer } from 
 
 const props = defineProps<{
   seed: number;
+  language: string;
   labels: {
     protons: string;
     neutrons: string;
@@ -18,7 +19,7 @@ const props = defineProps<{
 const emit = defineEmits<{ answered: [result: { correct: boolean; reason?: string }] }>();
 
 const task = computed(() => generate(props.seed));
-const text = computed(() => describe(task.value).task);
+const text = computed(() => describe(task.value, props, props.language).task);
 const answer = ref<Answer>({ protons: 0, neutrons: 0, electrons: 0 });
 const feedback = ref("");
 
@@ -59,7 +60,9 @@ function nucleusPlaces(total: number, offset: number) {
 
 function verify() {
   const correct = check(task.value, answer.value);
-  feedback.value = correct ? props.labels.right : reason(task.value, answer.value);
+  feedback.value = correct
+    ? props.labels.right
+    : reason(task.value, answer.value, props.language === "en" ? "en" : "de");
   emit("answered", correct ? { correct } : { correct, reason: feedback.value });
 }
 </script>

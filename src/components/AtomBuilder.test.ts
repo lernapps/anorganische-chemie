@@ -14,7 +14,7 @@ import {
 describe("generate", () => {
   it("gives the same element for the same seed and a new one for each of the first ten", () => {
     expect(generate(3)).toEqual(generate(3));
-    const names = new Set(Array.from({ length: 10 }, (_, i) => generate(i + 1).name));
+    const names = new Set(Array.from({ length: 10 }, (_, i) => generate(i + 1).name.de));
     expect(names.size).toBe(10);
   });
 });
@@ -23,22 +23,23 @@ describe("check", () => {
   const carbon = generate(6);
 
   it("accepts the neutral atom with the right counts", () => {
-    expect(carbon.name).toBe("Kohlenstoff");
+    expect(carbon.name.de).toBe("Kohlenstoff");
+    expect(carbon.name.en).toBe("Carbon");
     expect(check(carbon, { protons: 6, neutrons: 6, electrons: 6 })).toBe(true);
     expect(check(carbon, solution(carbon))).toBe(true);
   });
 
   it("rejects the typical mistakes, each with its reason", () => {
     expect(check(carbon, { protons: 6, neutrons: 6, electrons: 7 })).toBe(false);
-    expect(reason(carbon, { protons: 6, neutrons: 6, electrons: 7 })).toContain("neutral");
+    expect(reason(carbon, { protons: 6, neutrons: 6, electrons: 7 }, "de")).toContain("neutral");
     expect(check(carbon, { protons: 6, neutrons: 12, electrons: 6 })).toBe(false);
-    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 })).toContain("12 − 6 = 6");
-    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 })).toContain("6 Protonen");
+    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 }, "de")).toContain("12 − 6 = 6");
+    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 }, "de")).toContain("6 Protonen");
     expect(check(carbon, wrong(carbon))).toBe(false);
   });
 
   it("has no reason for a right answer", () => {
-    expect(reason(carbon, solution(carbon))).toBe("");
+    expect(reason(carbon, solution(carbon), "de")).toBe("");
   });
 });
 
@@ -59,9 +60,14 @@ describe("shells", () => {
 
 describe("describe and about", () => {
   it("states the task and the solution for a seed", () => {
-    const described = describeTask(generate(2));
+    const described = describeTask(generate(2), {}, "de");
     expect(described.task).toContain("Helium");
     expect(described.solution).toContain("2 Protonen, 2 Neutronen und 2 Elektronen");
+    const english = describeTask(generate(6), {}, "en");
+    expect(english.task).toContain("Carbon");
+    expect(english.solution).toBe("Carbon has 6 protons, 6 neutrons and 6 electrons.");
+    expect(reason(generate(6), { protons: 6, neutrons: 6, electrons: 7 }, "en")).toContain("neutral");
     expect(about.mistakes.length).toBeGreaterThan(0);
+    expect(about.task.en).not.toBe("");
   });
 });

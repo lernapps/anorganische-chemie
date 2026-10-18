@@ -1,4 +1,10 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Teilchenmodell und Atombau
-summary: Du erklärst mit dem Teilchenmodell, warum Stoffe fest, flüssig oder gasförmig sind, und baust Atome.
-pages: [teilchenmodell, atombau]
+title:
+  de: Teilchenmodell und Atombau
+  en: Particle model and atomic structure
+summary:
+  de: Du erklärst mit dem Teilchenmodell, warum Stoffe fest, flüssig oder gasförmig sind, und baust Atome.
+  en: You use the particle model to explain why substances are solid, liquid or gaseous, and you build atoms.
+pages:
+  - teilchenmodell
+  - atombau

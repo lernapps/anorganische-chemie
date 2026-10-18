@@ -2,12 +2,75 @@
 # Reinstoffe bei 1013 hPa. Temperaturen in °C, gerundet. Quelle: de.wikipedia.org, Infobox der Artikel
 # Wasser, Eisen, Kupfer, Aluminium, Natriumchlorid, Ethanol, Sauerstoff, Quecksilber, Stickstoff (am 2026-10-18 geöffnet).
 # Siedetemperatur der Elemente aus den Kelvin-Werten umgerechnet (K − 273,15).
-- { name: Wasser, zustand: flüssig, schmelz: 0, siede: 100 }
-- { name: Eisen, zustand: fest, schmelz: 1539, siede: 3070 }
-- { name: Kupfer, zustand: fest, schmelz: 1085, siede: 2595 }
-- { name: Aluminium, zustand: fest, schmelz: 660, siede: 2470 }
-- { name: Kochsalz (Natriumchlorid), zustand: fest, schmelz: 801, siede: 1461 }
-- { name: Ethanol, zustand: flüssig, schmelz: -115, siede: 78 }
-- { name: Sauerstoff, zustand: gasförmig, schmelz: -218, siede: -183 }
-- { name: Quecksilber, zustand: flüssig, schmelz: -39, siede: 357 }
-- { name: Stickstoff, zustand: gasförmig, schmelz: -210, siede: -196 }
+- name:
+    de: Wasser
+    en: Water
+  zustand:
+    de: flüssig
+    en: liquid
+  schmelz: 0
+  siede: 100
+- name:
+    de: Eisen
+    en: Iron
+  zustand:
+    de: fest
+    en: solid
+  schmelz: 1539
+  siede: 3070
+- name:
+    de: Kupfer
+    en: Copper
+  zustand:
+    de: fest
+    en: solid
+  schmelz: 1085
+  siede: 2595
+- name:
+    de: Aluminium
+    en: Aluminium
+  zustand:
+    de: fest
+    en: solid
+  schmelz: 660
+  siede: 2470
+- name:
+    de: Kochsalz (Natriumchlorid)
+    en: Table salt (sodium chloride)
+  zustand:
+    de: fest
+    en: solid
+  schmelz: 801
+  siede: 1461
+- name:
+    de: Ethanol
+    en: Ethanol
+  zustand:
+    de: flüssig
+    en: liquid
+  schmelz: -115
+  siede: 78
+- name:
+    de: Sauerstoff
+    en: Oxygen
+  zustand:
+    de: gasförmig
+    en: gaseous
+  schmelz: -218
+  siede: -183
+- name:
+    de: Quecksilber
+    en: Mercury
+  zustand:
+    de: flüssig
+    en: liquid
+  schmelz: -39
+  siede: 357
+- name:
+    de: Stickstoff
+    en: Nitrogen
+  zustand:
+    de: gasförmig
+    en: gaseous
+  schmelz: -210
+  siede: -196

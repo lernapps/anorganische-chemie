@@ -1,100 +1,199 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Atombau
-description: "Atome bestehen aus Protonen, Neutronen und Elektronen. So baust du ein Atom."
+title:
+  de: Atombau
+  en: Atomic structure
+description:
+  de: Atome bestehen aus Protonen, Neutronen und Elektronen. So baust du ein Atom.
+  en: Atoms consist of protons, neutrons and electrons. This is how you build an atom.
 blocks:
   - type: section
     id: warum
-    title: Warum
+    title:
+      de: Warum
+      en: Why
     blocks:
       - type: text
-        text: |
-          Alle Stoffe bestehen aus Atomen. Wer weiß, wie ein Atom gebaut ist, kann erklären, warum sich Elemente
-          unterscheiden und wie das Periodensystem geordnet ist.
+        text:
+          de: |
+            Alle Stoffe bestehen aus Atomen. Wer weiß, wie ein Atom gebaut ist, kann erklären, warum sich Elemente unterscheiden und wie das Periodensystem geordnet ist.
+          en: |
+            All substances consist of atoms. If you know how an atom is built, you can explain why elements differ and how the periodic table is ordered.
   - type: section
     id: regel
-    title: Regel
+    title:
+      de: Regel
+      en: Rule
     blocks:
       - type: definition
-        term: Atomkern
-        explanation: Der Atomkern liegt in der Mitte des Atoms. Er besteht aus Protonen und Neutronen.
+        term:
+          de: Atomkern
+          en: Nucleus
+        explanation:
+          de: Der Atomkern liegt in der Mitte des Atoms. Er besteht aus Protonen und Neutronen.
+          en: The nucleus is in the centre of the atom. It consists of protons and neutrons.
       - type: definition
-        term: Proton
-        explanation: Ein Proton ist ein Teilchen im Atomkern mit einer positiven Ladung.
+        term:
+          de: Proton
+          en: Proton
+        explanation:
+          de: Ein Proton ist ein Teilchen im Atomkern mit einer positiven Ladung.
+          en: A proton is a particle in the nucleus with a positive charge.
       - type: definition
-        term: Neutron
-        explanation: Ein Neutron ist ein Teilchen im Atomkern ohne Ladung.
+        term:
+          de: Neutron
+          en: Neutron
+        explanation:
+          de: Ein Neutron ist ein Teilchen im Atomkern ohne Ladung.
+          en: A neutron is a particle in the nucleus with no charge.
       - type: definition
-        term: Elektron
-        explanation: Ein Elektron ist ein Teilchen in der Atomhülle mit einer negativen Ladung.
+        term:
+          de: Elektron
+          en: Electron
+        explanation:
+          de: Ein Elektron ist ein Teilchen in der Atomhülle mit einer negativen Ladung.
+          en: An electron is a particle in the electron shell with a negative charge.
       - type: definition
-        term: Ordnungszahl
-        explanation: Die Ordnungszahl sagt, wie viele Protonen ein Atom hat. Jedes Element hat seine eigene Ordnungszahl.
+        term:
+          de: Ordnungszahl
+          en: Atomic number
+        explanation:
+          de: Die Ordnungszahl sagt, wie viele Protonen ein Atom hat. Jedes Element hat seine eigene Ordnungszahl.
+          en: The atomic number tells how many protons an atom has. Every element has its own atomic number.
       - type: definition
-        term: Massenzahl
-        explanation: Die Massenzahl ist die Zahl der Protonen und Neutronen zusammen.
+        term:
+          de: Massenzahl
+          en: Mass number
+        explanation:
+          de: Die Massenzahl ist die Zahl der Protonen und Neutronen zusammen.
+          en: The mass number is the number of protons and neutrons together.
       - type: text
-        text: |
-          Ein Atom ist nach außen neutral: Es hat **gleich viele Protonen und Elektronen**. Die Elektronen bewegen
-          sich auf Schalen um den Kern. Die erste Schale (K) nimmt höchstens 2 Elektronen auf, die zweite (L) und die
-          dritte (M) bis zu 8.
+        text:
+          de: |
+            Ein Atom ist nach außen neutral: Es hat **gleich viele Protonen und Elektronen**. Die Elektronen bewegen sich auf Schalen um den Kern. Die erste Schale (K) nimmt höchstens 2 Elektronen auf, die zweite (L) und die dritte (M) bis zu 8.
+          en: |
+            An atom is neutral from the outside: it has **as many protons as electrons**. The electrons move on shells around the nucleus. The first shell (K) holds at most 2 electrons, the second (L) and the third (M) up to 8.
       - type: formula
-        formula: "A = Z + N"
+        formula: A = Z + N
       - type: text
-        text: Dabei ist $A$ die Massenzahl, $Z$ die Ordnungszahl (Protonenzahl) und $N$ die Neutronenzahl.
+        text:
+          de: |
+            Dabei ist $A$ die Massenzahl, $Z$ die Ordnungszahl (Protonenzahl) und $N$ die Neutronenzahl.
+          en: |
+            Here $A$ is the mass number, $Z$ the atomic number (number of protons) and $N$ the number of neutrons.
   - type: section
     id: beispiel
-    title: Beispiel
+    title:
+      de: Beispiel
+      en: Example
     blocks:
       - type: example
-        title: Das Atom von Kohlenstoff
+        title:
+          de: Das Atom von Kohlenstoff
+          en: The carbon atom
         blocks:
           - type: table
-            caption: Bausteine eines Kohlenstoff-Atoms (C)
+            caption:
+              de: Bausteine eines Kohlenstoff-Atoms (C)
+              en: Building blocks of a carbon atom (C)
             rowHeaders: true
             rows:
-              - [Protonen, "6 (die Ordnungszahl)"]
-              - [Neutronen, "6 (12 − 6)"]
-              - [Elektronen, "6 (gleich viele wie Protonen)"]
-              - [Schalen, "K: 2, L: 4"]
+              - - de: Protonen
+                  en: Protons
+                - de: 6 (die Ordnungszahl)
+                  en: 6 (the atomic number)
+              - - de: Neutronen
+                  en: Neutrons
+                - de: 6 (12 − 6)
+                  en: 6 (12 − 6)
+              - - de: Elektronen
+                  en: Electrons
+                - de: 6 (gleich viele wie Protonen)
+                  en: 6 (as many as protons)
+              - - de: Schalen
+                  en: Shells
+                - de: "K: 2, L: 4"
+                  en: "K: 2, L: 4"
   - type: section
     id: uebung
-    title: Übung
+    title:
+      de: Übung
+      en: Practice
     blocks:
       - type: vue-component
         component: AtomBuilder
         id: atom-bauen
         props:
+          language:
+            de: de
+            en: en
           labels:
-            protons: Protonen
-            neutrons: Neutronen
-            electrons: Elektronen
-            check: Prüfen
-            more: eins mehr
-            fewer: eins weniger
-            right: Richtig, das Atom ist neutral und hat die richtige Zahl an Neutronen.
+            protons:
+              de: Protonen
+              en: Protons
+            neutrons:
+              de: Neutronen
+              en: Neutrons
+            electrons:
+              de: Elektronen
+              en: Electrons
+            check:
+              de: Prüfen
+              en: Check
+            more:
+              de: eins mehr
+              en: one more
+            fewer:
+              de: eins weniger
+              en: one fewer
+            right:
+              de: Richtig, das Atom ist neutral und hat die richtige Zahl an Neutronen.
+              en: Correct, the atom is neutral and has the right number of neutrons.
         examples:
           accepted:
-            - { seed: 6, answer: { protons: 6, neutrons: 6, electrons: 6 } }
+            - seed: 6
+              answer:
+                protons: 6
+                neutrons: 6
+                electrons: 6
           rejected:
-            - { seed: 6, answer: { protons: 6, neutrons: 6, electrons: 7 } }
-            - { seed: 6, answer: { protons: 6, neutrons: 12, electrons: 6 } }
+            - seed: 6
+              answer:
+                protons: 6
+                neutrons: 6
+                electrons: 7
+            - seed: 6
+              answer:
+                protons: 6
+                neutrons: 12
+                electrons: 6
       - type: generated
         id: neutronen-berechnen
         given:
-          e: { pick: 1, from: { data: elemente } }
+          e:
+            pick: 1
+            from:
+              data: elemente
         task:
-          text: "Wie viele Neutronen hat ein Atom {{e.name}} mit der Massenzahl {{e.massenzahl}} und der Ordnungszahl {{e.ordnungszahl}}?"
-        answer: { value: "e.massenzahl - e.ordnungszahl", compare: number }
+          text:
+            de: Wie viele Neutronen hat ein Atom {{e.name}} mit der Massenzahl {{e.massenzahl}} und der Ordnungszahl {{e.ordnungszahl}}?
+            en: How many neutrons does an atom of {{e.name}} have with mass number {{e.massenzahl}} and atomic number {{e.ordnungszahl}}?
+        answer:
+          value: e.massenzahl - e.ordnungszahl
+          compare: number
         mistakes:
-          - {
-              value: "e.massenzahl",
-              message: "Das ist die Massenzahl. Sie zählt Protonen und Neutronen zusammen. Ziehe die Protonen ab.",
-            }
-          - {
-              value: "e.massenzahl + e.ordnungszahl",
-              message: "Du hast die Protonen dazugezählt. Du musst sie abziehen: Neutronen = Massenzahl − Ordnungszahl.",
-            }
-        hint: "Neutronen = Massenzahl minus Ordnungszahl."
+          - value: e.massenzahl
+            message:
+              de: Das ist die Massenzahl. Sie zählt Protonen und Neutronen zusammen. Ziehe die Protonen ab.
+              en: That is the mass number. It counts protons and neutrons together. Subtract the protons.
+          - value: e.massenzahl + e.ordnungszahl
+            message:
+              de: "Du hast die Protonen dazugezählt. Du musst sie abziehen: Neutronen = Massenzahl − Ordnungszahl."
+              en: "You added the protons. You have to subtract them: neutrons = mass number − atomic number."
+        hint:
+          de: Neutronen = Massenzahl minus Ordnungszahl.
+          en: Neutrons = mass number minus atomic number.
         steps:
-          - "$N = A - Z$"
-          - "$N = {{e.massenzahl}} - {{e.ordnungszahl}} = {{answer}}$"
+          - de: $N = A - Z$
+            en: $N = A - Z$
+          - de: $N = {{e.massenzahl}} - {{e.ordnungszahl}} = {{answer}}$
+            en: $N = {{e.massenzahl}} - {{e.ordnungszahl}} = {{answer}}$

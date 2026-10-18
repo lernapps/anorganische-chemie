@@ -4,8 +4,10 @@ export interface Answer {
   electrons: number;
 }
 
+export type Language = "de" | "en";
+
 export interface Task {
-  name: string;
+  name: Record<Language, string>;
   symbol: string;
   protons: number;
   massNumber: number;
@@ -13,16 +15,16 @@ export interface Task {
 
 /** The elements 1 to 10 with the mass number of their most common isotope (Wikipedia, infobox of each element). */
 const ELEMENTS: readonly Task[] = [
-  { name: "Wasserstoff", symbol: "H", protons: 1, massNumber: 1 },
-  { name: "Helium", symbol: "He", protons: 2, massNumber: 4 },
-  { name: "Lithium", symbol: "Li", protons: 3, massNumber: 7 },
-  { name: "Beryllium", symbol: "Be", protons: 4, massNumber: 9 },
-  { name: "Bor", symbol: "B", protons: 5, massNumber: 11 },
-  { name: "Kohlenstoff", symbol: "C", protons: 6, massNumber: 12 },
-  { name: "Stickstoff", symbol: "N", protons: 7, massNumber: 14 },
-  { name: "Sauerstoff", symbol: "O", protons: 8, massNumber: 16 },
-  { name: "Fluor", symbol: "F", protons: 9, massNumber: 19 },
-  { name: "Neon", symbol: "Ne", protons: 10, massNumber: 20 },
+  { name: { de: "Wasserstoff", en: "Hydrogen" }, symbol: "H", protons: 1, massNumber: 1 },
+  { name: { de: "Helium", en: "Helium" }, symbol: "He", protons: 2, massNumber: 4 },
+  { name: { de: "Lithium", en: "Lithium" }, symbol: "Li", protons: 3, massNumber: 7 },
+  { name: { de: "Beryllium", en: "Beryllium" }, symbol: "Be", protons: 4, massNumber: 9 },
+  { name: { de: "Bor", en: "Boron" }, symbol: "B", protons: 5, massNumber: 11 },
+  { name: { de: "Kohlenstoff", en: "Carbon" }, symbol: "C", protons: 6, massNumber: 12 },
+  { name: { de: "Stickstoff", en: "Nitrogen" }, symbol: "N", protons: 7, massNumber: 14 },
+  { name: { de: "Sauerstoff", en: "Oxygen" }, symbol: "O", protons: 8, massNumber: 16 },
+  { name: { de: "Fluor", en: "Fluorine" }, symbol: "F", protons: 9, massNumber: 19 },
+  { name: { de: "Neon", en: "Neon" }, symbol: "Ne", protons: 10, massNumber: 20 },
 ];
 
 /** How many particles of each kind a learner may set at most. */
@@ -52,15 +54,23 @@ export function wrong(task: Task): Answer {
 }
 
 /** Why an answer is wrong, the most specific reason first; empty when it is right. */
-export function reason(task: Task, answer: Answer): string {
+export function reason(task: Task, answer: Answer, language: Language): string {
   if (check(task, answer)) return "";
+  const name = task.name[language];
   if (answer.protons !== task.protons) {
-    return `Die Protonenzahl ist die Ordnungszahl. ${task.name} hat ${task.protons} Protonen.`;
+    return language === "en"
+      ? `The number of protons is the atomic number. ${name} has ${task.protons} protons.`
+      : `Die Protonenzahl ist die Ordnungszahl. ${name} hat ${task.protons} Protonen.`;
   }
   if (answer.electrons !== answer.protons) {
-    return "Ein Atom ist neutral: Es hat gleich viele Elektronen wie Protonen.";
+    return language === "en"
+      ? "An atom is neutral: it has as many electrons as protons."
+      : "Ein Atom ist neutral: Es hat gleich viele Elektronen wie Protonen.";
   }
-  return `Die Neutronenzahl ist die Massenzahl minus die Protonenzahl: ${task.massNumber} − ${task.protons} = ${neutronsOf(task)}.`;
+  const sum = `${task.massNumber} − ${task.protons} = ${neutronsOf(task)}`;
+  return language === "en"
+    ? `The number of neutrons is the mass number minus the number of protons: ${sum}.`
+    : `Die Neutronenzahl ist die Massenzahl minus die Protonenzahl: ${sum}.`;
 }
 
 /** How the electrons fill the shells K, L, M and N: 2, 8, 8, then 2 more. */
@@ -75,21 +85,48 @@ export function shells(electrons: number): number[] {
   return counts;
 }
 
-export function describe(task: Task): { task: string; solution: string } {
-  return {
-    task: `Baue ein neutrales Atom von ${task.name} (${task.symbol}) mit der Massenzahl ${task.massNumber}. Stelle die Zahl der Protonen, Neutronen und Elektronen ein.`,
-    solution: `${task.name} hat ${task.protons} Protonen, ${neutronsOf(task)} Neutronen und ${task.protons} Elektronen.`,
-  };
+const languageOf = (lang: string): Language => (lang === "en" ? "en" : "de");
+
+export function describe(task: Task, _props: unknown, lang: string): { task: string; solution: string } {
+  const language = languageOf(lang);
+  const name = task.name[language];
+  const neutrons = neutronsOf(task);
+  return language === "en"
+    ? {
+        task: `Build a neutral atom of ${name} (${task.symbol}) with mass number ${task.massNumber}. Set the number of protons, neutrons and electrons.`,
+        solution: `${name} has ${task.protons} protons, ${neutrons} neutrons and ${task.protons} electrons.`,
+      }
+    : {
+        task: `Baue ein neutrales Atom von ${name} (${task.symbol}) mit der Massenzahl ${task.massNumber}. Stelle die Zahl der Protonen, Neutronen und Elektronen ein.`,
+        solution: `${name} hat ${task.protons} Protonen, ${neutrons} Neutronen und ${task.protons} Elektronen.`,
+      };
 }
 
 export const about = {
-  task: "Die Lernenden stellen für ein gegebenes Element mit Plus- und Minus-Tasten die Zahl der Protonen, Neutronen und Elektronen ein und prüfen ihr Atom.",
-  answer: "Drei ganze Zahlen: Protonen, Neutronen, Elektronen.",
-  correct:
-    "Die Protonenzahl ist die Ordnungszahl, die Elektronenzahl ist gleich der Protonenzahl (neutrales Atom), die Neutronenzahl ist Massenzahl minus Protonenzahl.",
+  task: {
+    de: "Die Lernenden stellen für ein gegebenes Element mit Plus- und Minus-Tasten die Zahl der Protonen, Neutronen und Elektronen ein und prüfen ihr Atom.",
+    en: "Learners set the number of protons, neutrons and electrons for a given element with plus and minus buttons and check their atom.",
+  },
+  answer: {
+    de: "Drei ganze Zahlen: Protonen, Neutronen, Elektronen.",
+    en: "Three whole numbers: protons, neutrons, electrons.",
+  },
+  correct: {
+    de: "Die Protonenzahl ist die Ordnungszahl, die Elektronenzahl ist gleich der Protonenzahl (neutrales Atom), die Neutronenzahl ist Massenzahl minus Protonenzahl.",
+    en: "The number of protons is the atomic number, the number of electrons equals the number of protons (neutral atom), the number of neutrons is the mass number minus the number of protons.",
+  },
   mistakes: [
-    "Die Elektronenzahl weicht von der Protonenzahl ab, das Atom wäre geladen.",
-    "Die Massenzahl wird als Neutronenzahl eingetragen.",
-    "Die Protonenzahl passt nicht zur Ordnungszahl des Elements.",
+    {
+      de: "Die Elektronenzahl weicht von der Protonenzahl ab, das Atom wäre geladen.",
+      en: "The number of electrons differs from the number of protons, so the atom would be charged.",
+    },
+    {
+      de: "Die Massenzahl wird als Neutronenzahl eingetragen.",
+      en: "The mass number is entered as the number of neutrons.",
+    },
+    {
+      de: "Die Protonenzahl passt nicht zur Ordnungszahl des Elements.",
+      en: "The number of protons does not match the atomic number of the element.",
+    },
   ],
 };
