@@ -212,10 +212,10 @@ fitness:
 
 ### Tasks
 
-- [ ] Only after the confirmation: in this plan's folder, `npx --yes github:lernapps/tooling#exp/compact-guidance create
+- [x] Only after the confirmation: in this plan's folder, `npx --yes github:lernapps/tooling#exp/compact-guidance create
       --archetype <archetype>`. Keeps this plan.
-- [ ] `git switch work`, then `npm install` (dependencies, git hooks). From now on: `npx lernapps check`.
-- [ ] Commit the generated app with this plan on `work`.
+- [x] `git switch work`, then `npm install` (dependencies, git hooks). From now on: `npx lernapps check`.
+- [x] Commit the generated app with this plan on `work`.
 - [ ] Load skill `lernapps-app` and the archetype's skill.
 - [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from the plan and its content method: replace
       every placeholder comment with concrete instructions (files, ids, data files, one example). Delete its top
