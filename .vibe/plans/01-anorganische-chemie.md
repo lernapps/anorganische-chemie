@@ -133,6 +133,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Ersteller: "Ich bin Oliver (@mrsimpson)"
 - Pages: "Pages ist eingerichtet." (nicht per REST prüfbar, Proxy sperrt den Pfad)
 - Suchbegriffe: "Die Suchbegriffe sind sehr lang und sehr spezifisch" -> auf vier kurze gekürzt
+- Aufbau: "Wir haben auf Lernapps schon den Mathe trainer und elektrizität. Wesentlicher Teil sind dabei Übungen und auch hilfreiche Visualisierungen"
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"
