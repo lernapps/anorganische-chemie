@@ -41,9 +41,9 @@ Page and exercise ids (page file, exercise id):
   `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`).
 - `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component
   `ParticleModel`); `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
-- `periodensystem`: `periodensystem-lesen.yaml` (`ordnungszahl-ablesen`, `periode-bestimmen`); `hauptgruppen.yaml`
-  (`gruppe-name`, `aussenelektronen`, `hauptgruppe-bestimmen`); `metalle-nichtmetalle.yaml` (`metall-oder-nichtmetall`,
-  `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
+- `periodensystem`: `periodensystem-lesen.yaml` (`element-finden`, `periode-bedeutung`); `hauptgruppen.yaml`
+  (`hauptgruppe-finden`, `hauptgruppe-brom`); `metalle-nichtmetalle.yaml` (`art-finden`, `metalle-fest`,
+  `metall-eigenschaft`, `bor-halbmetall`).
 - `reaktionen`: `symbole-formeln.yaml` (`symbol-zuordnen`, `atome-ammoniak`, `atome-methan`); `reaktionen.yaml`
   (`vorgang-art`, `atome-entstehen`, `sicheres-zeichen`); `reaktionsgleichungen.yaml` (`koeffizient-wasser`,
   `koeffizient-magnesium`, `koeffizient-ammoniak`, `koeffizient-methan`, `gleichung-schritte`).
@@ -57,8 +57,10 @@ Page and exercise ids (page file, exercise id):
 - Every page has the sections in this order and with these ids: `warum`, `regel`, `beispiel` (a box `example`),
   `uebung`. Titles: Warum, Regel, Beispiel, Übung (English: Why, Rule, Example, Practice). Every page has at least one
   exercise in `uebung`.
-- Exception: `src/periodensystem/hauptgruppen.yaml` has a second section `entdecken` (after `warum`) with the component
-  `PeriodicTable`; its static table of the eight groups stays in `regel` as the text version.
+- Exception: the three pages of the chapter `periodensystem` have a second section `entdecken` (after `warum`) with the
+  component `PeriodicTable` (its `nojs` text is the text version) and end with the exercise component `ElementFinder`; the
+  rule text is kept to a few sentences and the definitions. Every page also needs one standard exercise (quiz type or
+  `generated`): an exercise component alone does not count as the page's exercise (build message "the page has no exercise").
 - A page explains one competency group in about 150–250 words in plain German plus figure and exercises.
 - Ids short and stable; never reuse a removed id (`explainer-stable-ids`).
 
@@ -90,10 +92,15 @@ Page and exercise ids (page file, exercise id):
   (`siedetemperatur-ordnen`: three drawn records `a`, `b`, `c` with `where` for distinct ones; a list cannot be a
   placeholder).
 - Ablesen: `generated` with `given: { e: { pick: 1, from: { data: elemente } } }` and `compare: number` or
-  `{ choice: [...] }` (`ordnungszahl-ablesen`, `periode-bestimmen`, `aussenelektronen`, `zustand-bestimmen`,
-  `metall-oder-nichtmetall`). A mistake may not equal the answer for any record, so some have none; the hint then says
-  where to look. `hauptgruppe-bestimmen` restricts the draw to groups 13–18 with `where` so that the mistake "group number
-  instead of main group" never equals the answer.
+  `{ choice: [...] }` (`zustand-bestimmen`). A mistake may not equal the answer for any record, so some have none; the hint
+  then says where to look.
+- Finden: component `ElementFinder` (exercise) on the map of the 44 elements (`element-finden`, `hauptgruppe-finden`,
+  `art-finden`): task types `name`, `number`, `position` (period and main group), `group` (tap all elements of a main group),
+  `outer` (any element with n outer electrons), `kind` (a metal or non-metal of a period). The block's prop `types` lists the types
+  the page uses; the task number picks type and element. It checks the property, not one model solution. Cells are neutral grey, so
+  the map never shows the answer. Borderline elements are never an answer. Number words avoid plural errors: the prompt says
+  "die Zahl der Außenelektronen ist n". A new task type is one more entry in `ElementFinder.ts` (case in `generate`, `taskText`,
+  `reason`), its label texts in the block's `labels`, and a test.
 - Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
 - Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
@@ -103,10 +110,12 @@ Page and exercise ids (page file, exercise id):
   every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
 - Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
   checks the property, not one model solution.
-- Entdecken: component `PeriodicTable` (not an exercise) on `src/periodensystem/hauptgruppen.yaml`, section `entdecken`: colour map
-  of the 44 elements by main group; tap an element for a profile (shell picture, common compounds, uses, one "Wusstest du?"
-  fact), tap a group in the legend to highlight it; arrow keys move between elements. All texts are props of the block (de, en),
-  and its `nojs` text lists every element with the same facts.
+- Entdecken: component `PeriodicTable` (not an exercise), section `entdecken` of the three pages of `periodensystem`: colour map
+  of the 44 elements; tap an element for a profile (shell picture, common compounds, uses, one "Wusstest du?" fact), tap a group
+  or kind in the legend to highlight it, tap a period number to highlight a row (prop `labels.periodText`), arrow keys move
+  between elements. Props: `mode` (`group` or `kind`) and `toggle` (switch between "Nach Hauptgruppe" and "Nach Art", only on
+  `metalle-nichtmetalle`), `kinds`. All texts are props of the block (de, en); its `nojs` text lists every element with the same
+  facts (grouped by kind on the kind page).
 - Visualisieren: component `ParticleModel` (not an exercise) with a temperature slider and a `nojs` text.
 - Data files `src/data/`: `stoffe.yaml` (9 pure substances: state, melting and boiling point), `elemente.yaml` (all 44
   elements of the eight main groups without the superheavy ones: Z, shells, group, main group, outer electrons, period,
@@ -119,12 +128,12 @@ Page and exercise ids (page file, exercise id):
 - Colours: Protonen rot, Neutronen grau, Elektronen blau, in all figures and components. Labels in both languages.
 - Main groups in `PeriodicTable`: one light fill per group (`COLORS` in `PeriodicTable.ts`), dark text; every cell also names its
   group in text (legend, roman numeral in the header row, accessible name), so colour is never the only signal. A new fill needs a
-  contrast of at least 7:1 with the text colour (`PeriodicTable.test.ts` checks it).
+  contrast of at least 7:1 with the text colour (`PeriodicTable.test.ts` checks it). The view by kind has three fills
+  (`KIND_COLORS`: metal blue, non-metal orange, borderline case green), same rule.
 - Teilchenmodell: component `ParticleModel` with a temperature slider and a `nojs` text, and a `table` of the three states.
   No bundled images so far; own images would go to `src/images/` with `source: eigene Arbeit` and a licence.
-- Atommodell: drawn live by the component `AtomBuilder` (nucleus, shells K–N). Periodensystem: a `table` of the main groups
-  (columns) and periods (rows) with symbol and atomic number, built from `elemente.yaml`; main group names and elements in
-  `hauptgruppen.yaml`.
+- Atommodell: drawn live by the component `AtomBuilder` (nucleus, shells K–N). Periodensystem: the component `PeriodicTable`
+  (main groups as columns, periods as rows, symbol and atomic number per cell), built from `elemente.yaml`; no static table.
 - Every figure: `alt` says what it shows, caption what to look at; works at 360 px.
 - Origin of drawings: own work, code of this repository (MIT); no third-party images.
 
@@ -168,6 +177,17 @@ Page and exercise ids (page file, exercise id):
   fails the check. Until that is fixed: write formulas in the question text with Unicode subscripts and an arrow
   (`x H₂ + O₂ → 2H₂O`), so the question stays complete inside its card. A `formula` block above the question is not used: on a phone
   it scrolls out of sight. Once #47 is fixed, use `$\ce{…}$` in the text.
+- No `scoped` styles in components. Vue then builds a shared helper chunk named `_plugin-vue_export-helper-….js`, and GitHub
+  Pages without a `.nojekyll` file does not serve files that start with an underscore: the helper gets a 404 and every component
+  silently stays on its `nojs` text (the first published version had exactly this). Component classes carry their own prefix
+  (`pt-`, `ef-`, `atom-builder`, `particle-model`) instead. After a build, `find dist -name "_*"` must print nothing; to test
+  like Pages, serve `dist` with a server that answers 404 for paths with a segment starting with `_` or `.` and check that
+  `.explainer-component[data-hydrated]` is set for every component.
+- Names of functions and variables in components must not be browser globals (`prompt`, `alert`, `location`, …): the build
+  rejects them outside `onMounted` (rule `vue-component-browser-globals`). The rule also flags a local function named `prompt`.
+- A prop with a literal-union array type must be written inline in the `defineProps` (`("a" | "b")[]`); a local alias is not accepted.
+- Exercise components emit `answered` and the page shows the feedback and the reason; the component must not show its own
+  feedback line (it appeared twice in `AtomBuilder`).
 - Every `generated` exercise sets `practice`, the sentence above its live task, naming what changes ("… mit immer neuen Elementen:",
   "… mit immer neuen Stoffen:"), in both languages. The worked tasks with solutions stay hidden with JavaScript (the template's
   default `workedTasks: without-javascript`); do not set `workedTasks: always`.

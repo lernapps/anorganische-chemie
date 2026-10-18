@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
   COLORS,
+  KIND_COLORS,
+  fillOf,
+  isHighlighted,
+  withNumber,
   EDGE_COLOR,
   GROUPS,
   TEXT_COLOR,
@@ -21,6 +25,7 @@ const profile = (symbol: string, number: number, group: number, period: number, 
   group,
   period,
   kind: "x",
+  kindId: group === 1 ? "metall" : "nichtmetall",
   shells,
   compounds: [],
   uses: [],
@@ -108,5 +113,45 @@ describe("subscript", () => {
     expect(subscript("H2O")).toBe("H₂O");
     expect(subscript("Ca3(PO4)2")).toBe("Ca₃(PO₄)₂");
     expect(subscript("NaCl")).toBe("NaCl");
+  });
+});
+
+describe("views by kind", () => {
+  it("has dark text with enough contrast on every kind fill", () => {
+    for (const fill of Object.values(KIND_COLORS)) expect(contrast(fill, TEXT_COLOR)).toBeGreaterThanOrEqual(7);
+    expect(new Set(Object.values(KIND_COLORS)).size).toBe(3);
+  });
+
+  it("colours by group or by kind", () => {
+    const sodium = profile("Na", 11, 1, 3, "2, 8, 1");
+    expect(fillOf(sodium, "group")).toBe(COLORS[0]);
+    expect(fillOf(sodium, "kind")).toBe(KIND_COLORS["metall"]);
+  });
+});
+
+describe("isHighlighted", () => {
+  const sodium = profile("Na", 11, 1, 3, "2, 8, 1");
+  const neon = profile("Ne", 10, 18, 2, "2, 8");
+
+  it("follows the chosen group in the group view and the chosen kind in the kind view", () => {
+    expect(isHighlighted(sodium, { mode: "group", group: 1 })).toBe(true);
+    expect(isHighlighted(neon, { mode: "group", group: 1 })).toBe(false);
+    expect(isHighlighted(neon, { mode: "kind", kind: "nichtmetall" })).toBe(true);
+    expect(isHighlighted(sodium, { mode: "kind", kind: "nichtmetall" })).toBe(false);
+  });
+
+  it("adds the chosen period in both views", () => {
+    expect(isHighlighted(sodium, { mode: "group", period: 3 })).toBe(true);
+    expect(isHighlighted(neon, { mode: "kind", period: 3 })).toBe(false);
+  });
+
+  it("highlights nothing when nothing is chosen", () => {
+    expect(isHighlighted(sodium, { mode: "group" })).toBe(false);
+  });
+});
+
+describe("withNumber", () => {
+  it("fills the number into every place", () => {
+    expect(withNumber("Periode {n}: {n} Schalen", 3)).toBe("Periode 3: 3 Schalen");
   });
 });
