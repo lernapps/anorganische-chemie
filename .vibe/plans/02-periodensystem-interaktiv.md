@@ -130,11 +130,11 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
       the ones you use. Commit the update alone; fix its check findings before content.
 - [x] Slice 1, Plural: "1 Proton" statt "1 Protonen" in `AtomBuilder` (Text, Begründung, Test). Commit.
 - [x] Slice 2, Karte: `PeriodicTable` mit Sicht "nach Art", Hervorheben einer Periode, Prop `mode`; Test; `nojs` bleibt vollständig. Commit.
-- [ ] Slice 3, Übung: `ElementFinder` (Logik, Test, Ansicht) mit den Aufgabentypen Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen, Art und Periode. Commit.
-- [ ] Slice 4, Seiten: `periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle` mit Karte und `ElementFinder`, kürzere Texte, Eintrags-Themen. Commit.
-- [ ] The content guide describes the app as it is now: competencies, chapters, patterns, procedure for the next
+- [x] Slice 3, Übung: `ElementFinder` (Logik, Test, Ansicht) mit den Aufgabentypen Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen, Art und Periode. Commit.
+- [x] Slice 4, Seiten: `periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle` mit Karte und `ElementFinder`, kürzere Texte, Eintrags-Themen. Commit.
+- [x] The content guide describes the app as it is now: competencies, chapters, patterns, procedure for the next
       increment (`app-content-matches`). `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` prints 0.
-- [ ] `npx lernapps check` passes.
+- [x] `npx lernapps check` passes.
 - [ ] Every box of Explore, Plan and Code ticked.
 - [ ] Set `phase: commit`: change the value line (`grep '^phase:'` prints `phase: commit`).
 

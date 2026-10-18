@@ -3,8 +3,8 @@ title:
   de: Die acht Hauptgruppen
   en: The eight main groups
 description:
-  de: Alle acht Hauptgruppen mit Namen und allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
-  en: All eight main groups with their names and all their elements. The main group tells how many electrons are in the outer shell.
+  de: Alle acht Hauptgruppen mit allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
+  en: All eight main groups with all their elements. The main group tells how many electrons are in the outer shell.
 blocks:
   - type: section
     id: warum
@@ -2232,97 +2232,12 @@ blocks:
         explanation:
           de: Die acht Hauptgruppen sind die Gruppen 1, 2 und 13 bis 18 des Periodensystems. Man nummeriert sie mit I bis VIII.
           en: The eight main groups are groups 1, 2 and 13 to 18 of the periodic table. They are numbered I to VIII.
-      - type: table
-        caption:
-          de: Die acht Hauptgruppen mit ihren Elementen (ohne die superschweren)
-          en: The eight main groups with their elements (without the superheavy ones)
-        header:
-          - de: Hauptgruppe
-            en: Main group
-          - de: Gruppe
-            en: Group
-          - de: Name
-            en: Name
-          - de: Elemente
-            en: Elements
-        rowHeaders: true
-        rows:
-          - - de: I
-              en: I
-            - de: "1"
-              en: "1"
-            - de: Alkalimetalle (und Wasserstoff)
-              en: alkali metals (and hydrogen)
-            - de: H, Li, Na, K, Rb, Cs, Fr
-              en: H, Li, Na, K, Rb, Cs, Fr
-          - - de: II
-              en: II
-            - de: "2"
-              en: "2"
-            - de: Erdalkalimetalle
-              en: alkaline earth metals
-            - de: Be, Mg, Ca, Sr, Ba, Ra
-              en: Be, Mg, Ca, Sr, Ba, Ra
-          - - de: III
-              en: III
-            - de: "13"
-              en: "13"
-            - de: Borgruppe
-              en: boron group
-            - de: B, Al, Ga, In, Tl
-              en: B, Al, Ga, In, Tl
-          - - de: IV
-              en: IV
-            - de: "14"
-              en: "14"
-            - de: Kohlenstoff-Silicium-Gruppe
-              en: carbon–silicon group
-            - de: C, Si, Ge, Sn, Pb
-              en: C, Si, Ge, Sn, Pb
-          - - de: V
-              en: V
-            - de: "15"
-              en: "15"
-            - de: Stickstoff-Phosphor-Gruppe
-              en: nitrogen–phosphorus group
-            - de: N, P, As, Sb, Bi
-              en: N, P, As, Sb, Bi
-          - - de: VI
-              en: VI
-            - de: "16"
-              en: "16"
-            - de: Chalkogene
-              en: chalcogens
-            - de: O, S, Se, Te, Po
-              en: O, S, Se, Te, Po
-          - - de: VII
-              en: VII
-            - de: "17"
-              en: "17"
-            - de: Halogene
-              en: halogens
-            - de: F, Cl, Br, I, At
-              en: F, Cl, Br, I, At
-          - - de: VIII
-              en: VIII
-            - de: "18"
-              en: "18"
-            - de: Edelgase
-              en: noble gases
-            - de: He, Ne, Ar, Kr, Xe, Rn
-              en: He, Ne, Ar, Kr, Xe, Rn
       - type: text
         text:
           de: |
-            Bei den Hauptgruppen ist die Nummer gleich der Zahl der Elektronen in der äußersten Schale, den **Außenelektronen**. Helium ist die Ausnahme: Es hat nur 2 Außenelektronen, weil seine erste Schale nicht mehr aufnehmen kann.
+            Bei den Hauptgruppen ist die Nummer gleich der Zahl der Elektronen in der äußersten Schale, den **Außenelektronen**. Helium ist die Ausnahme: Es hat nur 2. Die Gruppen 13 bis 18 sind die Hauptgruppen III bis VIII (Gruppe minus 10).
           en: |
-            For the main groups the number equals the number of electrons in the outermost shell, the **outer electrons**. Helium is the exception: it has only 2 outer electrons, because its first shell cannot hold more.
-      - type: text
-        text:
-          de: |
-            Besonders ähnlich sind sich die Elemente der Alkalimetalle, Erdalkalimetalle, Halogene und Edelgase. Die Edelgase sind geruchlos, farblos und gasförmig.
-          en: |
-            The elements of the alkali metals, alkaline earth metals, halogens and noble gases are especially similar. The noble gases are odourless, colourless and gaseous.
+            For the main groups the number equals the number of electrons in the outermost shell, the **outer electrons**. Helium is the exception: it has only 2. Groups 13 to 18 are the main groups III to VIII (group minus 10).
   - type: section
     id: beispiel
     title:
@@ -2331,115 +2246,839 @@ blocks:
     blocks:
       - type: example
         title:
-          de: Chlor in der Hauptgruppe VII
-          en: Chlorine in main group VII
+          de: Chlor
+          en: Chlorine
         blocks:
           - type: text
             text:
               de: |
-                Chlor steht in Gruppe 17, also in der Hauptgruppe VII (17 − 10 = 7). Seine Elektronen sitzen auf den Schalen 2, 8 und 7. Auf der äußersten Schale sind 7 Elektronen, genau die Nummer der Hauptgruppe. Chlor gehört zu den Halogenen.
+                Chlor steht in Gruppe 17, also in Hauptgruppe VII. Seine Elektronen sitzen auf den Schalen 2, 8 und 7: Außen sind es 7, genau die Nummer der Hauptgruppe.
               en: |
-                Chlorine is in group 17, so in main group VII (17 − 10 = 7). Its electrons sit on shells 2, 8 and 7. The outermost shell has 7 electrons, exactly the number of the main group. Chlorine is a halogen.
+                Chlorine is in group 17, so in main group VII. Its electrons sit on shells 2, 8 and 7: on the outside there are 7, exactly the number of the main group.
   - type: section
     id: uebung
     title:
       de: Übung
       en: Practice
     blocks:
-      - type: matching
-        id: gruppe-name
+      - type: vue-component
+        component: ElementFinder
+        id: hauptgruppe-finden
+        props:
+          language:
+            de: de
+            en: en
+          labels:
+            promptName:
+              de: Tippe auf {name}.
+              en: Tap {name}.
+            promptNumber:
+              de: Tippe auf das Element mit der Ordnungszahl {n}.
+              en: Tap the element with atomic number {n}.
+            promptPosition:
+              de: Tippe auf das Element in Periode {period} und Hauptgruppe {group}.
+              en: Tap the element in period {period} and main group {group}.
+            promptGroup:
+              de: Tippe auf alle Elemente der Hauptgruppe {group} ({groupName}).
+              en: Tap all elements of main group {group} ({groupName}).
+            promptOuter:
+              de: Tippe auf ein Element, bei dem die Zahl der Außenelektronen {n} ist.
+              en: Tap an element whose number of outer electrons is {n}.
+            promptKind:
+              de: Tippe auf ein {kind} der Periode {period}.
+              en: Tap a {kind} in period {period}.
+            reasonName:
+              de: Das ist {name} ({symbol}). Gesucht ist {wantedName}.
+              en: That is {name} ({symbol}). You are looking for {wantedName}.
+            reasonNumber:
+              de: "{name} hat die Ordnungszahl {n}. Gesucht ist die Ordnungszahl {wantedN}."
+              en: "{name} has atomic number {n}. You are looking for atomic number {wantedN}."
+            reasonPosition:
+              de: "{name} steht in Periode {period} und Hauptgruppe {group}. Gesucht ist Periode {wantedPeriod}, Hauptgruppe {wantedGroup}."
+              en: "{name} is in period {period} and main group {group}. You are looking for period {wantedPeriod}, main group {wantedGroup}."
+            reasonOuter:
+              de: "Zahl der Außenelektronen bei {name}: {outer}. Gesucht ist {wantedN}."
+              en: "Number of outer electrons of {name}: {outer}. You are looking for {wantedN}."
+            reasonPeriod:
+              de: "{name} steht in Periode {period}. Gesucht ist Periode {wantedPeriod}."
+              en: "{name} is in period {period}. You are looking for period {wantedPeriod}."
+            reasonKind:
+              de: "{name} ist ein {kind}. Gesucht ist ein {wantedKind}."
+              en: "{name} is a {kind}. You are looking for a {wantedKind}."
+            reasonGroup:
+              de: "Zu viel markiert: {extra}. Es fehlen: {missing}."
+              en: "Marked too many: {extra}. Missing: {missing}."
+            solutionOne:
+              de: "Richtig ist: {names}."
+              en: "The right answer is: {names}."
+            solutionSome:
+              de: "Richtig sind zum Beispiel: {names}."
+              en: "Right answers are, for example: {names}."
+            solutionAll:
+              de: "Richtig sind: {names}."
+              en: "The right answers are: {names}."
+            kindMetal:
+              de: Metall
+              en: metal
+            kindNonmetal:
+              de: Nichtmetall
+              en: non-metal
+            check:
+              de: Prüfen
+              en: Check
+            right:
+              de: Richtig!
+              en: Correct!
+          elements:
+            - symbol:
+                de: H
+                en: H
+              name:
+                de: Wasserstoff
+                en: Hydrogen
+              number: 1
+              group: 1
+              period: 1
+              outer: 1
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: &a1
+                de: Nichtmetall
+                en: non-metal
+            - symbol:
+                de: He
+                en: He
+              name:
+                de: Helium
+                en: Helium
+              number: 2
+              group: 18
+              period: 1
+              outer: 2
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Li
+                en: Li
+              name:
+                de: Lithium
+                en: Lithium
+              number: 3
+              group: 1
+              period: 2
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: &a2
+                de: Metall
+                en: metal
+            - symbol:
+                de: Be
+                en: Be
+              name:
+                de: Beryllium
+                en: Beryllium
+              number: 4
+              group: 2
+              period: 2
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: B
+                en: B
+              name:
+                de: Bor
+                en: Boron
+              number: 5
+              group: 13
+              period: 2
+              outer: 3
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: &a3
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+            - symbol:
+                de: C
+                en: C
+              name:
+                de: Kohlenstoff
+                en: Carbon
+              number: 6
+              group: 14
+              period: 2
+              outer: 4
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: N
+                en: N
+              name:
+                de: Stickstoff
+                en: Nitrogen
+              number: 7
+              group: 15
+              period: 2
+              outer: 5
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: O
+                en: O
+              name:
+                de: Sauerstoff
+                en: Oxygen
+              number: 8
+              group: 16
+              period: 2
+              outer: 6
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: F
+                en: F
+              name:
+                de: Fluor
+                en: Fluorine
+              number: 9
+              group: 17
+              period: 2
+              outer: 7
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Ne
+                en: Ne
+              name:
+                de: Neon
+                en: Neon
+              number: 10
+              group: 18
+              period: 2
+              outer: 8
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Na
+                en: Na
+              name:
+                de: Natrium
+                en: Sodium
+              number: 11
+              group: 1
+              period: 3
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Mg
+                en: Mg
+              name:
+                de: Magnesium
+                en: Magnesium
+              number: 12
+              group: 2
+              period: 3
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Al
+                en: Al
+              name:
+                de: Aluminium
+                en: Aluminium
+              number: 13
+              group: 13
+              period: 3
+              outer: 3
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Si
+                en: Si
+              name:
+                de: Silicium
+                en: Silicon
+              number: 14
+              group: 14
+              period: 3
+              outer: 4
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: P
+                en: P
+              name:
+                de: Phosphor
+                en: Phosphorus
+              number: 15
+              group: 15
+              period: 3
+              outer: 5
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: S
+                en: S
+              name:
+                de: Schwefel
+                en: Sulfur
+              number: 16
+              group: 16
+              period: 3
+              outer: 6
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Cl
+                en: Cl
+              name:
+                de: Chlor
+                en: Chlorine
+              number: 17
+              group: 17
+              period: 3
+              outer: 7
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Ar
+                en: Ar
+              name:
+                de: Argon
+                en: Argon
+              number: 18
+              group: 18
+              period: 3
+              outer: 8
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: K
+                en: K
+              name:
+                de: Kalium
+                en: Potassium
+              number: 19
+              group: 1
+              period: 4
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Ca
+                en: Ca
+              name:
+                de: Calcium
+                en: Calcium
+              number: 20
+              group: 2
+              period: 4
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Ga
+                en: Ga
+              name:
+                de: Gallium
+                en: Gallium
+              number: 31
+              group: 13
+              period: 4
+              outer: 3
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Ge
+                en: Ge
+              name:
+                de: Germanium
+                en: Germanium
+              number: 32
+              group: 14
+              period: 4
+              outer: 4
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: As
+                en: As
+              name:
+                de: Arsen
+                en: Arsenic
+              number: 33
+              group: 15
+              period: 4
+              outer: 5
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: Se
+                en: Se
+              name:
+                de: Selen
+                en: Selenium
+              number: 34
+              group: 16
+              period: 4
+              outer: 6
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: Br
+                en: Br
+              name:
+                de: Brom
+                en: Bromine
+              number: 35
+              group: 17
+              period: 4
+              outer: 7
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Kr
+                en: Kr
+              name:
+                de: Krypton
+                en: Krypton
+              number: 36
+              group: 18
+              period: 4
+              outer: 8
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Rb
+                en: Rb
+              name:
+                de: Rubidium
+                en: Rubidium
+              number: 37
+              group: 1
+              period: 5
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Sr
+                en: Sr
+              name:
+                de: Strontium
+                en: Strontium
+              number: 38
+              group: 2
+              period: 5
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: In
+                en: In
+              name:
+                de: Indium
+                en: Indium
+              number: 49
+              group: 13
+              period: 5
+              outer: 3
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Sn
+                en: Sn
+              name:
+                de: Zinn
+                en: Tin
+              number: 50
+              group: 14
+              period: 5
+              outer: 4
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Sb
+                en: Sb
+              name:
+                de: Antimon
+                en: Antimony
+              number: 51
+              group: 15
+              period: 5
+              outer: 5
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: Te
+                en: Te
+              name:
+                de: Tellur
+                en: Tellurium
+              number: 52
+              group: 16
+              period: 5
+              outer: 6
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: I
+                en: I
+              name:
+                de: Iod
+                en: Iodine
+              number: 53
+              group: 17
+              period: 5
+              outer: 7
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Xe
+                en: Xe
+              name:
+                de: Xenon
+                en: Xenon
+              number: 54
+              group: 18
+              period: 5
+              outer: 8
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Cs
+                en: Cs
+              name:
+                de: Caesium
+                en: Caesium
+              number: 55
+              group: 1
+              period: 6
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Ba
+                en: Ba
+              name:
+                de: Barium
+                en: Barium
+              number: 56
+              group: 2
+              period: 6
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Tl
+                en: Tl
+              name:
+                de: Thallium
+                en: Thallium
+              number: 81
+              group: 13
+              period: 6
+              outer: 3
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Pb
+                en: Pb
+              name:
+                de: Blei
+                en: Lead
+              number: 82
+              group: 14
+              period: 6
+              outer: 4
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Bi
+                en: Bi
+              name:
+                de: Bismut
+                en: Bismuth
+              number: 83
+              group: 15
+              period: 6
+              outer: 5
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: Po
+                en: Po
+              name:
+                de: Polonium
+                en: Polonium
+              number: 84
+              group: 16
+              period: 6
+              outer: 6
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: At
+                en: At
+              name:
+                de: Astat
+                en: Astatine
+              number: 85
+              group: 17
+              period: 6
+              outer: 7
+              kindId:
+                de: grenzfall
+                en: grenzfall
+              kind: *a3
+            - symbol:
+                de: Rn
+                en: Rn
+              name:
+                de: Radon
+                en: Radon
+              number: 86
+              group: 18
+              period: 6
+              outer: 8
+              kindId:
+                de: nichtmetall
+                en: nichtmetall
+              kind: *a1
+            - symbol:
+                de: Fr
+                en: Fr
+              name:
+                de: Francium
+                en: Francium
+              number: 87
+              group: 1
+              period: 7
+              outer: 1
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+            - symbol:
+                de: Ra
+                en: Ra
+              name:
+                de: Radium
+                en: Radium
+              number: 88
+              group: 2
+              period: 7
+              outer: 2
+              kindId:
+                de: metall
+                en: metall
+              kind: *a2
+          groups:
+            - group: 1
+              roman:
+                de: I
+                en: I
+              name:
+                de: Alkalimetalle und Wasserstoff
+                en: alkali metals and hydrogen
+            - group: 2
+              roman:
+                de: II
+                en: II
+              name:
+                de: Erdalkalimetalle
+                en: Alkaline earth metals
+            - group: 13
+              roman:
+                de: III
+                en: III
+              name:
+                de: Borgruppe
+                en: Boron group
+            - group: 14
+              roman:
+                de: IV
+                en: IV
+              name:
+                de: Kohlenstoff-Silicium-Gruppe
+                en: Carbon–silicon group
+            - group: 15
+              roman:
+                de: V
+                en: V
+              name:
+                de: Stickstoff-Phosphor-Gruppe
+                en: Nitrogen–phosphorus group
+            - group: 16
+              roman:
+                de: VI
+                en: VI
+              name:
+                de: Chalkogene
+                en: Chalcogens
+            - group: 17
+              roman:
+                de: VII
+                en: VII
+              name:
+                de: Halogene
+                en: Halogens
+            - group: 18
+              roman:
+                de: VIII
+                en: VIII
+              name:
+                de: Edelgase
+                en: Noble gases
+          types:
+            - group
+            - outer
+            - position
+        examples:
+          accepted:
+            - seed: 1
+              answer:
+                - H
+                - Li
+                - Na
+                - K
+                - Rb
+                - Cs
+                - Fr
+            - seed: 1
+              answer:
+                - Fr
+                - Cs
+                - Rb
+                - K
+                - Na
+                - Li
+                - H
+            - seed: 2
+              answer:
+                - S
+            - seed: 2
+              answer:
+                - Se
+          rejected:
+            - seed: 1
+              answer:
+                - Li
+                - Na
+            - seed: 2
+              answer:
+                - Cl
+      - type: single-choice
+        id: hauptgruppe-brom
         text:
-          de: Ordne jeder Gruppe des Periodensystems ihren Namen zu.
-          en: Match each group of the periodic table with its name.
-        pairs:
-          - left:
-              de: Gruppe 1
-              en: Group 1
-            right:
-              de: Alkalimetalle (und Wasserstoff)
-              en: alkali metals (and hydrogen)
-          - left:
-              de: Gruppe 2
-              en: Group 2
-            right:
-              de: Erdalkalimetalle
-              en: alkaline earth metals
-          - left:
-              de: Gruppe 16
-              en: Group 16
-            right:
-              de: Chalkogene
-              en: chalcogens
-          - left:
-              de: Gruppe 17
-              en: Group 17
-            right:
-              de: Halogene
-              en: halogens
-          - left:
-              de: Gruppe 18
-              en: Group 18
-            right:
-              de: Edelgase
-              en: noble gases
+          de: Brom steht in Gruppe 17 des Periodensystems. In welcher Hauptgruppe steht es?
+          en: Bromine is in group 17 of the periodic table. In which main group is it?
+        options:
+          - text:
+              de: Hauptgruppe VII
+              en: Main group VII
+            correct: true
+            info:
+              de: Gruppe 17 ist die Hauptgruppe VII (17 − 10 = 7). Brom hat 7 Außenelektronen und gehört zu den Halogenen.
+              en: Group 17 is main group VII (17 − 10 = 7). Bromine has 7 outer electrons and is a halogen.
+          - text:
+              de: Hauptgruppe VIII
+              en: Main group VIII
+            correct: false
+            info:
+              de: Die Hauptgruppe VIII ist Gruppe 18, die Edelgase. Brom steht links daneben.
+              en: Main group VIII is group 18, the noble gases. Bromine is next to it on the left.
+          - text:
+              de: Hauptgruppe VI
+              en: Main group VI
+            correct: false
+            info:
+              de: Die Hauptgruppe VI ist Gruppe 16, die Chalkogene mit Sauerstoff und Schwefel.
+              en: Main group VI is group 16, the chalcogens with oxygen and sulfur.
         explanation:
-          de: Die Gruppen 1 und 2 sind die Alkali- und Erdalkalimetalle, Gruppe 16 sind die Chalkogene, Gruppe 17 die Halogene und Gruppe 18 die Edelgase.
-          en: Groups 1 and 2 are the alkali and alkaline earth metals, group 16 the chalcogens, group 17 the halogens and group 18 the noble gases.
+          de: Bei den Gruppen 13 bis 18 ziehst du 10 ab, um die Hauptgruppe zu bekommen.
+          en: For groups 13 to 18 you subtract 10 to get the main group.
         links:
           - title:
               de: Hauptgruppe (Wikipedia)
               en: Main group (Wikipedia, German)
             url: https://de.wikipedia.org/wiki/Hauptgruppe
-      - type: generated
-        id: aussenelektronen
-        practice:
-          de: "Übe selbst, mit immer neuen Elementen:"
-          en: "Practise on your own, with new elements every time:"
-        given:
-          e:
-            pick: 1
-            from:
-              data: elemente
-        task:
-          text:
-            de: Wie viele Außenelektronen hat ein Atom {{e.name}} (Symbol {{e.symbol}})?
-            en: How many outer electrons does an atom of {{e.name}} (symbol {{e.symbol}}) have?
-        answer:
-          value: e.aussen
-          compare: number
-        hint:
-          de: Bei den Hauptgruppen ist die Zahl der Außenelektronen die Nummer der Hauptgruppe (I bis VIII). Helium ist die Ausnahme.
-          en: For the main groups the number of outer electrons is the number of the main group (I to VIII). Helium is the exception.
-        steps:
-          - de: "{{e.name}} hat {{answer}} Außenelektronen."
-            en: "{{e.name}} has {{answer}} outer electrons."
-      - type: generated
-        id: hauptgruppe-bestimmen
-        practice:
-          de: "Übe selbst, mit immer neuen Elementen:"
-          en: "Practise on your own, with new elements every time:"
-        given:
-          e:
-            pick: 1
-            from:
-              data: elemente
-        where:
-          - e.gruppe > 12
-        task:
-          text:
-            de: "{{e.name}} steht in Gruppe {{e.gruppe}} des Periodensystems. In welcher Hauptgruppe (I bis VIII, als Zahl 1 bis 8) steht es?"
-            en: "{{e.name}} is in group {{e.gruppe}} of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it?"
-        answer:
-          value: e.hauptgruppe
-          compare: number
-        mistakes:
-          - value: e.gruppe
-            message:
-              de: "Das ist die Gruppennummer von 1 bis 18. Die Hauptgruppe zählt nur von I bis VIII: Gruppe minus 10."
-              en: "That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10."
-        hint:
-          de: Bei den Gruppen 13 bis 18 ziehst du 10 ab.
-          en: For groups 13 to 18 you subtract 10.
-        steps:
-          - de: "{{e.gruppe}} − 10 = {{answer}}"
-            en: "{{e.gruppe}} − 10 = {{answer}}"
