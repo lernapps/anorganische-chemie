@@ -126,7 +126,7 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 ### Tasks
 
 - [x] `git switch -c increment/02-periodensystem-interaktiv` from `main`. Commit this plan on it.
-- [ ] `npx --yes github:lernapps/tooling#exp/compact-guidance update`, then `npm install`. It replaces the `lernapps-*` skills: reread
+- [x] `npx --yes github:lernapps/tooling#exp/compact-guidance update`, then `npm install`. It replaces the `lernapps-*` skills: reread
       the ones you use. Commit the update alone; fix its check findings before content.
 - [x] Slice 1, Plural: "1 Proton" statt "1 Protonen" in `AtomBuilder` (Text, Begründung, Test). Commit.
 - [x] Slice 2, Karte: `PeriodicTable` mit Sicht "nach Art", Hervorheben einer Periode, Prop `mode`; Test; `nojs` bleibt vollständig. Commit.
