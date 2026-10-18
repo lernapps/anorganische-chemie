@@ -73,11 +73,13 @@ blocks:
       de: Übung
       en: Practice
     blocks:
+      - type: formula
+        formula: \ce{x H2 + O2 -> 2H2O}
       - type: number
         id: koeffizient-wasser
         text:
-          de: Welche Zahl gehört an die Stelle von x? x H₂ + O₂ → 2H₂O
-          en: Which number belongs in place of x? x H₂ + O₂ → 2H₂O
+          de: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+          en: Which number belongs in place of x in the equation above?
         answer: 2
         tolerance: 0
         mistakes:
@@ -93,11 +95,13 @@ blocks:
               de: Reaktionsgleichung (Wikipedia)
               en: Reaction equation (Wikipedia, German)
             url: https://de.wikipedia.org/wiki/Reaktionsgleichung
+      - type: formula
+        formula: \ce{2Mg + O2 -> x MgO}
       - type: number
         id: koeffizient-magnesium
         text:
-          de: Welche Zahl gehört an die Stelle von x? 2Mg + O₂ → x MgO
-          en: Which number belongs in place of x? 2Mg + O₂ → x MgO
+          de: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+          en: Which number belongs in place of x in the equation above?
         answer: 2
         tolerance: 0
         mistakes:
@@ -113,11 +117,13 @@ blocks:
               de: Reaktionsgleichung (Wikipedia)
               en: Reaction equation (Wikipedia, German)
             url: https://de.wikipedia.org/wiki/Reaktionsgleichung
+      - type: formula
+        formula: \ce{N2 + x H2 -> 2NH3}
       - type: number
         id: koeffizient-ammoniak
         text:
-          de: Welche Zahl gehört an die Stelle von x? N₂ + x H₂ → 2NH₃
-          en: Which number belongs in place of x? N₂ + x H₂ → 2NH₃
+          de: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+          en: Which number belongs in place of x in the equation above?
         answer: 3
         tolerance: 0
         mistakes:
@@ -133,11 +139,13 @@ blocks:
               de: Reaktionsgleichung (Wikipedia)
               en: Reaction equation (Wikipedia, German)
             url: https://de.wikipedia.org/wiki/Reaktionsgleichung
+      - type: formula
+        formula: \ce{CH4 + x O2 -> CO2 + 2H2O}
       - type: number
         id: koeffizient-methan
         text:
-          de: Welche Zahl gehört an die Stelle von x? CH₄ + x O₂ → CO₂ + 2H₂O
-          en: Which number belongs in place of x? CH₄ + x O₂ → CO₂ + 2H₂O
+          de: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+          en: Which number belongs in place of x in the equation above?
         answer: 2
         tolerance: 0
         mistakes:

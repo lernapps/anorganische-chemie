@@ -97,7 +97,8 @@ Page and exercise ids (page file, exercise id):
 - Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
 - Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
-- Ausgleichen: `number` with a formula `\ce{…}` in the text and a blank `x`, e.g. `koeffizient-wasser`; the typical
+- Ausgleichen: a `formula` block with the equation and a blank `x` (`\ce{x H2 + O2 -> 2H2O}`) directly above a `number`
+  question "… in der Gleichung darüber?", e.g. `koeffizient-wasser` (quiz-type texts cannot show formulas); the typical
   mistake per exercise has its message. The equations are fixed in the YAML (a placeholder cannot carry a formula);
   every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
 - Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
