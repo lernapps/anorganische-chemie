@@ -76,8 +76,8 @@ blocks:
       - type: number
         id: koeffizient-wasser
         text:
-          de: Welche Zahl gehört an die Stelle von x? $\ce{x H2 + O2 -> 2H2O}$
-          en: Which number belongs in place of x? $\ce{x H2 + O2 -> 2H2O}$
+          de: Welche Zahl gehört an die Stelle von x? x H₂ + O₂ → 2H₂O
+          en: Which number belongs in place of x? x H₂ + O₂ → 2H₂O
         answer: 2
         tolerance: 0
         mistakes:
@@ -86,9 +86,9 @@ blocks:
               de: Dann stünden links nur 2 Wasserstoffatome, rechts aber 4 (2 · 2).
               en: Then there would be only 2 hydrogen atoms on the left, but 4 (2 · 2) on the right.
         explanation:
-          de: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen $\ce{H2}$.
-          en: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of $\ce{H2}$ on the left.
-        links: &a1
+          de: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen H₂.
+          en: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of H₂ on the left.
+        links:
           - title:
               de: Reaktionsgleichung (Wikipedia)
               en: Reaction equation (Wikipedia, German)
@@ -96,24 +96,28 @@ blocks:
       - type: number
         id: koeffizient-magnesium
         text:
-          de: Welche Zahl gehört an die Stelle von x? $\ce{2Mg + O2 -> x MgO}$
-          en: Which number belongs in place of x? $\ce{2Mg + O2 -> x MgO}$
+          de: Welche Zahl gehört an die Stelle von x? 2Mg + O₂ → x MgO
+          en: Which number belongs in place of x? 2Mg + O₂ → x MgO
         answer: 2
         tolerance: 0
         mistakes:
           - answer: 1
             message:
-              de: Dann stünde rechts nur 1 Sauerstoffatom, links aber 2 ($\ce{O2}$).
-              en: Then there would be only 1 oxygen atom on the right, but 2 ($\ce{O2}$) on the left.
+              de: Dann stünde rechts nur 1 Sauerstoffatom, links aber 2 (O₂).
+              en: Then there would be only 1 oxygen atom on the right, but 2 (O₂) on the left.
         explanation:
-          de: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen $\ce{MgO}$, damit beides stimmt.
-          en: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of $\ce{MgO}$ for both to be right.
-        links: *a1
+          de: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen MgO, damit beides stimmt.
+          en: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of MgO for both to be right.
+        links:
+          - title:
+              de: Reaktionsgleichung (Wikipedia)
+              en: Reaction equation (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reaktionsgleichung
       - type: number
         id: koeffizient-ammoniak
         text:
-          de: Welche Zahl gehört an die Stelle von x? $\ce{N2 + x H2 -> 2NH3}$
-          en: Which number belongs in place of x? $\ce{N2 + x H2 -> 2NH3}$
+          de: Welche Zahl gehört an die Stelle von x? N₂ + x H₂ → 2NH₃
+          en: Which number belongs in place of x? N₂ + x H₂ → 2NH₃
         answer: 3
         tolerance: 0
         mistakes:
@@ -122,25 +126,33 @@ blocks:
               de: Dann wären links 4 Wasserstoffatome, rechts aber 6 (2 · 3).
               en: Then there would be 4 hydrogen atoms on the left, but 6 (2 · 3) on the right.
         explanation:
-          de: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen $\ce{H2}$ sind es links ebenfalls 6.
-          en: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of $\ce{H2}$ there are also 6 on the left.
-        links: *a1
+          de: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen H₂ sind es links ebenfalls 6.
+          en: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of H₂ there are also 6 on the left.
+        links:
+          - title:
+              de: Reaktionsgleichung (Wikipedia)
+              en: Reaction equation (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reaktionsgleichung
       - type: number
         id: koeffizient-methan
         text:
-          de: Welche Zahl gehört an die Stelle von x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
-          en: Which number belongs in place of x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
+          de: Welche Zahl gehört an die Stelle von x? CH₄ + x O₂ → CO₂ + 2H₂O
+          en: Which number belongs in place of x? CH₄ + x O₂ → CO₂ + 2H₂O
         answer: 2
         tolerance: 0
         mistakes:
           - answer: 1
             message:
-              de: Dann wären links nur 2 Sauerstoffatome, rechts aber 4 (2 in $\ce{CO2}$ und 2 im Wasser).
-              en: Then there would be only 2 oxygen atoms on the left, but 4 on the right (2 in $\ce{CO2}$ and 2 in the water).
+              de: Dann wären links nur 2 Sauerstoffatome, rechts aber 4 (2 in CO₂ und 2 im Wasser).
+              en: Then there would be only 2 oxygen atoms on the left, but 4 on the right (2 in CO₂ and 2 in the water).
         explanation:
-          de: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen $\ce{O2}$ sind es links ebenfalls 4.
-          en: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of $\ce{O2}$ there are also 4 on the left.
-        links: *a1
+          de: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen O₂ sind es links ebenfalls 4.
+          en: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of O₂ there are also 4 on the left.
+        links:
+          - title:
+              de: Reaktionsgleichung (Wikipedia)
+              en: Reaction equation (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reaktionsgleichung
       - type: ordering
         id: gleichung-schritte
         text:
@@ -158,4 +170,8 @@ blocks:
         explanation:
           de: Erst kommen die Formeln, dann zählst du, dann gleichst du mit Koeffizienten aus und zuletzt prüfst du.
           en: First come the formulas, then you count, then you balance with coefficients, and finally you check.
-        links: *a1
+        links:
+          - title:
+              de: Reaktionsgleichung (Wikipedia)
+              en: Reaction equation (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reaktionsgleichung

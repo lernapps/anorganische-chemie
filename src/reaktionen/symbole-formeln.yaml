@@ -144,8 +144,8 @@ blocks:
       - type: number
         id: atome-ammoniak
         text:
-          de: Wie viele Wasserstoffatome hat ein Teilchen Ammoniak mit der Formel $\ce{NH3}$?
-          en: How many hydrogen atoms does one particle of ammonia with the formula $\ce{NH3}$ have?
+          de: Wie viele Wasserstoffatome hat ein Teilchen Ammoniak mit der Formel NH₃?
+          en: How many hydrogen atoms does one particle of ammonia with the formula NH₃ have?
         answer: 3
         tolerance: 0
         mistakes:
@@ -160,7 +160,7 @@ blocks:
         explanation:
           de: Der Index 3 steht hinter dem H. Er gilt nur für das H, also sind es 3 Wasserstoffatome und 1 Stickstoffatom.
           en: The index 3 is after the H. It applies only to the H, so there are 3 hydrogen atoms and 1 nitrogen atom.
-        links: &a1
+        links:
           - title:
               de: Chemisches Element (Wikipedia)
               en: Chemical element (Wikipedia, German)
@@ -168,8 +168,8 @@ blocks:
       - type: number
         id: atome-methan
         text:
-          de: Wie viele Atome hat ein Methanmolekül $\ce{CH4}$ insgesamt?
-          en: How many atoms does a methane molecule $\ce{CH4}$ have in total?
+          de: Wie viele Atome hat ein Methanmolekül CH₄ insgesamt?
+          en: How many atoms does a methane molecule CH₄ have in total?
         answer: 5
         tolerance: 0
         mistakes:
@@ -180,4 +180,8 @@ blocks:
         explanation:
           de: 1 Kohlenstoffatom und 4 Wasserstoffatome sind zusammen 5 Atome.
           en: 1 carbon atom and 4 hydrogen atoms make 5 atoms together.
-        links: *a1
+        links:
+          - title:
+              de: Chemisches Element (Wikipedia)
+              en: Chemical element (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Chemisches_Element

@@ -162,4 +162,9 @@ Page and exercise ids (page file, exercise id):
 
 ## Rules learned from mistakes
 
-None yet.
+- Texts of quiz-type exercises (`number`, `single-choice`, `multiple-choice`, `true-false`, `ordering`, `matching`: question,
+  options, `info`, `explanation`, mistakes) are plain text. `$…$` and `\ce{…}` show up as raw characters there. Write formulas
+  with Unicode subscripts and an arrow (`H₂ + O₂ → 2H₂O`). Formulas with `\ce` belong in `text`, `formula`, `table` and `example`
+  blocks and in the `task`, `steps` and `hint` of `generated` exercises.
+- The runtime's own texts ("Übe selbst, mit immer neuen Zahlen:", "Drei Beispielaufgaben, jede mit ihrer Lösung:") come from the
+  template and cannot be changed in this app; wishes for them go to an issue at lernapps/app-templates.
