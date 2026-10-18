@@ -39,14 +39,11 @@ const props = defineProps<{
     period: string;
     groupWord: string;
     number: string;
-    kind: string;
     shells: string;
     compounds: string;
     uses: string;
     fact: string;
     choose: string;
-    showGroup: string;
-    hideGroup: string;
   };
   groups: GroupInfo[];
   elements: Profile[];
@@ -125,13 +122,13 @@ const label = (element: Profile) =>
             :class="{ 'pt-cell-on': active === cell.group, 'pt-cell-selected': selected === cell.symbol }"
             :style="{ background: colorOf(cell.group), color: TEXT_COLOR, borderColor: EDGE_COLOR }"
             :tabindex="focusSymbol === cell.symbol ? 0 : -1"
-            :aria-label="label(cell)"
             :aria-pressed="selected === cell.symbol"
             @click="choose(cell.symbol)"
             @keydown="keydown($event, cell)"
           >
-            <span class="pt-number" aria-hidden="true">{{ cell.number }}</span>
-            <span class="pt-symbol" aria-hidden="true">{{ cell.symbol }}</span>
+            <span class="pt-number">{{ cell.number }}</span>
+            <span class="pt-symbol">{{ cell.symbol }}</span>
+            <span class="pt-hidden">, {{ label(cell) }}</span>
           </button>
           <span v-else class="pt-empty" aria-hidden="true"></span>
         </template>
@@ -263,6 +260,17 @@ const label = (element: Profile) =>
 .pt-legend-item:focus-visible {
   outline: 3px solid #1d4ed8;
   outline-offset: 2px;
+}
+.pt-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 .pt-number {
   position: absolute;

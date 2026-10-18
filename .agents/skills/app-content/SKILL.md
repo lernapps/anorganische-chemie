@@ -57,6 +57,8 @@ Page and exercise ids (page file, exercise id):
 - Every page has the sections in this order and with these ids: `warum`, `regel`, `beispiel` (a box `example`),
   `uebung`. Titles: Warum, Regel, Beispiel, Übung (English: Why, Rule, Example, Practice). Every page has at least one
   exercise in `uebung`.
+- Exception: `src/periodensystem/hauptgruppen.yaml` has a second section `entdecken` (after `warum`) with the component
+  `PeriodicTable`; its static table of the eight groups stays in `regel` as the text version.
 - A page explains one competency group in about 150–250 words in plain German plus figure and exercises.
 - Ids short and stable; never reuse a removed id (`explainer-stable-ids`).
 
@@ -100,6 +102,10 @@ Page and exercise ids (page file, exercise id):
   every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
 - Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
   checks the property, not one model solution.
+- Entdecken: component `PeriodicTable` (not an exercise) on `src/periodensystem/hauptgruppen.yaml`, section `entdecken`: colour map
+  of the 44 elements by main group; tap an element for a profile (shell picture, common compounds, uses, one "Wusstest du?"
+  fact), tap a group in the legend to highlight it; arrow keys move between elements. All texts are props of the block (de, en),
+  and its `nojs` text lists every element with the same facts.
 - Visualisieren: component `ParticleModel` (not an exercise) with a temperature slider and a `nojs` text.
 - Data files `src/data/`: `stoffe.yaml` (9 pure substances: state, melting and boiling point), `elemente.yaml` (all 44
   elements of the eight main groups without the superheavy ones: Z, shells, group, main group, outer electrons, period,
@@ -110,6 +116,9 @@ Page and exercise ids (page file, exercise id):
 ## Figures
 
 - Colours: Protonen rot, Neutronen grau, Elektronen blau, in all figures and components. Labels in both languages.
+- Main groups in `PeriodicTable`: one light fill per group (`COLORS` in `PeriodicTable.ts`), dark text; every cell also names its
+  group in text (legend, roman numeral in the header row, accessible name), so colour is never the only signal. A new fill needs a
+  contrast of at least 7:1 with the text colour (`PeriodicTable.test.ts` checks it).
 - Teilchenmodell: component `ParticleModel` with a temperature slider and a `nojs` text, and a `table` of the three states.
   No bundled images so far; own images would go to `src/images/` with `source: eigene Arbeit` and a licence.
 - Atommodell: drawn live by the component `AtomBuilder` (nucleus, shells K–N). Periodensystem: a `table` of the main groups
@@ -130,6 +139,16 @@ Page and exercise ids (page file, exercise id):
   (elements, Metalle, Halbmetalle, Nichtmetalle, Hauptgruppe, Reinstoff, Aggregatzustand, Reaktionsgleichung and the
   articles of the substances in `stoffe.yaml`). Wikipedia is CC BY-SA: facts are taken, no sentences are copied; links
   point to the articles.
+
+## Element profiles (PeriodicTable)
+
+- Per element in the block `props.elements`: 2–3 common compounds (formula with plain digits, shown with subscripts; a short
+  text), 2–3 uses, one "Wusstest du?" fact, and a `note` where fewer exist (noble gases, rare or radioactive elements).
+- Written in own words from the German Wikipedia article of the element (sections Verwendung, Verbindungen, Vorkommen,
+  Geschichte), de and en, at most about 110 characters per text, school year 7/8. No sentences copied.
+- Each claim was checked against the article by a quoted fragment before it went in (277 claims, all found). A new or changed
+  claim needs the same check against an opened source; if the source does not say it, leave it out.
+- Group texts (`props.groups`) come from the Wikipedia articles of the eight groups, the same way.
 
 ## Adding a chapter or round
 

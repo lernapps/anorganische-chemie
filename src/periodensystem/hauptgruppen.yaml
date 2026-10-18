@@ -19,6 +19,2075 @@ blocks:
           en: |
             Elements in one group behave in a similar way. If you know the main group, you can predict how an element behaves.
   - type: section
+    id: entdecken
+    title:
+      de: Entdecke die Elemente
+      en: Explore the elements
+    blocks:
+      - type: text
+        text:
+          de: |
+            Jede Farbe ist eine Hauptgruppe. Tippe auf ein Element und erfahre, wie seine Atome gebaut sind, welche Verbindungen es bildet und wozu man es nutzt.
+          en: |
+            Every colour is a main group. Tap an element to find out how its atoms are built, which compounds it forms and what it is used for.
+      - type: vue-component
+        component: PeriodicTable
+        props:
+          labels:
+            legend:
+              de: Hauptgruppen
+              en: Main groups
+            table:
+              de: Periodensystem der Hauptgruppen-Elemente. Wähle ein Element.
+              en: Periodic table of the main-group elements. Choose an element.
+            period:
+              de: Periode
+              en: Period
+            groupWord:
+              de: Hauptgruppe
+              en: Main group
+            number:
+              de: Ordnungszahl
+              en: Atomic number
+            shells:
+              de: Elektronen pro Schale
+              en: Electrons per shell
+            compounds:
+              de: Übliche Verbindungen
+              en: Common compounds
+            uses:
+              de: Wozu man es nutzt
+              en: What it is used for
+            fact:
+              de: Wusstest du?
+              en: Did you know?
+            choose:
+              de: Tippe auf ein Element, um mehr zu erfahren. Tippe auf eine Gruppe oben, um sie hervorzuheben.
+              en: Tap an element to learn more. Tap a group above to highlight it.
+          groups:
+            - group: 1
+              roman:
+                de: I
+                en: I
+              name:
+                de: Alkalimetalle (und Wasserstoff)
+                en: Alkali metals (and hydrogen)
+              text:
+                de: Silbrig glänzende, reaktive Metalle mit einem Außenelektron, das sie leicht abgeben. Wasserstoff steht auch in dieser Gruppe, ist aber kein Alkalimetall.
+                en: Shiny silvery, reactive metals with one outer electron that they give away easily. Hydrogen is in this group too, but it is not an alkali metal.
+            - group: 2
+              roman:
+                de: II
+                en: II
+              name:
+                de: Erdalkalimetalle
+                en: Alkaline earth metals
+              text:
+                de: Glänzende, reaktive Metalle mit zwei Außenelektronen. Radium ist radioaktiv.
+                en: Shiny, reactive metals with two outer electrons. Radium is radioactive.
+            - group: 13
+              roman:
+                de: III
+                en: III
+              name:
+                de: Borgruppe
+                en: Boron group
+              text:
+                de: Bor ist ein Halbmetall, die übrigen Elemente (Aluminium, Gallium, Indium, Thallium) sind Metalle.
+                en: Boron is a metalloid, the other elements (aluminium, gallium, indium, thallium) are metals.
+            - group: 14
+              roman:
+                de: IV
+                en: IV
+              name:
+                de: Kohlenstoff-Silicium-Gruppe
+                en: Carbon–silicon group
+              text:
+                de: Sie reicht von Kohlenstoff, einem Nichtmetall, bis zu Blei, einem Metall. Die Gruppe heißt nach ihren ersten beiden Elementen.
+                en: It reaches from carbon, a non-metal, to lead, a metal. The group is named after its first two elements.
+            - group: 15
+              roman:
+                de: V
+                en: V
+              name:
+                de: Stickstoff-Phosphor-Gruppe
+                en: Nitrogen–phosphorus group
+              text:
+                de: Stickstoff und Phosphor sind Nichtmetalle, Arsen und Antimon Halbmetalle, Bismut ist ein Metall.
+                en: Nitrogen and phosphorus are non-metals, arsenic and antimony are metalloids, bismuth is a metal.
+            - group: 16
+              roman:
+                de: VI
+                en: VI
+              name:
+                de: Chalkogene
+                en: Chalcogens
+              text:
+                de: Der Name heißt „Erzbildner“. Die Gruppe wird nach ihrem ersten Element auch Sauerstoffgruppe genannt.
+                en: The name means “ore formers”. After its first element the group is also called the oxygen group.
+            - group: 17
+              roman:
+                de: VII
+                en: VII
+              name:
+                de: Halogene
+                en: Halogens
+              text:
+                de: Der Name heißt „Salzbildner“. Die Elemente sind farbige, sehr reaktionsfreudige Nichtmetalle und bilden mit Metallen Salze.
+                en: The name means “salt formers”. The elements are coloured, very reactive non-metals and form salts with metals.
+            - group: 18
+              roman:
+                de: VIII
+                en: VIII
+              name:
+                de: Edelgase
+                en: Noble gases
+              text:
+                de: Sie reagieren nur unter extremen Bedingungen, sind einatomig und bei Raumtemperatur Gase. Helium ist das häufigste Edelgas, auf der Erde ist es Argon.
+                en: They react only under extreme conditions, consist of single atoms and are gases at room temperature. Helium is the most common noble gas, on Earth it is argon.
+          elements:
+            - symbol:
+                de: H
+                en: H
+              name:
+                de: Wasserstoff
+                en: Hydrogen
+              number: 1
+              group: 1
+              period: 1
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: "1"
+                en: "1"
+              compounds:
+                - formula:
+                    de: H2O
+                    en: H2O
+                  text:
+                    de: "Wasser: bedeckt den größten Teil unseres Planeten"
+                    en: "Water: covers most of our planet's surface"
+                - formula:
+                    de: CH4
+                    en: CH4
+                  text:
+                    de: "Methan: wichtiger Bestandteil von Erdgas"
+                    en: "Methane: an important part of natural gas"
+                - formula:
+                    de: NH3
+                    en: NH3
+                  text:
+                    de: "Ammoniak: Ausgangsstoff für Dünger, aus Wasserstoff und Stickstoff hergestellt"
+                    en: "Ammonia: made from hydrogen and nitrogen, a starting material for fertiliser"
+              uses:
+                - de: Treibstoff für Raketen und zum Schweißen
+                  en: Rocket fuel, and used in welding
+                - de: Härten von Pflanzenöl, so entsteht Margarine
+                  en: Hardens plant oil, which is how margarine is made
+                - de: Füllgas für Wetterballons, weil es sehr leicht ist
+                  en: Lifting gas for weather balloons because it is so light
+              fact:
+                de: Kein Element kommt im Weltall öfter vor als Wasserstoff.
+                en: Hydrogen is the most common element in the whole universe.
+            - symbol:
+                de: He
+                en: He
+              name:
+                de: Helium
+                en: Helium
+              number: 2
+              group: 18
+              period: 1
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: "2"
+                en: "2"
+              compounds: []
+              uses:
+                - de: Füllgas für Luftballons und Luftschiffe, es brennt nicht
+                  en: Fills balloons and airships, and it does not burn
+                - de: Kühlmittel für die Magnete in MRT-Geräten
+                  en: Coolant for the magnets in MRI scanners
+                - de: Teil von Atemgas-Gemischen beim professionellen Tauchen
+                  en: Part of breathing gas mixtures for professional diving
+              fact:
+                de: Helium wurde zuerst auf der Sonne entdeckt, daher der Name (griechisch helios = Sonne).
+                en: Helium was first spotted on the Sun, hence its name (Greek helios = sun).
+              note:
+                de: Helium ist ein Edelgas und bildet keine bekannten beständigen Verbindungen, deshalb sind hier keine aufgeführt.
+                en: Helium is a noble gas and forms no known stable compounds, so none are listed.
+            - symbol:
+                de: Li
+                en: Li
+              name:
+                de: Lithium
+                en: Lithium
+              number: 3
+              group: 1
+              period: 2
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 1
+                en: 2, 1
+              compounds:
+                - formula:
+                    de: Li2CO3
+                    en: Li2CO3
+                  text:
+                    de: "Lithiumcarbonat: wichtigste Lithiumverbindung, dient auch bei der Glasherstellung"
+                    en: "Lithium carbonate: the most important lithium compound, also used in making glass"
+                - formula:
+                    de: LiCl
+                    en: LiCl
+                  text:
+                    de: "Lithiumchlorid: nimmt Feuchtigkeit auf und trocknet Gase"
+                    en: "Lithium chloride: absorbs moisture and is used to dry gases"
+                - formula:
+                    de: LiOH
+                    en: LiOH
+                  text:
+                    de: "Lithiumhydroxid: Grundstoff für Schmierfette und Luftreinigung in U-Booten"
+                    en: "Lithium hydroxide: used for greases and to clean the air in submarines"
+              uses:
+                - de: Akkus in Smartphones, Laptops und Elektroautos
+                  en: Rechargeable batteries in phones, laptops and electric cars
+                - de: Batterien, die nicht wieder aufladbar sind
+                  en: Non-rechargeable lithium batteries
+                - de: Leichte Legierungen für die Luft- und Raumfahrt
+                  en: Lightweight alloys for aircraft and spacecraft
+              fact:
+                de: Unter den festen Elementen ist Lithium das mit der geringsten Dichte.
+                en: Lithium is the lightest solid element at room temperature.
+            - symbol:
+                de: Be
+                en: Be
+              name:
+                de: Beryllium
+                en: Beryllium
+              number: 4
+              group: 2
+              period: 2
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 2
+                en: 2, 2
+              compounds:
+                - formula:
+                    de: BeO
+                    en: BeO
+                  text:
+                    de: "Berylliumoxid: Keramik, die Wärme gut leitet und Strom isoliert"
+                    en: "Beryllium oxide: a ceramic that conducts heat well but insulates electricity"
+                - formula:
+                    de: Be(OH)2
+                    en: Be(OH)2
+                  text:
+                    de: "Berylliumhydroxid: wichtigste Beryllium-Verbindung, Zwischenstufe zur Herstellung des Metalls"
+                    en: "Beryllium hydroxide: the main beryllium compound, a step toward making the metal"
+              uses:
+                - de: Als Zusatz im Berylliumkupfer, einer harten, federnden Legierung
+                  en: Added to copper to make hard, springy beryllium copper
+                - de: Spiegel für Weltraumteleskope, weil es so leicht ist
+                  en: Mirrors for space telescopes, because it is so light
+                - de: Fenster in Röntgenröhren, weil es Röntgenstrahlen durchlässt
+                  en: Windows in X-ray tubes, since X-rays pass through it
+              fact:
+                de: Von allen Elementen, die leichter sind als Eisen, ist Beryllium das seltenste.
+                en: Of all elements lighter than iron, beryllium is the rarest.
+              note:
+                de: Beryllium und seine Verbindungen sind giftig und werden nur in wenigen Anwendungen genutzt.
+                en: Beryllium and its compounds are toxic and are used in only a few applications.
+            - symbol:
+                de: B
+                en: B
+              name:
+                de: Bor
+                en: Boron
+              number: 5
+              group: 13
+              period: 2
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 3
+                en: 2, 3
+              compounds:
+                - formula:
+                    de: Na2B4O7
+                    en: Na2B4O7
+                  text:
+                    de: "Borax: wichtigste Borverbindung, nötig für Dämmstoffe und Bleichmittel"
+                    en: "Borax: the most important boron compound, used for insulation and bleaches"
+                - formula:
+                    de: H3BO3
+                    en: H3BO3
+                  text:
+                    de: "Borsäure: dient als Flussmittel zum Löten"
+                    en: "Boric acid: used as a flux for soldering"
+                - formula:
+                    de: B4C
+                    en: B4C
+                  text:
+                    de: "Borcarbid: sehr hartes Schleifmittel für Stahl"
+                    en: "Boron carbide: a very hard abrasive for working steel"
+              uses:
+                - de: Fasern für Tennisschläger, Angelruten und Helikopterrotoren, weil sie fest und steif sind
+                  en: Fibres for tennis rackets, fishing rods and helicopter rotors, being strong and stiff
+                - de: Feuerwerk, weil es eine kräftig grüne Flamme gibt
+                  en: Fireworks, since it burns with an intense green flame
+                - de: Zünder für Airbags, als Bor-Nitrat-Gemisch
+                  en: Igniters for airbags, as a boron-nitrate mixture
+              fact:
+                de: Schon im antiken Rom nutzte man Borverbindungen, um Glas herzustellen.
+                en: Boron compounds were already used to make glass in ancient Rome.
+            - symbol:
+                de: C
+                en: C
+              name:
+                de: Kohlenstoff
+                en: Carbon
+              number: 6
+              group: 14
+              period: 2
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 4
+                en: 2, 4
+              compounds:
+                - formula:
+                    de: CO2
+                    en: CO2
+                  text:
+                    de: "Kohlenstoffdioxid: Treibhausgas, das Pflanzen für die Photosynthese brauchen"
+                    en: "Carbon dioxide: a greenhouse gas that plants need for photosynthesis"
+                - formula:
+                    de: CaCO3
+                    en: CaCO3
+                  text:
+                    de: "Calciumcarbonat: Kalkstein, Kreide, Marmor und Muschelschalen"
+                    en: "Calcium carbonate: limestone, chalk, marble and seashells"
+                - formula:
+                    de: Na2CO3
+                    en: Na2CO3
+                  text:
+                    de: "Soda (Natriumcarbonat): wichtiger Grundstoff für Glas"
+                    en: "Soda (sodium carbonate): an important raw material for glass"
+              uses:
+                - de: Graphit ist der Stoff in Bleistiftminen
+                  en: Graphite is the material in pencil leads
+                - de: Diamant dient als Schleifmittel, er ist sehr hart
+                  en: Diamond is used as an abrasive because it is so hard
+                - de: Aktivkohle wirkt wie ein Filter für gelöste Stoffe
+                  en: Activated carbon filters dissolved substances out of liquids
+              fact:
+                de: "Diamant und Graphit bestehen aus demselben Stoff: reinem Kohlenstoff."
+                en: "Diamond and graphite are made of the same thing: pure carbon."
+            - symbol:
+                de: N
+                en: N
+              name:
+                de: Stickstoff
+                en: Nitrogen
+              number: 7
+              group: 15
+              period: 2
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 5
+                en: 2, 5
+              compounds:
+                - formula:
+                    de: NH3
+                    en: NH3
+                  text:
+                    de: "Ammoniak: Grundstoff für Dünger, ein stechend riechendes Gas"
+                    en: "Ammonia: a sharp-smelling gas used to make fertiliser"
+                - formula:
+                    de: HNO3
+                    en: HNO3
+                  text:
+                    de: "Salpetersäure: starke Säure, Ausgangsstoff für Dünger und Farbstoffe"
+                    en: "Nitric acid: used to make fertilisers and dyes"
+                - formula:
+                    de: N2O
+                    en: N2O
+                  text:
+                    de: "Lachgas: betäubt bei Operationen"
+                    en: "Laughing gas: used as an anaesthetic"
+              uses:
+                - de: Flüssiger Stickstoff kühlt sehr stark, zum Beispiel Proben
+                  en: Liquid nitrogen is used for very strong cooling, e.g. of samples
+                - de: Schutzgas beim Schweißen
+                  en: Shielding gas for welding
+                - de: Füllung für Flugzeugreifen, damit sie nicht brennen
+                  en: Fills aircraft tyres so they cannot catch fire
+              fact:
+                de: Stickstoff macht 78 % der Luft aus, doch man erstickt in reinem Stickstoff.
+                en: Nitrogen makes up 78 % of air, yet you cannot live on pure nitrogen.
+            - symbol:
+                de: O
+                en: O
+              name:
+                de: Sauerstoff
+                en: Oxygen
+              number: 8
+              group: 16
+              period: 2
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 6
+                en: 2, 6
+              compounds:
+                - formula:
+                    de: H2O
+                    en: H2O
+                  text:
+                    de: "Wasser: Leben auf der Erde braucht es unbedingt"
+                    en: "Water: without it there would be no life on Earth"
+                - formula:
+                    de: H2O2
+                    en: H2O2
+                  text:
+                    de: "Wasserstoffperoxid: wirkt als Bleichmittel"
+                    en: "Hydrogen peroxide: works as a bleach"
+                - formula:
+                    de: SiO2
+                    en: SiO2
+                  text:
+                    de: "Siliciumdioxid: kommt als Quarz in Gesteinen vor"
+                    en: "Silicon dioxide: found in rocks as quartz"
+              uses:
+                - de: In der Stahlherstellung entfernt Sauerstoff unerwünschte Beimengungen
+                  en: In steelmaking, oxygen removes unwanted impurities
+                - de: Flüssiger Sauerstoff lässt Raketentreibstoff verbrennen
+                  en: Liquid oxygen lets rocket fuel burn
+                - de: Zusätzlicher Sauerstoff für Patienten in der Notfallmedizin
+                  en: Extra oxygen for patients in emergency medicine
+              fact:
+                de: Kein Element ist auf der Erde verbreiteter als Sauerstoff, auch Gesteine enthalten ihn.
+                en: Oxygen is the most abundant element on Earth, not only in air but also in rocks.
+            - symbol:
+                de: F
+                en: F
+              name:
+                de: Fluor
+                en: Fluorine
+              number: 9
+              group: 17
+              period: 2
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 7
+                en: 2, 7
+              compounds:
+                - formula:
+                    de: CaF2
+                    en: CaF2
+                  text:
+                    de: "Calciumfluorid: kommt als Mineral Fluorit in der Natur vor"
+                    en: "Calcium fluoride: occurs in nature as the mineral fluorite"
+                - formula:
+                    de: HF
+                    en: HF
+                  text:
+                    de: "Fluorwasserstoff: Flusssäure ätzt Glas"
+                    en: "Hydrogen fluoride: its solution, hydrofluoric acid, etches glass"
+                - formula:
+                    de: (C2F4)n
+                    en: (C2F4)n
+                  text:
+                    de: "PTFE (Teflon): Beschichtung von Bratpfannen"
+                    en: "PTFE (Teflon): the coating of frying pans"
+              uses:
+                - de: Herstellung von Uranhexafluorid für Kernbrennstoff
+                  en: Used to make uranium hexafluoride for nuclear fuel
+                - de: Herstellung von Schwefelhexafluorid, einem Isoliergas
+                  en: Used to make sulfur hexafluoride, an insulating gas
+                - de: Behandlung von Kunststoff-Oberflächen, etwa bei Autotanks
+                  en: Treating plastic surfaces, for example car fuel tanks
+              fact:
+                de: Fluor ist so reaktionsfreudig, dass es fast nie als reines Element in der Natur vorkommt.
+                en: Fluorine is so reactive that it almost never occurs as a pure element in nature.
+            - symbol:
+                de: Ne
+                en: Ne
+              name:
+                de: Neon
+                en: Neon
+              number: 10
+              group: 18
+              period: 2
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8
+                en: 2, 8
+              compounds: []
+              uses:
+                - de: Füllgas von Leuchtröhren, es leuchtet orangerot
+                  en: Fills glowing tubes, which shine orange-red
+                - de: Gemisch mit Helium im Helium-Neon-Laser
+                  en: Mixed with helium in helium-neon lasers
+                - de: Neon als Flüssigkeit eignet sich zum Kühlen
+                  en: Liquid neon can serve as a coolant
+              fact:
+                de: Neon ist nach Berechnungen das Element, das am schwersten eine Verbindung eingeht.
+                en: Calculations show neon is the element least willing to react.
+              note:
+                de: Von Neon sind bisher keine Verbindungen bekannt, deshalb sind hier keine aufgeführt.
+                en: No compounds of neon are known so far, so none are listed.
+            - symbol:
+                de: Na
+                en: Na
+              name:
+                de: Natrium
+                en: Sodium
+              number: 11
+              group: 1
+              period: 3
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 1
+                en: 2, 8, 1
+              compounds:
+                - formula:
+                    de: NaCl
+                    en: NaCl
+                  text:
+                    de: "Kochsalz: würzt Speisen und konserviert Lebensmittel"
+                    en: "Table salt: seasons food and preserves it"
+                - formula:
+                    de: NaOH
+                    en: NaOH
+                  text:
+                    de: "Natriumhydroxid: Lösung heißt Natronlauge, für Seife und Farbstoffe"
+                    en: "Sodium hydroxide: its solution, caustic soda, is used for soap and dyes"
+                - formula:
+                    de: NaHCO3
+                    en: NaHCO3
+                  text:
+                    de: "Natron: steckt im Backpulver"
+                    en: "Baking soda: used as baking powder"
+              uses:
+                - de: Kühlung von Ventilen in Verbrennungsmotoren
+                  en: Cooling the valves of combustion engines
+                - de: Natriumdampflampen gaben gelbes Licht für Straßen
+                  en: Sodium vapour lamps gave yellow light for streets
+                - de: Kühlmittel in Schnellen Brütern, den Kernreaktoren
+                  en: Coolant in fast breeder nuclear reactors
+              fact:
+                de: Der Name Buna, des ersten künstlichen Gummis, kommt von Butadien und Natrium.
+                en: Buna, the first artificial rubber, was named after butadiene and sodium.
+            - symbol:
+                de: Mg
+                en: Mg
+              name:
+                de: Magnesium
+                en: Magnesium
+              number: 12
+              group: 2
+              period: 3
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 2
+                en: 2, 8, 2
+              compounds:
+                - formula:
+                    de: MgO
+                    en: MgO
+                  text:
+                    de: "Magnesiumoxid: hält große Hitze aus, daher Keramik für Labor und Industrie"
+                    en: "Magnesium oxide: withstands great heat, so it is used for ceramics in labs and industry"
+                - formula:
+                    de: MgCO3
+                    en: MgCO3
+                  text:
+                    de: "Magnesiumcarbonat: das Magnesia der Turner, macht die Hände trocken"
+                    en: "Magnesium carbonate: the gym chalk that keeps gymnasts' hands dry"
+                - formula:
+                    de: MgSO4
+                    en: MgSO4
+                  text:
+                    de: "Magnesiumsulfat: als Bittersalz bekannt, kommt als Mineral Epsomit vor"
+                    en: "Magnesium sulfate: known as Epsom salt, occurs as the mineral epsomite"
+              uses:
+                - de: Leichte Legierungen für Autos und Flugzeuge
+                  en: Light alloys for cars and aircraft
+                - de: "Schutz vor Rost: Magnesiumstäbe opfern sich für edlere Metalle"
+                  en: Protects other metals from corrosion by corroding in their place
+                - de: "Feuerstarter: Magnesiumspäne entzünden sich leicht"
+                  en: "Fire starter: magnesium shavings ignite easily"
+              fact:
+                de: "Magnesium brennt sogar unter Wasser: Es gibt Fackeln, die dort leuchten."
+                en: "Magnesium can burn even underwater: there are torches that work there."
+            - symbol:
+                de: Al
+                en: Al
+              name:
+                de: Aluminium
+                en: Aluminium
+              number: 13
+              group: 13
+              period: 3
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 3
+                en: 2, 8, 3
+              compounds:
+                - formula:
+                    de: Al2O3
+                    en: Al2O3
+                  text:
+                    de: "Aluminiumoxid: als Korund, Rubin und Saphir im Gestein; Schleifmittel"
+                    en: "Aluminium oxide: found as corundum, ruby and sapphire; used as an abrasive"
+                - formula:
+                    de: Al(OH)3
+                    en: Al(OH)3
+                  text:
+                    de: "Aluminiumhydroxid: schützt Kunststoffe und Beschichtungen vor Feuer"
+                    en: "Aluminium hydroxide: makes plastics and coatings more fire resistant"
+                - formula:
+                    de: KAl(SO4)2
+                    en: KAl(SO4)2
+                  text:
+                    de: "Alaun: wird im Rasierstift bei kleinen Schnitten eingesetzt"
+                    en: "Alum: used in styptic pencils for small shaving cuts"
+              uses:
+                - de: Leichtbau in Flugzeugen, Autos und Zügen
+                  en: Lightweight construction in aircraft, cars and trains
+                - de: "Boote und Schiffe: Aluminium hält Salzwasser gut aus"
+                  en: "Boats and ships: aluminium withstands salt water well"
+                - de: Leichte Stromkabel, etwa Freileitungen und Flugzeugkabel
+                  en: Light electric cables, such as overhead lines and aircraft wiring
+              fact:
+                de: Einst war Aluminium teurer als Gold. Erst bessere Verfahren machten es billig.
+                en: Aluminium used to cost more than gold. Better production methods made it cheap.
+            - symbol:
+                de: Si
+                en: Si
+              name:
+                de: Silicium
+                en: Silicon
+              number: 14
+              group: 14
+              period: 3
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 4
+                en: 2, 8, 4
+              compounds:
+                - formula:
+                    de: SiO2
+                    en: SiO2
+                  text:
+                    de: "Siliciumdioxid: Hauptbestandteil von Sand; Quarz ist reines SiO2"
+                    en: "Silicon dioxide: the main part of sand; quartz is pure SiO2"
+                - formula:
+                    de: SiO
+                    en: SiO
+                  text:
+                    de: "Siliciummonoxid: veredelt optische Linsen mit einer dünnen Schicht"
+                    en: "Silicon monoxide: used to coat and improve optical lenses"
+              uses:
+                - de: Computerchips und Sensoren werden aus Silicium gebaut
+                  en: Computer chips and sensors are built from silicon
+                - de: Steckt in den meisten Solarzellen
+                  en: An important part of most solar cells
+                - de: Zusatz beim Stahl und in Gusslegierungen
+                  en: Added to steel and cast alloys
+              fact:
+                de: Schachtelhalm und Bambus bauen Siliciumdioxid ein und werden dadurch stabiler.
+                en: Horsetail and bamboo store silicon dioxide, which makes them sturdier.
+            - symbol:
+                de: P
+                en: P
+              name:
+                de: Phosphor
+                en: Phosphorus
+              number: 15
+              group: 15
+              period: 3
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 5
+                en: 2, 8, 5
+              compounds:
+                - formula:
+                    de: Ca5(PO4)3OH
+                    en: Ca5(PO4)3OH
+                  text:
+                    de: "Hydroxylapatit: ein Phosphat, das Knochen und Zähne aufbaut"
+                    en: "Hydroxyapatite: a phosphate that builds bones and teeth"
+                - formula:
+                    de: P4O10
+                    en: P4O10
+                  text:
+                    de: "Phosphorpentoxid: trocknet Stoffe stark aus; Ausgangsstoff für Phosphorsäure"
+                    en: "Phosphorus pentoxide: a powerful drying agent and the start for phosphoric acid"
+                - formula:
+                    de: P4S3
+                    en: P4S3
+                  text:
+                    de: "Tetraphosphortrisulfid: steckt teilweise noch im Kopf von Streichhölzern"
+                    en: "Tetraphosphorus trisulfide: still used in some matchstick heads"
+              uses:
+                - de: "Düngemittel: Phosphate aus Phosphor-Rohstoffen lassen Pflanzen wachsen"
+                  en: "Fertilisers: phosphates are the plant food made from phosphorus raw material"
+                - de: Roter Phosphor wird für Streichhölzer verwendet
+                  en: Red phosphorus is used in making matches
+                - de: Roter Phosphor macht manche Kunststoffe schwerer entflammbar
+                  en: Red phosphorus makes some plastics harder to set on fire
+              fact:
+                de: Phosphor wurde 1669 aus eingedampftem Urin gewonnen und leuchtete im Dunkeln.
+                en: Phosphorus was first made in 1669 from boiled-down urine, and it glowed in the dark.
+            - symbol:
+                de: S
+                en: S
+              name:
+                de: Schwefel
+                en: Sulfur
+              number: 16
+              group: 16
+              period: 3
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 6
+                en: 2, 8, 6
+              compounds:
+                - formula:
+                    de: H2SO4
+                    en: H2SO4
+                  text:
+                    de: "Schwefelsäure: wichtige Industriesäure, vor allem für Dünger"
+                    en: "Sulfuric acid: a key industrial acid, mostly used to make fertiliser"
+                - formula:
+                    de: H2S
+                    en: H2S
+                  text:
+                    de: "Schwefelwasserstoff: giftiges Gas, riecht nach faulen Eiern"
+                    en: "Hydrogen sulfide: a poisonous gas that smells of rotten eggs"
+                - formula:
+                    de: SO2
+                    en: SO2
+                  text:
+                    de: "Schwefeldioxid: konserviert Wein und Trockenobst"
+                    en: "Sulfur dioxide: preserves wine and dried fruit"
+              uses:
+                - de: Ausgangsstoff für Schwefelsäure (rund 90 % des Schwefels)
+                  en: Raw material for sulfuric acid (about 90 % of all sulfur)
+                - de: Macht Gummi widerstandsfähig (Vulkanisation von Kautschuk)
+                  en: Makes rubber tougher (vulcanisation of rubber)
+                - de: Zutat für Schwarzpulver und Feuerwerk
+                  en: An ingredient of black powder and fireworks
+              fact:
+                de: Schon um 5000 v. Chr. bleichten Menschen in China und Ägypten Stoffe mit Schwefel.
+                en: As early as about 5000 BC, people in China and Egypt bleached cloth with sulfur.
+            - symbol:
+                de: Cl
+                en: Cl
+              name:
+                de: Chlor
+                en: Chlorine
+              number: 17
+              group: 17
+              period: 3
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 7
+                en: 2, 8, 7
+              compounds:
+                - formula:
+                    de: NaCl
+                    en: NaCl
+                  text:
+                    de: "Natriumchlorid: unser Speisesalz, auch als Steinsalz im Boden"
+                    en: "Sodium chloride: our table salt, also found underground as rock salt"
+                - formula:
+                    de: HCl
+                    en: HCl
+                  text:
+                    de: "Chlorwasserstoff: löst sich in Wasser zur Salzsäure"
+                    en: "Hydrogen chloride: dissolves in water to form hydrochloric acid"
+                - formula:
+                    de: KCl
+                    en: KCl
+                  text:
+                    de: "Kaliumchlorid: dient hauptsächlich der Düngung von Feldern"
+                    en: "Potassium chloride: mainly used as a fertiliser"
+              uses:
+                - de: Ausgangsstoff für den Kunststoff PVC (über Vinylchlorid)
+                  en: Starting material for the plastic PVC (via vinyl chloride)
+                - de: Desinfiziert Schwimmbad- und Trinkwasser
+                  en: Disinfects swimming-pool and drinking water
+                - de: Bleicht Papier weiß
+                  en: Bleaches paper white
+              fact:
+                de: 1995 kam Chlor bei 85 % aller Arzneistoffe zum Einsatz.
+                en: Chlorine was used in making 85 % of all medicines (as of 1995).
+            - symbol:
+                de: Ar
+                en: Ar
+              name:
+                de: Argon
+                en: Argon
+              number: 18
+              group: 18
+              period: 3
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 8
+                en: 2, 8, 8
+              compounds:
+                - formula:
+                    de: HArF
+                    en: HArF
+                  text:
+                    de: "Argonfluorohydrid: eine Verbindung, die nur im Labor bei sehr großer Kälte entsteht"
+                    en: "Argon fluorohydride: a compound made only in the lab at extremely low temperatures"
+              uses:
+                - de: Schutzgas beim Schweißen, damit das Metall nicht reagiert
+                  en: Shielding gas for welding, so the metal does not react
+                - de: Füllgas in Glühlampen und Isolierglasscheiben
+                  en: Filling gas in light bulbs and double-glazed windows
+                - de: "Löschgas für Serverräume: Es verdrängt den Sauerstoff"
+                  en: "Fire-extinguishing gas for server rooms: it pushes out oxygen"
+              fact:
+                de: Nur Stickstoff und Sauerstoff sind in der Luft häufiger als Argon.
+                en: After nitrogen and oxygen, argon is the third most common gas in the air.
+              note:
+                de: Argon ist ein Edelgas und bildet kaum Verbindungen; nur eine ist bekannt.
+                en: Argon is a noble gas and forms hardly any compounds; only one is known.
+            - symbol:
+                de: K
+                en: K
+              name:
+                de: Kalium
+                en: Potassium
+              number: 19
+              group: 1
+              period: 4
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 8, 1
+                en: 2, 8, 8, 1
+              compounds:
+                - formula:
+                    de: KCl
+                    en: KCl
+                  text:
+                    de: "Kaliumchlorid: Kalidünger und Ausgangsstoff vieler Kaliumsalze"
+                    en: "Potassium chloride: potash fertiliser and a source of many other potassium compounds"
+                - formula:
+                    de: KNO3
+                    en: KNO3
+                  text:
+                    de: "Kaliumnitrat: Hauptbestandteil von Schwarzpulver"
+                    en: "Potassium nitrate: the main ingredient of black powder"
+                - formula:
+                    de: K2SO4
+                    en: K2SO4
+                  text:
+                    de: "Kaliumsulfat: Dünger für Pflanzen"
+                    en: "Potassium sulfate: mainly used as a fertiliser"
+              uses:
+                - de: Kühlflüssigkeit in einigen Kernreaktoren (mit Natrium gemischt)
+                  en: Coolant in some nuclear reactors (mixed with sodium)
+                - de: Zusatz in Wolframdraht für Glühlampenwendeln
+                  en: Added to tungsten wire for light-bulb filaments
+              fact:
+                de: Kalium wurde sogar in der Atmosphäre ferner Planeten entdeckt.
+                en: Potassium has even been detected in the atmospheres of distant planets.
+              note:
+                de: Das Metall Kalium hat kaum technische Bedeutung, daher gibt der Artikel nur zwei Verwendungen an.
+                en: The metal potassium has little technical importance, so only two uses are listed.
+            - symbol:
+                de: Ca
+                en: Ca
+              name:
+                de: Calcium
+                en: Calcium
+              number: 20
+              group: 2
+              period: 4
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 8, 2
+                en: 2, 8, 8, 2
+              compounds:
+                - formula:
+                    de: CaCO3
+                    en: CaCO3
+                  text:
+                    de: "Calciumcarbonat: Hauptstoff von Kalkstein, Kreide und Marmor"
+                    en: "Calcium carbonate: the main substance of limestone, chalk and marble"
+                - formula:
+                    de: CaSO4
+                    en: CaSO4
+                  text:
+                    de: "Calciumsulfat: kommt als Gips vor und dient als Baustoff"
+                    en: "Calcium sulfate: occurs as gypsum and is used as a building material"
+                - formula:
+                    de: CaO
+                    en: CaO
+                  text:
+                    de: "Calciumoxid: gebrannter Kalk, Zusatz für Mörtel und Putz"
+                    en: "Calcium oxide: quicklime, used to make mortar and plaster"
+              uses:
+                - de: Hilft in der Metallurgie, andere Metalle wie Vanadium und Zirconium zu gewinnen
+                  en: Used in metallurgy to produce other metals such as vanadium and zirconium
+                - de: Zusatz in Legierungen, zum Beispiel mit Aluminium oder Kupfer
+                  en: Added to alloys, for example with aluminium or copper
+              fact:
+                de: "Calcium steckt nicht nur in Knochen: Es hilft auch Nerven und Muskeln, Signale weiterzugeben."
+                en: "Calcium is not only in bones: it also helps nerves and muscles pass on signals."
+              note:
+                de: Das Metall Calcium wird meist in Verbindungen genutzt, daher gibt der Artikel nur zwei Verwendungen des Elements an.
+                en: The metal calcium is mostly used in its compounds, so only two uses of the element are listed.
+            - symbol:
+                de: Ga
+                en: Ga
+              name:
+                de: Gallium
+                en: Gallium
+              number: 31
+              group: 13
+              period: 4
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 3
+                en: 2, 8, 18, 3
+              compounds:
+                - formula:
+                    de: GaAs
+                    en: GaAs
+                  text:
+                    de: "Galliumarsenid: Halbleiter, steckt in Solarzellen und LEDs"
+                    en: "Gallium arsenide: a semiconductor for solar cells and LEDs"
+                - formula:
+                    de: GaN
+                    en: GaN
+                  text:
+                    de: "Galliumnitrid: Halbleiter, aus dem Leuchtdioden gemacht werden"
+                    en: "Gallium nitride: a semiconductor used to make LEDs"
+              uses:
+                - de: Flüssiger Bestandteil von Thermometern (in der Legierung Galinstan)
+                  en: Liquid part of thermometers (in the alloy galinstan)
+                - de: Beschichtung für Spiegel
+                  en: Coating for mirrors
+                - de: Zusatz zum Silicium in der Elektronik (Dotierung)
+                  en: Added to silicon in electronics (doping)
+              fact:
+                de: Gallium schmilzt schon bei etwa 30 °C, siedet aber erst bei 2400 °C.
+                en: Gallium melts at only about 30 °C but does not boil until 2400 °C.
+            - symbol:
+                de: Ge
+                en: Ge
+              name:
+                de: Germanium
+                en: Germanium
+              number: 32
+              group: 14
+              period: 4
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 4
+                en: 2, 8, 18, 4
+              compounds:
+                - formula:
+                    de: GeO2
+                    en: GeO2
+                  text:
+                    de: "Germaniumdioxid: Katalysator für Polyester in PET-Flaschen"
+                    en: "Germanium dioxide: a catalyst for the polyester in PET bottles"
+                - formula:
+                    de: GeCl4
+                    en: GeCl4
+                  text:
+                    de: "Germaniumtetrachlorid: Rohstoff für Glasfaserkabel"
+                    en: "Germanium tetrachloride: helps in making optical-fibre cables"
+                - formula:
+                    de: GeH4
+                    en: GeH4
+                  text:
+                    de: "Monogerman: Gas für die Halbleiterindustrie"
+                    en: "Germane: a gas used in the semiconductor industry"
+              uses:
+                - de: Erste Dioden und Transistoren, bis Silicium sie ersetzte
+                  en: The first diodes and transistors, until silicon replaced it
+                - de: Linsen für Nachtsichtgeräte und Wärmebildkameras
+                  en: Lenses for night-vision devices and thermal cameras
+                - de: Strahlendetektor aus hochreinem Kristall
+                  en: Radiation detector made of a very pure crystal
+              fact:
+                de: Mendelejew sagte das Element 1871 voraus, Jahre vor seiner Entdeckung, und nannte es Eka-Silicium.
+                en: Mendeleev predicted this element in 1871, years before its discovery, and called it eka-silicon.
+            - symbol:
+                de: As
+                en: As
+              name:
+                de: Arsen
+                en: Arsenic
+              number: 33
+              group: 15
+              period: 4
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 5
+                en: 2, 8, 18, 5
+              compounds:
+                - formula:
+                    de: GaAs
+                    en: GaAs
+                  text:
+                    de: "Galliumarsenid: Halbleiter für Chips, LEDs und Laserdioden"
+                    en: "Gallium arsenide: a semiconductor used in chips, LEDs and laser diodes"
+                - formula:
+                    de: As2O3
+                    en: As2O3
+                  text:
+                    de: "Arsenik (Arsen(III)-oxid): sehr giftig, in manchen Ländern als Schädlingsgift genutzt"
+                    en: "Arsenic trioxide: very poisonous, used as a pest killer in some countries"
+                - formula:
+                    de: As2S3
+                    en: As2S3
+                  text:
+                    de: "Auripigment: gelbes Mineral, früher eine Malerfarbe"
+                    en: "Orpiment: a yellow mineral that was once used as a paint pigment"
+              uses:
+                - de: "Zusatz in Blei: macht es fester und gießbarer, z. B. für Akkuplatten"
+                  en: Added to lead to make it stronger and easier to cast, for example in battery plates
+                - de: Früher wichtige Zutat in Kupfer-Legierungen, die sich dadurch leichter bearbeiten ließen
+                  en: Once an important ingredient of copper alloys that made them easier to work
+                - de: Sehr reines Arsen wird für Halbleiter in der Elektronik gebraucht
+                  en: Very pure arsenic is needed for semiconductors in electronics
+              fact:
+                de: Im Haar von Ötzi fand man viel Arsen – wahrscheinlich, weil er mit Kupfer arbeitete.
+                en: Large amounts of arsenic were found in the hair of Ötzi the Iceman, probably because he worked with copper.
+            - symbol:
+                de: Se
+                en: Se
+              name:
+                de: Selen
+                en: Selenium
+              number: 34
+              group: 16
+              period: 4
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 6
+                en: 2, 8, 18, 6
+              compounds:
+                - formula:
+                    de: SeS2
+                    en: SeS2
+                  text:
+                    de: "Selendisulfid: Wirkstoff in Shampoos gegen Schuppen"
+                    en: "Selenium disulfide: an ingredient in anti-dandruff shampoos"
+                - formula:
+                    de: CdSe
+                    en: CdSe
+                  text:
+                    de: "Cadmiumselenid: gibt Farben ein kräftiges Rot"
+                    en: "Cadmium selenide: gives paints and pigments a strong red colour"
+                - formula:
+                    de: SeO2
+                    en: SeO2
+                  text:
+                    de: "Selendioxid: spart Energie bei der Herstellung von Mangan"
+                    en: "Selenium dioxide: saves energy when manganese is produced"
+              uses:
+                - de: "In der Glasherstellung: entfärbt grünes Glas oder färbt Glas rot"
+                  en: "In glassmaking: removes the green tint from glass or colours glass red"
+                - de: Lichtempfindliche Trommeln in Fotokopierern und Laserdruckern
+                  en: Light-sensitive drums in photocopiers and laser printers
+                - de: "Zusatz in Stahl und Kupfer: macht sie besser zu bearbeiten"
+                  en: Added to steel and copper alloys so they are easier to machine
+              fact:
+                de: Selen heißt nach der griechischen Mondgöttin Selene.
+                en: Selenium is named after Selene, the Greek goddess of the moon.
+            - symbol:
+                de: Br
+                en: Br
+              name:
+                de: Brom
+                en: Bromine
+              number: 35
+              group: 17
+              period: 4
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 18, 7
+                en: 2, 8, 18, 7
+              compounds:
+                - formula:
+                    de: AgBr
+                    en: AgBr
+                  text:
+                    de: "Silberbromid: lichtempfindlicher Stoff für Fotofilme"
+                    en: "Silver bromide: the light-sensitive substance used in photographic film"
+                - formula:
+                    de: CH3Br
+                    en: CH3Br
+                  text:
+                    de: "Methylbromid: Gas, das gegen Schädlinge in Containern eingesetzt wurde"
+                    en: "Methyl bromide: a gas once used to fumigate containers against pests"
+              uses:
+                - de: Flammschutzmittel in Kunststoffen und Leiterplatten
+                  en: Flame retardants in plastics and circuit boards
+                - de: Desinfektionsmittel, milder als Chlor
+                  en: A disinfectant that is milder than chlorine
+                - de: Bromhaltiger Kautschuk für luftdichte Reifen
+                  en: Bromine-containing rubber for airtight tyres
+              fact:
+                de: Brom und Quecksilber sind die einzigen Elemente, die bei Normbedingungen flüssig sind.
+                en: Bromine and mercury are the only elements that are liquid under standard conditions.
+            - symbol:
+                de: Kr
+                en: Kr
+              name:
+                de: Krypton
+                en: Krypton
+              number: 36
+              group: 18
+              period: 4
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 18, 8
+                en: 2, 8, 18, 8
+              compounds:
+                - formula:
+                    de: KrF2
+                    en: KrF2
+                  text:
+                    de: "Kryptondifluorid: eines der stärksten bekannten Oxidationsmittel"
+                    en: "Krypton difluoride: one of the strongest known oxidising agents"
+              uses:
+                - de: "Füllgas in Glühlampen: der Draht kann heißer werden und leuchtet heller"
+                  en: Filling gas in light bulbs, so the filament can run hotter and shine brighter
+                - de: Füllgas für sehr gut dämmende Isolierglasscheiben
+                  en: Filling gas for very well insulating double-glazed windows
+                - de: Zusammen mit Fluor für UV-Laser (Excimerlaser)
+                  en: Used with fluorine in a UV laser (excimer laser)
+              fact:
+                de: Von 1960 bis 1983 wurde der Meter über das Licht eines Krypton-Atoms festgelegt.
+                en: From 1960 until 1983 the metre was defined using light from a krypton atom.
+              note:
+                de: Von Krypton sind nur sehr wenige Verbindungen bekannt, deshalb ist hier nur eine aufgeführt.
+                en: Only very few krypton compounds are known, so only one is listed.
+            - symbol:
+                de: Rb
+                en: Rb
+              name:
+                de: Rubidium
+                en: Rubidium
+              number: 37
+              group: 1
+              period: 5
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 8, 1
+                en: 2, 8, 18, 8, 1
+              compounds:
+                - formula:
+                    de: RbCl
+                    en: RbCl
+                  text:
+                    de: "Rubidiumchlorid: Salz, aus dem sich das Metall gewinnen lässt"
+                    en: "Rubidium chloride: a salt from which the metal can be made"
+                - formula:
+                    de: RbOH
+                    en: RbOH
+                  text:
+                    de: "Rubidiumhydroxid: entsteht, wenn Rubidium heftig mit Wasser reagiert"
+                    en: "Rubidium hydroxide: formed when rubidium reacts violently with water"
+                - formula:
+                    de: RbAlSi3O8
+                    en: RbAlSi3O8
+                  text:
+                    de: "Rubiklin: sehr seltenes Mineral, 1998 auf der Insel Elba entdeckt"
+                    en: "Rubicline: a very rare mineral, found on the island of Elba in 1998"
+              uses:
+                - de: "Rubidiumuhren: Atomuhren in Navigationssatelliten wie GPS"
+                  en: "Rubidium clocks: atomic clocks in navigation satellites such as GPS"
+                - de: In der Forschung, um Atome mit Laserlicht abzukühlen
+                  en: In research, for cooling atoms with laser light
+              fact:
+                de: Der Name bedeutet „tiefrot“, nach zwei dunkelroten Linien im Licht des Elements.
+                en: The name means “deep red”, after two dark red lines in the light the element gives off.
+            - symbol:
+                de: Sr
+                en: Sr
+              name:
+                de: Strontium
+                en: Strontium
+              number: 38
+              group: 2
+              period: 5
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 8, 2
+                en: 2, 8, 18, 8, 2
+              compounds:
+                - formula:
+                    de: SrCO3
+                    en: SrCO3
+                  text:
+                    de: "Strontiumcarbonat: wichtigste Handelsform, z. B. für Magnete"
+                    en: "Strontium carbonate: the most important commercial form, used for magnets among other things"
+                - formula:
+                    de: Sr(NO3)2
+                    en: Sr(NO3)2
+                  text:
+                    de: "Strontiumnitrat: färbt Feuerwerk rot"
+                    en: "Strontium nitrate: gives fireworks their red colour"
+                - formula:
+                    de: SrSO4
+                    en: SrSO4
+                  text:
+                    de: "Coelestin (Strontiumsulfat): wichtiges Erz, auch für Bohrflüssigkeiten"
+                    en: "Celestine (strontium sulfate): an important ore, also used in drilling fluids"
+              uses:
+                - de: Rote Farbe in Feuerwerk und Signalfackeln
+                  en: Red colour in fireworks and flares
+                - de: Für keramische Ferritmagnete
+                  en: For ceramic ferrite magnets
+                - de: "Zusatz in Aluminium-Silicium-Legierungen: verbessert deren Festigkeit"
+                  en: Added to aluminium-silicon alloys to improve their mechanical properties
+              fact:
+                de: Strontium ist nach dem Ort Strontian in Schottland benannt.
+                en: Strontium is named after the village of Strontian in Scotland.
+            - symbol:
+                de: In
+                en: In
+              name:
+                de: Indium
+                en: Indium
+              number: 49
+              group: 13
+              period: 5
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 18, 3
+                en: 2, 8, 18, 18, 3
+              compounds:
+                - formula:
+                    de: InAs
+                    en: InAs
+                  text:
+                    de: "Indiumarsenid: Halbleiter für Leuchtdioden, Fotodioden und Laser"
+                    en: "Indium arsenide: a semiconductor for LEDs, photodiodes and lasers"
+                - formula:
+                    de: CuInSe2
+                    en: CuInSe2
+                  text:
+                    de: "Kupferindiumdiselenid: Schicht in Dünnschicht-Solarzellen"
+                    en: "Copper indium diselenide: the light-absorbing layer in thin-film solar cells"
+                - formula:
+                    de: In2S3
+                    en: In2S3
+                  text:
+                    de: "Indium(III)-sulfid: ersetzt Cadmiumsulfid in Solarzellen"
+                    en: "Indium(III) sulfide: replaces cadmium sulfide in solar cells"
+              uses:
+                - de: Der größte Teil geht in Bildschirme (als Indiumzinnoxid)
+                  en: Most of it goes into displays, as indium tin oxide
+                - de: Legierungen mit niedrigem Schmelzpunkt für Sprinkler und Sicherungen
+                  en: Low-melting alloys for sprinklers and fuses
+                - de: "Dichtungen in Kältegeräten: bleibt auch bei Kälte formbar"
+                  en: Seals in cryogenic equipment, because it stays easy to shape even when very cold
+              fact:
+                de: Galinstan, eine Legierung mit Indium, ist bei Zimmertemperatur flüssig und ersetzt Quecksilber.
+                en: Galinstan, an alloy containing indium, is liquid at room temperature and can replace mercury.
+            - symbol:
+                de: Sn
+                en: Sn
+              name:
+                de: Zinn
+                en: Tin
+              number: 50
+              group: 14
+              period: 5
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 18, 4
+                en: 2, 8, 18, 18, 4
+              compounds:
+                - formula:
+                    de: SnO2
+                    en: SnO2
+                  text:
+                    de: "Zinndioxid (Kassiterit): wichtigstes Zinnerz, auch mildes Poliermittel"
+                    en: "Tin dioxide (cassiterite): the main tin ore, also a mild polishing agent"
+                - formula:
+                    de: Cu2FeSnS4
+                    en: Cu2FeSnS4
+                  text:
+                    de: "Stannit: seltenes Zinnerz aus Kupfer, Eisen, Zinn und Schwefel"
+                    en: "Stannite: a rare tin ore made of copper, iron, tin and sulfur"
+              uses:
+                - de: Mit Kupfer legiert ergibt es Bronze
+                  en: Alloyed with copper it makes bronze
+                - de: "Lötzinn: verbindet elektronische Bauteile auf Platinen"
+                  en: "Solder: joins electronic parts on circuit boards"
+                - de: "Weißblech: verzinntes Eisenblech für Konservendosen"
+                  en: "Tinplate: tin-coated iron sheet used for food cans"
+              fact:
+                de: Biegt man reines Zinn, knarrt es hörbar – das nennt man „Zinngeschrei“.
+                en: If you bend pure tin it creaks audibly, a sound called “tin cry”.
+            - symbol:
+                de: Sb
+                en: Sb
+              name:
+                de: Antimon
+                en: Antimony
+              number: 51
+              group: 15
+              period: 5
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 18, 5
+                en: 2, 8, 18, 18, 5
+              compounds:
+                - formula:
+                    de: Sb2S3
+                    en: Sb2S3
+                  text:
+                    de: "Antimontrisulfid (Stibnit): wichtigstes Erz, früher auch schwarze Augenschminke"
+                    en: "Antimony trisulfide (stibnite): the main ore, once also used as black eye makeup"
+                - formula:
+                    de: Sb2O3
+                    en: Sb2O3
+                  text:
+                    de: "Antimontrioxid: Flammschutzmittel und Stoff bei der Herstellung von PET"
+                    en: "Antimony trioxide: used as a flame retardant and in making PET plastic"
+              uses:
+                - de: Härtet Blei und Zinn in Legierungen
+                  en: Hardens lead and tin in alloys
+                - de: Bestandteil von Blei für Akkumulatoren
+                  en: An ingredient of the lead used in batteries
+                - de: Dotierstoff für Halbleiter, z. B. in Silicium
+                  en: Used to dope semiconductors such as silicon
+              fact:
+                de: Antimon dehnt sich beim Abkühlen aus, deshalb füllt Guss auch feinste Ecken.
+                en: Antimony expands as it cools, so cast alloys with it fill even the finest corners.
+            - symbol:
+                de: Te
+                en: Te
+              name:
+                de: Tellur
+                en: Tellurium
+              number: 52
+              group: 16
+              period: 5
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 18, 6
+                en: 2, 8, 18, 18, 6
+              compounds:
+                - formula:
+                    de: CdTe
+                    en: CdTe
+                  text:
+                    de: "Cadmiumtellurid: Material für Dünnschicht-Solarzellen"
+                    en: "Cadmium telluride: a material for thin-film solar cells"
+                - formula:
+                    de: TeO2
+                    en: TeO2
+                  text:
+                    de: "Tellurdioxid: Glas für Lichtwellenleiter"
+                    en: "Tellurium dioxide: glass for optical fibres"
+                - formula:
+                    de: Sb2Te3
+                    en: Sb2Te3
+                  text:
+                    de: "Antimontellurid: Speicherschicht in wiederbeschreibbaren CDs"
+                    en: "Antimony telluride: the storage layer in rewritable CDs"
+              uses:
+                - de: Zusatz in der Metallindustrie
+                  en: An additive in the metal industry
+                - de: Wenig Tellur dient für Gummi, Sprengkapseln sowie gefärbtes Glas und Keramik
+                  en: Small amounts are used for rubber, detonators and coloured glass and ceramics
+                - de: Tellursalze färben Feuerwerk grasgrün
+                  en: Tellurium salts give fireworks a grass-green colour
+              fact:
+                de: Tellur ist ungefähr so selten wie Gold, aber viel billiger.
+                en: Tellurium is about as rare as gold, but much cheaper.
+            - symbol:
+                de: I
+                en: I
+              name:
+                de: Iod
+                en: Iodine
+              number: 53
+              group: 17
+              period: 5
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 18, 18, 7
+                en: 2, 8, 18, 18, 7
+              compounds:
+                - formula:
+                    de: KI
+                    en: KI
+                  text:
+                    de: "Kaliumiodid: bekanntes Iodsalz, in dem sich Iod gut löst"
+                    en: "Potassium iodide: a well-known iodide in which iodine dissolves well"
+                - formula:
+                    de: CaI2
+                    en: CaI2
+                  text:
+                    de: "Calciumiodid: wird Lebensmitteln als Iodquelle zugesetzt"
+                    en: "Calcium iodide: added to foods as a source of iodine"
+                - formula:
+                    de: AgI
+                    en: AgI
+                  text:
+                    de: "Silberiodid: Silbersalz, das bei Licht dunkel wird"
+                    en: "Silver iodide: a silver salt that darkens in light"
+              uses:
+                - de: "Iodsalz: Speisesalz mit Iod, weil der Körper Iod braucht"
+                  en: "Iodised salt: table salt with added iodine, because the body needs iodine"
+                - de: Iodtinktur wirkt als Desinfektionsmittel bei Wunden
+                  en: Tincture of iodine works as an antiseptic for wounds
+                - de: Desinfiziert zum Teil das Wasser in Schwimmbädern
+                  en: Sometimes used to disinfect swimming pool water
+              fact:
+                de: "Iod entdeckte man zufällig: Beim Töpfereinigen stieg eine violette Wolke auf."
+                en: "Iodine was found by accident: cleaning pots released a violet cloud."
+            - symbol:
+                de: Xe
+                en: Xe
+              name:
+                de: Xenon
+                en: Xenon
+              number: 54
+              group: 18
+              period: 5
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 18, 18, 8
+                en: 2, 8, 18, 18, 8
+              compounds:
+                - formula:
+                    de: XeF2
+                    en: XeF2
+                  text:
+                    de: "Xenondifluorid: die stabilste Xenonverbindung, dient im Labor zum Fluorieren"
+                    en: "Xenon difluoride: the most stable xenon compound, used in labs to add fluorine"
+                - formula:
+                    de: XeF4
+                    en: XeF4
+                  text:
+                    de: "Xenontetrafluorid: eine von drei bekannten Xenon-Fluor-Verbindungen"
+                    en: "Xenon tetrafluoride: one of three known compounds of xenon and fluorine"
+              uses:
+                - de: Füllgas in Gasentladungslampen, auch in Autoscheinwerfern (Xenonlicht)
+                  en: Fill gas in discharge lamps, including car headlights (xenon lights)
+                - de: Treibstoff in Ionenantrieben von Satelliten und Raumsonden
+                  en: Propellant in ion thrusters of satellites and space probes
+                - de: Füllgas in besonders gut dämmenden Mehrscheiben-Fenstern
+                  en: Fill gas in highly insulating multi-pane windows
+              fact:
+                de: Auf der Erde gibt es kein stabiles Element, das seltener ist als Xenon.
+                en: Xenon is the rarest stable element on Earth.
+            - symbol:
+                de: Cs
+                en: Cs
+              name:
+                de: Caesium
+                en: Caesium
+              number: 55
+              group: 1
+              period: 6
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 18, 8, 1
+                en: 2, 8, 18, 18, 8, 1
+              compounds:
+                - formula:
+                    de: CsCl
+                    en: CsCl
+                  text:
+                    de: "Caesiumchlorid: hilft in der Ultrazentrifuge, DNA zu trennen und zu reinigen"
+                    en: "Caesium chloride: used to separate and purify DNA in an ultracentrifuge"
+                - formula:
+                    de: CsI
+                    en: CsI
+                  text:
+                    de: "Caesiumiodid: durchsichtiges Material in Szintillationszählern"
+                    en: "Caesium iodide: a transparent material in scintillation counters"
+                - formula:
+                    de: CsNO3
+                    en: CsNO3
+                  text:
+                    de: "Caesiumnitrat: steckt in Leuchtmunition und Tarnnebeln des Militärs"
+                    en: "Caesium nitrate: used in military flares and smoke screens"
+              uses:
+                - de: Taktgeber der Atomuhren, nach denen die Weltzeit läuft
+                  en: Timekeeper in atomic clocks that set world time
+                - de: Treibstoff in Ionenantrieben für die Raumfahrt
+                  en: Propellant in ion thrusters for spaceflight
+                - de: Bindet Restgase in Vakuumröhren und verbessert so das Vakuum
+                  en: Binds leftover gases in vacuum tubes and so improves the vacuum
+              fact:
+                de: Seit 1967 ist die Sekunde über Caesiumatome festgelegt.
+                en: Since 1967, the second has been defined using caesium atoms.
+            - symbol:
+                de: Ba
+                en: Ba
+              name:
+                de: Barium
+                en: Barium
+              number: 56
+              group: 2
+              period: 6
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 18, 8, 2
+                en: 2, 8, 18, 18, 8, 2
+              compounds:
+                - formula:
+                    de: BaSO4
+                    en: BaSO4
+                  text:
+                    de: "Bariumsulfat: schwer löslich und ungiftig, nützlich als Röntgenkontrastmittel und Farbe"
+                    en: "Barium sulfate: barely soluble and non-toxic, used as an X-ray contrast agent and in paint"
+                - formula:
+                    de: BaCl2
+                    en: BaCl2
+                  text:
+                    de: "Bariumchlorid: Grundstoff für andere Bariumverbindungen, weist Sulfat nach"
+                    en: "Barium chloride: a starting material for other barium compounds, detects sulfate"
+                - formula:
+                    de: Ba(NO3)2
+                    en: Ba(NO3)2
+                  text:
+                    de: "Bariumnitrat: färbt Feuerwerk grün"
+                    en: "Barium nitrate: gives fireworks a green colour"
+              uses:
+                - de: Bindet Restgase in Vakuumröhren, zum Beispiel in älteren Fernsehern
+                  en: Binds leftover gases in vacuum tubes, for example in old TV sets
+                - de: Als Zusatz im Nickel von Zündkerzen
+                  en: Alloyed with nickel in spark plugs
+                - de: Macht Bleilegierungen für Lager härter
+                  en: Makes lead alloys for bearings harder
+              fact:
+                de: 1602 fielen in Italien Steine auf, die nach dem Erhitzen im Dunkeln nachleuchteten. Sie enthielten Barium.
+                en: In 1602, stones in Italy that glowed in the dark after heating caught attention. They contained barium.
+            - symbol:
+                de: Tl
+                en: Tl
+              name:
+                de: Thallium
+                en: Thallium
+              number: 81
+              group: 13
+              period: 6
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 32, 18, 3
+                en: 2, 8, 18, 32, 18, 3
+              compounds:
+                - formula:
+                    de: Tl2SO4
+                    en: Tl2SO4
+                  text:
+                    de: "Thalliumsulfat: wurde früher als Rattengift verkauft, sehr giftig"
+                    en: "Thallium sulfate: once sold as rat poison, very toxic"
+                - formula:
+                    de: TlNO3
+                    en: TlNO3
+                  text:
+                    de: "Thalliumnitrat: gab grünes Licht in Seenotraketen, aber giftig"
+                    en: "Thallium nitrate: gave green light in distress flares, but toxic"
+                - formula:
+                    de: Tl2S
+                    en: Tl2S
+                  text:
+                    de: "Thalliumsulfid: Material für Fotozellen"
+                    en: "Thallium sulfide: a material for photocells"
+              uses:
+                - de: "Legiert mit Blei: Rollen zum Verzinken von Stahlblech"
+                  en: "Alloyed with lead: rollers for galvanising steel sheet"
+                - de: "Mit Quecksilber gemischt: Thermometer für sehr tiefe Temperaturen"
+                  en: "Mixed with mercury: thermometers for very low temperatures"
+                - de: Zusatz in Bleitelluriden für thermoelektrische Materialien
+                  en: Additive in lead tellurides for thermoelectric materials
+              fact:
+                de: Thallium wurde 1861 an einer leuchtend grünen Linie im Licht erkannt und nach einem grünen Zweig benannt.
+                en: Thallium was spotted in 1861 by a bright green line in its light, and named after a green twig.
+            - symbol:
+                de: Pb
+                en: Pb
+              name:
+                de: Blei
+                en: Lead
+              number: 82
+              group: 14
+              period: 6
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 32, 18, 4
+                en: 2, 8, 18, 32, 18, 4
+              compounds:
+                - formula:
+                    de: PbS
+                    en: PbS
+                  text:
+                    de: "Bleisulfid (Bleiglanz): das wichtigste Bleierz"
+                    en: "Lead sulfide (galena): the most important lead ore"
+                - formula:
+                    de: Pb3O4
+                    en: Pb3O4
+                  text:
+                    de: "Mennige: rotes Pulver, früher Rostschutzfarbe und Zusatz für Bleikristall"
+                    en: "Red lead: a red powder, once used as rust-proof paint and in lead crystal"
+                - formula:
+                    de: PbO2
+                    en: PbO2
+                  text:
+                    de: "Blei(IV)-oxid: Elektrode in Autobatterien"
+                    en: "Lead(IV) oxide: an electrode in car batteries"
+              uses:
+                - de: Hauptstoff von Autobatterien, dort landen rund 60 % des Bleis
+                  en: "Main material of car batteries: about 60% of lead goes there"
+                - de: Schutz vor Röntgenstrahlen, zum Beispiel in der Bleischürze
+                  en: Shielding against X-rays, for example in lead aprons
+                - de: Schwere Gewichte beim Tauchen
+                  en: Heavy weights for scuba diving
+              fact:
+                de: In der römischen Porta Nigra stecken geschätzt sieben Tonnen Blei.
+                en: About seven tonnes of lead went into building the Roman gate Porta Nigra.
+            - symbol:
+                de: Bi
+                en: Bi
+              name:
+                de: Bismut
+                en: Bismuth
+              number: 83
+              group: 15
+              period: 6
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 32, 18, 5
+                en: 2, 8, 18, 32, 18, 5
+              compounds:
+                - formula:
+                    de: Bi2O3
+                    en: Bi2O3
+                  text:
+                    de: "Bismutoxid: Zusatz für optische Gläser und technische Keramik"
+                    en: "Bismuth oxide: an additive for optical glass and technical ceramics"
+                - formula:
+                    de: BiOCl
+                    en: BiOCl
+                  text:
+                    de: "Bismutchloridoxid: silbriges Perlglanz-Pigment in Kosmetik"
+                    en: "Bismuth oxychloride: a silvery pearlescent pigment in cosmetics"
+                - formula:
+                    de: BiVO4
+                    en: BiVO4
+                  text:
+                    de: "Bismutvanadat: wetterfestes gelbes Pigment für Lacke und Fassadenfarben"
+                    en: "Bismuth vanadate: a weatherproof yellow pigment for paints and facade colours"
+              uses:
+                - de: Zutat für Legierungen, die schon bei niedriger Temperatur schmelzen
+                  en: Ingredient in alloys that melt at low temperatures
+                - de: Bismut-Zinn-Lot ersetzt bleihaltiges Lot in der Elektronik
+                  en: Bismuth-tin solder replaces lead solder in electronics
+                - de: Ersetzt das giftigere Blei in Schrotkugeln
+                  en: A less toxic replacement for lead in shotgun pellets
+              fact:
+                de: Im 16. Jahrhundert bekamen Holzkästchen eine glänzende Bismutschicht unter bunten Bildern.
+                en: In the 16th century, wooden boxes were decorated with shiny bismuth as a backdrop for colourful designs.
+            - symbol:
+                de: Po
+                en: Po
+              name:
+                de: Polonium
+                en: Polonium
+              number: 84
+              group: 16
+              period: 6
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 32, 18, 6
+                en: 2, 8, 18, 32, 18, 6
+              compounds:
+                - formula:
+                    de: PoO2
+                    en: PoO2
+                  text:
+                    de: "Poloniumdioxid: gelbe oder rote Verbindung aus Polonium und Sauerstoff"
+                    en: "Polonium dioxide: a yellow or red compound of polonium and oxygen"
+                - formula:
+                    de: PoS
+                    en: PoS
+                  text:
+                    de: "Poloniummonosulfid: schwarzer Stoff, der aus einer Poloniumlösung ausfällt"
+                    en: "Polonium monosulfide: a black solid that precipitates from a polonium solution"
+                - formula:
+                    de: H2Po
+                    en: H2Po
+                  text:
+                    de: "Poloniumwasserstoff: bei Raumtemperatur eine Flüssigkeit"
+                    en: "Hydrogen polonide: a liquid at room temperature"
+              uses:
+                - de: Entlädt in Fabriken statische Aufladung, etwa beim Rollen von Papier
+                  en: Removes static charge in factories, for example when rolling paper
+                - de: Wärmequelle in Batterien der sowjetischen Mondfahrzeuge Lunochod
+                  en: Heat source in batteries of the Soviet Lunokhod moon rovers
+                - de: Mit Beryllium als tragbare Neutronenquelle
+                  en: Together with beryllium as a portable neutron source
+              fact:
+                de: Das Ehepaar Curie entdeckte Polonium 1898; der Name erinnert an Polen, Maries Heimat.
+                en: Marie and Pierre Curie found polonium in 1898 and named it after Poland, Marie's homeland.
+            - symbol:
+                de: At
+                en: At
+              name:
+                de: Astat
+                en: Astatine
+              number: 85
+              group: 17
+              period: 6
+              kind:
+                de: Grenzfall (Halbmetall)
+                en: borderline case (metalloid)
+              shells:
+                de: 2, 8, 18, 32, 18, 7
+                en: 2, 8, 18, 32, 18, 7
+              compounds:
+                - formula:
+                    de: HAt
+                    en: HAt
+                  text:
+                    de: "Astatwasserstoff: eine Verbindung aus Astat und Wasserstoff, nur in Spuren nachgewiesen"
+                    en: "Hydrogen astatide: a compound of astatine and hydrogen, detected only in traces"
+              uses:
+                - de: In der Kernmedizin werden Astat-Verbindungen zur Bestrahlung von Tumoren genutzt
+                  en: Organic astatine compounds are used in nuclear medicine to irradiate tumours
+                - de: Astat-Isotope können die Schilddrüse für Untersuchungen markieren
+                  en: Astatine isotopes can label the thyroid gland for examinations
+              fact:
+                de: Auf der ganzen Erde gibt es von Astat nur etwa 100 bis 130 Milligramm.
+                en: There are only about 100 to 130 milligrams of astatine on all of Earth.
+              note:
+                de: Astat ist so selten und kurzlebig, dass der Artikel nur eine Verbindung nennt.
+                en: Astatine is so rare and short-lived that only one compound is listed.
+            - symbol:
+                de: Rn
+                en: Rn
+              name:
+                de: Radon
+                en: Radon
+              number: 86
+              group: 18
+              period: 6
+              kind:
+                de: Nichtmetall
+                en: non-metal
+              shells:
+                de: 2, 8, 18, 32, 18, 8
+                en: 2, 8, 18, 32, 18, 8
+              compounds:
+                - formula:
+                    de: RnF2
+                    en: RnF2
+                  text:
+                    de: "Radondifluorid: entsteht, wenn Radon mit Fluor reagiert"
+                    en: "Radon difluoride: forms when radon reacts with fluorine"
+              uses:
+                - de: Radonmessungen zeigen, ob Grundwasser in ein Gewässer fließt
+                  en: Radon measurements show whether groundwater flows into a body of water
+                - de: Mit Radon im Boden lassen sich Uranlagerstätten aufspüren
+                  en: Radon measurements help in the search for uranium ore
+                - de: Beim Vorhersagen von Erdbeben misst man manchmal das Radon im Boden
+                  en: In some countries, earthquake forecasting also relies on radon measurements
+              fact:
+                de: Unter den Elementgasen ist Radon besonders dicht, also sehr schwer.
+                en: Radon is by far the densest elemental gas, apart from astatine and hot iodine vapour.
+              note:
+                de: Radon ist radioaktiv, deshalb nennt der Artikel nur eine Verbindung.
+                en: Radon is radioactive, so only one compound is listed.
+            - symbol:
+                de: Fr
+                en: Fr
+              name:
+                de: Francium
+                en: Francium
+              number: 87
+              group: 1
+              period: 7
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 32, 18, 8, 1
+                en: 2, 8, 18, 32, 18, 8, 1
+              compounds: []
+              uses:
+                - de: Wird in der Grundlagenforschung genutzt, um den Aufbau von Atomen zu untersuchen
+                  en: Used in basic research to study the structure of atoms
+              fact:
+                de: In der ganzen Erdkruste steckt nur etwa 28 Gramm Francium.
+                en: The whole Earth's crust contains only about 28 grams of francium.
+              note:
+                de: Francium ist extrem selten und zerfällt in Minuten, daher nennt der Artikel keine Verbindungen und nur eine Nutzung.
+                en: Francium is extremely rare and decays within minutes, so no compounds and only one use are listed.
+            - symbol:
+                de: Ra
+                en: Ra
+              name:
+                de: Radium
+                en: Radium
+              number: 88
+              group: 2
+              period: 7
+              kind:
+                de: Metall
+                en: metal
+              shells:
+                de: 2, 8, 18, 32, 18, 8, 2
+                en: 2, 8, 18, 32, 18, 8, 2
+              compounds:
+                - formula:
+                    de: RaCl2
+                    en: RaCl2
+                  text:
+                    de: "Radiumchlorid: Grundlage eines Arzneimittels gegen Knochenmetastasen"
+                    en: "Radium chloride: the basis of a drug for bone metastases"
+                - formula:
+                    de: RaSO4
+                    en: RaSO4
+                  text:
+                    de: "Radiumsulfat: schwer lösliches Salz, ähnlich wie Bariumsulfat"
+                    en: "Radium sulfate: a barely soluble salt, like barium sulfate"
+              uses:
+                - de: Früher in Kapseln zur Krebsbehandlung von innen (Brachytherapie)
+                  en: Once used in capsules for cancer treatment from inside (brachytherapy)
+                - de: Im Physikunterricht zeigen Präparate Alphastrahlung in Nebelkammern
+                  en: In physics classes, samples show alpha radiation in cloud chambers
+                - de: Mit Beryllium gemischt eine Quelle für Neutronen
+                  en: Mixed with beryllium, a source of neutrons
+              fact:
+                de: Bis 1931 wurde Wasser mit Radium namens Radithor als Getränk verkauft.
+                en: Until 1931, radium water called Radithor was sold as a drink.
+        nojs:
+          de: |
+            **I · Alkalimetalle (und Wasserstoff):** Silbrig glänzende, reaktive Metalle mit einem Außenelektron, das sie leicht abgeben. Wasserstoff steht auch in dieser Gruppe, ist aber kein Alkalimetall.
+
+            - **Wasserstoff (H)**, Ordnungszahl 1, Hauptgruppe I, Periode 1, Nichtmetall. Elektronen pro Schale: 1. Übliche Verbindungen: H₂O (Wasser: bedeckt den größten Teil unseres Planeten); CH₄ (Methan: wichtiger Bestandteil von Erdgas); NH₃ (Ammoniak: Ausgangsstoff für Dünger, aus Wasserstoff und Stickstoff hergestellt). Nutzen: Treibstoff für Raketen und zum Schweißen; Härten von Pflanzenöl, so entsteht Margarine; Füllgas für Wetterballons, weil es sehr leicht ist. Wusstest du? Kein Element kommt im Weltall öfter vor als Wasserstoff.
+            - **Lithium (Li)**, Ordnungszahl 3, Hauptgruppe I, Periode 2, Metall. Elektronen pro Schale: 2, 1. Übliche Verbindungen: Li₂CO₃ (Lithiumcarbonat: wichtigste Lithiumverbindung, dient auch bei der Glasherstellung); LiCl (Lithiumchlorid: nimmt Feuchtigkeit auf und trocknet Gase); LiOH (Lithiumhydroxid: Grundstoff für Schmierfette und Luftreinigung in U-Booten). Nutzen: Akkus in Smartphones, Laptops und Elektroautos; Batterien, die nicht wieder aufladbar sind; Leichte Legierungen für die Luft- und Raumfahrt. Wusstest du? Unter den festen Elementen ist Lithium das mit der geringsten Dichte.
+            - **Natrium (Na)**, Ordnungszahl 11, Hauptgruppe I, Periode 3, Metall. Elektronen pro Schale: 2, 8, 1. Übliche Verbindungen: NaCl (Kochsalz: würzt Speisen und konserviert Lebensmittel); NaOH (Natriumhydroxid: Lösung heißt Natronlauge, für Seife und Farbstoffe); NaHCO₃ (Natron: steckt im Backpulver). Nutzen: Kühlung von Ventilen in Verbrennungsmotoren; Natriumdampflampen gaben gelbes Licht für Straßen; Kühlmittel in Schnellen Brütern, den Kernreaktoren. Wusstest du? Der Name Buna, des ersten künstlichen Gummis, kommt von Butadien und Natrium.
+            - **Kalium (K)**, Ordnungszahl 19, Hauptgruppe I, Periode 4, Metall. Elektronen pro Schale: 2, 8, 8, 1. Übliche Verbindungen: KCl (Kaliumchlorid: Kalidünger und Ausgangsstoff vieler Kaliumsalze); KNO₃ (Kaliumnitrat: Hauptbestandteil von Schwarzpulver); K₂SO₄ (Kaliumsulfat: Dünger für Pflanzen). Nutzen: Kühlflüssigkeit in einigen Kernreaktoren (mit Natrium gemischt); Zusatz in Wolframdraht für Glühlampenwendeln. Das Metall Kalium hat kaum technische Bedeutung, daher gibt der Artikel nur zwei Verwendungen an. Wusstest du? Kalium wurde sogar in der Atmosphäre ferner Planeten entdeckt.
+            - **Rubidium (Rb)**, Ordnungszahl 37, Hauptgruppe I, Periode 5, Metall. Elektronen pro Schale: 2, 8, 18, 8, 1. Übliche Verbindungen: RbCl (Rubidiumchlorid: Salz, aus dem sich das Metall gewinnen lässt); RbOH (Rubidiumhydroxid: entsteht, wenn Rubidium heftig mit Wasser reagiert); RbAlSi₃O₈ (Rubiklin: sehr seltenes Mineral, 1998 auf der Insel Elba entdeckt). Nutzen: Rubidiumuhren: Atomuhren in Navigationssatelliten wie GPS; In der Forschung, um Atome mit Laserlicht abzukühlen. Wusstest du? Der Name bedeutet „tiefrot“, nach zwei dunkelroten Linien im Licht des Elements.
+            - **Caesium (Cs)**, Ordnungszahl 55, Hauptgruppe I, Periode 6, Metall. Elektronen pro Schale: 2, 8, 18, 18, 8, 1. Übliche Verbindungen: CsCl (Caesiumchlorid: hilft in der Ultrazentrifuge, DNA zu trennen und zu reinigen); CsI (Caesiumiodid: durchsichtiges Material in Szintillationszählern); CsNO₃ (Caesiumnitrat: steckt in Leuchtmunition und Tarnnebeln des Militärs). Nutzen: Taktgeber der Atomuhren, nach denen die Weltzeit läuft; Treibstoff in Ionenantrieben für die Raumfahrt; Bindet Restgase in Vakuumröhren und verbessert so das Vakuum. Wusstest du? Seit 1967 ist die Sekunde über Caesiumatome festgelegt.
+            - **Francium (Fr)**, Ordnungszahl 87, Hauptgruppe I, Periode 7, Metall. Elektronen pro Schale: 2, 8, 18, 32, 18, 8, 1. Nutzen: Wird in der Grundlagenforschung genutzt, um den Aufbau von Atomen zu untersuchen. Francium ist extrem selten und zerfällt in Minuten, daher nennt der Artikel keine Verbindungen und nur eine Nutzung. Wusstest du? In der ganzen Erdkruste steckt nur etwa 28 Gramm Francium.
+
+            **II · Erdalkalimetalle:** Glänzende, reaktive Metalle mit zwei Außenelektronen. Radium ist radioaktiv.
+
+            - **Beryllium (Be)**, Ordnungszahl 4, Hauptgruppe II, Periode 2, Metall. Elektronen pro Schale: 2, 2. Übliche Verbindungen: BeO (Berylliumoxid: Keramik, die Wärme gut leitet und Strom isoliert); Be(OH)₂ (Berylliumhydroxid: wichtigste Beryllium-Verbindung, Zwischenstufe zur Herstellung des Metalls). Nutzen: Als Zusatz im Berylliumkupfer, einer harten, federnden Legierung; Spiegel für Weltraumteleskope, weil es so leicht ist; Fenster in Röntgenröhren, weil es Röntgenstrahlen durchlässt. Beryllium und seine Verbindungen sind giftig und werden nur in wenigen Anwendungen genutzt. Wusstest du? Von allen Elementen, die leichter sind als Eisen, ist Beryllium das seltenste.
+            - **Magnesium (Mg)**, Ordnungszahl 12, Hauptgruppe II, Periode 3, Metall. Elektronen pro Schale: 2, 8, 2. Übliche Verbindungen: MgO (Magnesiumoxid: hält große Hitze aus, daher Keramik für Labor und Industrie); MgCO₃ (Magnesiumcarbonat: das Magnesia der Turner, macht die Hände trocken); MgSO₄ (Magnesiumsulfat: als Bittersalz bekannt, kommt als Mineral Epsomit vor). Nutzen: Leichte Legierungen für Autos und Flugzeuge; Schutz vor Rost: Magnesiumstäbe opfern sich für edlere Metalle; Feuerstarter: Magnesiumspäne entzünden sich leicht. Wusstest du? Magnesium brennt sogar unter Wasser: Es gibt Fackeln, die dort leuchten.
+            - **Calcium (Ca)**, Ordnungszahl 20, Hauptgruppe II, Periode 4, Metall. Elektronen pro Schale: 2, 8, 8, 2. Übliche Verbindungen: CaCO₃ (Calciumcarbonat: Hauptstoff von Kalkstein, Kreide und Marmor); CaSO₄ (Calciumsulfat: kommt als Gips vor und dient als Baustoff); CaO (Calciumoxid: gebrannter Kalk, Zusatz für Mörtel und Putz). Nutzen: Hilft in der Metallurgie, andere Metalle wie Vanadium und Zirconium zu gewinnen; Zusatz in Legierungen, zum Beispiel mit Aluminium oder Kupfer. Das Metall Calcium wird meist in Verbindungen genutzt, daher gibt der Artikel nur zwei Verwendungen des Elements an. Wusstest du? Calcium steckt nicht nur in Knochen: Es hilft auch Nerven und Muskeln, Signale weiterzugeben.
+            - **Strontium (Sr)**, Ordnungszahl 38, Hauptgruppe II, Periode 5, Metall. Elektronen pro Schale: 2, 8, 18, 8, 2. Übliche Verbindungen: SrCO₃ (Strontiumcarbonat: wichtigste Handelsform, z. B. für Magnete); Sr(NO₃)₂ (Strontiumnitrat: färbt Feuerwerk rot); SrSO₄ (Coelestin (Strontiumsulfat): wichtiges Erz, auch für Bohrflüssigkeiten). Nutzen: Rote Farbe in Feuerwerk und Signalfackeln; Für keramische Ferritmagnete; Zusatz in Aluminium-Silicium-Legierungen: verbessert deren Festigkeit. Wusstest du? Strontium ist nach dem Ort Strontian in Schottland benannt.
+            - **Barium (Ba)**, Ordnungszahl 56, Hauptgruppe II, Periode 6, Metall. Elektronen pro Schale: 2, 8, 18, 18, 8, 2. Übliche Verbindungen: BaSO₄ (Bariumsulfat: schwer löslich und ungiftig, nützlich als Röntgenkontrastmittel und Farbe); BaCl₂ (Bariumchlorid: Grundstoff für andere Bariumverbindungen, weist Sulfat nach); Ba(NO₃)₂ (Bariumnitrat: färbt Feuerwerk grün). Nutzen: Bindet Restgase in Vakuumröhren, zum Beispiel in älteren Fernsehern; Als Zusatz im Nickel von Zündkerzen; Macht Bleilegierungen für Lager härter. Wusstest du? 1602 fielen in Italien Steine auf, die nach dem Erhitzen im Dunkeln nachleuchteten. Sie enthielten Barium.
+            - **Radium (Ra)**, Ordnungszahl 88, Hauptgruppe II, Periode 7, Metall. Elektronen pro Schale: 2, 8, 18, 32, 18, 8, 2. Übliche Verbindungen: RaCl₂ (Radiumchlorid: Grundlage eines Arzneimittels gegen Knochenmetastasen); RaSO₄ (Radiumsulfat: schwer lösliches Salz, ähnlich wie Bariumsulfat). Nutzen: Früher in Kapseln zur Krebsbehandlung von innen (Brachytherapie); Im Physikunterricht zeigen Präparate Alphastrahlung in Nebelkammern; Mit Beryllium gemischt eine Quelle für Neutronen. Wusstest du? Bis 1931 wurde Wasser mit Radium namens Radithor als Getränk verkauft.
+
+            **III · Borgruppe:** Bor ist ein Halbmetall, die übrigen Elemente (Aluminium, Gallium, Indium, Thallium) sind Metalle.
+
+            - **Bor (B)**, Ordnungszahl 5, Hauptgruppe III, Periode 2, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 3. Übliche Verbindungen: Na₂B₄O₇ (Borax: wichtigste Borverbindung, nötig für Dämmstoffe und Bleichmittel); H₃BO₃ (Borsäure: dient als Flussmittel zum Löten); B₄C (Borcarbid: sehr hartes Schleifmittel für Stahl). Nutzen: Fasern für Tennisschläger, Angelruten und Helikopterrotoren, weil sie fest und steif sind; Feuerwerk, weil es eine kräftig grüne Flamme gibt; Zünder für Airbags, als Bor-Nitrat-Gemisch. Wusstest du? Schon im antiken Rom nutzte man Borverbindungen, um Glas herzustellen.
+            - **Aluminium (Al)**, Ordnungszahl 13, Hauptgruppe III, Periode 3, Metall. Elektronen pro Schale: 2, 8, 3. Übliche Verbindungen: Al₂O₃ (Aluminiumoxid: als Korund, Rubin und Saphir im Gestein; Schleifmittel); Al(OH)₃ (Aluminiumhydroxid: schützt Kunststoffe und Beschichtungen vor Feuer); KAl(SO₄)₂ (Alaun: wird im Rasierstift bei kleinen Schnitten eingesetzt). Nutzen: Leichtbau in Flugzeugen, Autos und Zügen; Boote und Schiffe: Aluminium hält Salzwasser gut aus; Leichte Stromkabel, etwa Freileitungen und Flugzeugkabel. Wusstest du? Einst war Aluminium teurer als Gold. Erst bessere Verfahren machten es billig.
+            - **Gallium (Ga)**, Ordnungszahl 31, Hauptgruppe III, Periode 4, Metall. Elektronen pro Schale: 2, 8, 18, 3. Übliche Verbindungen: GaAs (Galliumarsenid: Halbleiter, steckt in Solarzellen und LEDs); GaN (Galliumnitrid: Halbleiter, aus dem Leuchtdioden gemacht werden). Nutzen: Flüssiger Bestandteil von Thermometern (in der Legierung Galinstan); Beschichtung für Spiegel; Zusatz zum Silicium in der Elektronik (Dotierung). Wusstest du? Gallium schmilzt schon bei etwa 30 °C, siedet aber erst bei 2400 °C.
+            - **Indium (In)**, Ordnungszahl 49, Hauptgruppe III, Periode 5, Metall. Elektronen pro Schale: 2, 8, 18, 18, 3. Übliche Verbindungen: InAs (Indiumarsenid: Halbleiter für Leuchtdioden, Fotodioden und Laser); CuInSe₂ (Kupferindiumdiselenid: Schicht in Dünnschicht-Solarzellen); In₂S₃ (Indium(III)-sulfid: ersetzt Cadmiumsulfid in Solarzellen). Nutzen: Der größte Teil geht in Bildschirme (als Indiumzinnoxid); Legierungen mit niedrigem Schmelzpunkt für Sprinkler und Sicherungen; Dichtungen in Kältegeräten: bleibt auch bei Kälte formbar. Wusstest du? Galinstan, eine Legierung mit Indium, ist bei Zimmertemperatur flüssig und ersetzt Quecksilber.
+            - **Thallium (Tl)**, Ordnungszahl 81, Hauptgruppe III, Periode 6, Metall. Elektronen pro Schale: 2, 8, 18, 32, 18, 3. Übliche Verbindungen: Tl₂SO₄ (Thalliumsulfat: wurde früher als Rattengift verkauft, sehr giftig); TlNO₃ (Thalliumnitrat: gab grünes Licht in Seenotraketen, aber giftig); Tl₂S (Thalliumsulfid: Material für Fotozellen). Nutzen: Legiert mit Blei: Rollen zum Verzinken von Stahlblech; Mit Quecksilber gemischt: Thermometer für sehr tiefe Temperaturen; Zusatz in Bleitelluriden für thermoelektrische Materialien. Wusstest du? Thallium wurde 1861 an einer leuchtend grünen Linie im Licht erkannt und nach einem grünen Zweig benannt.
+
+            **IV · Kohlenstoff-Silicium-Gruppe:** Sie reicht von Kohlenstoff, einem Nichtmetall, bis zu Blei, einem Metall. Die Gruppe heißt nach ihren ersten beiden Elementen.
+
+            - **Kohlenstoff (C)**, Ordnungszahl 6, Hauptgruppe IV, Periode 2, Nichtmetall. Elektronen pro Schale: 2, 4. Übliche Verbindungen: CO₂ (Kohlenstoffdioxid: Treibhausgas, das Pflanzen für die Photosynthese brauchen); CaCO₃ (Calciumcarbonat: Kalkstein, Kreide, Marmor und Muschelschalen); Na₂CO₃ (Soda (Natriumcarbonat): wichtiger Grundstoff für Glas). Nutzen: Graphit ist der Stoff in Bleistiftminen; Diamant dient als Schleifmittel, er ist sehr hart; Aktivkohle wirkt wie ein Filter für gelöste Stoffe. Wusstest du? Diamant und Graphit bestehen aus demselben Stoff: reinem Kohlenstoff.
+            - **Silicium (Si)**, Ordnungszahl 14, Hauptgruppe IV, Periode 3, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 4. Übliche Verbindungen: SiO₂ (Siliciumdioxid: Hauptbestandteil von Sand; Quarz ist reines SiO2); SiO (Siliciummonoxid: veredelt optische Linsen mit einer dünnen Schicht). Nutzen: Computerchips und Sensoren werden aus Silicium gebaut; Steckt in den meisten Solarzellen; Zusatz beim Stahl und in Gusslegierungen. Wusstest du? Schachtelhalm und Bambus bauen Siliciumdioxid ein und werden dadurch stabiler.
+            - **Germanium (Ge)**, Ordnungszahl 32, Hauptgruppe IV, Periode 4, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 4. Übliche Verbindungen: GeO₂ (Germaniumdioxid: Katalysator für Polyester in PET-Flaschen); GeCl₄ (Germaniumtetrachlorid: Rohstoff für Glasfaserkabel); GeH₄ (Monogerman: Gas für die Halbleiterindustrie). Nutzen: Erste Dioden und Transistoren, bis Silicium sie ersetzte; Linsen für Nachtsichtgeräte und Wärmebildkameras; Strahlendetektor aus hochreinem Kristall. Wusstest du? Mendelejew sagte das Element 1871 voraus, Jahre vor seiner Entdeckung, und nannte es Eka-Silicium.
+            - **Zinn (Sn)**, Ordnungszahl 50, Hauptgruppe IV, Periode 5, Metall. Elektronen pro Schale: 2, 8, 18, 18, 4. Übliche Verbindungen: SnO₂ (Zinndioxid (Kassiterit): wichtigstes Zinnerz, auch mildes Poliermittel); Cu₂FeSnS₄ (Stannit: seltenes Zinnerz aus Kupfer, Eisen, Zinn und Schwefel). Nutzen: Mit Kupfer legiert ergibt es Bronze; Lötzinn: verbindet elektronische Bauteile auf Platinen; Weißblech: verzinntes Eisenblech für Konservendosen. Wusstest du? Biegt man reines Zinn, knarrt es hörbar – das nennt man „Zinngeschrei“.
+            - **Blei (Pb)**, Ordnungszahl 82, Hauptgruppe IV, Periode 6, Metall. Elektronen pro Schale: 2, 8, 18, 32, 18, 4. Übliche Verbindungen: PbS (Bleisulfid (Bleiglanz): das wichtigste Bleierz); Pb₃O₄ (Mennige: rotes Pulver, früher Rostschutzfarbe und Zusatz für Bleikristall); PbO₂ (Blei(IV)-oxid: Elektrode in Autobatterien). Nutzen: Hauptstoff von Autobatterien, dort landen rund 60 % des Bleis; Schutz vor Röntgenstrahlen, zum Beispiel in der Bleischürze; Schwere Gewichte beim Tauchen. Wusstest du? In der römischen Porta Nigra stecken geschätzt sieben Tonnen Blei.
+
+            **V · Stickstoff-Phosphor-Gruppe:** Stickstoff und Phosphor sind Nichtmetalle, Arsen und Antimon Halbmetalle, Bismut ist ein Metall.
+
+            - **Stickstoff (N)**, Ordnungszahl 7, Hauptgruppe V, Periode 2, Nichtmetall. Elektronen pro Schale: 2, 5. Übliche Verbindungen: NH₃ (Ammoniak: Grundstoff für Dünger, ein stechend riechendes Gas); HNO₃ (Salpetersäure: starke Säure, Ausgangsstoff für Dünger und Farbstoffe); N₂O (Lachgas: betäubt bei Operationen). Nutzen: Flüssiger Stickstoff kühlt sehr stark, zum Beispiel Proben; Schutzgas beim Schweißen; Füllung für Flugzeugreifen, damit sie nicht brennen. Wusstest du? Stickstoff macht 78 % der Luft aus, doch man erstickt in reinem Stickstoff.
+            - **Phosphor (P)**, Ordnungszahl 15, Hauptgruppe V, Periode 3, Nichtmetall. Elektronen pro Schale: 2, 8, 5. Übliche Verbindungen: Ca₅(PO₄)₃OH (Hydroxylapatit: ein Phosphat, das Knochen und Zähne aufbaut); P₄O₁₀ (Phosphorpentoxid: trocknet Stoffe stark aus; Ausgangsstoff für Phosphorsäure); P₄S₃ (Tetraphosphortrisulfid: steckt teilweise noch im Kopf von Streichhölzern). Nutzen: Düngemittel: Phosphate aus Phosphor-Rohstoffen lassen Pflanzen wachsen; Roter Phosphor wird für Streichhölzer verwendet; Roter Phosphor macht manche Kunststoffe schwerer entflammbar. Wusstest du? Phosphor wurde 1669 aus eingedampftem Urin gewonnen und leuchtete im Dunkeln.
+            - **Arsen (As)**, Ordnungszahl 33, Hauptgruppe V, Periode 4, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 5. Übliche Verbindungen: GaAs (Galliumarsenid: Halbleiter für Chips, LEDs und Laserdioden); As₂O₃ (Arsenik (Arsen(III)-oxid): sehr giftig, in manchen Ländern als Schädlingsgift genutzt); As₂S₃ (Auripigment: gelbes Mineral, früher eine Malerfarbe). Nutzen: Zusatz in Blei: macht es fester und gießbarer, z. B. für Akkuplatten; Früher wichtige Zutat in Kupfer-Legierungen, die sich dadurch leichter bearbeiten ließen; Sehr reines Arsen wird für Halbleiter in der Elektronik gebraucht. Wusstest du? Im Haar von Ötzi fand man viel Arsen – wahrscheinlich, weil er mit Kupfer arbeitete.
+            - **Antimon (Sb)**, Ordnungszahl 51, Hauptgruppe V, Periode 5, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 18, 5. Übliche Verbindungen: Sb₂S₃ (Antimontrisulfid (Stibnit): wichtigstes Erz, früher auch schwarze Augenschminke); Sb₂O₃ (Antimontrioxid: Flammschutzmittel und Stoff bei der Herstellung von PET). Nutzen: Härtet Blei und Zinn in Legierungen; Bestandteil von Blei für Akkumulatoren; Dotierstoff für Halbleiter, z. B. in Silicium. Wusstest du? Antimon dehnt sich beim Abkühlen aus, deshalb füllt Guss auch feinste Ecken.
+            - **Bismut (Bi)**, Ordnungszahl 83, Hauptgruppe V, Periode 6, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 32, 18, 5. Übliche Verbindungen: Bi₂O₃ (Bismutoxid: Zusatz für optische Gläser und technische Keramik); BiOCl (Bismutchloridoxid: silbriges Perlglanz-Pigment in Kosmetik); BiVO₄ (Bismutvanadat: wetterfestes gelbes Pigment für Lacke und Fassadenfarben). Nutzen: Zutat für Legierungen, die schon bei niedriger Temperatur schmelzen; Bismut-Zinn-Lot ersetzt bleihaltiges Lot in der Elektronik; Ersetzt das giftigere Blei in Schrotkugeln. Wusstest du? Im 16. Jahrhundert bekamen Holzkästchen eine glänzende Bismutschicht unter bunten Bildern.
+
+            **VI · Chalkogene:** Der Name heißt „Erzbildner“. Die Gruppe wird nach ihrem ersten Element auch Sauerstoffgruppe genannt.
+
+            - **Sauerstoff (O)**, Ordnungszahl 8, Hauptgruppe VI, Periode 2, Nichtmetall. Elektronen pro Schale: 2, 6. Übliche Verbindungen: H₂O (Wasser: Leben auf der Erde braucht es unbedingt); H₂O₂ (Wasserstoffperoxid: wirkt als Bleichmittel); SiO₂ (Siliciumdioxid: kommt als Quarz in Gesteinen vor). Nutzen: In der Stahlherstellung entfernt Sauerstoff unerwünschte Beimengungen; Flüssiger Sauerstoff lässt Raketentreibstoff verbrennen; Zusätzlicher Sauerstoff für Patienten in der Notfallmedizin. Wusstest du? Kein Element ist auf der Erde verbreiteter als Sauerstoff, auch Gesteine enthalten ihn.
+            - **Schwefel (S)**, Ordnungszahl 16, Hauptgruppe VI, Periode 3, Nichtmetall. Elektronen pro Schale: 2, 8, 6. Übliche Verbindungen: H₂SO₄ (Schwefelsäure: wichtige Industriesäure, vor allem für Dünger); H₂S (Schwefelwasserstoff: giftiges Gas, riecht nach faulen Eiern); SO₂ (Schwefeldioxid: konserviert Wein und Trockenobst). Nutzen: Ausgangsstoff für Schwefelsäure (rund 90 % des Schwefels); Macht Gummi widerstandsfähig (Vulkanisation von Kautschuk); Zutat für Schwarzpulver und Feuerwerk. Wusstest du? Schon um 5000 v. Chr. bleichten Menschen in China und Ägypten Stoffe mit Schwefel.
+            - **Selen (Se)**, Ordnungszahl 34, Hauptgruppe VI, Periode 4, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 6. Übliche Verbindungen: SeS₂ (Selendisulfid: Wirkstoff in Shampoos gegen Schuppen); CdSe (Cadmiumselenid: gibt Farben ein kräftiges Rot); SeO₂ (Selendioxid: spart Energie bei der Herstellung von Mangan). Nutzen: In der Glasherstellung: entfärbt grünes Glas oder färbt Glas rot; Lichtempfindliche Trommeln in Fotokopierern und Laserdruckern; Zusatz in Stahl und Kupfer: macht sie besser zu bearbeiten. Wusstest du? Selen heißt nach der griechischen Mondgöttin Selene.
+            - **Tellur (Te)**, Ordnungszahl 52, Hauptgruppe VI, Periode 5, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 18, 6. Übliche Verbindungen: CdTe (Cadmiumtellurid: Material für Dünnschicht-Solarzellen); TeO₂ (Tellurdioxid: Glas für Lichtwellenleiter); Sb₂Te₃ (Antimontellurid: Speicherschicht in wiederbeschreibbaren CDs). Nutzen: Zusatz in der Metallindustrie; Wenig Tellur dient für Gummi, Sprengkapseln sowie gefärbtes Glas und Keramik; Tellursalze färben Feuerwerk grasgrün. Wusstest du? Tellur ist ungefähr so selten wie Gold, aber viel billiger.
+            - **Polonium (Po)**, Ordnungszahl 84, Hauptgruppe VI, Periode 6, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 32, 18, 6. Übliche Verbindungen: PoO₂ (Poloniumdioxid: gelbe oder rote Verbindung aus Polonium und Sauerstoff); PoS (Poloniummonosulfid: schwarzer Stoff, der aus einer Poloniumlösung ausfällt); H₂Po (Poloniumwasserstoff: bei Raumtemperatur eine Flüssigkeit). Nutzen: Entlädt in Fabriken statische Aufladung, etwa beim Rollen von Papier; Wärmequelle in Batterien der sowjetischen Mondfahrzeuge Lunochod; Mit Beryllium als tragbare Neutronenquelle. Wusstest du? Das Ehepaar Curie entdeckte Polonium 1898; der Name erinnert an Polen, Maries Heimat.
+
+            **VII · Halogene:** Der Name heißt „Salzbildner“. Die Elemente sind farbige, sehr reaktionsfreudige Nichtmetalle und bilden mit Metallen Salze.
+
+            - **Fluor (F)**, Ordnungszahl 9, Hauptgruppe VII, Periode 2, Nichtmetall. Elektronen pro Schale: 2, 7. Übliche Verbindungen: CaF₂ (Calciumfluorid: kommt als Mineral Fluorit in der Natur vor); HF (Fluorwasserstoff: Flusssäure ätzt Glas); (C₂F₄)n (PTFE (Teflon): Beschichtung von Bratpfannen). Nutzen: Herstellung von Uranhexafluorid für Kernbrennstoff; Herstellung von Schwefelhexafluorid, einem Isoliergas; Behandlung von Kunststoff-Oberflächen, etwa bei Autotanks. Wusstest du? Fluor ist so reaktionsfreudig, dass es fast nie als reines Element in der Natur vorkommt.
+            - **Chlor (Cl)**, Ordnungszahl 17, Hauptgruppe VII, Periode 3, Nichtmetall. Elektronen pro Schale: 2, 8, 7. Übliche Verbindungen: NaCl (Natriumchlorid: unser Speisesalz, auch als Steinsalz im Boden); HCl (Chlorwasserstoff: löst sich in Wasser zur Salzsäure); KCl (Kaliumchlorid: dient hauptsächlich der Düngung von Feldern). Nutzen: Ausgangsstoff für den Kunststoff PVC (über Vinylchlorid); Desinfiziert Schwimmbad- und Trinkwasser; Bleicht Papier weiß. Wusstest du? 1995 kam Chlor bei 85 % aller Arzneistoffe zum Einsatz.
+            - **Brom (Br)**, Ordnungszahl 35, Hauptgruppe VII, Periode 4, Nichtmetall. Elektronen pro Schale: 2, 8, 18, 7. Übliche Verbindungen: AgBr (Silberbromid: lichtempfindlicher Stoff für Fotofilme); CH₃Br (Methylbromid: Gas, das gegen Schädlinge in Containern eingesetzt wurde). Nutzen: Flammschutzmittel in Kunststoffen und Leiterplatten; Desinfektionsmittel, milder als Chlor; Bromhaltiger Kautschuk für luftdichte Reifen. Wusstest du? Brom und Quecksilber sind die einzigen Elemente, die bei Normbedingungen flüssig sind.
+            - **Iod (I)**, Ordnungszahl 53, Hauptgruppe VII, Periode 5, Nichtmetall. Elektronen pro Schale: 2, 8, 18, 18, 7. Übliche Verbindungen: KI (Kaliumiodid: bekanntes Iodsalz, in dem sich Iod gut löst); CaI₂ (Calciumiodid: wird Lebensmitteln als Iodquelle zugesetzt); AgI (Silberiodid: Silbersalz, das bei Licht dunkel wird). Nutzen: Iodsalz: Speisesalz mit Iod, weil der Körper Iod braucht; Iodtinktur wirkt als Desinfektionsmittel bei Wunden; Desinfiziert zum Teil das Wasser in Schwimmbädern. Wusstest du? Iod entdeckte man zufällig: Beim Töpfereinigen stieg eine violette Wolke auf.
+            - **Astat (At)**, Ordnungszahl 85, Hauptgruppe VII, Periode 6, Grenzfall (Halbmetall). Elektronen pro Schale: 2, 8, 18, 32, 18, 7. Übliche Verbindungen: HAt (Astatwasserstoff: eine Verbindung aus Astat und Wasserstoff, nur in Spuren nachgewiesen). Nutzen: In der Kernmedizin werden Astat-Verbindungen zur Bestrahlung von Tumoren genutzt; Astat-Isotope können die Schilddrüse für Untersuchungen markieren. Astat ist so selten und kurzlebig, dass der Artikel nur eine Verbindung nennt. Wusstest du? Auf der ganzen Erde gibt es von Astat nur etwa 100 bis 130 Milligramm.
+
+            **VIII · Edelgase:** Sie reagieren nur unter extremen Bedingungen, sind einatomig und bei Raumtemperatur Gase. Helium ist das häufigste Edelgas, auf der Erde ist es Argon.
+
+            - **Helium (He)**, Ordnungszahl 2, Hauptgruppe VIII, Periode 1, Nichtmetall. Elektronen pro Schale: 2. Nutzen: Füllgas für Luftballons und Luftschiffe, es brennt nicht; Kühlmittel für die Magnete in MRT-Geräten; Teil von Atemgas-Gemischen beim professionellen Tauchen. Helium ist ein Edelgas und bildet keine bekannten beständigen Verbindungen, deshalb sind hier keine aufgeführt. Wusstest du? Helium wurde zuerst auf der Sonne entdeckt, daher der Name (griechisch helios = Sonne).
+            - **Neon (Ne)**, Ordnungszahl 10, Hauptgruppe VIII, Periode 2, Nichtmetall. Elektronen pro Schale: 2, 8. Nutzen: Füllgas von Leuchtröhren, es leuchtet orangerot; Gemisch mit Helium im Helium-Neon-Laser; Neon als Flüssigkeit eignet sich zum Kühlen. Von Neon sind bisher keine Verbindungen bekannt, deshalb sind hier keine aufgeführt. Wusstest du? Neon ist nach Berechnungen das Element, das am schwersten eine Verbindung eingeht.
+            - **Argon (Ar)**, Ordnungszahl 18, Hauptgruppe VIII, Periode 3, Nichtmetall. Elektronen pro Schale: 2, 8, 8. Übliche Verbindungen: HArF (Argonfluorohydrid: eine Verbindung, die nur im Labor bei sehr großer Kälte entsteht). Nutzen: Schutzgas beim Schweißen, damit das Metall nicht reagiert; Füllgas in Glühlampen und Isolierglasscheiben; Löschgas für Serverräume: Es verdrängt den Sauerstoff. Argon ist ein Edelgas und bildet kaum Verbindungen; nur eine ist bekannt. Wusstest du? Nur Stickstoff und Sauerstoff sind in der Luft häufiger als Argon.
+            - **Krypton (Kr)**, Ordnungszahl 36, Hauptgruppe VIII, Periode 4, Nichtmetall. Elektronen pro Schale: 2, 8, 18, 8. Übliche Verbindungen: KrF₂ (Kryptondifluorid: eines der stärksten bekannten Oxidationsmittel). Nutzen: Füllgas in Glühlampen: der Draht kann heißer werden und leuchtet heller; Füllgas für sehr gut dämmende Isolierglasscheiben; Zusammen mit Fluor für UV-Laser (Excimerlaser). Von Krypton sind nur sehr wenige Verbindungen bekannt, deshalb ist hier nur eine aufgeführt. Wusstest du? Von 1960 bis 1983 wurde der Meter über das Licht eines Krypton-Atoms festgelegt.
+            - **Xenon (Xe)**, Ordnungszahl 54, Hauptgruppe VIII, Periode 5, Nichtmetall. Elektronen pro Schale: 2, 8, 18, 18, 8. Übliche Verbindungen: XeF₂ (Xenondifluorid: die stabilste Xenonverbindung, dient im Labor zum Fluorieren); XeF₄ (Xenontetrafluorid: eine von drei bekannten Xenon-Fluor-Verbindungen). Nutzen: Füllgas in Gasentladungslampen, auch in Autoscheinwerfern (Xenonlicht); Treibstoff in Ionenantrieben von Satelliten und Raumsonden; Füllgas in besonders gut dämmenden Mehrscheiben-Fenstern. Wusstest du? Auf der Erde gibt es kein stabiles Element, das seltener ist als Xenon.
+            - **Radon (Rn)**, Ordnungszahl 86, Hauptgruppe VIII, Periode 6, Nichtmetall. Elektronen pro Schale: 2, 8, 18, 32, 18, 8. Übliche Verbindungen: RnF₂ (Radondifluorid: entsteht, wenn Radon mit Fluor reagiert). Nutzen: Radonmessungen zeigen, ob Grundwasser in ein Gewässer fließt; Mit Radon im Boden lassen sich Uranlagerstätten aufspüren; Beim Vorhersagen von Erdbeben misst man manchmal das Radon im Boden. Radon ist radioaktiv, deshalb nennt der Artikel nur eine Verbindung. Wusstest du? Unter den Elementgasen ist Radon besonders dicht, also sehr schwer.
+          en: |
+            **I · Alkali metals (and hydrogen):** Shiny silvery, reactive metals with one outer electron that they give away easily. Hydrogen is in this group too, but it is not an alkali metal.
+
+            - **Hydrogen (H)**, Atomic number 1, Main group I, Period 1, non-metal. Electrons per shell: 1. Common compounds: H₂O (Water: covers most of our planet's surface); CH₄ (Methane: an important part of natural gas); NH₃ (Ammonia: made from hydrogen and nitrogen, a starting material for fertiliser). Uses: Rocket fuel, and used in welding; Hardens plant oil, which is how margarine is made; Lifting gas for weather balloons because it is so light. Did you know? Hydrogen is the most common element in the whole universe.
+            - **Lithium (Li)**, Atomic number 3, Main group I, Period 2, metal. Electrons per shell: 2, 1. Common compounds: Li₂CO₃ (Lithium carbonate: the most important lithium compound, also used in making glass); LiCl (Lithium chloride: absorbs moisture and is used to dry gases); LiOH (Lithium hydroxide: used for greases and to clean the air in submarines). Uses: Rechargeable batteries in phones, laptops and electric cars; Non-rechargeable lithium batteries; Lightweight alloys for aircraft and spacecraft. Did you know? Lithium is the lightest solid element at room temperature.
+            - **Sodium (Na)**, Atomic number 11, Main group I, Period 3, metal. Electrons per shell: 2, 8, 1. Common compounds: NaCl (Table salt: seasons food and preserves it); NaOH (Sodium hydroxide: its solution, caustic soda, is used for soap and dyes); NaHCO₃ (Baking soda: used as baking powder). Uses: Cooling the valves of combustion engines; Sodium vapour lamps gave yellow light for streets; Coolant in fast breeder nuclear reactors. Did you know? Buna, the first artificial rubber, was named after butadiene and sodium.
+            - **Potassium (K)**, Atomic number 19, Main group I, Period 4, metal. Electrons per shell: 2, 8, 8, 1. Common compounds: KCl (Potassium chloride: potash fertiliser and a source of many other potassium compounds); KNO₃ (Potassium nitrate: the main ingredient of black powder); K₂SO₄ (Potassium sulfate: mainly used as a fertiliser). Uses: Coolant in some nuclear reactors (mixed with sodium); Added to tungsten wire for light-bulb filaments. The metal potassium has little technical importance, so only two uses are listed. Did you know? Potassium has even been detected in the atmospheres of distant planets.
+            - **Rubidium (Rb)**, Atomic number 37, Main group I, Period 5, metal. Electrons per shell: 2, 8, 18, 8, 1. Common compounds: RbCl (Rubidium chloride: a salt from which the metal can be made); RbOH (Rubidium hydroxide: formed when rubidium reacts violently with water); RbAlSi₃O₈ (Rubicline: a very rare mineral, found on the island of Elba in 1998). Uses: Rubidium clocks: atomic clocks in navigation satellites such as GPS; In research, for cooling atoms with laser light. Did you know? The name means “deep red”, after two dark red lines in the light the element gives off.
+            - **Caesium (Cs)**, Atomic number 55, Main group I, Period 6, metal. Electrons per shell: 2, 8, 18, 18, 8, 1. Common compounds: CsCl (Caesium chloride: used to separate and purify DNA in an ultracentrifuge); CsI (Caesium iodide: a transparent material in scintillation counters); CsNO₃ (Caesium nitrate: used in military flares and smoke screens). Uses: Timekeeper in atomic clocks that set world time; Propellant in ion thrusters for spaceflight; Binds leftover gases in vacuum tubes and so improves the vacuum. Did you know? Since 1967, the second has been defined using caesium atoms.
+            - **Francium (Fr)**, Atomic number 87, Main group I, Period 7, metal. Electrons per shell: 2, 8, 18, 32, 18, 8, 1. Uses: Used in basic research to study the structure of atoms. Francium is extremely rare and decays within minutes, so no compounds and only one use are listed. Did you know? The whole Earth's crust contains only about 28 grams of francium.
+
+            **II · Alkaline earth metals:** Shiny, reactive metals with two outer electrons. Radium is radioactive.
+
+            - **Beryllium (Be)**, Atomic number 4, Main group II, Period 2, metal. Electrons per shell: 2, 2. Common compounds: BeO (Beryllium oxide: a ceramic that conducts heat well but insulates electricity); Be(OH)₂ (Beryllium hydroxide: the main beryllium compound, a step toward making the metal). Uses: Added to copper to make hard, springy beryllium copper; Mirrors for space telescopes, because it is so light; Windows in X-ray tubes, since X-rays pass through it. Beryllium and its compounds are toxic and are used in only a few applications. Did you know? Of all elements lighter than iron, beryllium is the rarest.
+            - **Magnesium (Mg)**, Atomic number 12, Main group II, Period 3, metal. Electrons per shell: 2, 8, 2. Common compounds: MgO (Magnesium oxide: withstands great heat, so it is used for ceramics in labs and industry); MgCO₃ (Magnesium carbonate: the gym chalk that keeps gymnasts' hands dry); MgSO₄ (Magnesium sulfate: known as Epsom salt, occurs as the mineral epsomite). Uses: Light alloys for cars and aircraft; Protects other metals from corrosion by corroding in their place; Fire starter: magnesium shavings ignite easily. Did you know? Magnesium can burn even underwater: there are torches that work there.
+            - **Calcium (Ca)**, Atomic number 20, Main group II, Period 4, metal. Electrons per shell: 2, 8, 8, 2. Common compounds: CaCO₃ (Calcium carbonate: the main substance of limestone, chalk and marble); CaSO₄ (Calcium sulfate: occurs as gypsum and is used as a building material); CaO (Calcium oxide: quicklime, used to make mortar and plaster). Uses: Used in metallurgy to produce other metals such as vanadium and zirconium; Added to alloys, for example with aluminium or copper. The metal calcium is mostly used in its compounds, so only two uses of the element are listed. Did you know? Calcium is not only in bones: it also helps nerves and muscles pass on signals.
+            - **Strontium (Sr)**, Atomic number 38, Main group II, Period 5, metal. Electrons per shell: 2, 8, 18, 8, 2. Common compounds: SrCO₃ (Strontium carbonate: the most important commercial form, used for magnets among other things); Sr(NO₃)₂ (Strontium nitrate: gives fireworks their red colour); SrSO₄ (Celestine (strontium sulfate): an important ore, also used in drilling fluids). Uses: Red colour in fireworks and flares; For ceramic ferrite magnets; Added to aluminium-silicon alloys to improve their mechanical properties. Did you know? Strontium is named after the village of Strontian in Scotland.
+            - **Barium (Ba)**, Atomic number 56, Main group II, Period 6, metal. Electrons per shell: 2, 8, 18, 18, 8, 2. Common compounds: BaSO₄ (Barium sulfate: barely soluble and non-toxic, used as an X-ray contrast agent and in paint); BaCl₂ (Barium chloride: a starting material for other barium compounds, detects sulfate); Ba(NO₃)₂ (Barium nitrate: gives fireworks a green colour). Uses: Binds leftover gases in vacuum tubes, for example in old TV sets; Alloyed with nickel in spark plugs; Makes lead alloys for bearings harder. Did you know? In 1602, stones in Italy that glowed in the dark after heating caught attention. They contained barium.
+            - **Radium (Ra)**, Atomic number 88, Main group II, Period 7, metal. Electrons per shell: 2, 8, 18, 32, 18, 8, 2. Common compounds: RaCl₂ (Radium chloride: the basis of a drug for bone metastases); RaSO₄ (Radium sulfate: a barely soluble salt, like barium sulfate). Uses: Once used in capsules for cancer treatment from inside (brachytherapy); In physics classes, samples show alpha radiation in cloud chambers; Mixed with beryllium, a source of neutrons. Did you know? Until 1931, radium water called Radithor was sold as a drink.
+
+            **III · Boron group:** Boron is a metalloid, the other elements (aluminium, gallium, indium, thallium) are metals.
+
+            - **Boron (B)**, Atomic number 5, Main group III, Period 2, borderline case (metalloid). Electrons per shell: 2, 3. Common compounds: Na₂B₄O₇ (Borax: the most important boron compound, used for insulation and bleaches); H₃BO₃ (Boric acid: used as a flux for soldering); B₄C (Boron carbide: a very hard abrasive for working steel). Uses: Fibres for tennis rackets, fishing rods and helicopter rotors, being strong and stiff; Fireworks, since it burns with an intense green flame; Igniters for airbags, as a boron-nitrate mixture. Did you know? Boron compounds were already used to make glass in ancient Rome.
+            - **Aluminium (Al)**, Atomic number 13, Main group III, Period 3, metal. Electrons per shell: 2, 8, 3. Common compounds: Al₂O₃ (Aluminium oxide: found as corundum, ruby and sapphire; used as an abrasive); Al(OH)₃ (Aluminium hydroxide: makes plastics and coatings more fire resistant); KAl(SO₄)₂ (Alum: used in styptic pencils for small shaving cuts). Uses: Lightweight construction in aircraft, cars and trains; Boats and ships: aluminium withstands salt water well; Light electric cables, such as overhead lines and aircraft wiring. Did you know? Aluminium used to cost more than gold. Better production methods made it cheap.
+            - **Gallium (Ga)**, Atomic number 31, Main group III, Period 4, metal. Electrons per shell: 2, 8, 18, 3. Common compounds: GaAs (Gallium arsenide: a semiconductor for solar cells and LEDs); GaN (Gallium nitride: a semiconductor used to make LEDs). Uses: Liquid part of thermometers (in the alloy galinstan); Coating for mirrors; Added to silicon in electronics (doping). Did you know? Gallium melts at only about 30 °C but does not boil until 2400 °C.
+            - **Indium (In)**, Atomic number 49, Main group III, Period 5, metal. Electrons per shell: 2, 8, 18, 18, 3. Common compounds: InAs (Indium arsenide: a semiconductor for LEDs, photodiodes and lasers); CuInSe₂ (Copper indium diselenide: the light-absorbing layer in thin-film solar cells); In₂S₃ (Indium(III) sulfide: replaces cadmium sulfide in solar cells). Uses: Most of it goes into displays, as indium tin oxide; Low-melting alloys for sprinklers and fuses; Seals in cryogenic equipment, because it stays easy to shape even when very cold. Did you know? Galinstan, an alloy containing indium, is liquid at room temperature and can replace mercury.
+            - **Thallium (Tl)**, Atomic number 81, Main group III, Period 6, metal. Electrons per shell: 2, 8, 18, 32, 18, 3. Common compounds: Tl₂SO₄ (Thallium sulfate: once sold as rat poison, very toxic); TlNO₃ (Thallium nitrate: gave green light in distress flares, but toxic); Tl₂S (Thallium sulfide: a material for photocells). Uses: Alloyed with lead: rollers for galvanising steel sheet; Mixed with mercury: thermometers for very low temperatures; Additive in lead tellurides for thermoelectric materials. Did you know? Thallium was spotted in 1861 by a bright green line in its light, and named after a green twig.
+
+            **IV · Carbon–silicon group:** It reaches from carbon, a non-metal, to lead, a metal. The group is named after its first two elements.
+
+            - **Carbon (C)**, Atomic number 6, Main group IV, Period 2, non-metal. Electrons per shell: 2, 4. Common compounds: CO₂ (Carbon dioxide: a greenhouse gas that plants need for photosynthesis); CaCO₃ (Calcium carbonate: limestone, chalk, marble and seashells); Na₂CO₃ (Soda (sodium carbonate): an important raw material for glass). Uses: Graphite is the material in pencil leads; Diamond is used as an abrasive because it is so hard; Activated carbon filters dissolved substances out of liquids. Did you know? Diamond and graphite are made of the same thing: pure carbon.
+            - **Silicon (Si)**, Atomic number 14, Main group IV, Period 3, borderline case (metalloid). Electrons per shell: 2, 8, 4. Common compounds: SiO₂ (Silicon dioxide: the main part of sand; quartz is pure SiO2); SiO (Silicon monoxide: used to coat and improve optical lenses). Uses: Computer chips and sensors are built from silicon; An important part of most solar cells; Added to steel and cast alloys. Did you know? Horsetail and bamboo store silicon dioxide, which makes them sturdier.
+            - **Germanium (Ge)**, Atomic number 32, Main group IV, Period 4, borderline case (metalloid). Electrons per shell: 2, 8, 18, 4. Common compounds: GeO₂ (Germanium dioxide: a catalyst for the polyester in PET bottles); GeCl₄ (Germanium tetrachloride: helps in making optical-fibre cables); GeH₄ (Germane: a gas used in the semiconductor industry). Uses: The first diodes and transistors, until silicon replaced it; Lenses for night-vision devices and thermal cameras; Radiation detector made of a very pure crystal. Did you know? Mendeleev predicted this element in 1871, years before its discovery, and called it eka-silicon.
+            - **Tin (Sn)**, Atomic number 50, Main group IV, Period 5, metal. Electrons per shell: 2, 8, 18, 18, 4. Common compounds: SnO₂ (Tin dioxide (cassiterite): the main tin ore, also a mild polishing agent); Cu₂FeSnS₄ (Stannite: a rare tin ore made of copper, iron, tin and sulfur). Uses: Alloyed with copper it makes bronze; Solder: joins electronic parts on circuit boards; Tinplate: tin-coated iron sheet used for food cans. Did you know? If you bend pure tin it creaks audibly, a sound called “tin cry”.
+            - **Lead (Pb)**, Atomic number 82, Main group IV, Period 6, metal. Electrons per shell: 2, 8, 18, 32, 18, 4. Common compounds: PbS (Lead sulfide (galena): the most important lead ore); Pb₃O₄ (Red lead: a red powder, once used as rust-proof paint and in lead crystal); PbO₂ (Lead(IV) oxide: an electrode in car batteries). Uses: Main material of car batteries: about 60% of lead goes there; Shielding against X-rays, for example in lead aprons; Heavy weights for scuba diving. Did you know? About seven tonnes of lead went into building the Roman gate Porta Nigra.
+
+            **V · Nitrogen–phosphorus group:** Nitrogen and phosphorus are non-metals, arsenic and antimony are metalloids, bismuth is a metal.
+
+            - **Nitrogen (N)**, Atomic number 7, Main group V, Period 2, non-metal. Electrons per shell: 2, 5. Common compounds: NH₃ (Ammonia: a sharp-smelling gas used to make fertiliser); HNO₃ (Nitric acid: used to make fertilisers and dyes); N₂O (Laughing gas: used as an anaesthetic). Uses: Liquid nitrogen is used for very strong cooling, e.g. of samples; Shielding gas for welding; Fills aircraft tyres so they cannot catch fire. Did you know? Nitrogen makes up 78 % of air, yet you cannot live on pure nitrogen.
+            - **Phosphorus (P)**, Atomic number 15, Main group V, Period 3, non-metal. Electrons per shell: 2, 8, 5. Common compounds: Ca₅(PO₄)₃OH (Hydroxyapatite: a phosphate that builds bones and teeth); P₄O₁₀ (Phosphorus pentoxide: a powerful drying agent and the start for phosphoric acid); P₄S₃ (Tetraphosphorus trisulfide: still used in some matchstick heads). Uses: Fertilisers: phosphates are the plant food made from phosphorus raw material; Red phosphorus is used in making matches; Red phosphorus makes some plastics harder to set on fire. Did you know? Phosphorus was first made in 1669 from boiled-down urine, and it glowed in the dark.
+            - **Arsenic (As)**, Atomic number 33, Main group V, Period 4, borderline case (metalloid). Electrons per shell: 2, 8, 18, 5. Common compounds: GaAs (Gallium arsenide: a semiconductor used in chips, LEDs and laser diodes); As₂O₃ (Arsenic trioxide: very poisonous, used as a pest killer in some countries); As₂S₃ (Orpiment: a yellow mineral that was once used as a paint pigment). Uses: Added to lead to make it stronger and easier to cast, for example in battery plates; Once an important ingredient of copper alloys that made them easier to work; Very pure arsenic is needed for semiconductors in electronics. Did you know? Large amounts of arsenic were found in the hair of Ötzi the Iceman, probably because he worked with copper.
+            - **Antimony (Sb)**, Atomic number 51, Main group V, Period 5, borderline case (metalloid). Electrons per shell: 2, 8, 18, 18, 5. Common compounds: Sb₂S₃ (Antimony trisulfide (stibnite): the main ore, once also used as black eye makeup); Sb₂O₃ (Antimony trioxide: used as a flame retardant and in making PET plastic). Uses: Hardens lead and tin in alloys; An ingredient of the lead used in batteries; Used to dope semiconductors such as silicon. Did you know? Antimony expands as it cools, so cast alloys with it fill even the finest corners.
+            - **Bismuth (Bi)**, Atomic number 83, Main group V, Period 6, borderline case (metalloid). Electrons per shell: 2, 8, 18, 32, 18, 5. Common compounds: Bi₂O₃ (Bismuth oxide: an additive for optical glass and technical ceramics); BiOCl (Bismuth oxychloride: a silvery pearlescent pigment in cosmetics); BiVO₄ (Bismuth vanadate: a weatherproof yellow pigment for paints and facade colours). Uses: Ingredient in alloys that melt at low temperatures; Bismuth-tin solder replaces lead solder in electronics; A less toxic replacement for lead in shotgun pellets. Did you know? In the 16th century, wooden boxes were decorated with shiny bismuth as a backdrop for colourful designs.
+
+            **VI · Chalcogens:** The name means “ore formers”. After its first element the group is also called the oxygen group.
+
+            - **Oxygen (O)**, Atomic number 8, Main group VI, Period 2, non-metal. Electrons per shell: 2, 6. Common compounds: H₂O (Water: without it there would be no life on Earth); H₂O₂ (Hydrogen peroxide: works as a bleach); SiO₂ (Silicon dioxide: found in rocks as quartz). Uses: In steelmaking, oxygen removes unwanted impurities; Liquid oxygen lets rocket fuel burn; Extra oxygen for patients in emergency medicine. Did you know? Oxygen is the most abundant element on Earth, not only in air but also in rocks.
+            - **Sulfur (S)**, Atomic number 16, Main group VI, Period 3, non-metal. Electrons per shell: 2, 8, 6. Common compounds: H₂SO₄ (Sulfuric acid: a key industrial acid, mostly used to make fertiliser); H₂S (Hydrogen sulfide: a poisonous gas that smells of rotten eggs); SO₂ (Sulfur dioxide: preserves wine and dried fruit). Uses: Raw material for sulfuric acid (about 90 % of all sulfur); Makes rubber tougher (vulcanisation of rubber); An ingredient of black powder and fireworks. Did you know? As early as about 5000 BC, people in China and Egypt bleached cloth with sulfur.
+            - **Selenium (Se)**, Atomic number 34, Main group VI, Period 4, borderline case (metalloid). Electrons per shell: 2, 8, 18, 6. Common compounds: SeS₂ (Selenium disulfide: an ingredient in anti-dandruff shampoos); CdSe (Cadmium selenide: gives paints and pigments a strong red colour); SeO₂ (Selenium dioxide: saves energy when manganese is produced). Uses: In glassmaking: removes the green tint from glass or colours glass red; Light-sensitive drums in photocopiers and laser printers; Added to steel and copper alloys so they are easier to machine. Did you know? Selenium is named after Selene, the Greek goddess of the moon.
+            - **Tellurium (Te)**, Atomic number 52, Main group VI, Period 5, borderline case (metalloid). Electrons per shell: 2, 8, 18, 18, 6. Common compounds: CdTe (Cadmium telluride: a material for thin-film solar cells); TeO₂ (Tellurium dioxide: glass for optical fibres); Sb₂Te₃ (Antimony telluride: the storage layer in rewritable CDs). Uses: An additive in the metal industry; Small amounts are used for rubber, detonators and coloured glass and ceramics; Tellurium salts give fireworks a grass-green colour. Did you know? Tellurium is about as rare as gold, but much cheaper.
+            - **Polonium (Po)**, Atomic number 84, Main group VI, Period 6, borderline case (metalloid). Electrons per shell: 2, 8, 18, 32, 18, 6. Common compounds: PoO₂ (Polonium dioxide: a yellow or red compound of polonium and oxygen); PoS (Polonium monosulfide: a black solid that precipitates from a polonium solution); H₂Po (Hydrogen polonide: a liquid at room temperature). Uses: Removes static charge in factories, for example when rolling paper; Heat source in batteries of the Soviet Lunokhod moon rovers; Together with beryllium as a portable neutron source. Did you know? Marie and Pierre Curie found polonium in 1898 and named it after Poland, Marie's homeland.
+
+            **VII · Halogens:** The name means “salt formers”. The elements are coloured, very reactive non-metals and form salts with metals.
+
+            - **Fluorine (F)**, Atomic number 9, Main group VII, Period 2, non-metal. Electrons per shell: 2, 7. Common compounds: CaF₂ (Calcium fluoride: occurs in nature as the mineral fluorite); HF (Hydrogen fluoride: its solution, hydrofluoric acid, etches glass); (C₂F₄)n (PTFE (Teflon): the coating of frying pans). Uses: Used to make uranium hexafluoride for nuclear fuel; Used to make sulfur hexafluoride, an insulating gas; Treating plastic surfaces, for example car fuel tanks. Did you know? Fluorine is so reactive that it almost never occurs as a pure element in nature.
+            - **Chlorine (Cl)**, Atomic number 17, Main group VII, Period 3, non-metal. Electrons per shell: 2, 8, 7. Common compounds: NaCl (Sodium chloride: our table salt, also found underground as rock salt); HCl (Hydrogen chloride: dissolves in water to form hydrochloric acid); KCl (Potassium chloride: mainly used as a fertiliser). Uses: Starting material for the plastic PVC (via vinyl chloride); Disinfects swimming-pool and drinking water; Bleaches paper white. Did you know? Chlorine was used in making 85 % of all medicines (as of 1995).
+            - **Bromine (Br)**, Atomic number 35, Main group VII, Period 4, non-metal. Electrons per shell: 2, 8, 18, 7. Common compounds: AgBr (Silver bromide: the light-sensitive substance used in photographic film); CH₃Br (Methyl bromide: a gas once used to fumigate containers against pests). Uses: Flame retardants in plastics and circuit boards; A disinfectant that is milder than chlorine; Bromine-containing rubber for airtight tyres. Did you know? Bromine and mercury are the only elements that are liquid under standard conditions.
+            - **Iodine (I)**, Atomic number 53, Main group VII, Period 5, non-metal. Electrons per shell: 2, 8, 18, 18, 7. Common compounds: KI (Potassium iodide: a well-known iodide in which iodine dissolves well); CaI₂ (Calcium iodide: added to foods as a source of iodine); AgI (Silver iodide: a silver salt that darkens in light). Uses: Iodised salt: table salt with added iodine, because the body needs iodine; Tincture of iodine works as an antiseptic for wounds; Sometimes used to disinfect swimming pool water. Did you know? Iodine was found by accident: cleaning pots released a violet cloud.
+            - **Astatine (At)**, Atomic number 85, Main group VII, Period 6, borderline case (metalloid). Electrons per shell: 2, 8, 18, 32, 18, 7. Common compounds: HAt (Hydrogen astatide: a compound of astatine and hydrogen, detected only in traces). Uses: Organic astatine compounds are used in nuclear medicine to irradiate tumours; Astatine isotopes can label the thyroid gland for examinations. Astatine is so rare and short-lived that only one compound is listed. Did you know? There are only about 100 to 130 milligrams of astatine on all of Earth.
+
+            **VIII · Noble gases:** They react only under extreme conditions, consist of single atoms and are gases at room temperature. Helium is the most common noble gas, on Earth it is argon.
+
+            - **Helium (He)**, Atomic number 2, Main group VIII, Period 1, non-metal. Electrons per shell: 2. Uses: Fills balloons and airships, and it does not burn; Coolant for the magnets in MRI scanners; Part of breathing gas mixtures for professional diving. Helium is a noble gas and forms no known stable compounds, so none are listed. Did you know? Helium was first spotted on the Sun, hence its name (Greek helios = sun).
+            - **Neon (Ne)**, Atomic number 10, Main group VIII, Period 2, non-metal. Electrons per shell: 2, 8. Uses: Fills glowing tubes, which shine orange-red; Mixed with helium in helium-neon lasers; Liquid neon can serve as a coolant. No compounds of neon are known so far, so none are listed. Did you know? Calculations show neon is the element least willing to react.
+            - **Argon (Ar)**, Atomic number 18, Main group VIII, Period 3, non-metal. Electrons per shell: 2, 8, 8. Common compounds: HArF (Argon fluorohydride: a compound made only in the lab at extremely low temperatures). Uses: Shielding gas for welding, so the metal does not react; Filling gas in light bulbs and double-glazed windows; Fire-extinguishing gas for server rooms: it pushes out oxygen. Argon is a noble gas and forms hardly any compounds; only one is known. Did you know? After nitrogen and oxygen, argon is the third most common gas in the air.
+            - **Krypton (Kr)**, Atomic number 36, Main group VIII, Period 4, non-metal. Electrons per shell: 2, 8, 18, 8. Common compounds: KrF₂ (Krypton difluoride: one of the strongest known oxidising agents). Uses: Filling gas in light bulbs, so the filament can run hotter and shine brighter; Filling gas for very well insulating double-glazed windows; Used with fluorine in a UV laser (excimer laser). Only very few krypton compounds are known, so only one is listed. Did you know? From 1960 until 1983 the metre was defined using light from a krypton atom.
+            - **Xenon (Xe)**, Atomic number 54, Main group VIII, Period 5, non-metal. Electrons per shell: 2, 8, 18, 18, 8. Common compounds: XeF₂ (Xenon difluoride: the most stable xenon compound, used in labs to add fluorine); XeF₄ (Xenon tetrafluoride: one of three known compounds of xenon and fluorine). Uses: Fill gas in discharge lamps, including car headlights (xenon lights); Propellant in ion thrusters of satellites and space probes; Fill gas in highly insulating multi-pane windows. Did you know? Xenon is the rarest stable element on Earth.
+            - **Radon (Rn)**, Atomic number 86, Main group VIII, Period 6, non-metal. Electrons per shell: 2, 8, 18, 32, 18, 8. Common compounds: RnF₂ (Radon difluoride: forms when radon reacts with fluorine). Uses: Radon measurements show whether groundwater flows into a body of water; Radon measurements help in the search for uranium ore; In some countries, earthquake forecasting also relies on radon measurements. Radon is radioactive, so only one compound is listed. Did you know? Radon is by far the densest elemental gas, apart from astatine and hot iodine vapour.
+  - type: section
     id: regel
     title:
       de: Regel

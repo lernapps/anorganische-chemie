@@ -3,7 +3,7 @@
 # archetype: explainer | interactive | quiz; null until chosen in Explore.
 archetype: explainer
 # phase: explore | plan | code | commit. Set it on entering a phase.
-phase: code
+phase: commit
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 ---
@@ -176,6 +176,7 @@ topics:
   - { title: { de: "Atombau", en: "Atomic structure" }, path: teilchen/atombau/ }
   - { title: { de: "Periodensystem lesen", en: "Reading the periodic table" }, path: periodensystem/periodensystem-lesen/ }
   - { title: { de: "Die acht Hauptgruppen", en: "The eight main groups" }, path: periodensystem/hauptgruppen/ }
+  - { title: { de: "Elemente entdecken", en: "Explore the elements" }, path: periodensystem/hauptgruppen/#entdecken }
   - { title: { de: "Metalle und Nichtmetalle", en: "Metals and non-metals" }, path: periodensystem/metalle-nichtmetalle/ }
   - { title: { de: "Symbole und Formeln", en: "Symbols and formulas" }, path: reaktionen/symbole-formeln/ }
   - { title: { de: "Chemische Reaktionen", en: "Chemical reactions" }, path: reaktionen/reaktionen/ }
@@ -258,13 +259,13 @@ fitness:
 - [x] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
 - [x] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
 - [x] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
-- [ ] Steckbriefe der 44 Elemente aus den Wikipedia-Artikeln recherchieren: je 2–3 übliche Verbindungen, 2–3 Nutzen, ein "Wusstest du?"-Satz; in eigenen Worten, Deutsch und Englisch, jede Angabe mit einem Beleg im Artikel geprüft.
+- [x] Steckbriefe der 44 Elemente aus den Wikipedia-Artikeln recherchieren: je 2–3 übliche Verbindungen, 2–3 Nutzen, ein "Wusstest du?"-Satz; in eigenen Worten, Deutsch und Englisch, jede Angabe mit einem Beleg im Artikel geprüft.
 - [x] Komponente `PeriodicTable` (Logik, Test, Ansicht) mit Farben je Hauptgruppe, Steckbrief, Gruppenhervorhebung, Tastatur, `nojs`-Text.
-- [ ] Abschnitt `entdecken` auf der Seite `hauptgruppen` mit der Komponente; Inhaltsführer, Eintrag und Plan aktualisieren; `npx lernapps check`; Commit und Push auf `work`.
-- [ ] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
-- [ ] `npx lernapps check` passes.
-- [ ] Every box of Explore, Plan and Code ticked.
-- [ ] Set `phase: commit`.
+- [x] Abschnitt `entdecken` auf der Seite `hauptgruppen` mit der Komponente; Inhaltsführer, Eintrag und Plan aktualisieren; `npx lernapps check`; Commit und Push auf `work`.
+- [x] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
+- [x] `npx lernapps check` passes.
+- [x] Every box of Explore, Plan and Code ticked.
+- [x] Set `phase: commit`.
 
 ### Completed
 
