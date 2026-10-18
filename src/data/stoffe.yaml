@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# Reinstoffe bei 1013 hPa. Temperaturen in °C, gerundet. Quelle: de.wikipedia.org, Infobox der Artikel
+# Wasser, Eisen, Kupfer, Aluminium, Natriumchlorid, Ethanol, Sauerstoff, Quecksilber, Stickstoff (am 2026-10-18 geöffnet).
+# Siedetemperatur der Elemente aus den Kelvin-Werten umgerechnet (K − 273,15).
+- { name: Wasser, zustand: flüssig, schmelz: 0, siede: 100 }
+- { name: Eisen, zustand: fest, schmelz: 1539, siede: 3070 }
+- { name: Kupfer, zustand: fest, schmelz: 1085, siede: 2595 }
+- { name: Aluminium, zustand: fest, schmelz: 660, siede: 2470 }
+- { name: Kochsalz (Natriumchlorid), zustand: fest, schmelz: 801, siede: 1461 }
+- { name: Ethanol, zustand: flüssig, schmelz: -115, siede: 78 }
+- { name: Sauerstoff, zustand: gasförmig, schmelz: -218, siede: -183 }
+- { name: Quecksilber, zustand: flüssig, schmelz: -39, siede: 357 }
+- { name: Stickstoff, zustand: gasförmig, schmelz: -210, siede: -196 }

@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title: Stoffeigenschaften
+description: "Aggregatzustand, Schmelz- und Siedetemperatur: Daran erkennst du Stoffe und schließt auf ihre Verwendung."
+blocks:
+  - type: section
+    id: warum
+    title: Warum
+    blocks:
+      - type: text
+        text: |
+          Warum sind Stromkabel aus Kupfer und Töpfe aus Metall, aber Getränke aus Flüssigkeiten? Jeder Stoff hat
+          Eigenschaften, an denen man ihn erkennt und die zeigen, wofür er sich eignet.
+  - type: section
+    id: regel
+    title: Regel
+    blocks:
+      - type: text
+        text: |
+          Drei Eigenschaften helfen beim Ordnen:
+          - Der **Aggregatzustand** bei Zimmertemperatur (20 °C): fest, flüssig oder gasförmig.
+          - Die **Schmelztemperatur**: Ab dieser Temperatur wird ein fester Stoff flüssig.
+          - Die **Siedetemperatur**: Ab dieser Temperatur wird ein flüssiger Stoff gasförmig.
+      - type: definition
+        term: Schmelztemperatur
+        explanation: Die Temperatur, bei der ein fester Stoff flüssig wird. Für einen Reinstoff ist sie immer gleich.
+      - type: definition
+        term: Siedetemperatur
+        explanation: Die Temperatur, bei der ein flüssiger Stoff gasförmig wird. Für einen Reinstoff ist sie immer gleich.
+      - type: note
+        title: Merkhilfe
+        blocks:
+          - type: text
+            text: |
+              Liegt die Zimmertemperatur (20 °C) unter der Schmelztemperatur, ist der Stoff fest. Liegt sie zwischen
+              Schmelz- und Siedetemperatur, ist er flüssig. Liegt sie darüber, ist er gasförmig.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Warum ist Wasser bei 20 °C flüssig?
+        blocks:
+          - type: text
+            text: |
+              Wasser schmilzt bei 0 °C und siedet bei 100 °C. Zimmertemperatur (20 °C) liegt dazwischen. Darum ist
+              Wasser bei 20 °C flüssig.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: zustand-bestimmen
+        given:
+          e: { pick: 1, from: { data: stoffe } }
+        task:
+          text: "Ist {{e.name}} bei Zimmertemperatur (20 °C) fest, flüssig oder gasförmig?"
+        answer: { value: "e.zustand", compare: { choice: [fest, flüssig, gasförmig] } }
+        hint: "Vergleiche 20 °C mit der Schmelztemperatur und der Siedetemperatur von {{e.name}}."
+        steps:
+          - "{{e.name}} schmilzt bei {{e.schmelz}} °C und siedet bei {{e.siede}} °C."
+          - "Bei 20 °C ist {{e.name}} also {{answer}}."
+      - type: generated
+        id: siedetemperatur-ordnen
+        given:
+          a: { pick: 1, from: { data: stoffe } }
+          b: { pick: 1, from: { data: stoffe } }
+          c: { pick: 1, from: { data: stoffe } }
+        where: ["a.name != b.name", "a.name != c.name", "b.name != c.name"]
+        task:
+          text: "Ordne diese Stoffe nach ihrer Siedetemperatur, den mit der niedrigsten zuerst: {{a.name}}, {{b.name}} und {{c.name}}."
+        answer: { value: "map(sortBy([a, b, c], siede), name)", compare: order }
+        mistakes:
+          - {
+              value: "map(reverse(sortBy([a, b, c], siede)), name)",
+              message: "Du hast von hoch nach niedrig geordnet. Gefragt ist die niedrigste Siedetemperatur zuerst.",
+            }
+        hint: "Der Stoff, der am leichtesten gasförmig wird, hat die niedrigste Siedetemperatur."
+        steps:
+          - "Sortiere nach der Siedetemperatur, von niedrig nach hoch."
+      - type: single-choice
+        id: kupfer-kabel
+        text: Warum werden Stromkabel aus Kupfer gemacht?
+        options:
+          - text: Kupfer leitet den elektrischen Strom gut.
+            correct: true
+            info: Kupfer ist ein Metall, das den Strom sehr gut leitet. Deshalb steckt es in Leitungen und Kabeln.
+          - text: Kupfer ist bei Zimmertemperatur flüssig.
+            correct: false
+            info: Kupfer ist bei 20 °C fest. Es schmilzt erst bei etwa 1085 °C.
+          - text: Kupfer hat eine sehr niedrige Siedetemperatur.
+            correct: false
+            info: Kupfer siedet erst bei etwa 2595 °C. Eine niedrige Siedetemperatur wäre für ein Kabel auch kein Vorteil.
+        explanation: Man wählt einen Stoff nach der Eigenschaft, die man braucht. Ein Kabel muss den Strom gut leiten, und das kann Kupfer.
+        links:
+          - { title: Kupfer (Wikipedia), url: "https://de.wikipedia.org/wiki/Kupfer" }

@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title: Stoffe und ihre Eigenschaften
+summary: Du lernst Reinstoffe und Gemische zu unterscheiden und Stoffe an ihren Eigenschaften zu erkennen.
+pages: [reinstoffe-gemische, stoffeigenschaften]

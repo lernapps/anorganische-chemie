@@ -1,10 +1,13 @@
 # yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
-title: Prozentrechnung
+title: Anorganische Chemie – Einstieg
 intro: |
-  Prozentwert, Prozentsatz und Grundwert: Was sie bedeuten, wie du sie ausrechnest, und je ein Beispiel dazu.
-  Für die Klassen 7 und 8.
+  Woraus bestehen Stoffe? Du lernst Reinstoffe und Gemische kennen, baust Atome, liest das Periodensystem und
+  stellst einfache Reaktionsgleichungen auf. Auf jeder Seite übst du selbst.
+  Für die unteren Klassenstufen (Klasse 7 und 8).
 languages: [de]
-chapters: [prozent]
+chapters: [stoffe]
 sources:
-  - title: Prozentrechnung mittels Formeln (Serlo)
-    url: https://de.serlo.org/mathe/2193/prozentrechnung-mittels-formeln
+  - title: Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (KMK, 2004)
+    url: https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Chemie.pdf
+  - title: Chemie (Serlo, CC BY-SA 4.0)
+    url: https://de.serlo.org/chemie

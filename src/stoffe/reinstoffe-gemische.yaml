@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title: Reinstoffe und Gemische
+description: Reinstoffe bestehen aus einer einzigen Stoffart, Gemische aus mehreren. So erkennst du den Unterschied.
+blocks:
+  - type: section
+    id: warum
+    title: Warum
+    blocks:
+      - type: text
+        text: |
+          Fast alles um dich herum ist ein Stoff: Wasser, Luft, Metall, Milch. Wer Stoffe ordnen will, fragt zuerst:
+          Ist das eine einzige Stoffart oder sind mehrere gemischt?
+  - type: section
+    id: regel
+    title: Regel
+    blocks:
+      - type: definition
+        term: Reinstoff
+        explanation: Ein Reinstoff besteht nur aus einer Stoffart, zum Beispiel reines Wasser oder reiner Sauerstoff.
+      - type: definition
+        term: Gemisch
+        explanation: Ein Gemisch besteht aus mehreren Stoffen, zum Beispiel Luft, Milch oder Granit.
+      - type: text
+        text: |
+          Ein Reinstoff hat immer dieselben Eigenschaften, zum Beispiel einen festen Siedepunkt. Die Stoffe eines
+          Gemischs lassen sich oft ohne chemische Reaktion wieder trennen, etwa durch Filtern oder Verdampfen.
+      - type: table
+        caption: Reinstoffe und Gemische im Vergleich
+        header: [Merkmal, Reinstoff, Gemisch]
+        rowHeaders: true
+        rows:
+          - [Bestandteile, eine Stoffart, mehrere Stoffe]
+          - [Beispiele, "reines Wasser, Sauerstoff, Kochsalz", "Luft, Milch, Granit"]
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ist Luft ein Reinstoff?
+        blocks:
+          - type: text
+            text: |
+              Luft besteht vor allem aus Stickstoff und Sauerstoff, dazu kommen weitere Gase. Es sind also mehrere
+              Stoffe gemischt. Luft ist deshalb ein **Gemisch**, kein Reinstoff.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: multiple-choice
+        id: gemische-finden
+        text: Welche dieser Stoffe sind Gemische?
+        options:
+          - text: Luft
+            correct: true
+            info: Luft besteht aus Stickstoff, Sauerstoff und weiteren Gasen. Es sind mehrere Stoffe gemischt.
+          - text: Milch
+            correct: true
+            info: Milch enthält unter anderem Wasser, Fette und Eiweiße. Sie ist ein Gemisch.
+          - text: reines Wasser
+            correct: false
+            info: Reines (destilliertes) Wasser besteht nur aus Wasser. Es ist ein Reinstoff.
+          - text: reiner Sauerstoff
+            correct: false
+            info: Reiner Sauerstoff besteht nur aus einer Stoffart. Er ist ein Reinstoff.
+        explanation: Gemische bestehen aus mehreren Stoffen. Luft und Milch sind Gemische, reines Wasser und reiner Sauerstoff sind Reinstoffe.
+        links:
+          - { title: Reinstoff (Wikipedia), url: "https://de.wikipedia.org/wiki/Reinstoff" }
+      - type: true-false
+        id: salzwasser-reinstoff
+        text: Salzwasser ist ein Reinstoff.
+        answer: false
+        explanation: Salzwasser besteht aus Wasser und Salz. Es sind zwei Stoffe gemischt, also ein Gemisch. Durch Verdampfen des Wassers bleibt das Salz zurück.
+        links:
+          - { title: Reinstoff (Wikipedia), url: "https://de.wikipedia.org/wiki/Reinstoff" }

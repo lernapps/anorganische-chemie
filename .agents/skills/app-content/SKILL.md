@@ -36,7 +36,10 @@ Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen
    - Ich kann eine chemische Reaktion von einer physikalischen Veränderung unterscheiden.
    - Ich kann eine einfache Reaktionsgleichung mit Atomerhaltung aufstellen.
 
-Page and exercise ids per competency are added here when the page exists (page file, exercise id).
+Page and exercise ids (page file, exercise id):
+- Kapitel `stoffe`: `src/stoffe/reinstoffe-gemische.yaml` (`gemische-finden`, `salzwasser-reinstoff`) for Reinstoffe/Gemische;
+  `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`) for Eigenschaften, Ordnen und Verwendung.
+- Other chapters: added when their pages exist.
 
 ## Content structure
 
@@ -70,7 +73,10 @@ Page and exercise ids per competency are added here when the page exists (page f
   Seite gezählt".
 - Aufbauen: component `AtomBuilder` (exercise): set protons, neutrons, electrons for a given element; checks the
   property, not one model solution.
-- Each pattern has one example here once built: `<file>`, `<id>`.
+- Examples built: Ablesen/Wahl: `src/stoffe/stoffeigenschaften.yaml`, `zustand-bestimmen` (data `stoffe`); Ordnen:
+  `siedetemperatur-ordnen` (three drawn records `a`, `b`, `c`, with `where` for distinct ones; a list cannot be a placeholder);
+  Urteilen: `src/stoffe/reinstoffe-gemische.yaml`, `salzwasser-reinstoff`; Verwendung: `kupfer-kabel`.
+- Other patterns: examples added when built.
 - Data files `src/data/`: `stoffe.yaml`, `elemente.yaml` (Elemente 1–20), `reaktionen.yaml`. Same fields in every record.
   Every value is checked against an opened source before it goes in; the source is named in `sources`.
 

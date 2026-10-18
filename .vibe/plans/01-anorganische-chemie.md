@@ -220,7 +220,7 @@ fitness:
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from the plan and its content method: replace
       every placeholder comment with concrete instructions (files, ids, data files, one example). Delete its top
       comment. `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` must print 0. Commit it before any content.
-- [ ] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
+- [x] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
 - [ ] Kapitel 2 "Teilchenmodell und Atombau" (Seiten `teilchenmodell`, `atombau`): Komponente `ParticleModel` (Regler Temperatur) mit `nojs`, Komponente `AtomBuilder` (Übung) mit Logik und Test; Commit je Komponente.
 - [ ] Kapitel 3 "Periodensystem" (Seiten `periodensystem-lesen`, `metalle-nichtmetalle`): Daten `src/data/elemente.yaml` (Elemente 1–20), `labelled-figure` des Periodensystems, `generated`-Übungen; Commit.
 - [ ] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
