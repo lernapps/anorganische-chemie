@@ -50,7 +50,7 @@ const text = computed(() => props.labels[`${state.value}Text` as "solidText" | "
   </div>
 </template>
 
-<style scoped>
+<style>
 .particle-model {
   display: grid;
   gap: 0.75rem;

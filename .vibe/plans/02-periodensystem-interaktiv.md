@@ -80,6 +80,7 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 
 - Kapitel: "Das Periodensystem-Kapitel mit seinen Unterelementen sollte komplett Gebrauch von der interaktiven Komponente machen. Der Grammatikfehler kann da mit geregelt werden."
 - Anlass: "Unsere neue Periodensystem-Komponente ist da viel zu selten eingebunden." und "Wenn ich die Adresse öffne, stehen da immer noch sehr viele Fließtexte."
+- Fund in der Vorschau: Auf der Seite stehen nur die `nojs`-Texte ("Das ist nur Text. wo ist das interaktive Element?", mit Adresse der Vorschau); Ursache: GitHub Pages liefert `_plugin-vue_export-helper-….js` nicht aus; behoben durch Verzicht auf `scoped` in den Komponenten.
 - Zu Umfang und Plan: "Wir sollten das jetzt einfach noch zu einem ersten brauchbaren Abschluss bringen, so dass es einen sinnvollen Mehrwert bietet." (gelesen als Bestätigung von Recherche- und Plan-Haltepunkt; Veröffentlichen bleibt ein eigener Haltepunkt). Außerdem: keine Anfragen mehr an die andere Session.
 - Hürden und Beispiele: nicht gefragt; die Annahmen stehen als "guess" unter "Notes".
 

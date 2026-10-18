@@ -130,7 +130,7 @@ function verify() {
   </div>
 </template>
 
-<style scoped>
+<style>
 .element-finder {
   display: grid;
   gap: 0.75rem;

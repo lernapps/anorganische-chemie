@@ -177,6 +177,12 @@ Page and exercise ids (page file, exercise id):
   fails the check. Until that is fixed: write formulas in the question text with Unicode subscripts and an arrow
   (`x H₂ + O₂ → 2H₂O`), so the question stays complete inside its card. A `formula` block above the question is not used: on a phone
   it scrolls out of sight. Once #47 is fixed, use `$\ce{…}$` in the text.
+- No `scoped` styles in components. Vue then builds a shared helper chunk named `_plugin-vue_export-helper-….js`, and GitHub
+  Pages without a `.nojekyll` file does not serve files that start with an underscore: the helper gets a 404 and every component
+  silently stays on its `nojs` text (the first published version had exactly this). Component classes carry their own prefix
+  (`pt-`, `ef-`, `atom-builder`, `particle-model`) instead. After a build, `find dist -name "_*"` must print nothing; to test
+  like Pages, serve `dist` with a server that answers 404 for paths with a segment starting with `_` or `.` and check that
+  `.explainer-component[data-hydrated]` is set for every component.
 - Names of functions and variables in components must not be browser globals (`prompt`, `alert`, `location`, …): the build
   rejects them outside `onMounted` (rule `vue-component-browser-globals`). The rule also flags a local function named `prompt`.
 - A prop with a literal-union array type must be written inline in the `defineProps` (`("a" | "b")[]`); a local alias is not accepted.

@@ -276,7 +276,7 @@ const label = (element: Profile) =>
   </div>
 </template>
 
-<style scoped>
+<style>
 .periodic-table {
   display: grid;
   gap: 0.75rem;

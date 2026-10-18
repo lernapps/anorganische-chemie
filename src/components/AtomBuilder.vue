@@ -111,7 +111,7 @@ function verify() {
   </div>
 </template>
 
-<style scoped>
+<style>
 .atom-builder {
   display: grid;
   gap: 0.75rem;
