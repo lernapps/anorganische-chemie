@@ -3,7 +3,7 @@
 # archetype: explainer | interactive | quiz; null until chosen in Explore.
 archetype: explainer
 # phase: explore | plan | code | commit. Set it on entering a phase.
-phase: commit
+phase: plan
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 ---
@@ -37,6 +37,7 @@ Lernende der unteren Klassenstufen (7/8, Annahme) lernen die Grundlagen der anor
 - Kein Landeslehrplan: Orientierung an den KMK-Bildungsstandards (Wunsch des Creators); Reihenfolge der unteren Stufen selbst abgeleitet.
 - Sprachen `[de, en]` (guess): "mehrsprachig" ohne Sprachen genannt; das System kann für App-Texte nur Deutsch und Englisch. Alle Texte, Daten und Komponenten in beiden Sprachen.
 - Hauptgruppen: alle 44 Elemente der acht Hauptgruppen ohne die superschweren (Creator: "alle Hauptgruppen (44, ohne die superschweren)"); Daten `elemente.yaml`. Die Neutronen-Übung bleibt bei Elementen 1–20 (`atome.yaml`), weil die Massenzahl des häufigsten Isotops sonst nicht eindeutig ist (guess).
+- Interaktives Periodensystem (nach der Vorschau gewünscht): neue Komponente `PeriodicTable` auf der Seite `hauptgruppen`, farbig nach Hauptgruppe, Klick auf ein Element zeigt Steckbrief mit üblichen Verbindungen und Nutzen. Die bisherige Tabelle bleibt als Text für Lesende ohne JavaScript.
 - Inhalte selbst geschrieben, Serlo (CC BY-SA 4.0) nur als Zweitquelle verlinkt (Creator: "schreib selbst, binde serlo ein wo sinnvoll").
 
 ## Notes
@@ -139,6 +140,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Plan-Checkpoint: "Ja, anlegen" (nach Vorlage von Plan, Skizzen, Übungen; Erweiterungen in Issue #1 vertagt)
 - Rückfrage zu den Elementen: "wieso nimmst Du nur die Elemente 1-20 und nicht alle Hauptgruppen (44, ohne sdie superschweren)"
 - Änderung nach dem Plan: "Es sollten alle Hauptgruppen berücksichtigt werden. Außerdem hätte ich das auch gerne mehrsprachig"
+- Rückmeldung zur Vorschau: "Die Elektronen von Antimon sitzen auf Schalen mit 2, 8, 18, 18, 5 Elektronen. Was ist denn das für eine dämliche Formulierung in einem Quiz? Überhaupt sind die Hauptgruppen nicht ansprechend aufbereitet. Wenn wir schon eine Webanwendung haben, hätte ich gerne eine farbige, interaktive, neugierig machende Darstellung, in der ich über die Elemente und bspw. auch ihre üblichen Verbindungen und Nutzen erfahre"
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"
@@ -204,6 +206,12 @@ fitness:
 - [x] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes → change,
       ask again. No `create` before the yes.
 - [x] Set `phase: code`.
+
+### Nachtrag nach der Vorschau: interaktives Periodensystem
+
+- [ ] Skizze zeigen: farbige Karte der 44 Elemente, Steckbrief mit Verbindungen und Nutzen (Schritte unten im Chat).
+- [ ] **Checkpoint:** Nachtrag bestätigen. Stop und auf ein ausdrückliches Ja warten.
+- [ ] Set `phase: code`.
 
 ### Content method
 
