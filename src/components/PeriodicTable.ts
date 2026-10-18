@@ -5,6 +5,7 @@ export interface Profile {
   group: number;
   period: number;
   kind: string;
+  kindId: string;
   shells: string;
   compounds: { formula: string; text: string }[];
   uses: string[];
@@ -24,6 +25,33 @@ export const GROUPS = [1, 2, 13, 14, 15, 16, 17, 18] as const;
 
 /** Light fills, one per main group; the text on them is dark. */
 export const COLORS = ["#f4b6b6", "#f7cf9b", "#f1e48c", "#bfe3a3", "#a3e0d0", "#a8d3f3", "#c9bbf0", "#f1b8dc"] as const;
+/** Light fills for the view by kind: metal, non-metal, borderline case; the text on them is dark. */
+export const KIND_COLORS: Readonly<Record<string, string>> = {
+  metall: "#bcd4f5",
+  nichtmetall: "#f7d3a6",
+  grenzfall: "#c9e8b5",
+};
+
+export type Mode = "group" | "kind";
+
+/** The fill of an element in a view. */
+export function fillOf(profile: Pick<Profile, "group" | "kindId">, mode: Mode): string {
+  return mode === "kind" ? (KIND_COLORS[profile.kindId] ?? "#e5e7eb") : colorOf(profile.group);
+}
+
+/** Whether an element belongs to what the learner chose: its group, its kind, or its period (each may be unset). */
+export function isHighlighted(
+  profile: Pick<Profile, "group" | "kindId" | "period">,
+  choice: { mode: Mode; group?: number | undefined; kind?: string | undefined; period?: number | undefined },
+): boolean {
+  if (choice.period !== undefined && profile.period === choice.period) return true;
+  if (choice.mode === "group") return choice.group !== undefined && profile.group === choice.group;
+  return choice.kind !== undefined && profile.kindId === choice.kind;
+}
+
+/** A label text with its number filled in: "Periode {n}" becomes "Periode 3". */
+export const withNumber = (template: string, n: number): string => template.replace(/\{n\}/g, String(n));
+
 export const TEXT_COLOR = "#111111";
 export const EDGE_COLOR = "#374151";
 
@@ -41,12 +69,15 @@ export interface Place {
   column: number;
 }
 
-export const placeOf = (profile: Profile): Place => ({ row: profile.period - 1, column: columnOf(profile.group) });
+export const placeOf = (profile: { period: number; group: number }): Place => ({
+  row: profile.period - 1,
+  column: columnOf(profile.group),
+});
 
 /** The table as rows (periods) of cells (columns), empty places undefined. */
-export function matrix(profiles: readonly Profile[]): (Profile | undefined)[][] {
+export function matrix<T extends { period: number; group: number }>(profiles: readonly T[]): (T | undefined)[][] {
   const rows = Math.max(...profiles.map((profile) => profile.period));
-  const grid: (Profile | undefined)[][] = Array.from({ length: rows }, () =>
+  const grid: (T | undefined)[][] = Array.from({ length: rows }, () =>
     Array.from({ length: GROUPS.length }, () => undefined),
   );
   for (const profile of profiles) {
@@ -62,7 +93,7 @@ export function matrix(profiles: readonly Profile[]): (Profile | undefined)[][] 
 export type Direction = "ArrowLeft" | "ArrowRight" | "ArrowUp" | "ArrowDown" | "Home" | "End";
 
 /** Where an arrow key leads from a place: the next element in that direction, or the same place at the edge. */
-export function move(grid: readonly (Profile | undefined)[][], from: Place, key: Direction): Place {
+export function move<T>(grid: readonly (T | undefined)[][], from: Place, key: Direction): Place {
   const rows = grid.length;
   const columns = GROUPS.length;
   const filled = (row: number, column: number) => grid[row]?.[column] !== undefined;

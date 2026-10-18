@@ -129,7 +129,7 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 - [ ] `npx --yes github:lernapps/tooling#exp/compact-guidance update`, then `npm install`. It replaces the `lernapps-*` skills: reread
       the ones you use. Commit the update alone; fix its check findings before content.
 - [x] Slice 1, Plural: "1 Proton" statt "1 Protonen" in `AtomBuilder` (Text, Begründung, Test). Commit.
-- [ ] Slice 2, Karte: `PeriodicTable` mit Sicht "nach Art", Hervorheben einer Periode, Prop `mode`; Test; `nojs` bleibt vollständig. Commit.
+- [x] Slice 2, Karte: `PeriodicTable` mit Sicht "nach Art", Hervorheben einer Periode, Prop `mode`; Test; `nojs` bleibt vollständig. Commit.
 - [ ] Slice 3, Übung: `ElementFinder` (Logik, Test, Ansicht) mit den Aufgabentypen Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen, Art und Periode. Commit.
 - [ ] Slice 4, Seiten: `periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle` mit Karte und `ElementFinder`, kürzere Texte, Eintrags-Themen. Commit.
 - [ ] The content guide describes the app as it is now: competencies, chapters, patterns, procedure for the next

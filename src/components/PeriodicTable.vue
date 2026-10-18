@@ -4,15 +4,20 @@ import {
   CENTER,
   EDGE_COLOR,
   GROUPS,
+  KIND_COLORS,
   TEXT_COLOR,
   colorOf,
+  fillOf,
+  isHighlighted,
   matrix,
   move,
   placeOf,
   shellPicture,
   shellsOf,
   subscript,
+  withNumber,
   type Direction,
+  type Mode,
   type Place,
 } from "./PeriodicTable.ts";
 
@@ -23,6 +28,7 @@ type Profile = {
   group: number;
   period: number;
   kind: string;
+  kindId: string;
   shells: string;
   compounds: { formula: string; text: string }[];
   uses: string[];
@@ -31,6 +37,7 @@ type Profile = {
 };
 
 type GroupInfo = { group: number; roman: string; name: string; text: string };
+type KindInfo = { id: string; name: string; text: string };
 
 const props = defineProps<{
   labels: {
@@ -44,21 +51,43 @@ const props = defineProps<{
     uses: string;
     fact: string;
     choose: string;
+    viewLabel?: string;
+    byGroup?: string;
+    byKind?: string;
+    periodText?: string;
   };
   groups: GroupInfo[];
   elements: Profile[];
+  kinds?: KindInfo[];
+  mode?: "group" | "kind";
+  toggle?: boolean;
 }>();
 
 const grid = computed(() => matrix(props.elements));
+const mode = ref<Mode>(props.mode ?? "group");
 const selected = ref<string | undefined>(undefined);
-const active = ref<number | undefined>(undefined);
+const activeGroup = ref<number | undefined>(undefined);
+const activeKind = ref<string | undefined>(undefined);
+const activePeriod = ref<number | undefined>(undefined);
 const focusSymbol = ref<string>(props.elements[0]?.symbol ?? "");
 const buttons = new Map<string, HTMLButtonElement>();
 
 const profile = computed(() => props.elements.find((element) => element.symbol === selected.value));
-const groupInfo = computed(() => props.groups.find((group) => group.group === active.value));
+const groupInfo = computed(() => props.groups.find((group) => group.group === activeGroup.value));
+const kindInfo = computed(() => props.kinds?.find((kind) => kind.id === activeKind.value));
 const picture = computed(() => (profile.value ? shellPicture(shellsOf(profile.value.shells)) : undefined));
 const romanOf = (group: number) => props.groups.find((info) => info.group === group)?.roman ?? "";
+const choice = computed(() => ({
+  mode: mode.value,
+  group: activeGroup.value,
+  kind: activeKind.value,
+  period: activePeriod.value,
+}));
+const periodText = computed(() =>
+  activePeriod.value !== undefined && props.labels.periodText !== undefined
+    ? withNumber(props.labels.periodText, activePeriod.value)
+    : undefined,
+);
 
 function remember(symbol: string, element: unknown) {
   if (element instanceof HTMLButtonElement) buttons.set(symbol, element);
@@ -71,7 +100,19 @@ function choose(symbol: string) {
 }
 
 function toggleGroup(group: number) {
-  active.value = active.value === group ? undefined : group;
+  activeGroup.value = activeGroup.value === group ? undefined : group;
+}
+
+function toggleKind(kind: string) {
+  activeKind.value = activeKind.value === kind ? undefined : kind;
+}
+
+function togglePeriod(period: number) {
+  activePeriod.value = activePeriod.value === period ? undefined : period;
+}
+
+function setMode(next: Mode) {
+  mode.value = next;
 }
 
 function keydown(event: KeyboardEvent, element: Profile) {
@@ -87,40 +128,75 @@ function keydown(event: KeyboardEvent, element: Profile) {
 }
 
 const label = (element: Profile) =>
-  `${element.name}, ${props.labels.number} ${element.number}, ${props.labels.groupWord} ${romanOf(element.group)}`;
+  `${element.name}, ${props.labels.number} ${element.number}, ${props.labels.groupWord} ${romanOf(element.group)}, ${element.kind}`;
 </script>
 
 <template>
   <div class="periodic-table">
-    <div class="pt-legend" role="group" :aria-label="labels.legend">
+    <div v-if="toggle && kinds" class="pt-modes" role="group" :aria-label="labels.viewLabel">
+      <button type="button" class="pt-mode" :aria-pressed="mode === 'group'" @click="setMode('group')">
+        {{ labels.byGroup }}
+      </button>
+      <button type="button" class="pt-mode" :aria-pressed="mode === 'kind'" @click="setMode('kind')">
+        {{ labels.byKind }}
+      </button>
+    </div>
+    <div v-if="mode === 'group'" class="pt-legend" role="group" :aria-label="labels.legend">
       <button
         v-for="info in groups"
         :key="info.group"
         type="button"
         class="pt-legend-item"
-        :aria-pressed="active === info.group"
+        :aria-pressed="activeGroup === info.group"
         :style="{ background: colorOf(info.group), color: TEXT_COLOR, borderColor: EDGE_COLOR }"
         @click="toggleGroup(info.group)"
       >
         <strong>{{ info.roman }}</strong> {{ info.name }}
       </button>
     </div>
-    <p v-if="groupInfo" class="pt-group" aria-live="polite">
+    <div v-else class="pt-legend" role="group" :aria-label="labels.legend">
+      <button
+        v-for="info in kinds"
+        :key="info.id"
+        type="button"
+        class="pt-legend-item"
+        :aria-pressed="activeKind === info.id"
+        :style="{ background: KIND_COLORS[info.id], color: TEXT_COLOR, borderColor: EDGE_COLOR }"
+        @click="toggleKind(info.id)"
+      >
+        {{ info.name }}
+      </button>
+    </div>
+    <p v-if="mode === 'group' && groupInfo" class="pt-group" aria-live="polite">
       <strong>{{ groupInfo.roman }} · {{ groupInfo.name }}:</strong> {{ groupInfo.text }}
     </p>
+    <p v-if="mode === 'kind' && kindInfo" class="pt-group" aria-live="polite">
+      <strong>{{ kindInfo.name }}:</strong> {{ kindInfo.text }}
+    </p>
+    <p v-if="periodText" class="pt-group" aria-live="polite">{{ periodText }}</p>
     <div class="pt-grid" role="group" :aria-label="labels.table">
       <span class="pt-corner" aria-hidden="true"></span>
       <span v-for="group in GROUPS" :key="group" class="pt-head" aria-hidden="true">{{ romanOf(group) }}</span>
       <template v-for="(line, row) in grid" :key="row">
-        <span class="pt-period" :title="`${labels.period} ${row + 1}`">{{ row + 1 }}</span>
+        <button
+          v-if="labels.periodText"
+          type="button"
+          class="pt-period pt-period-button"
+          :aria-pressed="activePeriod === row + 1"
+          :aria-label="`${labels.period} ${row + 1}`"
+          @click="togglePeriod(row + 1)"
+        >
+          {{ row + 1 }}
+        </button>
+        <span v-else class="pt-period" :title="`${labels.period} ${row + 1}`">{{ row + 1 }}</span>
         <template v-for="(cell, column) in line" :key="column">
           <button
             v-if="cell"
             :ref="(element) => remember(cell.symbol, element)"
             type="button"
             class="pt-cell"
-            :class="{ 'pt-cell-on': active === cell.group, 'pt-cell-selected': selected === cell.symbol }"
-            :style="{ background: colorOf(cell.group), color: TEXT_COLOR, borderColor: EDGE_COLOR }"
+            :class="{ 'pt-cell-on': isHighlighted(cell, choice), 'pt-cell-selected': selected === cell.symbol }"
+            :style="{ background: fillOf(cell, mode), color: TEXT_COLOR, borderColor: EDGE_COLOR }"
             :tabindex="focusSymbol === cell.symbol ? 0 : -1"
             :aria-pressed="selected === cell.symbol"
             @click="choose(cell.symbol)"
@@ -157,7 +233,7 @@ const label = (element: Profile) =>
             :cx="CENTER"
             :cy="CENTER"
             r="9"
-            :fill="colorOf(profile.group)"
+            :fill="fillOf(profile, mode)"
             :stroke="EDGE_COLOR"
             stroke-width="0.8"
           />
@@ -206,6 +282,27 @@ const label = (element: Profile) =>
   gap: 0.75rem;
   max-width: 44rem;
 }
+.pt-modes {
+  display: flex;
+  gap: 0.375rem;
+}
+.pt-mode {
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  min-height: 2.75rem;
+  font: inherit;
+  font-size: 0.875rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.pt-mode[aria-pressed="true"] {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+  font-weight: 700;
+}
 .pt-legend {
   display: flex;
   flex-wrap: wrap;
@@ -226,7 +323,7 @@ const label = (element: Profile) =>
 }
 .pt-grid {
   display: grid;
-  grid-template-columns: 1.1rem repeat(8, minmax(0, 1fr));
+  grid-template-columns: 1.4rem repeat(8, minmax(0, 1fr));
   gap: 2px;
 }
 .pt-head,
@@ -235,6 +332,21 @@ const label = (element: Profile) =>
   align-items: center;
   justify-content: center;
   font-size: 0.6875rem;
+}
+.pt-period-button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.6875rem;
+  cursor: pointer;
+  padding: 0;
+}
+.pt-period-button[aria-pressed="true"] {
+  background: #1d4ed8;
+  color: #ffffff;
+  font-weight: 700;
 }
 .pt-cell {
   position: relative;
@@ -257,7 +369,9 @@ const label = (element: Profile) =>
   border-width: 3px;
 }
 .pt-cell:focus-visible,
-.pt-legend-item:focus-visible {
+.pt-legend-item:focus-visible,
+.pt-mode:focus-visible,
+.pt-period-button:focus-visible {
   outline: 3px solid #1d4ed8;
   outline-offset: 2px;
 }
