@@ -216,8 +216,8 @@ fitness:
       --archetype <archetype>`. Keeps this plan.
 - [x] `git switch work`, then `npm install` (dependencies, git hooks). From now on: `npx lernapps check`.
 - [x] Commit the generated app with this plan on `work`.
-- [ ] Load skill `lernapps-app` and the archetype's skill.
-- [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from the plan and its content method: replace
+- [x] Load skill `lernapps-app` and the archetype's skill.
+- [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from the plan and its content method: replace
       every placeholder comment with concrete instructions (files, ids, data files, one example). Delete its top
       comment. `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` must print 0. Commit it before any content.
 - [ ] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
