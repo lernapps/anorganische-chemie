@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   about,
   check,
+  count,
   describe as describeTask,
   generate,
   neutronsOf,
@@ -40,6 +41,23 @@ describe("check", () => {
 
   it("has no reason for a right answer", () => {
     expect(reason(carbon, solution(carbon), "de")).toBe("");
+  });
+});
+
+describe("count", () => {
+  it("uses the singular for exactly one and the plural otherwise", () => {
+    expect(count("de", 1, "proton")).toBe("1 Proton");
+    expect(count("de", 0, "neutron")).toBe("0 Neutronen");
+    expect(count("de", 2, "electron")).toBe("2 Elektronen");
+    expect(count("en", 1, "electron")).toBe("1 electron");
+    expect(count("en", 0, "neutron")).toBe("0 neutrons");
+  });
+
+  it("writes hydrogen without a plural error", () => {
+    const hydrogen = generate(1);
+    expect(describeTask(hydrogen, {}, "de").solution).toBe("Wasserstoff hat 1 Proton, 0 Neutronen und 1 Elektron.");
+    expect(describeTask(hydrogen, {}, "en").solution).toBe("Hydrogen has 1 proton, 0 neutrons and 1 electron.");
+    expect(reason(hydrogen, { protons: 2, neutrons: 0, electrons: 2 }, "de")).toContain("hat 1 Proton.");
   });
 });
 

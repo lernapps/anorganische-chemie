@@ -53,14 +53,25 @@ export function wrong(task: Task): Answer {
   return { ...solution(task), electrons: task.protons + 1 };
 }
 
+const NOUNS = {
+  de: { proton: ["Proton", "Protonen"], neutron: ["Neutron", "Neutronen"], electron: ["Elektron", "Elektronen"] },
+  en: { proton: ["proton", "protons"], neutron: ["neutron", "neutrons"], electron: ["electron", "electrons"] },
+} as const;
+
+/** A count with its noun in the right number: 1 Proton, 0 Neutronen, 2 protons. */
+export function count(language: Language, n: number, kind: keyof (typeof NOUNS)["de"]): string {
+  const [one, many] = NOUNS[language][kind];
+  return `${n} ${n === 1 ? one : many}`;
+}
+
 /** Why an answer is wrong, the most specific reason first; empty when it is right. */
 export function reason(task: Task, answer: Answer, language: Language): string {
   if (check(task, answer)) return "";
   const name = task.name[language];
   if (answer.protons !== task.protons) {
     return language === "en"
-      ? `The number of protons is the atomic number. ${name} has ${task.protons} protons.`
-      : `Die Protonenzahl ist die Ordnungszahl. ${name} hat ${task.protons} Protonen.`;
+      ? `The number of protons is the atomic number. ${name} has ${count("en", task.protons, "proton")}.`
+      : `Die Protonenzahl ist die Ordnungszahl. ${name} hat ${count("de", task.protons, "proton")}.`;
   }
   if (answer.electrons !== answer.protons) {
     return language === "en"
@@ -94,11 +105,11 @@ export function describe(task: Task, _props: unknown, lang: string): { task: str
   return language === "en"
     ? {
         task: `Build a neutral atom of ${name} (${task.symbol}) with mass number ${task.massNumber}. Set the number of protons, neutrons and electrons.`,
-        solution: `${name} has ${task.protons} protons, ${neutrons} neutrons and ${task.protons} electrons.`,
+        solution: `${name} has ${count("en", task.protons, "proton")}, ${count("en", neutrons, "neutron")} and ${count("en", task.protons, "electron")}.`,
       }
     : {
         task: `Baue ein neutrales Atom von ${name} (${task.symbol}) mit der Massenzahl ${task.massNumber}. Stelle die Zahl der Protonen, Neutronen und Elektronen ein.`,
-        solution: `${name} hat ${task.protons} Protonen, ${neutrons} Neutronen und ${task.protons} Elektronen.`,
+        solution: `${name} hat ${count("de", task.protons, "proton")}, ${count("de", neutrons, "neutron")} und ${count("de", task.protons, "electron")}.`,
       };
 }
 

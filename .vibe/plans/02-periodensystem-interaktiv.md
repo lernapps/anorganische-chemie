@@ -3,7 +3,7 @@
 # Archetype as in the app's first plan; set it when you start. Never changes.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit. Change the value line below, never this comment.
-phase: explore
+phase: code
 # prePushFailures: failed pre-push runs of this increment, written by the hook. Never change it.
 prePushFailures: 0
 ---
@@ -72,14 +72,15 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
       sources.
 - [x] Ask: which hurdles and misconceptions, which examples or experiments for the new content? Under "Notes": the
       didactic approach per competency and the scope (in, out, data range).
-- [ ] **Checkpoint:** research. Show in plain words: curriculum orientation, new competencies by chapter, didactic
+- [x] **Checkpoint:** research. Show in plain words: curriculum orientation, new competencies by chapter, didactic
       approach, scope, sources and how checked, what is unchecked. Stop and wait. Changes → change, ask again.
-- [ ] Set `phase: plan`: change the value line (`grep '^phase:'` prints `phase: plan`).
+- [x] Set `phase: plan`: change the value line (`grep '^phase:'` prints `phase: plan`).
 
 ### Answers
 
 - Kapitel: "Das Periodensystem-Kapitel mit seinen Unterelementen sollte komplett Gebrauch von der interaktiven Komponente machen. Der Grammatikfehler kann da mit geregelt werden."
 - Anlass: "Unsere neue Periodensystem-Komponente ist da viel zu selten eingebunden." und "Wenn ich die Adresse öffne, stehen da immer noch sehr viele Fließtexte."
+- Zu Umfang und Plan: "Wir sollten das jetzt einfach noch zu einem ersten brauchbaren Abschluss bringen, so dass es einen sinnvollen Mehrwert bietet." (gelesen als Bestätigung von Recherche- und Plan-Haltepunkt; Veröffentlichen bleibt ein eigener Haltepunkt). Außerdem: keine Anfragen mehr an die andere Session.
 - Hürden und Beispiele: nicht gefragt; die Annahmen stehen als "guess" unter "Notes".
 
 ### Completed
@@ -94,13 +95,13 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
       ends in a commit.
 - [x] Write "Content method": the guide's patterns, figures, components per slice; anything new, with why the
       guide's patterns do not fit.
-- [ ] Show the creator, short: goal, new competencies by chapter, slices; in plain words what learners see and do,
+- [x] Show the creator, short: goal, new competencies by chapter, slices; in plain words what learners see and do,
       and what is new. Max 2 questions.
-- [ ] Each new component or interactive exercise: show a sketch (static SVG or image, or the steps). Words alone are
+- [x] Each new component or interactive exercise: show a sketch (static SVG or image, or the steps). Words alone are
       not enough.
-- [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes → change,
+- [x] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes → change,
       ask again.
-- [ ] Set `phase: code`: change the value line (`grep '^phase:'` prints `phase: code`).
+- [x] Set `phase: code`: change the value line (`grep '^phase:'` prints `phase: code`).
 
 ### Content method
 
@@ -127,7 +128,7 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 - [x] `git switch -c increment/02-periodensystem-interaktiv` from `main`. Commit this plan on it.
 - [ ] `npx --yes github:lernapps/tooling#exp/compact-guidance update`, then `npm install`. It replaces the `lernapps-*` skills: reread
       the ones you use. Commit the update alone; fix its check findings before content.
-- [ ] Slice 1, Plural: "1 Proton" statt "1 Protonen" in `AtomBuilder` (Text, Begründung, Test). Commit.
+- [x] Slice 1, Plural: "1 Proton" statt "1 Protonen" in `AtomBuilder` (Text, Begründung, Test). Commit.
 - [ ] Slice 2, Karte: `PeriodicTable` mit Sicht "nach Art", Hervorheben einer Periode, Prop `mode`; Test; `nojs` bleibt vollständig. Commit.
 - [ ] Slice 3, Übung: `ElementFinder` (Logik, Test, Ansicht) mit den Aufgabentypen Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen, Art und Periode. Commit.
 - [ ] Slice 4, Seiten: `periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle` mit Karte und `ElementFinder`, kürzere Texte, Eintrags-Themen. Commit.
