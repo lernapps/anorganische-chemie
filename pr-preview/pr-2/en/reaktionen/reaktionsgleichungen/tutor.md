@@ -18,42 +18,42 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### koeffizient-wasser (number)
 
 - Link: [./#koeffizient-wasser](./#koeffizient-wasser), in the section „Practice“
-- Task: Which number belongs in place of x? $\ce{x H2 + O2 -> 2H2O}$
+- Task: Which number belongs in place of x? x H₂ + O₂ → 2H₂O
 - Answer format: type a number
 - Solution: 2
-- Explanation: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of $\ce{H2}$ on the left.
+- Explanation: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of H₂ on the left.
 - Typical mistakes and the app's message:
   - 1: Then there would be only 2 hydrogen atoms on the left, but 4 (2 · 2) on the right.
 
 ### koeffizient-magnesium (number)
 
 - Link: [./#koeffizient-magnesium](./#koeffizient-magnesium), in the section „Practice“
-- Task: Which number belongs in place of x? $\ce{2Mg + O2 -> x MgO}$
+- Task: Which number belongs in place of x? 2Mg + O₂ → x MgO
 - Answer format: type a number
 - Solution: 2
-- Explanation: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of $\ce{MgO}$ for both to be right.
+- Explanation: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of MgO for both to be right.
 - Typical mistakes and the app's message:
-  - 1: Then there would be only 1 oxygen atom on the right, but 2 ($\ce{O2}$) on the left.
+  - 1: Then there would be only 1 oxygen atom on the right, but 2 (O₂) on the left.
 
 ### koeffizient-ammoniak (number)
 
 - Link: [./#koeffizient-ammoniak](./#koeffizient-ammoniak), in the section „Practice“
-- Task: Which number belongs in place of x? $\ce{N2 + x H2 -> 2NH3}$
+- Task: Which number belongs in place of x? N₂ + x H₂ → 2NH₃
 - Answer format: type a number
 - Solution: 3
-- Explanation: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of $\ce{H2}$ there are also 6 on the left.
+- Explanation: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of H₂ there are also 6 on the left.
 - Typical mistakes and the app's message:
   - 2: Then there would be 4 hydrogen atoms on the left, but 6 (2 · 3) on the right.
 
 ### koeffizient-methan (number)
 
 - Link: [./#koeffizient-methan](./#koeffizient-methan), in the section „Practice“
-- Task: Which number belongs in place of x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
+- Task: Which number belongs in place of x? CH₄ + x O₂ → CO₂ + 2H₂O
 - Answer format: type a number
 - Solution: 2
-- Explanation: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of $\ce{O2}$ there are also 4 on the left.
+- Explanation: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of O₂ there are also 4 on the left.
 - Typical mistakes and the app's message:
-  - 1: Then there would be only 2 oxygen atoms on the left, but 4 on the right (2 in $\ce{CO2}$ and 2 in the water).
+  - 1: Then there would be only 2 oxygen atoms on the left, but 4 on the right (2 in CO₂ and 2 in the water).
 
 ### gleichung-schritte (ordering)
 

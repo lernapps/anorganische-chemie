@@ -94,7 +94,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### atome-ammoniak (number)
 
 - Link: [./#atome-ammoniak](./#atome-ammoniak), im Abschnitt „Übung“
-- Aufgabe: Wie viele Wasserstoffatome hat ein Teilchen Ammoniak mit der Formel $\ce{NH3}$?
+- Aufgabe: Wie viele Wasserstoffatome hat ein Teilchen Ammoniak mit der Formel NH₃?
 - Antwortformat: eine Zahl eintippen
 - Lösung: 3
 - Erklärung: Der Index 3 steht hinter dem H. Er gilt nur für das H, also sind es 3 Wasserstoffatome und 1 Stickstoffatom.
@@ -105,7 +105,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### atome-methan (number)
 
 - Link: [./#atome-methan](./#atome-methan), im Abschnitt „Übung“
-- Aufgabe: Wie viele Atome hat ein Methanmolekül $\ce{CH4}$ insgesamt?
+- Aufgabe: Wie viele Atome hat ein Methanmolekül CH₄ insgesamt?
 - Antwortformat: eine Zahl eintippen
 - Lösung: 5
 - Erklärung: 1 Kohlenstoffatom und 4 Wasserstoffatome sind zusammen 5 Atome.

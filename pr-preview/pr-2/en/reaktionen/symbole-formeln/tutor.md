@@ -94,7 +94,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### atome-ammoniak (number)
 
 - Link: [./#atome-ammoniak](./#atome-ammoniak), in the section „Practice“
-- Task: How many hydrogen atoms does one particle of ammonia with the formula $\ce{NH3}$ have?
+- Task: How many hydrogen atoms does one particle of ammonia with the formula NH₃ have?
 - Answer format: type a number
 - Solution: 3
 - Explanation: The index 3 is after the H. It applies only to the H, so there are 3 hydrogen atoms and 1 nitrogen atom.
@@ -105,7 +105,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### atome-methan (number)
 
 - Link: [./#atome-methan](./#atome-methan), in the section „Practice“
-- Task: How many atoms does a methane molecule $\ce{CH4}$ have in total?
+- Task: How many atoms does a methane molecule CH₄ have in total?
 - Answer format: type a number
 - Solution: 5
 - Explanation: 1 carbon atom and 4 hydrogen atoms make 5 atoms together.

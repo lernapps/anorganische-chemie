@@ -18,42 +18,42 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### koeffizient-wasser (number)
 
 - Link: [./#koeffizient-wasser](./#koeffizient-wasser), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x? $\ce{x H2 + O2 -> 2H2O}$
+- Aufgabe: Welche Zahl gehört an die Stelle von x? x H₂ + O₂ → 2H₂O
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
-- Erklärung: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen $\ce{H2}$.
+- Erklärung: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen H₂.
 - Typische Fehler und die Meldung der App:
   - 1: Dann stünden links nur 2 Wasserstoffatome, rechts aber 4 (2 · 2).
 
 ### koeffizient-magnesium (number)
 
 - Link: [./#koeffizient-magnesium](./#koeffizient-magnesium), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x? $\ce{2Mg + O2 -> x MgO}$
+- Aufgabe: Welche Zahl gehört an die Stelle von x? 2Mg + O₂ → x MgO
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
-- Erklärung: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen $\ce{MgO}$, damit beides stimmt.
+- Erklärung: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen MgO, damit beides stimmt.
 - Typische Fehler und die Meldung der App:
-  - 1: Dann stünde rechts nur 1 Sauerstoffatom, links aber 2 ($\ce{O2}$).
+  - 1: Dann stünde rechts nur 1 Sauerstoffatom, links aber 2 (O₂).
 
 ### koeffizient-ammoniak (number)
 
 - Link: [./#koeffizient-ammoniak](./#koeffizient-ammoniak), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x? $\ce{N2 + x H2 -> 2NH3}$
+- Aufgabe: Welche Zahl gehört an die Stelle von x? N₂ + x H₂ → 2NH₃
 - Antwortformat: eine Zahl eintippen
 - Lösung: 3
-- Erklärung: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen $\ce{H2}$ sind es links ebenfalls 6.
+- Erklärung: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen H₂ sind es links ebenfalls 6.
 - Typische Fehler und die Meldung der App:
   - 2: Dann wären links 4 Wasserstoffatome, rechts aber 6 (2 · 3).
 
 ### koeffizient-methan (number)
 
 - Link: [./#koeffizient-methan](./#koeffizient-methan), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
+- Aufgabe: Welche Zahl gehört an die Stelle von x? CH₄ + x O₂ → CO₂ + 2H₂O
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
-- Erklärung: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen $\ce{O2}$ sind es links ebenfalls 4.
+- Erklärung: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen O₂ sind es links ebenfalls 4.
 - Typische Fehler und die Meldung der App:
-  - 1: Dann wären links nur 2 Sauerstoffatome, rechts aber 4 (2 in $\ce{CO2}$ und 2 im Wasser).
+  - 1: Dann wären links nur 2 Sauerstoffatome, rechts aber 4 (2 in CO₂ und 2 im Wasser).
 
 ### gleichung-schritte (ordering)
 
