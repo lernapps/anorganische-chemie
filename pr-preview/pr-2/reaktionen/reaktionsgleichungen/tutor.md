@@ -18,7 +18,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### koeffizient-wasser (number)
 
 - Link: [./#koeffizient-wasser](./#koeffizient-wasser), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+- Aufgabe: Welche Zahl gehört an die Stelle von x? x H₂ + O₂ → 2H₂O
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
 - Erklärung: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen H₂.
@@ -28,7 +28,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### koeffizient-magnesium (number)
 
 - Link: [./#koeffizient-magnesium](./#koeffizient-magnesium), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+- Aufgabe: Welche Zahl gehört an die Stelle von x? 2Mg + O₂ → x MgO
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
 - Erklärung: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen MgO, damit beides stimmt.
@@ -38,7 +38,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### koeffizient-ammoniak (number)
 
 - Link: [./#koeffizient-ammoniak](./#koeffizient-ammoniak), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+- Aufgabe: Welche Zahl gehört an die Stelle von x? N₂ + x H₂ → 2NH₃
 - Antwortformat: eine Zahl eintippen
 - Lösung: 3
 - Erklärung: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen H₂ sind es links ebenfalls 6.
@@ -48,7 +48,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ### koeffizient-methan (number)
 
 - Link: [./#koeffizient-methan](./#koeffizient-methan), im Abschnitt „Übung“
-- Aufgabe: Welche Zahl gehört an die Stelle von x in der Gleichung darüber?
+- Aufgabe: Welche Zahl gehört an die Stelle von x? CH₄ + x O₂ → CO₂ + 2H₂O
 - Antwortformat: eine Zahl eintippen
 - Lösung: 2
 - Erklärung: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen O₂ sind es links ebenfalls 4.

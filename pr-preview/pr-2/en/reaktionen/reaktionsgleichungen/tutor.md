@@ -18,7 +18,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### koeffizient-wasser (number)
 
 - Link: [./#koeffizient-wasser](./#koeffizient-wasser), in the section „Practice“
-- Task: Which number belongs in place of x in the equation above?
+- Task: Which number belongs in place of x? x H₂ + O₂ → 2H₂O
 - Answer format: type a number
 - Solution: 2
 - Explanation: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of H₂ on the left.
@@ -28,7 +28,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### koeffizient-magnesium (number)
 
 - Link: [./#koeffizient-magnesium](./#koeffizient-magnesium), in the section „Practice“
-- Task: Which number belongs in place of x in the equation above?
+- Task: Which number belongs in place of x? 2Mg + O₂ → x MgO
 - Answer format: type a number
 - Solution: 2
 - Explanation: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of MgO for both to be right.
@@ -38,7 +38,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### koeffizient-ammoniak (number)
 
 - Link: [./#koeffizient-ammoniak](./#koeffizient-ammoniak), in the section „Practice“
-- Task: Which number belongs in place of x in the equation above?
+- Task: Which number belongs in place of x? N₂ + x H₂ → 2NH₃
 - Answer format: type a number
 - Solution: 3
 - Explanation: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of H₂ there are also 6 on the left.
@@ -48,7 +48,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ### koeffizient-methan (number)
 
 - Link: [./#koeffizient-methan](./#koeffizient-methan), in the section „Practice“
-- Task: Which number belongs in place of x in the equation above?
+- Task: Which number belongs in place of x? CH₄ + x O₂ → CO₂ + 2H₂O
 - Answer format: type a number
 - Solution: 2
 - Explanation: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of O₂ there are also 4 on the left.
