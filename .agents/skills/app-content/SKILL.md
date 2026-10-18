@@ -163,9 +163,10 @@ Page and exercise ids (page file, exercise id):
 
 ## Rules learned from mistakes
 
-- Texts of quiz-type exercises (`number`, `single-choice`, `multiple-choice`, `true-false`, `ordering`, `matching`: question,
-  options, `info`, `explanation`, mistakes) are plain text. `$…$` and `\ce{…}` show up as raw characters there. Write formulas
-  with Unicode subscripts and an arrow (`H₂ + O₂ → 2H₂O`). Formulas with `\ce` belong in `text`, `formula`, `table` and `example`
-  blocks and in the `task`, `steps` and `hint` of `generated` exercises.
-- The runtime's own texts ("Übe selbst, mit immer neuen Zahlen:", "Drei Beispielaufgaben, jede mit ihrer Lösung:") come from the
-  template and cannot be changed in this app; wishes for them go to an issue at lernapps/app-templates.
+- Texts of quiz-type exercises (`number`, `single-choice`, …) may contain `$…$` formulas with the template from
+  cae5b90 on, but its end-to-end test "one <math> per formula" does not count them yet (issue lernapps/app-templates#47) and
+  fails the check. Until that is fixed: put the equation in a `formula` block directly above the question and write formulas in the
+  question text with Unicode subscripts and an arrow (`H₂ + O₂ → 2H₂O`).
+- Every `generated` exercise sets `practice`, the sentence above its live task, naming what changes ("… mit immer neuen Elementen:",
+  "… mit immer neuen Stoffen:"), in both languages. The worked tasks with solutions stay hidden with JavaScript (the template's
+  default `workedTasks: without-javascript`); do not set `workedTasks: always`.

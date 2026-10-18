@@ -2260,6 +2260,9 @@ blocks:
             url: https://de.wikipedia.org/wiki/Hauptgruppe
       - type: generated
         id: aussenelektronen
+        practice:
+          de: "Übe selbst, mit immer neuen Elementen:"
+          en: "Practise on your own, with new elements every time:"
         given:
           e:
             pick: 1
@@ -2280,6 +2283,9 @@ blocks:
             en: "{{e.name}} has {{answer}} outer electrons."
       - type: generated
         id: hauptgruppe-bestimmen
+        practice:
+          de: "Übe selbst, mit immer neuen Elementen:"
+          en: "Practise on your own, with new elements every time:"
         given:
           e:
             pick: 1

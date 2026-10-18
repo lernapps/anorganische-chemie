@@ -76,6 +76,9 @@ blocks:
     blocks:
       - type: generated
         id: metall-oder-nichtmetall
+        practice:
+          de: "Übe selbst, mit immer neuen Elementen:"
+          en: "Practise on your own, with new elements every time:"
         given:
           e:
             pick: 1

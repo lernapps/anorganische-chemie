@@ -227,6 +227,9 @@ blocks:
     blocks:
       - type: generated
         id: ordnungszahl-ablesen
+        practice:
+          de: "Übe selbst, mit immer neuen Elementen:"
+          en: "Practise on your own, with new elements every time:"
         given:
           e:
             pick: 1
@@ -247,6 +250,9 @@ blocks:
             en: "{{e.name}} has the atomic number {{answer}}."
       - type: generated
         id: periode-bestimmen
+        practice:
+          de: "Übe selbst, mit immer neuen Elementen:"
+          en: "Practise on your own, with new elements every time:"
         given:
           e:
             pick: 1
