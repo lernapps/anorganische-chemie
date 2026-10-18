@@ -9,6 +9,7 @@ This file is for an AI tutor. It contains the solutions: use them to guide and t
 ## Sections
 
 - [Why](./#warum)
+- [Explore the elements](./#entdecken)
 - [Rule](./#regel)
 - [Example](./#beispiel)
 - [Practice](./#uebung)

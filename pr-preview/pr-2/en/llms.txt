@@ -39,6 +39,7 @@ Deutsch: ../llms.txt
   - [Practice](periodensystem/periodensystem-lesen/#uebung)
 - [The eight main groups](periodensystem/hauptgruppen/): All eight main groups with their names and all their elements. The main group tells how many electrons are in the outer shell.
   - [Why](periodensystem/hauptgruppen/#warum)
+  - [Explore the elements](periodensystem/hauptgruppen/#entdecken)
   - [Rule](periodensystem/hauptgruppen/#regel)
   - [Example](periodensystem/hauptgruppen/#beispiel)
   - [Practice](periodensystem/hauptgruppen/#uebung)

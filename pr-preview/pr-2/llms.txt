@@ -39,6 +39,7 @@ English: en/llms.txt
   - [Übung](periodensystem/periodensystem-lesen/#uebung)
 - [Die acht Hauptgruppen](periodensystem/hauptgruppen/): Alle acht Hauptgruppen mit Namen und allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
   - [Warum](periodensystem/hauptgruppen/#warum)
+  - [Entdecke die Elemente](periodensystem/hauptgruppen/#entdecken)
   - [Regel](periodensystem/hauptgruppen/#regel)
   - [Beispiel](periodensystem/hauptgruppen/#beispiel)
   - [Übung](periodensystem/hauptgruppen/#uebung)

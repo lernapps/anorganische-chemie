@@ -9,6 +9,7 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 ## Abschnitte
 
 - [Warum](./#warum)
+- [Entdecke die Elemente](./#entdecken)
 - [Regel](./#regel)
 - [Beispiel](./#beispiel)
 - [Übung](./#uebung)
