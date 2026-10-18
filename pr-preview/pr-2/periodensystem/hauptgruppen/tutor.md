@@ -27,54 +27,54 @@ Diese Datei ist für einen KI-Tutor. Sie enthält die Lösungen: Nutze sie, um a
 
 - Link: [./#aussenelektronen](./#aussenelektronen), im Abschnitt „Übung“
 - Antwortformat: eine Zahl eintippen
-- Tipp, den die App zeigt (Vorlage: {{…}} sind die Werte der Aufgabe): Außenelektronen sitzen auf der äußersten Schale, also steht die letzte Zahl der Aufzählung für sie.
+- Tipp, den die App zeigt (Vorlage: {{…}} sind die Werte der Aufgabe): Bei den Hauptgruppen ist die Zahl der Außenelektronen die Nummer der Hauptgruppe (I bis VIII). Helium ist die Ausnahme.
 - Lösungsweg (Vorlage: {{…}} sind die Werte der Aufgabe):
-  - Die äußerste Schale von {{e.name}} hat {{answer}} Elektronen.
+  - {{e.name}} hat {{answer}} Außenelektronen.
 - Aufgaben nach Nummer, 1 bis 44: jede eine andere (die App zeigt „Aufgabe Nr. …“):
-  - [Aufgabe Nr. 1](./?aussenelektronen=1#aussenelektronen): Wie viele Außenelektronen hat ein Atom Caesium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 8, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 2](./?aussenelektronen=2#aussenelektronen): Wie viele Außenelektronen hat ein Atom Neon? Seine Elektronen sitzen auf Schalen mit 2, 8 Elektronen. → Lösung: 8
-  - [Aufgabe Nr. 3](./?aussenelektronen=3#aussenelektronen): Wie viele Außenelektronen hat ein Atom Indium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 3 Elektronen. → Lösung: 3
-  - [Aufgabe Nr. 4](./?aussenelektronen=4#aussenelektronen): Wie viele Außenelektronen hat ein Atom Blei? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 4 Elektronen. → Lösung: 4
-  - [Aufgabe Nr. 5](./?aussenelektronen=5#aussenelektronen): Wie viele Außenelektronen hat ein Atom Silicium? Seine Elektronen sitzen auf Schalen mit 2, 8, 4 Elektronen. → Lösung: 4
-  - [Aufgabe Nr. 6](./?aussenelektronen=6#aussenelektronen): Wie viele Außenelektronen hat ein Atom Phosphor? Seine Elektronen sitzen auf Schalen mit 2, 8, 5 Elektronen. → Lösung: 5
-  - [Aufgabe Nr. 7](./?aussenelektronen=7#aussenelektronen): Wie viele Außenelektronen hat ein Atom Arsen? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 5 Elektronen. → Lösung: 5
-  - [Aufgabe Nr. 8](./?aussenelektronen=8#aussenelektronen): Wie viele Außenelektronen hat ein Atom Natrium? Seine Elektronen sitzen auf Schalen mit 2, 8, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 9](./?aussenelektronen=9#aussenelektronen): Wie viele Außenelektronen hat ein Atom Francium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 8, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 10](./?aussenelektronen=10#aussenelektronen): Wie viele Außenelektronen hat ein Atom Stickstoff? Seine Elektronen sitzen auf Schalen mit 2, 5 Elektronen. → Lösung: 5
-  - [Aufgabe Nr. 11](./?aussenelektronen=11#aussenelektronen): Wie viele Außenelektronen hat ein Atom Beryllium? Seine Elektronen sitzen auf Schalen mit 2, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 12](./?aussenelektronen=12#aussenelektronen): Wie viele Außenelektronen hat ein Atom Zinn? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 4 Elektronen. → Lösung: 4
-  - [Aufgabe Nr. 13](./?aussenelektronen=13#aussenelektronen): Wie viele Außenelektronen hat ein Atom Strontium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 8, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 14](./?aussenelektronen=14#aussenelektronen): Wie viele Außenelektronen hat ein Atom Thallium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 3 Elektronen. → Lösung: 3
-  - [Aufgabe Nr. 15](./?aussenelektronen=15#aussenelektronen): Wie viele Außenelektronen hat ein Atom Wasserstoff? Seine Elektronen sitzen auf Schalen mit 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 16](./?aussenelektronen=16#aussenelektronen): Wie viele Außenelektronen hat ein Atom Polonium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 6 Elektronen. → Lösung: 6
-  - [Aufgabe Nr. 17](./?aussenelektronen=17#aussenelektronen): Wie viele Außenelektronen hat ein Atom Astat? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 7 Elektronen. → Lösung: 7
-  - [Aufgabe Nr. 18](./?aussenelektronen=18#aussenelektronen): Wie viele Außenelektronen hat ein Atom Lithium? Seine Elektronen sitzen auf Schalen mit 2, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 19](./?aussenelektronen=19#aussenelektronen): Wie viele Außenelektronen hat ein Atom Fluor? Seine Elektronen sitzen auf Schalen mit 2, 7 Elektronen. → Lösung: 7
-  - [Aufgabe Nr. 20](./?aussenelektronen=20#aussenelektronen): Wie viele Außenelektronen hat ein Atom Chlor? Seine Elektronen sitzen auf Schalen mit 2, 8, 7 Elektronen. → Lösung: 7
-  - [Aufgabe Nr. 21](./?aussenelektronen=21#aussenelektronen): Wie viele Außenelektronen hat ein Atom Xenon? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 8 Elektronen. → Lösung: 8
-  - [Aufgabe Nr. 22](./?aussenelektronen=22#aussenelektronen): Wie viele Außenelektronen hat ein Atom Schwefel? Seine Elektronen sitzen auf Schalen mit 2, 8, 6 Elektronen. → Lösung: 6
-  - [Aufgabe Nr. 23](./?aussenelektronen=23#aussenelektronen): Wie viele Außenelektronen hat ein Atom Sauerstoff? Seine Elektronen sitzen auf Schalen mit 2, 6 Elektronen. → Lösung: 6
-  - [Aufgabe Nr. 24](./?aussenelektronen=24#aussenelektronen): Wie viele Außenelektronen hat ein Atom Bor? Seine Elektronen sitzen auf Schalen mit 2, 3 Elektronen. → Lösung: 3
-  - [Aufgabe Nr. 25](./?aussenelektronen=25#aussenelektronen): Wie viele Außenelektronen hat ein Atom Bismut? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 5 Elektronen. → Lösung: 5
-  - [Aufgabe Nr. 26](./?aussenelektronen=26#aussenelektronen): Wie viele Außenelektronen hat ein Atom Radium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 8, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 27](./?aussenelektronen=27#aussenelektronen): Wie viele Außenelektronen hat ein Atom Gallium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 3 Elektronen. → Lösung: 3
-  - [Aufgabe Nr. 28](./?aussenelektronen=28#aussenelektronen): Wie viele Außenelektronen hat ein Atom Kalium? Seine Elektronen sitzen auf Schalen mit 2, 8, 8, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 29](./?aussenelektronen=29#aussenelektronen): Wie viele Außenelektronen hat ein Atom Kohlenstoff? Seine Elektronen sitzen auf Schalen mit 2, 4 Elektronen. → Lösung: 4
-  - [Aufgabe Nr. 30](./?aussenelektronen=30#aussenelektronen): Wie viele Außenelektronen hat ein Atom Radon? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 32, 18, 8 Elektronen. → Lösung: 8
-  - [Aufgabe Nr. 31](./?aussenelektronen=31#aussenelektronen): Wie viele Außenelektronen hat ein Atom Magnesium? Seine Elektronen sitzen auf Schalen mit 2, 8, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 32](./?aussenelektronen=32#aussenelektronen): Wie viele Außenelektronen hat ein Atom Selen? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 6 Elektronen. → Lösung: 6
-  - [Aufgabe Nr. 33](./?aussenelektronen=33#aussenelektronen): Wie viele Außenelektronen hat ein Atom Calcium? Seine Elektronen sitzen auf Schalen mit 2, 8, 8, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 34](./?aussenelektronen=34#aussenelektronen): Wie viele Außenelektronen hat ein Atom Brom? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 7 Elektronen. → Lösung: 7
-  - [Aufgabe Nr. 35](./?aussenelektronen=35#aussenelektronen): Wie viele Außenelektronen hat ein Atom Barium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 8, 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 36](./?aussenelektronen=36#aussenelektronen): Wie viele Außenelektronen hat ein Atom Krypton? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 8 Elektronen. → Lösung: 8
-  - [Aufgabe Nr. 37](./?aussenelektronen=37#aussenelektronen): Wie viele Außenelektronen hat ein Atom Germanium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 4 Elektronen. → Lösung: 4
-  - [Aufgabe Nr. 38](./?aussenelektronen=38#aussenelektronen): Wie viele Außenelektronen hat ein Atom Iod? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 7 Elektronen. → Lösung: 7
-  - [Aufgabe Nr. 39](./?aussenelektronen=39#aussenelektronen): Wie viele Außenelektronen hat ein Atom Antimon? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 5 Elektronen. → Lösung: 5
-  - [Aufgabe Nr. 40](./?aussenelektronen=40#aussenelektronen): Wie viele Außenelektronen hat ein Atom Argon? Seine Elektronen sitzen auf Schalen mit 2, 8, 8 Elektronen. → Lösung: 8
-  - [Aufgabe Nr. 41](./?aussenelektronen=41#aussenelektronen): Wie viele Außenelektronen hat ein Atom Helium? Seine Elektronen sitzen auf Schalen mit 2 Elektronen. → Lösung: 2
-  - [Aufgabe Nr. 42](./?aussenelektronen=42#aussenelektronen): Wie viele Außenelektronen hat ein Atom Aluminium? Seine Elektronen sitzen auf Schalen mit 2, 8, 3 Elektronen. → Lösung: 3
-  - [Aufgabe Nr. 43](./?aussenelektronen=43#aussenelektronen): Wie viele Außenelektronen hat ein Atom Rubidium? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 8, 1 Elektronen. → Lösung: 1
-  - [Aufgabe Nr. 44](./?aussenelektronen=44#aussenelektronen): Wie viele Außenelektronen hat ein Atom Tellur? Seine Elektronen sitzen auf Schalen mit 2, 8, 18, 18, 6 Elektronen. → Lösung: 6
+  - [Aufgabe Nr. 1](./?aussenelektronen=1#aussenelektronen): Wie viele Außenelektronen hat ein Atom Caesium (Symbol Cs)? → Lösung: 1
+  - [Aufgabe Nr. 2](./?aussenelektronen=2#aussenelektronen): Wie viele Außenelektronen hat ein Atom Neon (Symbol Ne)? → Lösung: 8
+  - [Aufgabe Nr. 3](./?aussenelektronen=3#aussenelektronen): Wie viele Außenelektronen hat ein Atom Indium (Symbol In)? → Lösung: 3
+  - [Aufgabe Nr. 4](./?aussenelektronen=4#aussenelektronen): Wie viele Außenelektronen hat ein Atom Blei (Symbol Pb)? → Lösung: 4
+  - [Aufgabe Nr. 5](./?aussenelektronen=5#aussenelektronen): Wie viele Außenelektronen hat ein Atom Silicium (Symbol Si)? → Lösung: 4
+  - [Aufgabe Nr. 6](./?aussenelektronen=6#aussenelektronen): Wie viele Außenelektronen hat ein Atom Phosphor (Symbol P)? → Lösung: 5
+  - [Aufgabe Nr. 7](./?aussenelektronen=7#aussenelektronen): Wie viele Außenelektronen hat ein Atom Arsen (Symbol As)? → Lösung: 5
+  - [Aufgabe Nr. 8](./?aussenelektronen=8#aussenelektronen): Wie viele Außenelektronen hat ein Atom Natrium (Symbol Na)? → Lösung: 1
+  - [Aufgabe Nr. 9](./?aussenelektronen=9#aussenelektronen): Wie viele Außenelektronen hat ein Atom Francium (Symbol Fr)? → Lösung: 1
+  - [Aufgabe Nr. 10](./?aussenelektronen=10#aussenelektronen): Wie viele Außenelektronen hat ein Atom Stickstoff (Symbol N)? → Lösung: 5
+  - [Aufgabe Nr. 11](./?aussenelektronen=11#aussenelektronen): Wie viele Außenelektronen hat ein Atom Beryllium (Symbol Be)? → Lösung: 2
+  - [Aufgabe Nr. 12](./?aussenelektronen=12#aussenelektronen): Wie viele Außenelektronen hat ein Atom Zinn (Symbol Sn)? → Lösung: 4
+  - [Aufgabe Nr. 13](./?aussenelektronen=13#aussenelektronen): Wie viele Außenelektronen hat ein Atom Strontium (Symbol Sr)? → Lösung: 2
+  - [Aufgabe Nr. 14](./?aussenelektronen=14#aussenelektronen): Wie viele Außenelektronen hat ein Atom Thallium (Symbol Tl)? → Lösung: 3
+  - [Aufgabe Nr. 15](./?aussenelektronen=15#aussenelektronen): Wie viele Außenelektronen hat ein Atom Wasserstoff (Symbol H)? → Lösung: 1
+  - [Aufgabe Nr. 16](./?aussenelektronen=16#aussenelektronen): Wie viele Außenelektronen hat ein Atom Polonium (Symbol Po)? → Lösung: 6
+  - [Aufgabe Nr. 17](./?aussenelektronen=17#aussenelektronen): Wie viele Außenelektronen hat ein Atom Astat (Symbol At)? → Lösung: 7
+  - [Aufgabe Nr. 18](./?aussenelektronen=18#aussenelektronen): Wie viele Außenelektronen hat ein Atom Lithium (Symbol Li)? → Lösung: 1
+  - [Aufgabe Nr. 19](./?aussenelektronen=19#aussenelektronen): Wie viele Außenelektronen hat ein Atom Fluor (Symbol F)? → Lösung: 7
+  - [Aufgabe Nr. 20](./?aussenelektronen=20#aussenelektronen): Wie viele Außenelektronen hat ein Atom Chlor (Symbol Cl)? → Lösung: 7
+  - [Aufgabe Nr. 21](./?aussenelektronen=21#aussenelektronen): Wie viele Außenelektronen hat ein Atom Xenon (Symbol Xe)? → Lösung: 8
+  - [Aufgabe Nr. 22](./?aussenelektronen=22#aussenelektronen): Wie viele Außenelektronen hat ein Atom Schwefel (Symbol S)? → Lösung: 6
+  - [Aufgabe Nr. 23](./?aussenelektronen=23#aussenelektronen): Wie viele Außenelektronen hat ein Atom Sauerstoff (Symbol O)? → Lösung: 6
+  - [Aufgabe Nr. 24](./?aussenelektronen=24#aussenelektronen): Wie viele Außenelektronen hat ein Atom Bor (Symbol B)? → Lösung: 3
+  - [Aufgabe Nr. 25](./?aussenelektronen=25#aussenelektronen): Wie viele Außenelektronen hat ein Atom Bismut (Symbol Bi)? → Lösung: 5
+  - [Aufgabe Nr. 26](./?aussenelektronen=26#aussenelektronen): Wie viele Außenelektronen hat ein Atom Radium (Symbol Ra)? → Lösung: 2
+  - [Aufgabe Nr. 27](./?aussenelektronen=27#aussenelektronen): Wie viele Außenelektronen hat ein Atom Gallium (Symbol Ga)? → Lösung: 3
+  - [Aufgabe Nr. 28](./?aussenelektronen=28#aussenelektronen): Wie viele Außenelektronen hat ein Atom Kalium (Symbol K)? → Lösung: 1
+  - [Aufgabe Nr. 29](./?aussenelektronen=29#aussenelektronen): Wie viele Außenelektronen hat ein Atom Kohlenstoff (Symbol C)? → Lösung: 4
+  - [Aufgabe Nr. 30](./?aussenelektronen=30#aussenelektronen): Wie viele Außenelektronen hat ein Atom Radon (Symbol Rn)? → Lösung: 8
+  - [Aufgabe Nr. 31](./?aussenelektronen=31#aussenelektronen): Wie viele Außenelektronen hat ein Atom Magnesium (Symbol Mg)? → Lösung: 2
+  - [Aufgabe Nr. 32](./?aussenelektronen=32#aussenelektronen): Wie viele Außenelektronen hat ein Atom Selen (Symbol Se)? → Lösung: 6
+  - [Aufgabe Nr. 33](./?aussenelektronen=33#aussenelektronen): Wie viele Außenelektronen hat ein Atom Calcium (Symbol Ca)? → Lösung: 2
+  - [Aufgabe Nr. 34](./?aussenelektronen=34#aussenelektronen): Wie viele Außenelektronen hat ein Atom Brom (Symbol Br)? → Lösung: 7
+  - [Aufgabe Nr. 35](./?aussenelektronen=35#aussenelektronen): Wie viele Außenelektronen hat ein Atom Barium (Symbol Ba)? → Lösung: 2
+  - [Aufgabe Nr. 36](./?aussenelektronen=36#aussenelektronen): Wie viele Außenelektronen hat ein Atom Krypton (Symbol Kr)? → Lösung: 8
+  - [Aufgabe Nr. 37](./?aussenelektronen=37#aussenelektronen): Wie viele Außenelektronen hat ein Atom Germanium (Symbol Ge)? → Lösung: 4
+  - [Aufgabe Nr. 38](./?aussenelektronen=38#aussenelektronen): Wie viele Außenelektronen hat ein Atom Iod (Symbol I)? → Lösung: 7
+  - [Aufgabe Nr. 39](./?aussenelektronen=39#aussenelektronen): Wie viele Außenelektronen hat ein Atom Antimon (Symbol Sb)? → Lösung: 5
+  - [Aufgabe Nr. 40](./?aussenelektronen=40#aussenelektronen): Wie viele Außenelektronen hat ein Atom Argon (Symbol Ar)? → Lösung: 8
+  - [Aufgabe Nr. 41](./?aussenelektronen=41#aussenelektronen): Wie viele Außenelektronen hat ein Atom Helium (Symbol He)? → Lösung: 2
+  - [Aufgabe Nr. 42](./?aussenelektronen=42#aussenelektronen): Wie viele Außenelektronen hat ein Atom Aluminium (Symbol Al)? → Lösung: 3
+  - [Aufgabe Nr. 43](./?aussenelektronen=43#aussenelektronen): Wie viele Außenelektronen hat ein Atom Rubidium (Symbol Rb)? → Lösung: 1
+  - [Aufgabe Nr. 44](./?aussenelektronen=44#aussenelektronen): Wie viele Außenelektronen hat ein Atom Tellur (Symbol Te)? → Lösung: 6
 
 ### hauptgruppe-bestimmen (generated, number)
 
