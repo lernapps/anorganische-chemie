@@ -142,6 +142,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Änderung nach dem Plan: "Es sollten alle Hauptgruppen berücksichtigt werden. Außerdem hätte ich das auch gerne mehrsprachig"
 - Rückmeldung zur Vorschau: "Die Elektronen von Antimon sitzen auf Schalen mit 2, 8, 18, 18, 5 Elektronen. Was ist denn das für eine dämliche Formulierung in einem Quiz? Überhaupt sind die Hauptgruppen nicht ansprechend aufbereitet. Wenn wir schon eine Webanwendung haben, hätte ich gerne eine farbige, interaktive, neugierig machende Darstellung, in der ich über die Elemente und bspw. auch ihre üblichen Verbindungen und Nutzen erfahre"
 - Zum Nachtrag Periodensystem: "1. passt" (Aufbau der interaktiven Karte); "2. ja, auch englisch. Basierend auf Wikipedia oder einer anderen Internetquelle (selbst schreiben, keine Texte kopieren)" (ein "Wusstest du?"-Satz je Element)
+- Update und Merge: "Es sollte eine neue Version des Templates geben, in dem die Probleme behoben sind. Aktualisiere darauf, dann gib mir eine neue Version der Vorschau. Die guckst du dir dann auch selbst an, gerade die kritischen Punkte, so wie es ein Schüler würde. Dann mergest du das, wenn es okay aussieht."
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"
@@ -287,7 +288,7 @@ fitness:
 - [x] Verify over REST: default branch `main` (`gh api repos/<owner>/<repo> --jq .default_branch`); Pages serves
       `gh-pages` from `/` (`gh api repos/<owner>/<repo>/pages`; "Not Found" = off). Not right and not yours to
       change → note the creator's click (skill `lernapps-github`).
-- [ ] **Checkpoint:** publish. Ask before the app goes online; wait for the yes. Put the noted clicks into the same
+- [x] **Checkpoint:** publish. Ask before the app goes online; wait for the yes. Put the noted clicks into the same
       question.
 - [ ] `git switch main`, `git merge --ff-only work`, `git push origin main`. Run started?
       `gh run list --workflow Pages --branch main --commit "$(git rev-parse HEAD)"`; none after a minute →
