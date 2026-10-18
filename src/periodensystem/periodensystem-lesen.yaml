@@ -254,14 +254,14 @@ blocks:
               data: elemente
         task:
           text:
-            de: In welcher Periode steht {{e.name}}? Die Elektronen von {{e.name}} sitzen auf Schalen mit {{e.schalen}} Elektronen.
-            en: In which period is {{e.name}}? The electrons of {{e.name}} sit on shells with {{e.schalen}} electrons.
+            de: In welcher Periode steht {{e.name}} (Symbol {{e.symbol}})?
+            en: In which period is {{e.name}} (symbol {{e.symbol}})?
         answer:
           value: e.periode
           compare: number
         hint:
-          de: Die Periode ist die Zahl der Schalen. Zähle die Zahlen in der Aufzählung.
-          en: The period is the number of shells. Count the numbers in the list.
+          de: Die Periode ist die Zeile in der Tabelle, in der das Symbol {{e.symbol}} steht. Sie ist auch die Zahl der Elektronenschalen.
+          en: The period is the row of the table in which the symbol {{e.symbol}} stands. It is also the number of electron shells.
         steps:
-          - de: "{{e.name}} hat {{answer}} Schalen, also steht es in Periode {{answer}}."
-            en: "{{e.name}} has {{answer}} shells, so it is in period {{answer}}."
+          - de: "{{e.name}} steht in Periode {{answer}}."
+            en: "{{e.name}} is in period {{answer}}."

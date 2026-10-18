@@ -198,17 +198,17 @@ blocks:
               data: elemente
         task:
           text:
-            de: Wie viele Außenelektronen hat ein Atom {{e.name}}? Seine Elektronen sitzen auf Schalen mit {{e.schalen}} Elektronen.
-            en: How many outer electrons does an atom of {{e.name}} have? Its electrons sit on shells with {{e.schalen}} electrons.
+            de: Wie viele Außenelektronen hat ein Atom {{e.name}} (Symbol {{e.symbol}})?
+            en: How many outer electrons does an atom of {{e.name}} (symbol {{e.symbol}}) have?
         answer:
           value: e.aussen
           compare: number
         hint:
-          de: Außenelektronen sitzen auf der äußersten Schale, also steht die letzte Zahl der Aufzählung für sie.
-          en: Outer electrons sit on the outermost shell, so they are the last number in the list.
+          de: Bei den Hauptgruppen ist die Zahl der Außenelektronen die Nummer der Hauptgruppe (I bis VIII). Helium ist die Ausnahme.
+          en: For the main groups the number of outer electrons is the number of the main group (I to VIII). Helium is the exception.
         steps:
-          - de: Die äußerste Schale von {{e.name}} hat {{answer}} Elektronen.
-            en: The outermost shell of {{e.name}} has {{answer}} electrons.
+          - de: "{{e.name}} hat {{answer}} Außenelektronen."
+            en: "{{e.name}} has {{answer}} outer electrons."
       - type: generated
         id: hauptgruppe-bestimmen
         given:
