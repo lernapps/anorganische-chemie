@@ -150,19 +150,19 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 
 ### Tasks
 
-- [ ] Push the branch; open a pull request to `main`. Pre-push runs the heavy checks; fix failures. See the pull
+- [x] Push the branch; open a pull request to `main`. Pre-push runs the heavy checks; fix failures. See the pull
       request's checks to green. GitHub step fails or refused → skill `lernapps-github`.
-- [ ] **Checkpoint:** publish. Show what the increment adds and the preview link from the comment "Vorschau der
+- [x] **Checkpoint:** publish. Show what the increment adds and the preview link from the comment "Vorschau der
       App"; ask whether it may go online. Wait for the yes.
-- [ ] Merge the pull request into `main` (no pull request: merge the branch, push `main`). Watch the `Pages` run of
+- [x] Merge the pull request into `main` (no pull request: merge the branch, push `main`). Watch the `Pages` run of
       that commit. Fails → read the failed step, fix, push.
-- [ ] Open the address the job `deploy` printed ("published at ...", run summary); confirm the new content. Never
+- [x] Open the address the job `deploy` printed ("published at ...", run summary); confirm the new content. Never
       a derived address; follow redirects.
-- [ ] App listed and the entry changes (topics, school years, summary) → load skill `lernapps-listing`, write the
+- [x] App listed and the entry changes (topics, school years, summary) → load skill `lernapps-listing`, write the
       changed entry. Else skip the next task.
 - [ ] **Checkpoint:** list. Ask before opening the pull request to the catalog; wait for the yes.
-- [ ] Fill the retrospective.
-- [ ] Commit this plan on `main` and push it. A push of only `.vibe/` publishes nothing.
+- [x] Fill the retrospective.
+- [x] Commit this plan on `main` and push it. A push of only `.vibe/` publishes nothing.
 - [ ] Catalog pull request opened → see it to "bestanden" as the skill says.
 - [ ] Plan changed since its last push → commit on `main`, push again.
 
@@ -174,16 +174,18 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 
 ### Phases reached
 
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+commit; plan confirmed, published (PR #3 merged, `Pages` run green, live address checked with a browser: all components start). Listing checkpoint: yes given, catalog PR still open.
 
 ### Failed checks
 
-<!-- Each failed check: rule id, count. E.g. "`no-request-before-click`: 2". Not the pre-push count. -->
+`accessible` (label-content-name-mismatch on element buttons): 1. The e2e check "one math per formula" (formulas in quiz texts): 1, reverted, app-templates#47.
 
 ### Creator turns after the plan
 
-<!-- Number of creator messages after the confirmation, topic of each. Target: max 3. -->
+More than 3 (target missed): content depth and wording, formulas, the interactive component used too rarely, the text-only preview, publish, listing.
 
 ### Where I had to guess
 
-<!-- Each gap in plan, skills, content guide, messages or answers, and your choice. "None" if none. -->
+- Vue chunks starting with `_` (from `scoped` styles) are 404 on GitHub Pages without `.nojekyll`; no check noticed it, components stayed on the nojs text. Chose: no `scoped` styles; issue lernapps/tooling#107.
+- Which elements "alle Hauptgruppen" means: all 44, asked by the creator afterwards.
+- Schema for the catalog entry: not available locally; see listing task.
