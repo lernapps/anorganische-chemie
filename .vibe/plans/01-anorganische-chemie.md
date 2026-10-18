@@ -171,8 +171,8 @@ fitness:
 
 ### Tasks
 
-- [ ] Write the Code tasks under "Code": pages or screens, content, what each shows; each ends in a commit.
-- [ ] Load the archetype's skill and skill `lernapps-exercise-patterns`. Write "Content method".
+- [x] Write the Code tasks under "Code": pages or screens, content, what each shows; each ends in a commit.
+- [x] Load the archetype's skill and skill `lernapps-exercise-patterns`. Write "Content method".
 - [ ] Show the creator, short: goal, competencies by chapter, entry draft, tasks; the content method in plain words
       (what learners see and do, what it cannot do). Max 2 questions.
 - [ ] Each component or interactive exercise: show a sketch (static SVG or image, or the steps with what learners
@@ -183,8 +183,19 @@ fitness:
 
 ### Content method
 
-<!-- One line each: exercise patterns and where; figures and how made; data files; each component, what it checks
-and cannot; how a later agent adds a chapter. Becomes the content guide in Code. -->
+- Seitenaufbau (alle Seiten gleich): Abschnitte `warum`, `regel` (Erklärung, Formel/Figur), `beispiel` (Box `example`), `uebung`. Ids kurz und stabil.
+- Daten einmal als Datei, nie doppelt: `src/data/stoffe.yaml` (Name, Reinstoff/Gemisch, Aggregatzustand bei 20 °C, Schmelz- und Siedetemperatur, Verwendung), `elemente.yaml` (Ordnungszahl, Symbol, Name, Protonen, Neutronen des häufigsten Isotops, Elektronen pro Schale, Gruppe, Periode, Metall ja/nein), `reaktionen.yaml` (Gleichung mit Koeffizienten, Name). Jeder Wert wird beim Schreiben an einer geöffneten Quelle geprüft und die Quelle in `sources`/`source` genannt, nicht aus dem Gedächtnis.
+- Übungsmuster (jeweils mit Beispiel im Inhaltsführer `app-content`):
+  - Zuordnen/Benennen: `matching` und `single-choice` (Stoff ↔ Eigenschaft, Zustand ↔ Beschreibung), falsche Optionen mit `info`.
+  - Ordnen: `ordering` (Stoffe nach Siedetemperatur, Aggregatzustände nach Teilchenabstand).
+  - Ablesen: `generated` mit `pick: 1` aus `elemente.yaml` (Ordnungszahl, Gruppe, Periode, Anzahl Neutronen = Massenzahl − Protonen), typische Fehler "Massenzahl statt Protonen" mit Meldung.
+  - Urteilen: `true-false` mit Begründung ("Alle Metalle sind fest": nein, Quecksilber).
+  - Rechnen/Ausgleichen: `generated` aus `reaktionen.yaml`, gefragt ist ein Koeffizient; Fehler "Atome nur auf einer Seite gezählt".
+  - Aufbauen: Komponente `AtomBuilder` (Übung).
+- Abbildungen: Teilchenmodell als drei `image`-SVGs (fest, flüssig, gasförmig) und dazu die Komponente `ParticleModel`; Atommodell als SVG (Kern, Schalen) aus eigener Hand, gemeinfrei/CC0 vermerkt; Periodensystem als `labelled-figure` oder `table`. Alle Bilder selbst gezeichnet, Quelle "eigene Arbeit", Lizenz CC0-1.0 oder CC-BY-4.0 (zu klären mit dem Creator). Farben und Beschriftung gleich in der ganzen App (Protonen rot, Neutronen grau, Elektronen blau), im Inhaltsführer unter "Figures".
+- Komponenten, nur wo kein Block reicht (`prefer-built-in-block`): `ParticleModel` — ein Regler für die Temperatur lässt Teilchen sich schneller bewegen und die Abstände sichtbar ändern; Blöcke zeigen nur stehende Bilder, eine Veränderung durch den Lernenden ist so nicht ausdrückbar. `nojs`: die drei Zustände mit Beschreibung. Prüft nichts. `AtomBuilder` — Lernende stellen Protonen, Neutronen, Elektronen für ein gegebenes Element ein; ein Block kann kein freies Zusammenstellen prüfen. Prüft die Eigenschaft (Protonenzahl = Elektronenzahl = Ordnungszahl, Neutronen = Massenzahl − Ordnungszahl), nicht nur die Musterlösung; Rückmeldung nennt den Grund (z. B. "Ein Atom ist neutral: gleich viele Protonen wie Elektronen").
+- Grenzen: Teilchenmodell ist vereinfacht (keine Quantenmechanik, Schalenmodell bis Element 20); Komponenten brauchen Tastatur- und Touch-Bedienung, Alternativen als Text; keine Gefahrstoff-Versuche, nur Hinweise auf Sicherheit im Unterricht.
+- Neues Kapitel später: Ordner mit `chapter.yaml`, Eintrag in `src/app.yaml`, Seiten nach dem Seitenaufbau, neue Daten in `src/data/`, Kompetenzen im Inhaltsführer ergänzen, Eintrags-`topics` ergänzen.
 
 ### Completed
 
@@ -208,7 +219,12 @@ and cannot; how a later agent adds a chapter. Becomes the content guide in Code.
 - [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from the plan and its content method: replace
       every placeholder comment with concrete instructions (files, ids, data files, one example). Delete its top
       comment. `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` must print 0. Commit it before any content.
-- [ ] <the tasks written in Plan>
+- [ ] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
+- [ ] Kapitel 2 "Teilchenmodell und Atombau" (Seiten `teilchenmodell`, `atombau`): Komponente `ParticleModel` (Regler Temperatur) mit `nojs`, Komponente `AtomBuilder` (Übung) mit Logik und Test; Commit je Komponente.
+- [ ] Kapitel 3 "Periodensystem" (Seiten `periodensystem-lesen`, `metalle-nichtmetalle`): Daten `src/data/elemente.yaml` (Elemente 1–20), `labelled-figure` des Periodensystems, `generated`-Übungen; Commit.
+- [ ] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
+- [ ] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
+- [ ] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
 - [ ] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
 - [ ] `npx lernapps check` passes.
 - [ ] Every box of Explore, Plan and Code ticked.
