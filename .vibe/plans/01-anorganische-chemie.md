@@ -3,7 +3,7 @@
 # archetype: explainer | interactive | quiz; null until chosen in Explore.
 archetype: explainer
 # phase: explore | plan | code | commit. Set it on entering a phase.
-phase: code
+phase: commit
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 ---
@@ -249,10 +249,10 @@ fitness:
 - [x] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
 - [x] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
 - [x] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
-- [ ] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
-- [ ] `npx lernapps check` passes.
-- [ ] Every box of Explore, Plan and Code ticked.
-- [ ] Set `phase: commit`.
+- [x] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
+- [x] `npx lernapps check` passes.
+- [x] Every box of Explore, Plan and Code ticked.
+- [x] Set `phase: commit`.
 
 ### Completed
 

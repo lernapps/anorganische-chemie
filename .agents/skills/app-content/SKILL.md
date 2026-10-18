@@ -92,6 +92,8 @@ Page and exercise ids (page file, exercise id):
   `metall-oder-nichtmetall`). A mistake may not equal the answer for any record, so some have none; the hint then says
   where to look. `hauptgruppe-bestimmen` restricts the draw to groups 13–18 with `where` so that the mistake "group number
   instead of main group" never equals the answer.
+- Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
+- Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
 - Ausgleichen: `number` with a formula `\ce{…}` in the text and a blank `x`, e.g. `koeffizient-wasser`; the typical
   mistake per exercise has its message. The equations are fixed in the YAML (a placeholder cannot carry a formula);
