@@ -3,7 +3,7 @@
 # archetype: explainer | interactive | quiz; null until chosen in Explore.
 archetype: explainer
 # phase: explore | plan | code | commit. Set it on entering a phase.
-phase: plan
+phase: code
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 ---
@@ -134,6 +134,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Pages: "Pages ist eingerichtet." (nicht per REST prüfbar, Proxy sperrt den Pfad)
 - Suchbegriffe: "Die Suchbegriffe sind sehr lang und sehr spezifisch" -> auf vier kurze gekürzt
 - Aufbau: "Wir haben auf Lernapps schon den Mathe trainer und elektrizität. Wesentlicher Teil sind dabei Übungen und auch hilfreiche Visualisierungen"
+- Plan-Checkpoint: "Ja, anlegen" (nach Vorlage von Plan, Skizzen, Übungen; Erweiterungen in Issue #1 vertagt)
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"
@@ -173,13 +174,13 @@ fitness:
 
 - [x] Write the Code tasks under "Code": pages or screens, content, what each shows; each ends in a commit.
 - [x] Load the archetype's skill and skill `lernapps-exercise-patterns`. Write "Content method".
-- [ ] Show the creator, short: goal, competencies by chapter, entry draft, tasks; the content method in plain words
+- [x] Show the creator, short: goal, competencies by chapter, entry draft, tasks; the content method in plain words
       (what learners see and do, what it cannot do). Max 2 questions.
-- [ ] Each component or interactive exercise: show a sketch (static SVG or image, or the steps with what learners
+- [x] Each component or interactive exercise: show a sketch (static SVG or image, or the steps with what learners
       see after each). Words alone are not enough.
-- [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes → change,
+- [x] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes → change,
       ask again. No `create` before the yes.
-- [ ] Set `phase: code`.
+- [x] Set `phase: code`.
 
 ### Content method
 
