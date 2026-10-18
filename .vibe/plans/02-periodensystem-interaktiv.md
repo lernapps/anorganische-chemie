@@ -160,11 +160,11 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
       a derived address; follow redirects.
 - [x] App listed and the entry changes (topics, school years, summary) → load skill `lernapps-listing`, write the
       changed entry. Else skip the next task.
-- [ ] **Checkpoint:** list. Ask before opening the pull request to the catalog; wait for the yes.
+- [x] **Checkpoint:** list. Ask before opening the pull request to the catalog; wait for the yes.
 - [x] Fill the retrospective.
 - [x] Commit this plan on `main` and push it. A push of only `.vibe/` publishes nothing.
-- [ ] Catalog pull request opened → see it to "bestanden" as the skill says.
-- [ ] Plan changed since its last push → commit on `main`, push again.
+- [x] Catalog pull request opened → see it to "bestanden" as the skill says.
+- [x] Plan changed since its last push → commit on `main`, push again.
 
 ### Completed
 
@@ -174,7 +174,7 @@ Umfang: alle 44 Elemente der Hauptgruppen, Deutsch und Englisch, Handy ab 360 px
 
 ### Phases reached
 
-commit; plan confirmed, published (PR #3 merged, `Pages` run green, live address checked with a browser: all components start). Listing checkpoint: yes given, catalog PR still open.
+commit; plan confirmed, published (PR #3 merged, `Pages` run green, live address checked with a browser: all components start). Listing checkpoint: yes given; catalog PR lernapps/apps#53, check "bestanden".
 
 ### Failed checks
 
@@ -188,4 +188,4 @@ More than 3 (target missed): content depth and wording, formulas, the interactiv
 
 - Vue chunks starting with `_` (from `scoped` styles) are 404 on GitHub Pages without `.nojekyll`; no check noticed it, components stayed on the nojs text. Chose: no `scoped` styles; issue lernapps/tooling#107.
 - Which elements "alle Hauptgruppen" means: all 44, asked by the creator afterwards.
-- Schema for the catalog entry: not available locally; see listing task.
+- Schema and listing steps for the catalog entry: not available locally; fetched from lernapps.net with the creator's yes. Fork had to be created by the creator (not allowed in the session).
