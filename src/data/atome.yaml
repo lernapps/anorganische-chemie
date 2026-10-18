@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# Elemente 1 bis 20 für die Neutronen-Übung. massenzahl: die auf eine ganze Zahl gerundete Atommasse, das ist die Massenzahl
+# des häufigsten Isotops (de.wikipedia.org, Infobox der Elemente, am 2026-10-18 geöffnet). neutronen = massenzahl − ordnungszahl.
+# Für schwerere Elemente ist die Massenzahl des häufigsten Isotops nicht eindeutig; sie sind hier nicht aufgeführt.
+- symbol: H
+  name:
+    de: Wasserstoff
+    en: Hydrogen
+  ordnungszahl: 1
+  massenzahl: 1
+  neutronen: 0
+- symbol: He
+  name:
+    de: Helium
+    en: Helium
+  ordnungszahl: 2
+  massenzahl: 4
+  neutronen: 2
+- symbol: Li
+  name:
+    de: Lithium
+    en: Lithium
+  ordnungszahl: 3
+  massenzahl: 7
+  neutronen: 4
+- symbol: Be
+  name:
+    de: Beryllium
+    en: Beryllium
+  ordnungszahl: 4
+  massenzahl: 9
+  neutronen: 5
+- symbol: B
+  name:
+    de: Bor
+    en: Boron
+  ordnungszahl: 5
+  massenzahl: 11
+  neutronen: 6
+- symbol: C
+  name:
+    de: Kohlenstoff
+    en: Carbon
+  ordnungszahl: 6
+  massenzahl: 12
+  neutronen: 6
+- symbol: N
+  name:
+    de: Stickstoff
+    en: Nitrogen
+  ordnungszahl: 7
+  massenzahl: 14
+  neutronen: 7
+- symbol: O
+  name:
+    de: Sauerstoff
+    en: Oxygen
+  ordnungszahl: 8
+  massenzahl: 16
+  neutronen: 8
+- symbol: F
+  name:
+    de: Fluor
+    en: Fluorine
+  ordnungszahl: 9
+  massenzahl: 19
+  neutronen: 10
+- symbol: Ne
+  name:
+    de: Neon
+    en: Neon
+  ordnungszahl: 10
+  massenzahl: 20
+  neutronen: 10
+- symbol: Na
+  name:
+    de: Natrium
+    en: Sodium
+  ordnungszahl: 11
+  massenzahl: 23
+  neutronen: 12
+- symbol: Mg
+  name:
+    de: Magnesium
+    en: Magnesium
+  ordnungszahl: 12
+  massenzahl: 24
+  neutronen: 12
+- symbol: Al
+  name:
+    de: Aluminium
+    en: Aluminium
+  ordnungszahl: 13
+  massenzahl: 27
+  neutronen: 14
+- symbol: Si
+  name:
+    de: Silicium
+    en: Silicon
+  ordnungszahl: 14
+  massenzahl: 28
+  neutronen: 14
+- symbol: P
+  name:
+    de: Phosphor
+    en: Phosphorus
+  ordnungszahl: 15
+  massenzahl: 31
+  neutronen: 16
+- symbol: S
+  name:
+    de: Schwefel
+    en: Sulfur
+  ordnungszahl: 16
+  massenzahl: 32
+  neutronen: 16
+- symbol: Cl
+  name:
+    de: Chlor
+    en: Chlorine
+  ordnungszahl: 17
+  massenzahl: 35
+  neutronen: 18
+- symbol: Ar
+  name:
+    de: Argon
+    en: Argon
+  ordnungszahl: 18
+  massenzahl: 40
+  neutronen: 22
+- symbol: K
+  name:
+    de: Kalium
+    en: Potassium
+  ordnungszahl: 19
+  massenzahl: 39
+  neutronen: 20
+- symbol: Ca
+  name:
+    de: Calcium
+    en: Calcium
+  ordnungszahl: 20
+  massenzahl: 40
+  neutronen: 20

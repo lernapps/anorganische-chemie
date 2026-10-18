@@ -1,0 +1,267 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Periodensystem lesen
+  en: Reading the periodic table
+description:
+  de: Das Periodensystem ordnet alle Elemente. So liest du Ordnungszahl, Symbol, Periode und Gruppe ab.
+  en: The periodic table orders all elements. This is how you read the atomic number, symbol, period and group.
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Es gibt über hundert Elemente. Das Periodensystem ordnet sie so, dass Elemente mit ähnlichen Eigenschaften untereinander stehen. Wer es lesen kann, findet zu jedem Element schnell die wichtigsten Angaben.
+          en: |
+            There are over a hundred elements. The periodic table orders them so that elements with similar properties stand below each other. If you can read it, you quickly find the most important facts about any element.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Elementsymbol
+          en: Element symbol
+        explanation:
+          de: Das Elementsymbol ist die Abkürzung für ein Element aus einem oder zwei Buchstaben, zum Beispiel C für Kohlenstoff.
+          en: The element symbol is the abbreviation of an element with one or two letters, for example C for carbon.
+      - type: definition
+        term:
+          de: Periode
+          en: Period
+        explanation:
+          de: Eine Periode ist eine Zeile im Periodensystem. Die Nummer der Periode sagt, wie viele Schalen ein Atom hat.
+          en: A period is a row in the periodic table. The number of the period tells how many shells an atom has.
+      - type: definition
+        term:
+          de: Gruppe
+          en: Group
+        explanation:
+          de: Eine Gruppe ist eine Spalte im Periodensystem. Elemente einer Gruppe haben ähnliche Eigenschaften.
+          en: A group is a column in the periodic table. Elements in one group have similar properties.
+      - type: text
+        text:
+          de: |
+            Die Elemente sind nach steigender Ordnungszahl geordnet, in jeder Zeile von links nach rechts. Nach jedem Edelgas beginnt eine neue Zeile.
+          en: |
+            The elements are ordered by increasing atomic number, in every row from left to right. After every noble gas a new row begins.
+      - type: table
+        caption:
+          de: "Die Elemente der acht Hauptgruppen (ohne die superschweren): Spalten sind die Hauptgruppen, Zeilen die Perioden. In Klammern steht die Ordnungszahl. Die Übergangsmetalle in der Mitte des Periodensystems fehlen hier."
+          en: "The elements of the eight main groups (without the superheavy ones): the columns are the main groups, the rows are the periods. The atomic number is in brackets. The transition metals in the middle of the periodic table are missing here."
+        header:
+          - de: Periode
+            en: Period
+          - de: Gruppe 1
+            en: Group 1
+          - de: Gruppe 2
+            en: Group 2
+          - de: Gruppe 13
+            en: Group 13
+          - de: Gruppe 14
+            en: Group 14
+          - de: Gruppe 15
+            en: Group 15
+          - de: Gruppe 16
+            en: Group 16
+          - de: Gruppe 17
+            en: Group 17
+          - de: Gruppe 18
+            en: Group 18
+        rowHeaders: true
+        rows:
+          - - de: "1"
+              en: "1"
+            - de: H (1)
+              en: H (1)
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: He (2)
+              en: He (2)
+          - - de: "2"
+              en: "2"
+            - de: Li (3)
+              en: Li (3)
+            - de: Be (4)
+              en: Be (4)
+            - de: B (5)
+              en: B (5)
+            - de: C (6)
+              en: C (6)
+            - de: N (7)
+              en: N (7)
+            - de: O (8)
+              en: O (8)
+            - de: F (9)
+              en: F (9)
+            - de: Ne (10)
+              en: Ne (10)
+          - - de: "3"
+              en: "3"
+            - de: Na (11)
+              en: Na (11)
+            - de: Mg (12)
+              en: Mg (12)
+            - de: Al (13)
+              en: Al (13)
+            - de: Si (14)
+              en: Si (14)
+            - de: P (15)
+              en: P (15)
+            - de: S (16)
+              en: S (16)
+            - de: Cl (17)
+              en: Cl (17)
+            - de: Ar (18)
+              en: Ar (18)
+          - - de: "4"
+              en: "4"
+            - de: K (19)
+              en: K (19)
+            - de: Ca (20)
+              en: Ca (20)
+            - de: Ga (31)
+              en: Ga (31)
+            - de: Ge (32)
+              en: Ge (32)
+            - de: As (33)
+              en: As (33)
+            - de: Se (34)
+              en: Se (34)
+            - de: Br (35)
+              en: Br (35)
+            - de: Kr (36)
+              en: Kr (36)
+          - - de: "5"
+              en: "5"
+            - de: Rb (37)
+              en: Rb (37)
+            - de: Sr (38)
+              en: Sr (38)
+            - de: In (49)
+              en: In (49)
+            - de: Sn (50)
+              en: Sn (50)
+            - de: Sb (51)
+              en: Sb (51)
+            - de: Te (52)
+              en: Te (52)
+            - de: I (53)
+              en: I (53)
+            - de: Xe (54)
+              en: Xe (54)
+          - - de: "6"
+              en: "6"
+            - de: Cs (55)
+              en: Cs (55)
+            - de: Ba (56)
+              en: Ba (56)
+            - de: Tl (81)
+              en: Tl (81)
+            - de: Pb (82)
+              en: Pb (82)
+            - de: Bi (83)
+              en: Bi (83)
+            - de: Po (84)
+              en: Po (84)
+            - de: At (85)
+              en: At (85)
+            - de: Rn (86)
+              en: Rn (86)
+          - - de: "7"
+              en: "7"
+            - de: Fr (87)
+              en: Fr (87)
+            - de: Ra (88)
+              en: Ra (88)
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+            - de: –
+              en: –
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Kohlenstoff im Periodensystem
+          en: Carbon in the periodic table
+        blocks:
+          - type: text
+            text:
+              de: |
+                Das Symbol ist C, die Ordnungszahl 6. Kohlenstoff steht in Periode 2, denn seine Atome haben zwei Schalen. Es steht in Gruppe 14.
+              en: |
+                The symbol is C, the atomic number 6. Carbon is in period 2, because its atoms have two shells. It is in group 14.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: generated
+        id: ordnungszahl-ablesen
+        given:
+          e:
+            pick: 1
+            from:
+              data: elemente
+        task:
+          text:
+            de: Welche Ordnungszahl hat {{e.name}} (Symbol {{e.symbol}})?
+            en: What is the atomic number of {{e.name}} (symbol {{e.symbol}})?
+        answer:
+          value: e.ordnungszahl
+          compare: number
+        hint:
+          de: Suche das Symbol {{e.symbol}} in der Tabelle. Die Zahl in der Klammer ist die Ordnungszahl.
+          en: Look for the symbol {{e.symbol}} in the table. The number in brackets is the atomic number.
+        steps:
+          - de: "{{e.name}} hat die Ordnungszahl {{answer}}."
+            en: "{{e.name}} has the atomic number {{answer}}."
+      - type: generated
+        id: periode-bestimmen
+        given:
+          e:
+            pick: 1
+            from:
+              data: elemente
+        task:
+          text:
+            de: In welcher Periode steht {{e.name}}? Die Elektronen von {{e.name}} sitzen auf Schalen mit {{e.schalen}} Elektronen.
+            en: In which period is {{e.name}}? The electrons of {{e.name}} sit on shells with {{e.schalen}} electrons.
+        answer:
+          value: e.periode
+          compare: number
+        hint:
+          de: Die Periode ist die Zahl der Schalen. Zähle die Zahlen in der Aufzählung.
+          en: The period is the number of shells. Count the numbers in the list.
+        steps:
+          - de: "{{e.name}} hat {{answer}} Schalen, also steht es in Periode {{answer}}."
+            en: "{{e.name}} has {{answer}} shells, so it is in period {{answer}}."

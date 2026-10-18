@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Metalle und Nichtmetalle
+  en: Metals and non-metals
+description:
+  de: "Metalle, Nichtmetalle und Halbmetalle: So erkennst du sie an ihren Eigenschaften und ihrem Platz im Periodensystem."
+  en: "Metals, non-metals and metalloids: this is how you recognise them by their properties and their place in the periodic table."
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Ein Löffel aus Metall, eine Plastiktüte, ein Stück Schwefel: Stoffe verhalten sich sehr verschieden. Viel davon lässt sich daran ablesen, ob ein Element ein Metall ist.
+          en: |
+            A metal spoon, a plastic bag, a piece of sulfur: substances behave very differently. A lot of it depends on whether an element is a metal.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Metall
+          en: Metal
+        explanation:
+          de: Metalle leiten Strom und Wärme gut, lassen sich zu Blechen und Drähten verformen und haben metallischen Glanz.
+          en: Metals conduct electricity and heat well, can be formed into sheets and wires and have a metallic lustre.
+      - type: definition
+        term:
+          de: Nichtmetall
+          en: Non-metal
+        explanation:
+          de: Nichtmetalle haben diese Metalleigenschaften nicht. Beispiele sind Wasserstoff, Kohlenstoff, Stickstoff, Sauerstoff und Schwefel.
+          en: Non-metals do not have these metal properties. Examples are hydrogen, carbon, nitrogen, oxygen and sulfur.
+      - type: definition
+        term:
+          de: Halbmetall
+          en: Metalloid
+        explanation:
+          de: Halbmetalle stehen im Periodensystem zwischen Metallen und Nichtmetallen und lassen sich keiner Gruppe eindeutig zuordnen. Beispiele sind Bor und Silicium.
+          en: Metalloids stand in the periodic table between metals and non-metals and cannot clearly be put into either group. Examples are boron and silicon.
+      - type: text
+        text:
+          de: |
+            Im Periodensystem liegen die Metalle links und unterhalb einer Linie von Bor bis Astat. Die Nichtmetalle liegen rechts oberhalb dieser Linie.
+          en: |
+            In the periodic table the metals are on the left and below a line from boron to astatine. The non-metals are on the right above this line.
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Ist Aluminium ein Metall?
+          en: Is aluminium a metal?
+        blocks:
+          - type: text
+            text:
+              de: |
+                Aluminium steht in Gruppe 13, Periode 3, links und unterhalb der Linie von Bor zu Astat. Es leitet Strom und lässt sich zu Folie walzen. Aluminium ist ein **Metall**.
+              en: |
+                Aluminium is in group 13, period 3, on the left and below the line from boron to astatine. It conducts electricity and can be rolled into foil. Aluminium is a **metal**.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: generated
+        id: metall-oder-nichtmetall
+        given:
+          e:
+            pick: 1
+            from:
+              data: elemente
+        where:
+          - e.artid != "grenzfall"
+        task:
+          text:
+            de: Ist {{e.name}} ein Metall oder ein Nichtmetall?
+            en: Is {{e.name}} a metal or a non-metal?
+        answer:
+          value: e.art
+          compare:
+            choice:
+              - de: Metall
+                en: metal
+              - de: Nichtmetall
+                en: non-metal
+        hint:
+          de: Schau, auf welcher Seite der Linie von Bor zu Astat {{e.name}} steht.
+          en: Look at which side of the line from boron to astatine {{e.name}} is on.
+        steps:
+          - de: "{{e.name}} ist ein {{answer}}."
+            en: "{{e.name}} is a {{answer}}."
+      - type: true-false
+        id: metalle-fest
+        text:
+          de: Alle Metalle sind bei Zimmertemperatur fest.
+          en: All metals are solid at room temperature.
+        answer: false
+        explanation:
+          de: Quecksilber ist ein Metall und bei Zimmertemperatur flüssig. Es schmilzt schon bei etwa −39 °C.
+          en: Mercury is a metal and liquid at room temperature. It melts at about −39 °C.
+        links: &a1
+          - title:
+              de: Metalle (Wikipedia)
+              en: Metals (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Metalle
+      - type: single-choice
+        id: metall-eigenschaft
+        text:
+          de: Welche Eigenschaft haben Metalle?
+          en: Which property do metals have?
+        options:
+          - text:
+              de: Sie leiten den elektrischen Strom gut.
+              en: They conduct electric current well.
+            correct: true
+            info:
+              de: Eine hohe elektrische Leitfähigkeit gehört zu den typischen Eigenschaften von Metallen.
+              en: A high electrical conductivity is one of the typical properties of metals.
+          - text:
+              de: Sie leiten den elektrischen Strom nicht.
+              en: They do not conduct electric current.
+            correct: false
+            info:
+              de: Das gilt eher für Nichtmetalle. Metalle leiten den Strom gut.
+              en: That applies more to non-metals. Metals conduct current well.
+          - text:
+              de: Sie sind bei Zimmertemperatur immer gasförmig.
+              en: They are always gaseous at room temperature.
+            correct: false
+            info:
+              de: Metalle sind bei Zimmertemperatur fest, nur Quecksilber ist flüssig. Gasförmig ist kein Metall.
+              en: Metals are solid at room temperature; only mercury is liquid. No metal is gaseous.
+        explanation:
+          de: Metalle leiten Strom und Wärme gut, lassen sich verformen und glänzen.
+          en: Metals conduct electricity and heat well, can be formed and have a lustre.
+        links: *a1
+      - type: true-false
+        id: bor-halbmetall
+        text:
+          de: Bor und Silicium sind Halbmetalle.
+          en: Boron and silicon are metalloids.
+        answer: true
+        explanation:
+          de: Bor und Silicium stehen an der Grenze zwischen Metallen und Nichtmetallen und gelten als Halbmetalle.
+          en: Boron and silicon stand at the border between metals and non-metals and count as metalloids.
+        links:
+          - title:
+              de: Halbmetalle (Wikipedia)
+              en: Metalloids (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Halbmetalle

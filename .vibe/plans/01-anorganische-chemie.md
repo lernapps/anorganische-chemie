@@ -36,7 +36,7 @@ Lernende der unteren Klassenstufen (7/8, Annahme) lernen die Grundlagen der anor
 - Klassenstufen 7/8 (guess): "untere Klassenstufen" genannt, Jahrgang nicht bestätigt.
 - Kein Landeslehrplan: Orientierung an den KMK-Bildungsstandards (Wunsch des Creators); Reihenfolge der unteren Stufen selbst abgeleitet.
 - Sprachen `[de, en]` (guess): "mehrsprachig" ohne Sprachen genannt; das System kann für App-Texte nur Deutsch und Englisch. Alle Texte, Daten und Komponenten in beiden Sprachen.
-- Hauptgruppen: Kapitel Periodensystem behandelt alle acht Hauptgruppen mit Namen und Merkmalen; die Elemente 1–20 enthalten jede Hauptgruppe.
+- Hauptgruppen: alle 44 Elemente der acht Hauptgruppen ohne die superschweren (Creator: "alle Hauptgruppen (44, ohne die superschweren)"); Daten `elemente.yaml`. Die Neutronen-Übung bleibt bei Elementen 1–20 (`atome.yaml`), weil die Massenzahl des häufigsten Isotops sonst nicht eindeutig ist (guess).
 - Inhalte selbst geschrieben, Serlo (CC BY-SA 4.0) nur als Zweitquelle verlinkt (Creator: "schreib selbst, binde serlo ein wo sinnvoll").
 
 ## Notes
@@ -137,6 +137,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Suchbegriffe: "Die Suchbegriffe sind sehr lang und sehr spezifisch" -> auf vier kurze gekürzt
 - Aufbau: "Wir haben auf Lernapps schon den Mathe trainer und elektrizität. Wesentlicher Teil sind dabei Übungen und auch hilfreiche Visualisierungen"
 - Plan-Checkpoint: "Ja, anlegen" (nach Vorlage von Plan, Skizzen, Übungen; Erweiterungen in Issue #1 vertagt)
+- Rückfrage zu den Elementen: "wieso nimmst Du nur die Elemente 1-20 und nicht alle Hauptgruppen (44, ohne sdie superschweren)"
 - Änderung nach dem Plan: "Es sollten alle Hauptgruppen berücksichtigt werden. Außerdem hätte ich das auch gerne mehrsprachig"
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
@@ -225,7 +226,7 @@ fitness:
       comment. `grep -c "FILL IN" .agents/skills/app-content/SKILL.md` must print 0. Commit it before any content.
 - [x] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
 - [x] Kapitel 2 "Teilchenmodell und Atombau" (Seiten `teilchenmodell`, `atombau`): Komponente `ParticleModel` (Regler Temperatur) mit `nojs`, Komponente `AtomBuilder` (Übung) mit Logik und Test; Commit je Komponente.
-- [ ] Kapitel 3 "Periodensystem" (Seiten `periodensystem-lesen`, `metalle-nichtmetalle`): Daten `src/data/elemente.yaml` (Elemente 1–20), `labelled-figure` des Periodensystems, `generated`-Übungen; Commit.
+- [x] Kapitel 3 "Periodensystem" (Seiten `periodensystem-lesen`, `metalle-nichtmetalle`): Daten `src/data/elemente.yaml` (Elemente 1–20), `labelled-figure` des Periodensystems, `generated`-Übungen; Commit.
 - [ ] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
 - [ ] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
 - [ ] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.

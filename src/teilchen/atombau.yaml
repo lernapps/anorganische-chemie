@@ -172,7 +172,7 @@ blocks:
           e:
             pick: 1
             from:
-              data: elemente
+              data: atome
         task:
           text:
             de: Wie viele Neutronen hat ein Atom {{e.name}} mit der Massenzahl {{e.massenzahl}} und der Ordnungszahl {{e.ordnungszahl}}?

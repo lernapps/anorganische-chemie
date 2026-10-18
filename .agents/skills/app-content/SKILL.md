@@ -41,6 +41,9 @@ Page and exercise ids (page file, exercise id):
   `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`) for Eigenschaften, Ordnen und Verwendung.
 - Kapitel `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component `ParticleModel`);
   `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
+- Kapitel `periodensystem`: `src/periodensystem/periodensystem-lesen.yaml` (`ordnungszahl-ablesen`, `periode-bestimmen`);
+  `src/periodensystem/hauptgruppen.yaml` (`gruppe-name`, `aussenelektronen`, `hauptgruppe-bestimmen`);
+  `src/periodensystem/metalle-nichtmetalle.yaml` (`metall-oder-nichtmetall`, `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
 - Other chapters: added when their pages exist.
 
 ## Content structure
@@ -68,6 +71,8 @@ Page and exercise ids (page file, exercise id):
   `definition` block (glossary).
 - Terms: Reinstoff, Gemisch, Teilchenmodell, Atom, Proton, Neutron, Elektron, Elementsymbol, Ordnungszahl, Periode,
   Gruppe, Metall, Nichtmetall, Verbindung, Formel, Reaktionsgleichung.
+- Metall/Nichtmetall/Halbmetall: `artid` is `metall`, `nichtmetall` or `grenzfall`; the exercise only draws clear cases, borderline
+  elements (B, Si, Ge, As, Se, Sb, Te, Bi, Po, At) are shown as "Grenzfall (Halbmetall)".
 - Avoid "Molekül" before page `symbole-formeln`; avoid "Ion", "Bindung", "Elektronegativität" (later chapters, issue #1).
 - Chemistry notation only with `\ce{…}` and `\pu{…}`; temperatures in °C, density in g/cm³.
 
@@ -87,7 +92,9 @@ Page and exercise ids (page file, exercise id):
   `siedetemperatur-ordnen` (three drawn records `a`, `b`, `c`, with `where` for distinct ones; a list cannot be a placeholder);
   Urteilen: `src/stoffe/reinstoffe-gemische.yaml`, `salzwasser-reinstoff`; Verwendung: `kupfer-kabel`.
 - Other patterns: examples added when built.
-- Data files `src/data/`: `stoffe.yaml`, `elemente.yaml` (Elemente 1–20), `reaktionen.yaml`. Same fields in every record.
+- Data files `src/data/`: `stoffe.yaml`, `elemente.yaml` (all 44 elements of the eight main groups without the
+  superheavy ones: Z, shells, group, main group, outer electrons, period, kind), `atome.yaml` (elements 1–20 with mass
+  number and neutrons, because the most common isotope is not clear for heavier elements), `reaktionen.yaml`. Same fields in every record.
   Every value is checked against an opened source before it goes in; the source is named in `sources`.
 
 ## Figures
@@ -95,7 +102,7 @@ Page and exercise ids (page file, exercise id):
 - Colours: Protonen rot, Neutronen grau, Elektronen blau, in all figures and components. Labels in German.
 - Teilchenmodell: three own SVGs (fest, flüssig, gasförmig) in `src/images/` plus component `ParticleModel` with a
   temperature slider and a `nojs` text.
-- Atommodell: own SVG (Kern, Schalen), element 1–20. Periodensystem: `labelled-figure` or `table`.
+- Atommodell: own SVG (Kern, Schalen), element 1–20. Periodensystem: a `table` of the main groups (columns) and periods (rows) with symbol and atomic number, built from `elemente.yaml`.
 - Every figure: `alt` says what it shows, caption what to look at; works at 360 px.
 - Origin: eigene Arbeit; licence CC-BY-4.0 (default, the creator may change it).
 

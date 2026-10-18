@@ -1,0 +1,238 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Die acht Hauptgruppen
+  en: The eight main groups
+description:
+  de: Alle acht Hauptgruppen mit Namen und allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
+  en: All eight main groups with their names and all their elements. The main group tells how many electrons are in the outer shell.
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Elemente in einer Gruppe verhalten sich ähnlich. Wer die Hauptgruppe kennt, kann vorhersagen, wie ein Element sich verhält.
+          en: |
+            Elements in one group behave in a similar way. If you know the main group, you can predict how an element behaves.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Hauptgruppe
+          en: Main group
+        explanation:
+          de: Die acht Hauptgruppen sind die Gruppen 1, 2 und 13 bis 18 des Periodensystems. Man nummeriert sie mit I bis VIII.
+          en: The eight main groups are groups 1, 2 and 13 to 18 of the periodic table. They are numbered I to VIII.
+      - type: table
+        caption:
+          de: Die acht Hauptgruppen mit ihren Elementen (ohne die superschweren)
+          en: The eight main groups with their elements (without the superheavy ones)
+        header:
+          - de: Hauptgruppe
+            en: Main group
+          - de: Gruppe
+            en: Group
+          - de: Name
+            en: Name
+          - de: Elemente
+            en: Elements
+        rowHeaders: true
+        rows:
+          - - de: I
+              en: I
+            - de: "1"
+              en: "1"
+            - de: Alkalimetalle (und Wasserstoff)
+              en: alkali metals (and hydrogen)
+            - de: H, Li, Na, K, Rb, Cs, Fr
+              en: H, Li, Na, K, Rb, Cs, Fr
+          - - de: II
+              en: II
+            - de: "2"
+              en: "2"
+            - de: Erdalkalimetalle
+              en: alkaline earth metals
+            - de: Be, Mg, Ca, Sr, Ba, Ra
+              en: Be, Mg, Ca, Sr, Ba, Ra
+          - - de: III
+              en: III
+            - de: "13"
+              en: "13"
+            - de: Borgruppe
+              en: boron group
+            - de: B, Al, Ga, In, Tl
+              en: B, Al, Ga, In, Tl
+          - - de: IV
+              en: IV
+            - de: "14"
+              en: "14"
+            - de: Kohlenstoff-Silicium-Gruppe
+              en: carbon–silicon group
+            - de: C, Si, Ge, Sn, Pb
+              en: C, Si, Ge, Sn, Pb
+          - - de: V
+              en: V
+            - de: "15"
+              en: "15"
+            - de: Stickstoff-Phosphor-Gruppe
+              en: nitrogen–phosphorus group
+            - de: N, P, As, Sb, Bi
+              en: N, P, As, Sb, Bi
+          - - de: VI
+              en: VI
+            - de: "16"
+              en: "16"
+            - de: Chalkogene
+              en: chalcogens
+            - de: O, S, Se, Te, Po
+              en: O, S, Se, Te, Po
+          - - de: VII
+              en: VII
+            - de: "17"
+              en: "17"
+            - de: Halogene
+              en: halogens
+            - de: F, Cl, Br, I, At
+              en: F, Cl, Br, I, At
+          - - de: VIII
+              en: VIII
+            - de: "18"
+              en: "18"
+            - de: Edelgase
+              en: noble gases
+            - de: He, Ne, Ar, Kr, Xe, Rn
+              en: He, Ne, Ar, Kr, Xe, Rn
+      - type: text
+        text:
+          de: |
+            Bei den Hauptgruppen ist die Nummer gleich der Zahl der Elektronen in der äußersten Schale, den **Außenelektronen**. Helium ist die Ausnahme: Es hat nur 2 Außenelektronen, weil seine erste Schale nicht mehr aufnehmen kann.
+          en: |
+            For the main groups the number equals the number of electrons in the outermost shell, the **outer electrons**. Helium is the exception: it has only 2 outer electrons, because its first shell cannot hold more.
+      - type: text
+        text:
+          de: |
+            Besonders ähnlich sind sich die Elemente der Alkalimetalle, Erdalkalimetalle, Halogene und Edelgase. Die Edelgase sind geruchlos, farblos und gasförmig.
+          en: |
+            The elements of the alkali metals, alkaline earth metals, halogens and noble gases are especially similar. The noble gases are odourless, colourless and gaseous.
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Chlor in der Hauptgruppe VII
+          en: Chlorine in main group VII
+        blocks:
+          - type: text
+            text:
+              de: |
+                Chlor steht in Gruppe 17, also in der Hauptgruppe VII (17 − 10 = 7). Seine Elektronen sitzen auf den Schalen 2, 8 und 7. Auf der äußersten Schale sind 7 Elektronen, genau die Nummer der Hauptgruppe. Chlor gehört zu den Halogenen.
+              en: |
+                Chlorine is in group 17, so in main group VII (17 − 10 = 7). Its electrons sit on shells 2, 8 and 7. The outermost shell has 7 electrons, exactly the number of the main group. Chlorine is a halogen.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: matching
+        id: gruppe-name
+        text:
+          de: Ordne jeder Gruppe des Periodensystems ihren Namen zu.
+          en: Match each group of the periodic table with its name.
+        pairs:
+          - left:
+              de: Gruppe 1
+              en: Group 1
+            right:
+              de: Alkalimetalle (und Wasserstoff)
+              en: alkali metals (and hydrogen)
+          - left:
+              de: Gruppe 2
+              en: Group 2
+            right:
+              de: Erdalkalimetalle
+              en: alkaline earth metals
+          - left:
+              de: Gruppe 16
+              en: Group 16
+            right:
+              de: Chalkogene
+              en: chalcogens
+          - left:
+              de: Gruppe 17
+              en: Group 17
+            right:
+              de: Halogene
+              en: halogens
+          - left:
+              de: Gruppe 18
+              en: Group 18
+            right:
+              de: Edelgase
+              en: noble gases
+        explanation:
+          de: Die Gruppen 1 und 2 sind die Alkali- und Erdalkalimetalle, Gruppe 16 sind die Chalkogene, Gruppe 17 die Halogene und Gruppe 18 die Edelgase.
+          en: Groups 1 and 2 are the alkali and alkaline earth metals, group 16 the chalcogens, group 17 the halogens and group 18 the noble gases.
+        links:
+          - title:
+              de: Hauptgruppe (Wikipedia)
+              en: Main group (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Hauptgruppe
+      - type: generated
+        id: aussenelektronen
+        given:
+          e:
+            pick: 1
+            from:
+              data: elemente
+        task:
+          text:
+            de: Wie viele Außenelektronen hat ein Atom {{e.name}}? Seine Elektronen sitzen auf Schalen mit {{e.schalen}} Elektronen.
+            en: How many outer electrons does an atom of {{e.name}} have? Its electrons sit on shells with {{e.schalen}} electrons.
+        answer:
+          value: e.aussen
+          compare: number
+        hint:
+          de: Außenelektronen sitzen auf der äußersten Schale, also steht die letzte Zahl der Aufzählung für sie.
+          en: Outer electrons sit on the outermost shell, so they are the last number in the list.
+        steps:
+          - de: Die äußerste Schale von {{e.name}} hat {{answer}} Elektronen.
+            en: The outermost shell of {{e.name}} has {{answer}} electrons.
+      - type: generated
+        id: hauptgruppe-bestimmen
+        given:
+          e:
+            pick: 1
+            from:
+              data: elemente
+        where:
+          - e.gruppe > 12
+        task:
+          text:
+            de: "{{e.name}} steht in Gruppe {{e.gruppe}} des Periodensystems. In welcher Hauptgruppe (I bis VIII, als Zahl 1 bis 8) steht es?"
+            en: "{{e.name}} is in group {{e.gruppe}} of the periodic table. In which main group (I to VIII, as a number 1 to 8) is it?"
+        answer:
+          value: e.hauptgruppe
+          compare: number
+        mistakes:
+          - value: e.gruppe
+            message:
+              de: "Das ist die Gruppennummer von 1 bis 18. Die Hauptgruppe zählt nur von I bis VIII: Gruppe minus 10."
+              en: "That is the group number from 1 to 18. The main group only counts from I to VIII: group minus 10."
+        hint:
+          de: Bei den Gruppen 13 bis 18 ziehst du 10 ab.
+          en: For groups 13 to 18 you subtract 10.
+        steps:
+          - de: "{{e.gruppe}} − 10 = {{answer}}"
+            en: "{{e.gruppe}} − 10 = {{answer}}"
