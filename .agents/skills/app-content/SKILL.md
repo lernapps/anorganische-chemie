@@ -37,23 +37,26 @@ Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen
    - Ich kann eine einfache Reaktionsgleichung mit Atomerhaltung aufstellen.
 
 Page and exercise ids (page file, exercise id):
-- Kapitel `stoffe`: `src/stoffe/reinstoffe-gemische.yaml` (`gemische-finden`, `salzwasser-reinstoff`) for Reinstoffe/Gemische;
-  `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`) for Eigenschaften, Ordnen und Verwendung.
-- Kapitel `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component `ParticleModel`);
-  `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
-- Kapitel `periodensystem`: `src/periodensystem/periodensystem-lesen.yaml` (`ordnungszahl-ablesen`, `periode-bestimmen`);
-  `src/periodensystem/hauptgruppen.yaml` (`gruppe-name`, `aussenelektronen`, `hauptgruppe-bestimmen`);
-  `src/periodensystem/metalle-nichtmetalle.yaml` (`metall-oder-nichtmetall`, `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
-- Other chapters: added when their pages exist.
+- `stoffe`: `src/stoffe/reinstoffe-gemische.yaml` (`gemische-finden`, `salzwasser-reinstoff`);
+  `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`).
+- `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component
+  `ParticleModel`); `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
+- `periodensystem`: `periodensystem-lesen.yaml` (`ordnungszahl-ablesen`, `periode-bestimmen`); `hauptgruppen.yaml`
+  (`gruppe-name`, `aussenelektronen`, `hauptgruppe-bestimmen`); `metalle-nichtmetalle.yaml` (`metall-oder-nichtmetall`,
+  `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
+- `reaktionen`: `symbole-formeln.yaml` (`symbol-zuordnen`, `atome-ammoniak`, `atome-methan`); `reaktionen.yaml`
+  (`vorgang-art`, `atome-entstehen`, `sicheres-zeichen`); `reaktionsgleichungen.yaml` (`koeffizient-wasser`,
+  `koeffizient-magnesium`, `koeffizient-ammoniak`, `koeffizient-methan`, `gleichung-schritte`).
 
 ## Content structure
 
 - Chapter folder `src/<chapter>/` with `chapter.yaml` (title, summary, pages), listed in `src/app.yaml`.
-- Pages: `reinstoffe-gemische`, `stoffeigenschaften` (stoffe); `teilchenmodell`, `atombau` (teilchen);
-  `periodensystem-lesen`, `metalle-nichtmetalle` (periodensystem); `symbole-formeln`, `reaktionen`,
-  `reaktionsgleichungen` (reaktionen).
+- Chapters and pages: `stoffe` (`reinstoffe-gemische`, `stoffeigenschaften`); `teilchen` (`teilchenmodell`, `atombau`);
+  `periodensystem` (`periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle`); `reaktionen` (`symbole-formeln`,
+  `reaktionen`, `reaktionsgleichungen`).
 - Every page has the sections in this order and with these ids: `warum`, `regel`, `beispiel` (a box `example`),
-  `uebung`. Titles: Warum, Regel, Beispiel, Übung. Every page has at least one exercise in `uebung`.
+  `uebung`. Titles: Warum, Regel, Beispiel, Übung (English: Why, Rule, Example, Practice). Every page has at least one
+  exercise in `uebung`.
 - A page explains one competency group in about 150–250 words in plain German plus figure and exercises.
 - Ids short and stable; never reuse a removed id (`explainer-stable-ids`).
 
@@ -78,33 +81,40 @@ Page and exercise ids (page file, exercise id):
 
 ## Exercise patterns
 
-- Zuordnen/Benennen: `matching` or `single-choice` (Stoff ↔ Eigenschaft, Zustand ↔ Beschreibung); every wrong option has
-  `info`.
-- Ordnen: `ordering` (Stoffe nach Siedetemperatur, Zustände nach Teilchenabstand); only where the order is fixed.
-- Ablesen: `generated` with `given: { e: { pick: 1, from: { data: elemente } } }` (Ordnungszahl, Gruppe, Periode,
-  Neutronenzahl = Massenzahl − Protonenzahl); mistake "Massenzahl statt Protonenzahl" with message.
-- Urteilen: `true-false` with the reason in `explanation` ("Alle Metalle sind fest": nein, Quecksilber).
-- Ausgleichen: `generated` from `src/data/reaktionen.yaml`, asks for one coefficient; mistake "Atome nur auf einer
-  Seite gezählt".
-- Aufbauen: component `AtomBuilder` (exercise): set protons, neutrons, electrons for a given element; checks the
-  property, not one model solution.
-- Examples built: Ablesen/Wahl: `src/stoffe/stoffeigenschaften.yaml`, `zustand-bestimmen` (data `stoffe`); Ordnen:
-  `siedetemperatur-ordnen` (three drawn records `a`, `b`, `c`, with `where` for distinct ones; a list cannot be a placeholder);
-  Urteilen: `src/stoffe/reinstoffe-gemische.yaml`, `salzwasser-reinstoff`; Verwendung: `kupfer-kabel`.
-- Other patterns: examples added when built.
-- Data files `src/data/`: `stoffe.yaml`, `elemente.yaml` (all 44 elements of the eight main groups without the
-  superheavy ones: Z, shells, group, main group, outer electrons, period, kind), `atome.yaml` (elements 1–20 with mass
-  number and neutrons, because the most common isotope is not clear for heavier elements), `reaktionen.yaml`. Same fields in every record.
-  Every value is checked against an opened source before it goes in; the source is named in `sources`.
+- Zuordnen/Benennen: `matching` (right entries must be different) or `single-choice`; every wrong option has `info`.
+  Example: `src/teilchen/teilchenmodell.yaml`, `zustand-beschreibung`. Element symbols: `generated` with
+  `answer.compare: { pairs: { left: name, right: symbol } }`, `src/reaktionen/symbole-formeln.yaml`, `symbol-zuordnen`.
+- Ordnen: `ordering` for a fixed order (`gleichung-schritte`); with data `generated` and `compare: order`
+  (`siedetemperatur-ordnen`: three drawn records `a`, `b`, `c` with `where` for distinct ones; a list cannot be a
+  placeholder).
+- Ablesen: `generated` with `given: { e: { pick: 1, from: { data: elemente } } }` and `compare: number` or
+  `{ choice: [...] }` (`ordnungszahl-ablesen`, `periode-bestimmen`, `aussenelektronen`, `zustand-bestimmen`,
+  `metall-oder-nichtmetall`). A mistake may not equal the answer for any record, so some have none; the hint then says
+  where to look. `hauptgruppe-bestimmen` restricts the draw to groups 13–18 with `where` so that the mistake "group number
+  instead of main group" never equals the answer.
+- Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
+- Ausgleichen: `number` with a formula `\ce{…}` in the text and a blank `x`, e.g. `koeffizient-wasser`; the typical
+  mistake per exercise has its message. The equations are fixed in the YAML (a placeholder cannot carry a formula);
+  every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
+- Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
+  checks the property, not one model solution.
+- Visualisieren: component `ParticleModel` (not an exercise) with a temperature slider and a `nojs` text.
+- Data files `src/data/`: `stoffe.yaml` (9 pure substances: state, melting and boiling point), `elemente.yaml` (all 44
+  elements of the eight main groups without the superheavy ones: Z, shells, group, main group, outer electrons, period,
+  kind), `atome.yaml` (elements 1–20 with mass number and neutrons, because the most common isotope is not clear for
+  heavier elements). Same fields in every record. Every value was checked against an opened source (named in the file's
+  comment); new values need the same check.
 
 ## Figures
 
-- Colours: Protonen rot, Neutronen grau, Elektronen blau, in all figures and components. Labels in German.
-- Teilchenmodell: three own SVGs (fest, flüssig, gasförmig) in `src/images/` plus component `ParticleModel` with a
-  temperature slider and a `nojs` text.
-- Atommodell: own SVG (Kern, Schalen), element 1–20. Periodensystem: a `table` of the main groups (columns) and periods (rows) with symbol and atomic number, built from `elemente.yaml`.
+- Colours: Protonen rot, Neutronen grau, Elektronen blau, in all figures and components. Labels in both languages.
+- Teilchenmodell: component `ParticleModel` with a temperature slider and a `nojs` text, and a `table` of the three states.
+  No bundled images so far; own images would go to `src/images/` with `source: eigene Arbeit` and a licence.
+- Atommodell: drawn live by the component `AtomBuilder` (nucleus, shells K–N). Periodensystem: a `table` of the main groups
+  (columns) and periods (rows) with symbol and atomic number, built from `elemente.yaml`; main group names and elements in
+  `hauptgruppen.yaml`.
 - Every figure: `alt` says what it shows, caption what to look at; works at 360 px.
-- Origin: eigene Arbeit; licence CC-BY-4.0 (default, the creator may change it).
+- Origin of drawings: own work, code of this repository (MIT); no third-party images.
 
 ## Sources
 
@@ -114,7 +124,10 @@ Page and exercise ids (page file, exercise id):
   `.../18902/stoffeigenschaften`, `.../19470/atommodelle`, `.../158240/das-periodensystem-der-elemente`,
   `.../155738/chemische-zeichensprache`, `.../18885/chemische-reaktionen`. Serlo Chemie is marked "im Aufbau".
 - Not used: Wikibooks "Anorganische Chemie für Schüler" (licence unclear, GFDL), Bildungsserver link list.
-- Data values: from sources named per file in `src/app.yaml` `sources`.
+- Data values and facts: de.wikipedia.org articles opened on 2026-10-18 and named in the comment of each data file
+  (elements, Metalle, Halbmetalle, Nichtmetalle, Hauptgruppe, Reinstoff, Aggregatzustand, Reaktionsgleichung and the
+  articles of the substances in `stoffe.yaml`). Wikipedia is CC BY-SA: facts are taken, no sentences are copied; links
+  point to the articles.
 
 ## Adding a chapter or round
 

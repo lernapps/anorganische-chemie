@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Chemische Reaktionen
+  en: Chemical reactions
+description:
+  de: Bei einer chemischen Reaktion entstehen neue Stoffe. So unterscheidest du sie von einer Zustandsänderung.
+  en: In a chemical reaction new substances are formed. This is how you tell it from a change of state.
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Wenn Eis schmilzt, bleibt es Wasser. Wenn Holz verbrennt, bleibt kein Holz übrig. Zwischen diesen beiden Vorgängen liegt ein großer Unterschied, und genau den erkennst du an dieser Seite.
+          en: |
+            When ice melts, it is still water. When wood burns, no wood is left. There is a big difference between these two processes, and this page helps you to spot it.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Chemische Reaktion
+          en: Chemical reaction
+        explanation:
+          de: Bei einer chemischen Reaktion verwandeln sich Stoffe in andere Stoffe. Die neuen Stoffe haben andere Eigenschaften als die alten.
+          en: In a chemical reaction substances turn into other substances. The new substances have different properties from the old ones.
+      - type: definition
+        term:
+          de: Zustandsänderung
+          en: Change of state
+        explanation:
+          de: Bei einer Zustandsänderung wie Schmelzen oder Verdampfen bleibt der Stoff derselbe. Nur der Aggregatzustand ändert sich.
+          en: In a change of state such as melting or evaporating the substance stays the same. Only the state of matter changes.
+      - type: text
+        text:
+          de: |
+            Hinweise auf eine chemische Reaktion sind zum Beispiel eine Farbänderung, ein Gas, das aufsteigt, Wärme oder Licht. Sicher ist aber nur eins: Es entsteht ein neuer Stoff.
+          en: |
+            Hints of a chemical reaction are for example a change of colour, a rising gas, heat or light. Only one thing is certain: a new substance is formed.
+      - type: text
+        text:
+          de: |
+            Im Teilchenmodell ordnen sich bei einer Reaktion die Atome neu an. Die Atome selbst bleiben erhalten: Sie verschwinden nicht und es entstehen keine neuen.
+          en: |
+            In the particle model the atoms rearrange in a reaction. The atoms themselves are kept: they do not disappear and no new ones are created.
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Wasserstoff verbrennt
+          en: Hydrogen burns
+        blocks:
+          - type: text
+            text:
+              de: |
+                Wasserstoff und Sauerstoff reagieren zu Wasser. Aus zwei Gasen ist ein neuer Stoff mit anderen Eigenschaften geworden. Das ist eine chemische Reaktion. Wenn dagegen Wasser verdampft, ist der Stoff danach noch Wasser. Das ist nur eine Zustandsänderung.
+              en: |
+                Hydrogen and oxygen react to form water. Two gases have become a new substance with different properties. That is a chemical reaction. When water evaporates, however, the substance is still water. That is only a change of state.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: multiple-choice
+        id: vorgang-art
+        text:
+          de: Welche dieser Vorgänge sind chemische Reaktionen?
+          en: Which of these processes are chemical reactions?
+        options:
+          - text:
+              de: Holz verbrennt.
+              en: Wood burns.
+            correct: true
+            info:
+              de: Beim Verbrennen entstehen neue Stoffe, zum Beispiel Kohlenstoffdioxid und Asche. Es ist eine chemische Reaktion.
+              en: Burning forms new substances, for example carbon dioxide and ash. It is a chemical reaction.
+          - text:
+              de: Wasserstoff verbrennt zu Wasser.
+              en: Hydrogen burns to water.
+            correct: true
+            info:
+              de: Aus Wasserstoff und Sauerstoff wird Wasser, ein neuer Stoff. Es ist eine chemische Reaktion.
+              en: Hydrogen and oxygen become water, a new substance. It is a chemical reaction.
+          - text:
+              de: Eis schmilzt.
+              en: Ice melts.
+            correct: false
+            info:
+              de: Geschmolzenes Eis ist weiter Wasser. Es ändert sich nur der Zustand.
+              en: Melted ice is still water. Only the state changes.
+          - text:
+              de: Wasser verdampft.
+              en: Water evaporates.
+            correct: false
+            info:
+              de: Wasserdampf ist weiter Wasser. Es ist nur eine Zustandsänderung.
+              en: Water vapour is still water. It is only a change of state.
+        explanation:
+          de: Beim Schmelzen und Verdampfen bleibt es derselbe Stoff, nur der Zustand ändert sich. Beim Verbrennen entstehen neue Stoffe.
+          en: When melting and evaporating the substance stays the same, only the state changes. When burning, new substances are formed.
+        links: &a1
+          - title:
+              de: Chemische Reaktion (Wikipedia)
+              en: Chemical reaction (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Chemische_Reaktion
+      - type: true-false
+        id: atome-entstehen
+        text:
+          de: Bei einer chemischen Reaktion entstehen neue Atome.
+          en: In a chemical reaction new atoms are created.
+        answer: false
+        explanation:
+          de: Die Atome bleiben erhalten. Sie sind nach der Reaktion nur anders angeordnet. Darum entstehen neue Stoffe, aber keine neuen Atome.
+          en: The atoms are kept. After the reaction they are just arranged differently. That is why new substances are formed, but no new atoms.
+        links: *a1
+      - type: single-choice
+        id: sicheres-zeichen
+        text:
+          de: Woran erkennst du sicher eine chemische Reaktion?
+          en: How can you be sure that a chemical reaction has taken place?
+        options:
+          - text:
+              de: Es entsteht ein neuer Stoff.
+              en: A new substance is formed.
+            correct: true
+            info:
+              de: "Das ist das sichere Merkmal: Die Stoffe haben sich in andere Stoffe verwandelt."
+              en: "That is the certain sign: the substances have turned into other substances."
+          - text:
+              de: Der Stoff wird wärmer.
+              en: The substance gets warmer.
+            correct: false
+            info:
+              de: Ein Stoff kann auch wärmer werden, ohne dass er reagiert, zum Beispiel auf einer Heizung.
+              en: A substance can also get warmer without reacting, for example on a radiator.
+          - text:
+              de: Der Stoff wechselt den Aggregatzustand.
+              en: The substance changes its state of matter.
+            correct: false
+            info:
+              de: Das ist eine Zustandsänderung. Der Stoff bleibt dabei derselbe.
+              en: That is a change of state. The substance stays the same.
+        explanation:
+          de: Nur ein neuer Stoff zeigt sicher eine Reaktion an. Wärme oder ein Zustandswechsel reichen nicht.
+          en: Only a new substance shows a reaction for sure. Heat or a change of state is not enough.
+        links: *a1

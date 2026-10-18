@@ -1,0 +1,161 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Reaktionsgleichungen
+  en: Reaction equations
+description:
+  de: Eine Reaktionsgleichung zeigt, welche Stoffe reagieren. Auf beiden Seiten müssen gleich viele Atome stehen.
+  en: A reaction equation shows which substances react. There must be the same number of atoms on both sides.
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Mit einer Reaktionsgleichung beschreibst du eine Reaktion kurz und genau: Welche Stoffe gehen hinein, welche kommen heraus und in welchem Verhältnis.
+          en: |
+            With a reaction equation you describe a reaction briefly and precisely: which substances go in, which come out and in which ratio.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Reaktionsgleichung
+          en: Reaction equation
+        explanation:
+          de: Eine Reaktionsgleichung beschreibt eine Reaktion mit Formeln. Links vom Pfeil stehen die Ausgangsstoffe, rechts die Produkte.
+          en: A reaction equation describes a reaction with formulas. The starting substances are on the left of the arrow, the products on the right.
+      - type: definition
+        term:
+          de: Koeffizient
+          en: Coefficient
+        explanation:
+          de: Ein Koeffizient ist die große Zahl vor einer Formel. Er sagt, wie oft die Formel vorkommt.
+          en: A coefficient is the big number in front of a formula. It tells how often the formula occurs.
+      - type: text
+        text:
+          de: |
+            Die Atome bleiben bei einer Reaktion erhalten. Deshalb muss jede Atomsorte links und rechts gleich oft vorkommen. Du erreichst das mit Koeffizienten. Die Indizes in den Formeln änderst du nie, sonst wäre es ein anderer Stoff.
+          en: |
+            The atoms are kept in a reaction. So every kind of atom must occur equally often on the left and on the right. You achieve that with coefficients. You never change the indices in the formulas, otherwise it would be a different substance.
+      - type: formula
+        formula: \ce{2H2 + O2 -> 2H2O}
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Die Gleichung für Wasser aufstellen
+          en: Writing the equation for water
+        blocks:
+          - type: text
+            text:
+              de: |
+                1. Schreibe die Formeln: $\ce{H2 + O2 -> H2O}$. Links sind 2 Sauerstoffatome, rechts nur 1.
+                2. Setze die 2 vor $\ce{H2O}$: $\ce{H2 + O2 -> 2H2O}$. Jetzt sind rechts 4 Wasserstoffatome, links nur 2.
+                3. Setze die 2 vor $\ce{H2}$: $\ce{2H2 + O2 -> 2H2O}$. Links und rechts sind es 4 H und 2 O.
+              en: |
+                1. Write the formulas: $\ce{H2 + O2 -> H2O}$. On the left there are 2 oxygen atoms, on the right only 1.
+                2. Put the 2 in front of $\ce{H2O}$: $\ce{H2 + O2 -> 2H2O}$. Now there are 4 hydrogen atoms on the right, only 2 on the left.
+                3. Put the 2 in front of $\ce{H2}$: $\ce{2H2 + O2 -> 2H2O}$. On the left and on the right there are 4 H and 2 O.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: number
+        id: koeffizient-wasser
+        text:
+          de: Welche Zahl gehört an die Stelle von x? $\ce{x H2 + O2 -> 2H2O}$
+          en: Which number belongs in place of x? $\ce{x H2 + O2 -> 2H2O}$
+        answer: 2
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message:
+              de: Dann stünden links nur 2 Wasserstoffatome, rechts aber 4 (2 · 2).
+              en: Then there would be only 2 hydrogen atoms on the left, but 4 (2 · 2) on the right.
+        explanation:
+          de: Rechts stehen 2 · 2 = 4 Wasserstoffatome. Links braucht man deshalb 2 Teilchen $\ce{H2}$.
+          en: On the right there are 2 · 2 = 4 hydrogen atoms. So you need 2 particles of $\ce{H2}$ on the left.
+        links: &a1
+          - title:
+              de: Reaktionsgleichung (Wikipedia)
+              en: Reaction equation (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Reaktionsgleichung
+      - type: number
+        id: koeffizient-magnesium
+        text:
+          de: Welche Zahl gehört an die Stelle von x? $\ce{2Mg + O2 -> x MgO}$
+          en: Which number belongs in place of x? $\ce{2Mg + O2 -> x MgO}$
+        answer: 2
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message:
+              de: Dann stünde rechts nur 1 Sauerstoffatom, links aber 2 ($\ce{O2}$).
+              en: Then there would be only 1 oxygen atom on the right, but 2 ($\ce{O2}$) on the left.
+        explanation:
+          de: Links sind 2 Magnesiumatome und 2 Sauerstoffatome. Rechts braucht man 2 Teilchen $\ce{MgO}$, damit beides stimmt.
+          en: On the left there are 2 magnesium atoms and 2 oxygen atoms. On the right you need 2 particles of $\ce{MgO}$ for both to be right.
+        links: *a1
+      - type: number
+        id: koeffizient-ammoniak
+        text:
+          de: Welche Zahl gehört an die Stelle von x? $\ce{N2 + x H2 -> 2NH3}$
+          en: Which number belongs in place of x? $\ce{N2 + x H2 -> 2NH3}$
+        answer: 3
+        tolerance: 0
+        mistakes:
+          - answer: 2
+            message:
+              de: Dann wären links 4 Wasserstoffatome, rechts aber 6 (2 · 3).
+              en: Then there would be 4 hydrogen atoms on the left, but 6 (2 · 3) on the right.
+        explanation:
+          de: Rechts stehen 2 · 3 = 6 Wasserstoffatome. Mit 3 Teilchen $\ce{H2}$ sind es links ebenfalls 6.
+          en: On the right there are 2 · 3 = 6 hydrogen atoms. With 3 particles of $\ce{H2}$ there are also 6 on the left.
+        links: *a1
+      - type: number
+        id: koeffizient-methan
+        text:
+          de: Welche Zahl gehört an die Stelle von x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
+          en: Which number belongs in place of x? $\ce{CH4 + x O2 -> CO2 + 2H2O}$
+        answer: 2
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message:
+              de: Dann wären links nur 2 Sauerstoffatome, rechts aber 4 (2 in $\ce{CO2}$ und 2 im Wasser).
+              en: Then there would be only 2 oxygen atoms on the left, but 4 on the right (2 in $\ce{CO2}$ and 2 in the water).
+        explanation:
+          de: Rechts stehen 2 + 2 = 4 Sauerstoffatome. Mit 2 Teilchen $\ce{O2}$ sind es links ebenfalls 4.
+          en: On the right there are 2 + 2 = 4 oxygen atoms. With 2 particles of $\ce{O2}$ there are also 4 on the left.
+        links: *a1
+      - type: ordering
+        id: gleichung-schritte
+        text:
+          de: Bringe die Schritte beim Aufstellen einer Reaktionsgleichung in die richtige Reihenfolge.
+          en: Put the steps for writing a reaction equation in the right order.
+        items:
+          - de: Formeln der Ausgangsstoffe und Produkte aufschreiben
+            en: Write down the formulas of the starting substances and products
+          - de: Atome links und rechts zählen
+            en: Count the atoms on the left and on the right
+          - de: Koeffizienten vor die Formeln setzen
+            en: Put coefficients in front of the formulas
+          - de: Noch einmal zählen und prüfen
+            en: Count again and check
+        explanation:
+          de: Erst kommen die Formeln, dann zählst du, dann gleichst du mit Koeffizienten aus und zuletzt prüfst du.
+          en: First come the formulas, then you count, then you balance with coefficients, and finally you check.
+        links: *a1

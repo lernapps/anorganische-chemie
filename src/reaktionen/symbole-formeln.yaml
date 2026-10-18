@@ -1,0 +1,183 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Symbole und Formeln
+  en: Symbols and formulas
+description:
+  de: Jedes Element hat ein Symbol, jede Verbindung eine Formel. So liest und schreibst du sie.
+  en: Every element has a symbol, every compound a formula. This is how you read and write them.
+blocks:
+  - type: section
+    id: warum
+    title:
+      de: Warum
+      en: Why
+    blocks:
+      - type: text
+        text:
+          de: |
+            Chemiker schreiben nicht „Wasser besteht aus Wasserstoff und Sauerstoff“, sondern H₂O. Symbole und Formeln sind eine Kurzschrift, die überall auf der Welt gleich gelesen wird.
+          en: |
+            Chemists do not write “water consists of hydrogen and oxygen”, they write H₂O. Symbols and formulas are a shorthand that is read the same way all over the world.
+  - type: section
+    id: regel
+    title:
+      de: Regel
+      en: Rule
+    blocks:
+      - type: definition
+        term:
+          de: Verbindung
+          en: Compound
+        explanation:
+          de: Eine Verbindung besteht aus Atomen verschiedener Elemente, die in einem festen Verhältnis verbunden sind, zum Beispiel Wasser oder Kohlenstoffdioxid.
+          en: A compound consists of atoms of different elements joined in a fixed ratio, for example water or carbon dioxide.
+      - type: definition
+        term:
+          de: Molekül
+          en: Molecule
+        explanation:
+          de: Ein Molekül ist ein kleines Teilchen aus mehreren verbundenen Atomen, zum Beispiel ein Wassermolekül.
+          en: A molecule is a small particle made of several joined atoms, for example a water molecule.
+      - type: definition
+        term:
+          de: Formel
+          en: Formula
+        explanation:
+          de: Eine Formel zeigt mit den Elementsymbolen, aus welchen Atomen ein Stoff besteht. Eine kleine tiefgestellte Zahl, der Index, sagt, wie viele Atome es sind.
+          en: A formula uses element symbols to show which atoms a substance is made of. A small subscript number, the index, tells how many atoms there are.
+      - type: text
+        text:
+          de: |
+            Die Formel von Wasser ist $\ce{H2O}$: ein Molekül hat 2 Wasserstoffatome (H) und 1 Sauerstoffatom (O). Steht kein Index, ist es 1 Atom.
+          en: |
+            The formula of water is $\ce{H2O}$: one molecule has 2 hydrogen atoms (H) and 1 oxygen atom (O). If there is no index, it is 1 atom.
+      - type: table
+        caption:
+          de: Einige Formeln und ihre Atome
+          en: Some formulas and their atoms
+        header:
+          - de: Stoff
+            en: Substance
+          - de: Formel
+            en: Formula
+          - de: Atome in einem Teilchen
+            en: Atoms in one particle
+        rowHeaders: true
+        rows:
+          - - de: Wasser
+              en: water
+            - de: $\ce{H2O}$
+              en: $\ce{H2O}$
+            - de: 2 H, 1 O
+              en: 2 H, 1 O
+          - - de: Kohlenstoffdioxid
+              en: carbon dioxide
+            - de: $\ce{CO2}$
+              en: $\ce{CO2}$
+            - de: 1 C, 2 O
+              en: 1 C, 2 O
+          - - de: Methan
+              en: methane
+            - de: $\ce{CH4}$
+              en: $\ce{CH4}$
+            - de: 1 C, 4 H
+              en: 1 C, 4 H
+          - - de: Ammoniak
+              en: ammonia
+            - de: $\ce{NH3}$
+              en: $\ce{NH3}$
+            - de: 1 N, 3 H
+              en: 1 N, 3 H
+          - - de: Sauerstoff
+              en: oxygen
+            - de: $\ce{O2}$
+              en: $\ce{O2}$
+            - de: 2 O
+              en: 2 O
+  - type: section
+    id: beispiel
+    title:
+      de: Beispiel
+      en: Example
+    blocks:
+      - type: example
+        title:
+          de: Die Formel von Methan lesen
+          en: Reading the formula of methane
+        blocks:
+          - type: text
+            text:
+              de: |
+                Methan hat die Formel $\ce{CH4}$. C steht für Kohlenstoff, H für Wasserstoff. Die 4 sagt: Auf 1 Kohlenstoffatom kommen 4 Wasserstoffatome. Ein Methanmolekül hat zusammen 5 Atome.
+              en: |
+                Methane has the formula $\ce{CH4}$. C stands for carbon, H for hydrogen. The 4 says: for 1 carbon atom there are 4 hydrogen atoms. A methane molecule has 5 atoms in total.
+  - type: section
+    id: uebung
+    title:
+      de: Übung
+      en: Practice
+    blocks:
+      - type: generated
+        id: symbol-zuordnen
+        given:
+          es:
+            pick: 4
+            distinct: true
+            from:
+              data: elemente
+        task:
+          text:
+            de: Ordne jedem Element sein Symbol zu.
+            en: Match each element with its symbol.
+        answer:
+          value: es
+          compare:
+            pairs:
+              left: name
+              right: symbol
+        hint:
+          de: Das Symbol besteht aus ein oder zwei Buchstaben und steht in der Tabelle des Periodensystems.
+          en: The symbol has one or two letters and is in the table of the periodic table.
+        steps:
+          - de: Jedes Element hat genau ein Symbol.
+            en: Every element has exactly one symbol.
+      - type: number
+        id: atome-ammoniak
+        text:
+          de: Wie viele Wasserstoffatome hat ein Teilchen Ammoniak mit der Formel $\ce{NH3}$?
+          en: How many hydrogen atoms does one particle of ammonia with the formula $\ce{NH3}$ have?
+        answer: 3
+        tolerance: 0
+        mistakes:
+          - answer: 1
+            message:
+              de: Das N steht für Stickstoff. Der Index 3 hinter dem H sagt, dass es 3 Wasserstoffatome sind.
+              en: The N stands for nitrogen. The index 3 after the H says there are 3 hydrogen atoms.
+          - answer: 4
+            message:
+              de: Du hast alle Atome gezählt. Gefragt sind nur die Wasserstoffatome.
+              en: You counted all atoms. The question asks only for the hydrogen atoms.
+        explanation:
+          de: Der Index 3 steht hinter dem H. Er gilt nur für das H, also sind es 3 Wasserstoffatome und 1 Stickstoffatom.
+          en: The index 3 is after the H. It applies only to the H, so there are 3 hydrogen atoms and 1 nitrogen atom.
+        links: &a1
+          - title:
+              de: Chemisches Element (Wikipedia)
+              en: Chemical element (Wikipedia, German)
+            url: https://de.wikipedia.org/wiki/Chemisches_Element
+      - type: number
+        id: atome-methan
+        text:
+          de: Wie viele Atome hat ein Methanmolekül $\ce{CH4}$ insgesamt?
+          en: How many atoms does a methane molecule $\ce{CH4}$ have in total?
+        answer: 5
+        tolerance: 0
+        mistakes:
+          - answer: 4
+            message:
+              de: Du hast das Kohlenstoffatom vergessen. Das C ohne Index zählt als 1 Atom.
+              en: You forgot the carbon atom. The C without an index counts as 1 atom.
+        explanation:
+          de: 1 Kohlenstoffatom und 4 Wasserstoffatome sind zusammen 5 Atome.
+          en: 1 carbon atom and 4 hydrogen atoms make 5 atoms together.
+        links: *a1

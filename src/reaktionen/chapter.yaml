@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+title:
+  de: Formeln und Reaktionen
+  en: Formulas and reactions
+summary:
+  de: Du schreibst Elemente und Verbindungen mit Symbolen und Formeln, erkennst chemische Reaktionen und stellst einfache Reaktionsgleichungen auf.
+  en: You write elements and compounds with symbols and formulas, recognise chemical reactions and write simple reaction equations.
+pages:
+  - symbole-formeln
+  - reaktionen
+  - reaktionsgleichungen

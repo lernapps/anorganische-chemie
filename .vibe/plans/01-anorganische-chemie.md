@@ -149,17 +149,36 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 <!-- YAML valid against the entry schema; its property names. Only known values, never invented. -->
 
 ```yaml
-title: Anorganische Chemie – Einstieg
-subject: Chemie
+title:
+  de: Anorganische Chemie – Einstieg
+  en: Inorganic chemistry – first steps
+subject:
+  de: Chemie
+  en: Chemistry
 grades: [7, 8]
-summary: >-
-  Du lernst, woraus Stoffe bestehen: Reinstoffe, Gemische, Atome und das Periodensystem.
-  Du ordnest zu, zeichnest Atome und stellst einfache Reaktionsgleichungen auf.
+summary:
+  de: >-
+    Du lernst, woraus Stoffe bestehen: Reinstoffe und Gemische, Atome, die Hauptgruppen des Periodensystems und
+    einfache Reaktionsgleichungen. Du ordnest zu, baust Atome und rechnest selbst.
+  en: >-
+    You learn what substances are made of: pure substances and mixtures, atoms, the main groups of the periodic
+    table and simple reaction equations. You match, build atoms and calculate on your own.
 # url: nach der Veröffentlichung (Adresse aus dem Job "deploy")
 creator:
   name: Oliver (@mrsimpson)
+topics:
+  - { title: { de: "Reinstoffe und Gemische", en: "Pure substances and mixtures" }, path: stoffe/reinstoffe-gemische/ }
+  - { title: { de: "Stoffeigenschaften", en: "Properties of substances" }, path: stoffe/stoffeigenschaften/ }
+  - { title: { de: "Teilchenmodell", en: "Particle model" }, path: teilchen/teilchenmodell/ }
+  - { title: { de: "Atombau", en: "Atomic structure" }, path: teilchen/atombau/ }
+  - { title: { de: "Periodensystem lesen", en: "Reading the periodic table" }, path: periodensystem/periodensystem-lesen/ }
+  - { title: { de: "Die acht Hauptgruppen", en: "The eight main groups" }, path: periodensystem/hauptgruppen/ }
+  - { title: { de: "Metalle und Nichtmetalle", en: "Metals and non-metals" }, path: periodensystem/metalle-nichtmetalle/ }
+  - { title: { de: "Symbole und Formeln", en: "Symbols and formulas" }, path: reaktionen/symbole-formeln/ }
+  - { title: { de: "Chemische Reaktionen", en: "Chemical reactions" }, path: reaktionen/reaktionen/ }
+  - { title: { de: "Reaktionsgleichungen", en: "Reaction equations" }, path: reaktionen/reaktionsgleichungen/ }
 keywords: [Atome, Periodensystem, Stoffe, Formeln]
-# topics: nach dem Bau der Seiten
+source: https://github.com/lernapps/anorganische-chemie
 fitness:
   account: false
   install: false
@@ -227,9 +246,9 @@ fitness:
 - [x] Kapitel 1 "Stoffe und ihre Eigenschaften" (Seiten `reinstoffe-gemische`, `stoffeigenschaften`): Daten `src/data/stoffe.yaml`, Erklärung, Tabelle, Übungen; Commit.
 - [x] Kapitel 2 "Teilchenmodell und Atombau" (Seiten `teilchenmodell`, `atombau`): Komponente `ParticleModel` (Regler Temperatur) mit `nojs`, Komponente `AtomBuilder` (Übung) mit Logik und Test; Commit je Komponente.
 - [x] Kapitel 3 "Periodensystem" (Seiten `periodensystem-lesen`, `metalle-nichtmetalle`): Daten `src/data/elemente.yaml` (Elemente 1–20), `labelled-figure` des Periodensystems, `generated`-Übungen; Commit.
-- [ ] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
-- [ ] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
-- [ ] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
+- [x] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
+- [x] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
+- [x] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
 - [ ] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
 - [ ] `npx lernapps check` passes.
 - [ ] Every box of Explore, Plan and Code ticked.
