@@ -270,8 +270,8 @@ fitness:
 
 ### Tasks
 
-- [ ] `git push -u origin work` (not `main`). Pre-push runs the heavy checks; fix failures.
-- [ ] Verify over REST: default branch `main` (`gh api repos/<owner>/<repo> --jq .default_branch`); Pages serves
+- [x] `git push -u origin work` (not `main`). Pre-push runs the heavy checks; fix failures.
+- [x] Verify over REST: default branch `main` (`gh api repos/<owner>/<repo> --jq .default_branch`); Pages serves
       `gh-pages` from `/` (`gh api repos/<owner>/<repo>/pages`; "Not Found" = off). Not right and not yours to
       change → note the creator's click (skill `lernapps-github`).
 - [ ] **Checkpoint:** publish. Ask before the app goes online; wait for the yes. Put the noted clicks into the same
