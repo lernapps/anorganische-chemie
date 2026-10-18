@@ -35,6 +35,8 @@ Lernende der unteren Klassenstufen (7/8, Annahme) lernen die Grundlagen der anor
 - Archetyp explainer: der Stoff baut aufeinander auf, jede Seite erklärt und übt; ein Quiz allein erklärt nichts.
 - Klassenstufen 7/8 (guess): "untere Klassenstufen" genannt, Jahrgang nicht bestätigt.
 - Kein Landeslehrplan: Orientierung an den KMK-Bildungsstandards (Wunsch des Creators); Reihenfolge der unteren Stufen selbst abgeleitet.
+- Sprachen `[de, en]` (guess): "mehrsprachig" ohne Sprachen genannt; das System kann für App-Texte nur Deutsch und Englisch. Alle Texte, Daten und Komponenten in beiden Sprachen.
+- Hauptgruppen: Kapitel Periodensystem behandelt alle acht Hauptgruppen mit Namen und Merkmalen; die Elemente 1–20 enthalten jede Hauptgruppe.
 - Inhalte selbst geschrieben, Serlo (CC BY-SA 4.0) nur als Zweitquelle verlinkt (Creator: "schreib selbst, binde serlo ein wo sinnvoll").
 
 ## Notes
@@ -135,6 +137,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Suchbegriffe: "Die Suchbegriffe sind sehr lang und sehr spezifisch" -> auf vier kurze gekürzt
 - Aufbau: "Wir haben auf Lernapps schon den Mathe trainer und elektrizität. Wesentlicher Teil sind dabei Übungen und auch hilfreiche Visualisierungen"
 - Plan-Checkpoint: "Ja, anlegen" (nach Vorlage von Plan, Skizzen, Übungen; Erweiterungen in Issue #1 vertagt)
+- Änderung nach dem Plan: "Es sollten alle Hauptgruppen berücksichtigt werden. Außerdem hätte ich das auch gerne mehrsprachig"
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"

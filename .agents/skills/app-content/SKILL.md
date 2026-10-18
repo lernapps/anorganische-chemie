@@ -5,7 +5,7 @@ description: Use for any content work in this app - researching, writing, extend
 
 # Content guide of this app
 
-Explainer "Anorganische Chemie – Einstieg" for Klasse 7/8 (assumption of the creator, not fixed by a Lehrplan).
+Explainer "Anorganische Chemie – Einstieg" (de, en) for Klasse 7/8 (assumption of the creator, not fixed by a Lehrplan).
 Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen vertieft): issue #1.
 
 ## Curriculum
@@ -53,6 +53,14 @@ Page and exercise ids (page file, exercise id):
   `uebung`. Titles: Warum, Regel, Beispiel, Übung. Every page has at least one exercise in `uebung`.
 - A page explains one competency group in about 150–250 words in plain German plus figure and exercises.
 - Ids short and stable; never reuse a removed id (`explainer-stable-ids`).
+
+## Languages
+
+- `languages: [de, en]`, German first (guess: the creator asked for "mehrsprachig"; the runtime supports de and en).
+- Every learner text is a map `{ de, en }` (content, data files, component props); ids, numbers, formulas, symbols are
+  the same. Exercise components take a `language` prop and export `about` and `describe` per language.
+- English terms: Reinstoff = pure substance, Gemisch = mixture, Aggregatzustand = state of matter, Atomkern = nucleus,
+  Hauptgruppe = main group.
 
 ## Terminology
 
