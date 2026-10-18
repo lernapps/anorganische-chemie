@@ -3,7 +3,7 @@
 # archetype: explainer | interactive | quiz; null until chosen in Explore.
 archetype: explainer
 # phase: explore | plan | code | commit. Set it on entering a phase.
-phase: plan
+phase: code
 # prePushFailures: written by the pre-push hook. Never change it.
 prePushFailures: 0
 ---
@@ -141,6 +141,7 @@ Offen: genaue Inhalte je Seite mit Serlo-Seiten abgleichen (Passung pro Kompeten
 - Rückfrage zu den Elementen: "wieso nimmst Du nur die Elemente 1-20 und nicht alle Hauptgruppen (44, ohne sdie superschweren)"
 - Änderung nach dem Plan: "Es sollten alle Hauptgruppen berücksichtigt werden. Außerdem hätte ich das auch gerne mehrsprachig"
 - Rückmeldung zur Vorschau: "Die Elektronen von Antimon sitzen auf Schalen mit 2, 8, 18, 18, 5 Elektronen. Was ist denn das für eine dämliche Formulierung in einem Quiz? Überhaupt sind die Hauptgruppen nicht ansprechend aufbereitet. Wenn wir schon eine Webanwendung haben, hätte ich gerne eine farbige, interaktive, neugierig machende Darstellung, in der ich über die Elemente und bspw. auch ihre üblichen Verbindungen und Nutzen erfahre"
+- Zum Nachtrag Periodensystem: "1. passt" (Aufbau der interaktiven Karte); "2. ja, auch englisch. Basierend auf Wikipedia oder einer anderen Internetquelle (selbst schreiben, keine Texte kopieren)" (ein "Wusstest du?"-Satz je Element)
 - Checkpoint Recherche: "mach das" (nach Vorlage von Kapiteln, Quellen, Archetyp)
 - Bundesland: "Diese Bundesland frag nervt. Sch** Föderalismus. Es geht um den Inhalt!" (kein Landeslehrplan)
 - Quellen: "Recherchiere mal, welche Quellen es gibt"
@@ -209,9 +210,9 @@ fitness:
 
 ### Nachtrag nach der Vorschau: interaktives Periodensystem
 
-- [ ] Skizze zeigen: farbige Karte der 44 Elemente, Steckbrief mit Verbindungen und Nutzen (Schritte unten im Chat).
-- [ ] **Checkpoint:** Nachtrag bestätigen. Stop und auf ein ausdrückliches Ja warten.
-- [ ] Set `phase: code`.
+- [x] Skizze zeigen: farbige Karte der 44 Elemente, Steckbrief mit Verbindungen und Nutzen (Schritte unten im Chat).
+- [x] **Checkpoint:** Nachtrag bestätigen. Stop und auf ein ausdrückliches Ja warten.
+- [x] Set `phase: code`.
 
 ### Content method
 
@@ -257,10 +258,13 @@ fitness:
 - [x] Kapitel 4 "Formeln und Reaktionen" (Seiten `symbole-formeln`, `reaktionen`, `reaktionsgleichungen`): Daten `src/data/reaktionen.yaml`, `\ce{…}`-Formeln, Atomzählungs-Figuren, `generated`-Übungen; Commit.
 - [x] `src/app.yaml` (Titel, Einleitung, Kapitelreihenfolge, `sources`: KMK, Serlo), Glossar aus `definition`-Blöcken; Commit.
 - [x] Katalogeintrag: `topics` aus den fertigen Seiten und Abschnitts-ids; Commit.
-- [x] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
-- [x] `npx lernapps check` passes.
-- [x] Every box of Explore, Plan and Code ticked.
-- [x] Set `phase: commit`.
+- [ ] Steckbriefe der 44 Elemente aus den Wikipedia-Artikeln recherchieren: je 2–3 übliche Verbindungen, 2–3 Nutzen, ein "Wusstest du?"-Satz; in eigenen Worten, Deutsch und Englisch, jede Angabe mit einem Beleg im Artikel geprüft.
+- [x] Komponente `PeriodicTable` (Logik, Test, Ansicht) mit Farben je Hauptgruppe, Steckbrief, Gruppenhervorhebung, Tastatur, `nojs`-Text.
+- [ ] Abschnitt `entdecken` auf der Seite `hauptgruppen` mit der Komponente; Inhaltsführer, Eintrag und Plan aktualisieren; `npx lernapps check`; Commit und Push auf `work`.
+- [ ] Content guide still matches what was built (`app-content-matches`); `grep -c "FILL IN"` prints 0.
+- [ ] `npx lernapps check` passes.
+- [ ] Every box of Explore, Plan and Code ticked.
+- [ ] Set `phase: commit`.
 
 ### Completed
 
