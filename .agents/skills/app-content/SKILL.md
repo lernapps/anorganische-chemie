@@ -78,7 +78,7 @@ Page and exercise ids (page file, exercise id):
   `definition` block (glossary).
 - Terms: Reinstoff, Gemisch, Teilchenmodell, Atom, Proton, Neutron, Elektron, Elementsymbol, Ordnungszahl, Periode,
   Gruppe, Metall, Nichtmetall, Verbindung, Formel, Reaktionsgleichung.
-- Metall/Nichtmetall/Halbmetall: `artid` is `metall`, `nichtmetall` or `grenzfall`; the exercise only draws clear cases, borderline
+- Metall/Nichtmetall/Halbmetall: `kindId` is `metall`, `nichtmetall` or `grenzfall`; the exercise only draws clear cases, borderline
   elements (B, Si, Ge, As, Se, Sb, Te, Bi, Po, At) are shown as "Grenzfall (Halbmetall)".
 - Avoid "Molekül" before page `symbole-formeln`; avoid "Ion", "Bindung", "Elektronegativität" (later chapters, issue #1).
 - Chemistry notation only with `\ce{…}` and `\pu{…}`; temperatures in °C, density in g/cm³.
@@ -118,9 +118,10 @@ Page and exercise ids (page file, exercise id):
   facts (grouped by kind on the kind page).
 - Visualisieren: component `ParticleModel` (not an exercise) with a temperature slider and a `nojs` text.
 - Data files `src/data/`: `stoffe.yaml` (9 pure substances: state, melting and boiling point), `elemente.yaml` (all 44
-  elements of the eight main groups without the superheavy ones: Z, shells, group, main group, outer electrons, period,
-  kind), `atome.yaml` (elements 1–20 with mass number and neutrons, because the most common isotope is not clear for
-  heavier elements). Same fields in every record. Every value was checked against an opened source (named in the file's
+  elements of the eight main groups without the superheavy ones: `number`, `shells`, `group`, `mainGroup`, `outer`
+  electrons, `period`, `kind`, `kindId`, and for the profiles of `PeriodicTable` the lists `compounds` and `uses`, the
+  `fact` and, where fewer exist, a `note`), `atome.yaml` (elements 1–20 with mass number and neutrons, because the most common isotope is not clear for
+  heavier elements). Same fields in every record, but `note`. Every value was checked against an opened source (named in the file's
   comment); new values need the same check.
 
 ## Figures
@@ -152,7 +153,8 @@ Page and exercise ids (page file, exercise id):
 
 ## Element profiles (PeriodicTable)
 
-- Per element in the block `props.elements`: 2–3 common compounds (formula with plain digits, shown with subscripts; a short
+- Per element in `src/data/elemente.yaml` (the blocks name it: `props.elements: { data: elemente }`, once for all pages;
+  never copy it into a block): 2–3 common compounds (formula with plain digits, shown with subscripts; a short
   text), 2–3 uses, one "Wusstest du?" fact, and a `note` where fewer exist (noble gases, rare or radioactive elements).
 - Written in own words from the German Wikipedia article of the element (sections Verwendung, Verbindungen, Vorkommen,
   Geschichte), de and en, at most about 110 characters per text, school year 7/8. No sentences copied.
