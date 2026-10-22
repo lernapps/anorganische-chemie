@@ -52,7 +52,7 @@
       "sourceType": "github",
       "ref": "exp/compact-guidance",
       "skillPath": "skills/archetypes/lernapps-explainer/SKILL.md",
-      "computedHash": "5135be0d222d1b12fcc006244b28899b467ff62fed47a83320993ab419fdb7d5"
+      "computedHash": "7984137e55f2b21b7c656a30e0579621cccbb1ca3aeb57c6d0a545fbf8babad1"
     },
     "lernapps-explainer-design": {
       "source": "lernapps/tooling",
