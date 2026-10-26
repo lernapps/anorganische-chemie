@@ -136,18 +136,12 @@ blocks:
             electrons:
               de: Elektronen
               en: Electrons
-            check:
-              de: Prüfen
-              en: Check
             more:
               de: eins mehr
               en: one more
             fewer:
               de: eins weniger
               en: one fewer
-            right:
-              de: Richtig, das Atom ist neutral und hat die richtige Zahl an Neutronen.
-              en: Correct, the atom is neutral and has the right number of neutrons.
         examples:
           accepted:
             - seed: 6
