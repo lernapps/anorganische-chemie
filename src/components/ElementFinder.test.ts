@@ -98,6 +98,7 @@ const labels: Labels = {
   reasonNumber: "{name} hat die Ordnungszahl {n}. Gesucht ist die Ordnungszahl {wantedN}.",
   reasonPosition:
     "{name} steht in Periode {period} und Hauptgruppe {group}. Gesucht ist Periode {wantedPeriod}, Hauptgruppe {wantedGroup}.",
+  reasonSwapped: "{name} steht in Periode {period} und Hauptgruppe {group}: Du hast die beiden Zahlen vertauscht.",
   reasonOuter: "Zahl der Außenelektronen bei {name}: {outer}. Gesucht ist {wantedN}.",
   reasonPeriod: "{name} steht in Periode {period}. Gesucht ist Periode {wantedPeriod}.",
   reasonKind: "{name} ist ein {kind}. Gesucht ist ein {wantedKind}.",
@@ -275,9 +276,21 @@ describe("for a tutor", () => {
     }
   });
 
-  it("has no fixed answer for any typical mistake", () => {
-    const task = generate(1, propsOf("name"));
-    expect(mistakes(task)).toEqual(about.mistakes.map(() => undefined));
+  it("has a fixed answer only for period and main group the other way round", () => {
+    expect(mistakes(generate(1, propsOf("name")), propsOf("name"))).toEqual(about.mistakes.map(() => undefined));
+    const props = propsOf("position");
+    const tasks = SEEDS.map((seed) => generate(seed, props));
+    const swaps = tasks.filter((task) => mistakes(task, props)[3] !== undefined);
+    expect(swaps.length).toBeGreaterThan(0);
+    for (const task of swaps) {
+      const answer = mistakes(task, props)[3] ?? [];
+      expect(check(task, answer)).toBe(false);
+      expect(reason(task, answer, props, "de")).toContain("vertauscht");
+    }
+    // boron, period 2 and main group III: magnesium is in period 3 and main group II
+    const boron = tasks.find((task) => task.target.includes("B"));
+    if (boron === undefined) throw new Error("no task for boron");
+    expect(mistakes(boron, props)[3]).toEqual(["Mg"]);
   });
 
   it("shows an answer as the elements tapped", () => {

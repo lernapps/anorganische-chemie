@@ -32,6 +32,8 @@ export interface Labels {
   reasonName?: string;
   reasonNumber?: string;
   reasonPosition?: string;
+  /** For position: the element with period and main group the other way round. */
+  reasonSwapped?: string;
   reasonOuter?: string;
   reasonPeriod?: string;
   reasonKind?: string;
@@ -191,6 +193,22 @@ const roman = (groups: readonly GroupInfo[], group: number) =>
 const groupName = (groups: readonly GroupInfo[], group: number) =>
   groups.find((info) => info.group === group)?.name ?? "";
 const find = (elements: readonly Element[], symbol: string) => elements.find((element) => element.symbol === symbol);
+/** The main group I to VIII of an IUPAC group 1, 2, 13 to 18, as a number. */
+const mainOf = (group: number) => (group <= 2 ? group : group - 10);
+/** The IUPAC group of a main group 1 to 8. */
+const groupOf = (main: number) => (main <= 2 ? main : main + 10);
+
+/**
+ * For a task of the type position: the element in the period the task's main group names and the main group its
+ * period names, the two numbers the other way round; undefined when there is none or it is the element asked for.
+ */
+function swapped(task: Task, elements: readonly Element[]): Element | undefined {
+  if (task.type !== "position" || task.period === undefined || task.group === undefined) return undefined;
+  const period = mainOf(task.group);
+  const group = groupOf(task.period);
+  const element = elements.find((candidate) => candidate.period === period && candidate.group === group);
+  return element === undefined || task.target.includes(element.symbol) ? undefined : element;
+}
 
 /** The props that the texts of a task need. */
 type TextProps = Pick<Props, "elements" | "groups" | "labels" | "types">;
@@ -287,7 +305,9 @@ export function reason(task: Task, answer: readonly string[], props: TextProps, 
     case "number":
       return fill(label(labels, "reasonNumber"), values);
     case "position":
-      return fill(label(labels, "reasonPosition"), values);
+      return swapped(task, elements)?.symbol === tapped.symbol && labels.reasonSwapped !== undefined
+        ? fill(labels.reasonSwapped, values)
+        : fill(label(labels, "reasonPosition"), values);
     case "outer":
       return fill(label(labels, "reasonOuter"), values);
     case "kind":
@@ -313,11 +333,13 @@ export function describe(task: Task, props: Props, _lang: string): { task: strin
 }
 
 /**
- * The answer of each typical mistake of about.mistakes, for a tutor: none has one fixed answer (a wrong element, a
- * group with elements missing or too many, main group and group number mixed up are each many answers).
+ * The answer of each typical mistake of about.mistakes, for a tutor: a wrong element, a group with elements missing or
+ * too many, main group and group number mixed up are each many answers; period and main group the other way round is
+ * one element, when there is one.
  */
-export function mistakes(_task: Task, _props?: unknown): undefined[] {
-  return about.mistakes.map(() => undefined);
+export function mistakes(task: Task, props: Pick<Props, "elements">): (string[] | undefined)[] {
+  const other = swapped(task, props.elements);
+  return [undefined, undefined, undefined, other === undefined ? undefined : [other.symbol]];
 }
 
 /** An answer as the learner gives it: the elements tapped, "Kohlenstoff (C), Silicium (Si)"; "–" for none. */
@@ -351,6 +373,10 @@ export const about = {
     {
       de: "Gruppennummer (1 bis 18) und Hauptgruppe (I bis VIII) werden verwechselt.",
       en: "The group number (1 to 18) and the main group (I to VIII) are mixed up.",
+    },
+    {
+      de: "Periode und Hauptgruppe vertauscht: angetippt ist das Element in der Periode, die die Hauptgruppe nennt, und in der Hauptgruppe, die die Periode nennt.",
+      en: "Period and main group the other way round: the element tapped is in the period the main group names, and in the main group the period names.",
     },
   ],
 };

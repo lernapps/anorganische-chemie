@@ -71,20 +71,25 @@ export function reason(task: Task, answer: Answer, _props: unknown, lang: string
   if (check(task, answer)) return undefined;
   const language = languageOf(lang);
   const name = task.name[language];
+  // what does not fit and where to find it, never the number itself: the solution comes after the answer
   if (answer.protons !== task.protons) {
     return language === "en"
-      ? `The number of protons is the atomic number. ${name} has ${count("en", task.protons, "proton")}.`
-      : `Die Protonenzahl ist die Ordnungszahl. ${name} hat ${count("de", task.protons, "proton")}.`;
+      ? `The number of protons is the atomic number. Look up the atomic number of ${name} in the periodic table.`
+      : `Die Protonenzahl ist die Ordnungszahl. Schau im Periodensystem nach, welche Ordnungszahl ${name} hat.`;
   }
   if (answer.electrons !== answer.protons) {
     return language === "en"
       ? "An atom is neutral: it has as many electrons as protons."
       : "Ein Atom ist neutral: Es hat gleich viele Elektronen wie Protonen.";
   }
-  const sum = `${task.massNumber} − ${task.protons} = ${neutronsOf(task)}`;
+  if (answer.neutrons === task.massNumber) {
+    return language === "en"
+      ? "The mass number counts protons and neutrons together. Take the protons away from it."
+      : "Die Massenzahl zählt Protonen und Neutronen zusammen. Zieh die Protonen davon ab.";
+  }
   return language === "en"
-    ? `The number of neutrons is the mass number minus the number of protons: ${sum}.`
-    : `Die Neutronenzahl ist die Massenzahl minus die Protonenzahl: ${sum}.`;
+    ? "The number of neutrons is the mass number minus the number of protons. Work it out again."
+    : "Die Neutronenzahl ist die Massenzahl minus die Protonenzahl. Rechne noch einmal nach.";
 }
 
 /** How the electrons fill the shells K, L, M and N: 2, 8, 8, then 2 more. */

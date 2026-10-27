@@ -31,6 +31,7 @@ const props = defineProps<{
     reasonName?: string;
     reasonNumber?: string;
     reasonPosition?: string;
+    reasonSwapped?: string;
     reasonOuter?: string;
     reasonPeriod?: string;
     reasonKind?: string;

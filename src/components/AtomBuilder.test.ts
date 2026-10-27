@@ -38,8 +38,9 @@ describe("check", () => {
     expect(check(carbon, { protons: 6, neutrons: 6, electrons: 7 })).toBe(false);
     expect(reason(carbon, { protons: 6, neutrons: 6, electrons: 7 }, {}, "de")).toContain("neutral");
     expect(check(carbon, { protons: 6, neutrons: 12, electrons: 6 })).toBe(false);
-    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 }, {}, "de")).toContain("12 − 6 = 6");
-    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 }, {}, "de")).toContain("6 Protonen");
+    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 }, {}, "de")).toContain("Zieh die Protonen");
+    expect(reason(carbon, { protons: 6, neutrons: 7, electrons: 6 }, {}, "de")).toContain("Rechne noch einmal");
+    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 }, {}, "de")).toContain("Ordnungszahl Kohlenstoff");
     expect(check(carbon, wrong(carbon))).toBe(false);
   });
 
@@ -61,7 +62,8 @@ describe("count", () => {
     const hydrogen = generate(1);
     expect(describeTask(hydrogen, {}, "de").solution).toBe("Wasserstoff hat 1 Proton, 0 Neutronen und 1 Elektron.");
     expect(describeTask(hydrogen, {}, "en").solution).toBe("Hydrogen has 1 proton, 0 neutrons and 1 electron.");
-    expect(reason(hydrogen, { protons: 2, neutrons: 0, electrons: 2 }, {}, "de")).toContain("hat 1 Proton.");
+    // the message says where to look, not the number itself
+    expect(reason(hydrogen, { protons: 2, neutrons: 0, electrons: 2 }, {}, "de")).not.toContain("1 Proton");
   });
 });
 
