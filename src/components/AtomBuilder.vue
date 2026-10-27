@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
-import { MAXIMUM, check, describe, generate, reason, shells, type Answer } from "./AtomBuilder.ts";
+// An atom the learner builds for the element of the task of the number seed: plus and minus for protons, neutrons and
+// electrons, drawn as nucleus and shells. Its logic is in AtomBuilder.ts. It is the input of the task: it emits the
+// three counts with answer once the learner has changed one (undefined before), and the explainer draws "Prüfen",
+// checks them and gives the feedback with the app's message.
+import { computed, ref } from "vue";
+import { MAXIMUM, describe, generate, shells, type Answer } from "./AtomBuilder.ts";
 
 const props = defineProps<{
   seed: number;
@@ -9,32 +13,27 @@ const props = defineProps<{
     protons: string;
     neutrons: string;
     electrons: string;
-    check: string;
     more: string;
     fewer: string;
-    right: string;
   };
 }>();
 
-const emit = defineEmits<{ answered: [result: { correct: boolean; reason?: string }] }>();
+const emit = defineEmits<{ answer: [answer: Answer | undefined] }>();
+
+// the task of the number the explainer gives; "Neue Aufgabe" mounts the component afresh with another
 
 const task = computed(() => generate(props.seed));
 const text = computed(() => describe(task.value, props, props.language).task);
 const answer = ref<Answer>({ protons: 0, neutrons: 0, electrons: 0 });
-
-watch(
-  () => props.seed,
-  () => {
-    answer.value = { protons: 0, neutrons: 0, electrons: 0 };
-  },
-);
 
 type Kind = keyof Answer;
 const kinds: Kind[] = ["protons", "neutrons", "electrons"];
 
 function change(kind: Kind, step: number) {
   const next = answer.value[kind] + step;
-  if (next >= 0 && next <= MAXIMUM) answer.value = { ...answer.value, [kind]: next };
+  if (next < 0 || next > MAXIMUM) return;
+  answer.value = { ...answer.value, [kind]: next };
+  emit("answer", { ...answer.value });
 }
 
 const rings = computed(() => shells(answer.value.electrons));
@@ -54,12 +53,6 @@ function nucleusPlaces(total: number, offset: number) {
     const radius = 3 + Math.sqrt(index + offset) * 2.2;
     return { x: 80 + radius * Math.cos(angle), y: 80 + radius * Math.sin(angle) };
   });
-}
-
-function verify() {
-  const correct = check(task.value, answer.value);
-  const why = reason(task.value, answer.value, props.language === "en" ? "en" : "de");
-  emit("answered", correct ? { correct } : { correct, reason: why });
 }
 </script>
 
@@ -107,7 +100,6 @@ function verify() {
       <button type="button" :aria-label="`${labels[kind]}: ${labels.fewer}`" @click="change(kind, -1)">−</button>
       <button type="button" :aria-label="`${labels[kind]}: ${labels.more}`" @click="change(kind, 1)">+</button>
     </div>
-    <button type="button" class="atom-builder-check" @click="verify">{{ labels.check }}</button>
   </div>
 </template>
 
@@ -133,9 +125,6 @@ function verify() {
 }
 .atom-builder-row button {
   min-width: 2.75rem;
-  min-height: 2.75rem;
-}
-.atom-builder-check {
   min-height: 2.75rem;
 }
 </style>

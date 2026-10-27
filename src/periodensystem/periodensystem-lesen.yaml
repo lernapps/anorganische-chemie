@@ -342,6 +342,10 @@ blocks:
       de: Übung
       en: Practice
     blocks:
+      - type: text
+        text:
+          de: "**Nach dem Namen:** Finde das Element, dessen Namen du liest."
+          en: "**By name:** Find the element whose name you read."
       - type: vue-component
         component: ElementFinder
         id: element-finden
@@ -353,65 +357,14 @@ blocks:
             promptName:
               de: Tippe auf {name}.
               en: Tap {name}.
-            promptNumber:
-              de: Tippe auf das Element mit der Ordnungszahl {n}.
-              en: Tap the element with atomic number {n}.
-            promptPosition:
-              de: Tippe auf das Element in Periode {period} und Hauptgruppe {group}.
-              en: Tap the element in period {period} and main group {group}.
-            promptGroup:
-              de: Tippe auf alle Elemente der Hauptgruppe {group} ({groupName}).
-              en: Tap all elements of main group {group} ({groupName}).
-            promptOuter:
-              de: Tippe auf ein Element, bei dem die Zahl der Außenelektronen {n} ist.
-              en: Tap an element whose number of outer electrons is {n}.
-            promptKind:
-              de: Tippe auf ein {kind} der Periode {period}.
-              en: Tap a {kind} in period {period}.
             reasonName:
               de: Das ist {name} ({symbol}). Gesucht ist {wantedName}.
               en: That is {name} ({symbol}). You are looking for {wantedName}.
-            reasonNumber:
-              de: "{name} hat die Ordnungszahl {n}. Gesucht ist die Ordnungszahl {wantedN}."
-              en: "{name} has atomic number {n}. You are looking for atomic number {wantedN}."
-            reasonPosition:
-              de: "{name} steht in Periode {period} und Hauptgruppe {group}. Gesucht ist Periode {wantedPeriod}, Hauptgruppe {wantedGroup}."
-              en: "{name} is in period {period} and main group {group}. You are looking for period {wantedPeriod}, main group {wantedGroup}."
-            reasonOuter:
-              de: "Zahl der Außenelektronen bei {name}: {outer}. Gesucht ist {wantedN}."
-              en: "Number of outer electrons of {name}: {outer}. You are looking for {wantedN}."
-            reasonPeriod:
-              de: "{name} steht in Periode {period}. Gesucht ist Periode {wantedPeriod}."
-              en: "{name} is in period {period}. You are looking for period {wantedPeriod}."
-            reasonKind:
-              de: "{name} ist ein {kind}. Gesucht ist ein {wantedKind}."
-              en: "{name} is a {kind}. You are looking for a {wantedKind}."
-            reasonGroup:
-              de: "Zu viel markiert: {extra}. Es fehlen: {missing}."
-              en: "Marked too many: {extra}. Missing: {missing}."
             solutionOne:
               de: "Richtig ist: {names}."
               en: "The right answer is: {names}."
-            solutionSome:
-              de: "Richtig sind zum Beispiel: {names}."
-              en: "Right answers are, for example: {names}."
-            solutionAll:
-              de: "Richtig sind: {names}."
-              en: "The right answers are: {names}."
-            kindMetal:
-              de: Metall
-              en: metal
-            kindNonmetal:
-              de: Nichtmetall
-              en: non-metal
-            check:
-              de: Prüfen
-              en: Check
-            right:
-              de: Richtig!
-              en: Correct!
           elements: { data: elemente }
-          groups:
+          groups: &groups
             - group: 1
               roman:
                 de: I
@@ -470,8 +423,6 @@ blocks:
                 en: Noble gases
           types:
             - name
-            - number
-            - position
         examples:
           accepted:
             - seed: 1
@@ -479,7 +430,7 @@ blocks:
                 - H
             - seed: 2
               answer:
-                - C
+                - O
           rejected:
             - seed: 1
               answer:
@@ -487,6 +438,89 @@ blocks:
             - seed: 2
               answer:
                 - N
+      - type: text
+        text:
+          de: "**Nach der Ordnungszahl:** Finde das Element mit dieser Ordnungszahl."
+          en: "**By atomic number:** Find the element with this atomic number."
+      - type: vue-component
+        component: ElementFinder
+        id: ordnungszahl-finden
+        props:
+          language:
+            de: de
+            en: en
+          labels:
+            promptNumber:
+              de: Tippe auf das Element mit der Ordnungszahl {n}.
+              en: Tap the element with atomic number {n}.
+            reasonNumber:
+              de: "{name} hat die Ordnungszahl {n}. Gesucht ist die Ordnungszahl {wantedN}."
+              en: "{name} has atomic number {n}. You are looking for atomic number {wantedN}."
+            solutionOne:
+              de: "Richtig ist: {names}."
+              en: "The right answer is: {names}."
+          elements: { data: elemente }
+          groups: *groups
+          types:
+            - number
+        examples:
+          accepted:
+            - seed: 1
+              answer:
+                - C
+            - seed: 2
+              answer:
+                - Al
+          rejected:
+            - seed: 1
+              answer:
+                - N
+            - seed: 2
+              answer:
+                - Mg
+      - type: text
+        text:
+          de: "**Nach Periode und Hauptgruppe:** Finde das Element an dieser Stelle der Karte."
+          en: "**By period and main group:** Find the element at this place on the map."
+      - type: vue-component
+        component: ElementFinder
+        id: periode-hauptgruppe-finden
+        props:
+          language:
+            de: de
+            en: en
+          labels:
+            promptPosition:
+              de: Tippe auf das Element in Periode {period} und Hauptgruppe {group}.
+              en: Tap the element in period {period} and main group {group}.
+            reasonPosition:
+              de: "{name} steht in Periode {period} und Hauptgruppe {group}. Gesucht ist Periode {wantedPeriod}, Hauptgruppe {wantedGroup}."
+              en: "{name} is in period {period} and main group {group}. You are looking for period {wantedPeriod}, main group {wantedGroup}."
+            reasonSwapped:
+              de: "{name} steht in Periode {period} und Hauptgruppe {group}: Du hast die beiden Zahlen vertauscht. Die Periode ist die Zeile, die Hauptgruppe die Spalte."
+              en: "{name} is in period {period} and main group {group}: you have swapped the two numbers. The period is the row, the main group the column."
+            solutionOne:
+              de: "Richtig ist: {names}."
+              en: "The right answer is: {names}."
+          elements: { data: elemente }
+          groups: *groups
+          types:
+            - position
+        examples:
+          accepted:
+            - seed: 1
+              answer:
+                - Na
+            - seed: 2
+              answer:
+                - Ar
+          rejected:
+            - seed: 1
+              answer:
+                - Li
+            - seed: 2
+              answer:
+                - Cl
       - type: single-choice
         id: periode-bedeutung
         text:

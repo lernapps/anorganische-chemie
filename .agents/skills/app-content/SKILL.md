@@ -41,9 +41,9 @@ Page and exercise ids (page file, exercise id):
   `src/stoffe/stoffeigenschaften.yaml` (`zustand-bestimmen`, `siedetemperatur-ordnen`, `kupfer-kabel`).
 - `teilchen`: `src/teilchen/teilchenmodell.yaml` (`zustand-beschreibung`, `wasser-fliesst`, `teilchen-groesser`, component
   `ParticleModel`); `src/teilchen/atombau.yaml` (component `AtomBuilder` id `atom-bauen`, `neutronen-berechnen`).
-- `periodensystem`: `periodensystem-lesen.yaml` (`element-finden`, `periode-bedeutung`); `hauptgruppen.yaml`
-  (`hauptgruppe-finden`, `hauptgruppe-brom`); `metalle-nichtmetalle.yaml` (`art-finden`, `metalle-fest`,
-  `metall-eigenschaft`, `bor-halbmetall`).
+- `periodensystem`: `periodensystem-lesen.yaml` (`element-finden`, `ordnungszahl-finden`, `periode-hauptgruppe-finden`,
+  `periode-bedeutung`); `hauptgruppen.yaml` (`hauptgruppe-finden`, `aussenelektronen-finden`, `platz-finden`,
+  `hauptgruppe-brom`); `metalle-nichtmetalle.yaml` (`art-finden`, `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
 - `reaktionen`: `symbole-formeln.yaml` (`symbol-zuordnen`, `atome-ammoniak`, `atome-methan`); `reaktionen.yaml`
   (`vorgang-art`, `atome-entstehen`, `sicheres-zeichen`); `reaktionsgleichungen.yaml` (`koeffizient-wasser`,
   `koeffizient-magnesium`, `koeffizient-ammoniak`, `koeffizient-methan`, `gleichung-schritte`).
@@ -94,13 +94,19 @@ Page and exercise ids (page file, exercise id):
 - Ablesen: `generated` with `given: { e: { pick: 1, from: { data: elemente } } }` and `compare: number` or
   `{ choice: [...] }` (`zustand-bestimmen`). A mistake may not equal the answer for any record, so some have none; the hint
   then says where to look.
-- Finden: component `ElementFinder` (exercise) on the map of the 44 elements (`element-finden`, `hauptgruppe-finden`,
-  `art-finden`): task types `name`, `number`, `position` (period and main group), `group` (tap all elements of a main group),
-  `outer` (any element with n outer electrons), `kind` (a metal or non-metal of a period). The block's prop `types` lists the types
-  the page uses; the task number picks type and element. It checks the property, not one model solution. Cells are neutral grey, so
-  the map never shows the answer. Borderline elements are never an answer. Number words avoid plural errors: the prompt says
-  "die Zahl der Außenelektronen ist n". A new task type is one more entry in `ElementFinder.ts` (case in `generate`, `taskText`,
-  `reason`), its label texts in the block's `labels`, and a test.
+- Finden: component `ElementFinder` (exercise) on the map of the 44 elements: task types `name`, `number`, `position` (period
+  and main group), `group` (tap all elements of a main group), `outer` (any element with n outer electrons), `kind` (a metal or
+  non-metal of a period). One block per task type (creator's decision, so that the tutor gets one task text per exercise): its
+  prop `types` names exactly one type, and `labels` holds only the texts of that type (prompt, reason, solution texts; `kind` also
+  `kindMetal`, `kindNonmetal`); the page lists the blocks in `uebung`, each after a one-line text "**Nach …:** …" saying what it
+  practises; the `groups` list is written once per page with a YAML anchor (`groups: &groups`, then `groups: *groups`). Blocks:
+  `element-finden` (name), `ordnungszahl-finden` (number), `periode-hauptgruppe-finden` (position) on `periodensystem-lesen`;
+  `hauptgruppe-finden` (group), `aussenelektronen-finden` (outer), `platz-finden` (position) on `hauptgruppen`; `art-finden`
+  (kind) on `metalle-nichtmetalle`. The task number picks the element, group, number or kind (44, 8, 8 or 12 tasks). It checks
+  the property, not one model solution. Cells are neutral grey, so the map never shows the answer. Borderline elements are never
+  an answer. Number words avoid plural errors: the prompt says "die Zahl der Außenelektronen ist n". A new task type is one more
+  entry in `ElementFinder.ts` (case in `generate`, `params`, `reason`, its prompt in `PROMPTS`), its label texts in a new block's
+  `labels`, its examples, and a test.
 - Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
 - Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
@@ -188,8 +194,12 @@ Page and exercise ids (page file, exercise id):
 - Names of functions and variables in components must not be browser globals (`prompt`, `alert`, `location`, …): the build
   rejects them outside `onMounted` (rule `vue-component-browser-globals`). The rule also flags a local function named `prompt`.
 - A prop with a literal-union array type must be written inline in the `defineProps` (`("a" | "b")[]`); a local alias is not accepted.
-- Exercise components emit `answered` and the page shows the feedback and the reason; the component must not show its own
-  feedback line (it appeared twice in `AtomBuilder`).
+- Exercise components are only the input of their task (runtime from lernapps/app-templates#86 on): they emit `answer` with
+  the learner's answer each time it changes (`undefined` while there is none), have no "Prüfen" button and no `<form>` of their
+  own, and the explainer checks, shows the feedback and the reason (`reason(task, answer, props, lang)`, `undefined` for a right
+  answer). The component must not show its own feedback line (it appeared twice in `AtomBuilder`). Their logic also exports
+  `template`, `params`, `mistakes` and `show` for the tutor's table; `mistakes` gives only fixed wrong answers (`AtomBuilder`:
+  the mass number as neutrons), `undefined` for a mistake that is many answers.
 - Every `generated` exercise sets `practice`, the sentence above its live task, naming what changes ("… mit immer neuen Elementen:",
   "… mit immer neuen Stoffen:"), in both languages. The worked tasks with solutions stay hidden with JavaScript (the template's
   default `workedTasks: without-javascript`); do not set `workedTasks: always`.

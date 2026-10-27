@@ -5,10 +5,14 @@ import {
   count,
   describe as describeTask,
   generate,
+  mistakes,
   neutronsOf,
+  params,
   reason,
   shells,
+  show,
   solution,
+  template,
   wrong,
 } from "./AtomBuilder.ts";
 
@@ -32,15 +36,16 @@ describe("check", () => {
 
   it("rejects the typical mistakes, each with its reason", () => {
     expect(check(carbon, { protons: 6, neutrons: 6, electrons: 7 })).toBe(false);
-    expect(reason(carbon, { protons: 6, neutrons: 6, electrons: 7 }, "de")).toContain("neutral");
+    expect(reason(carbon, { protons: 6, neutrons: 6, electrons: 7 }, {}, "de")).toContain("neutral");
     expect(check(carbon, { protons: 6, neutrons: 12, electrons: 6 })).toBe(false);
-    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 }, "de")).toContain("12 − 6 = 6");
-    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 }, "de")).toContain("6 Protonen");
+    expect(reason(carbon, { protons: 6, neutrons: 12, electrons: 6 }, {}, "de")).toContain("Zieh die Protonen");
+    expect(reason(carbon, { protons: 6, neutrons: 7, electrons: 6 }, {}, "de")).toContain("Rechne noch einmal");
+    expect(reason(carbon, { protons: 5, neutrons: 6, electrons: 5 }, {}, "de")).toContain("Ordnungszahl Kohlenstoff");
     expect(check(carbon, wrong(carbon))).toBe(false);
   });
 
   it("has no reason for a right answer", () => {
-    expect(reason(carbon, solution(carbon), "de")).toBe("");
+    expect(reason(carbon, solution(carbon), {}, "de")).toBeUndefined();
   });
 });
 
@@ -57,7 +62,8 @@ describe("count", () => {
     const hydrogen = generate(1);
     expect(describeTask(hydrogen, {}, "de").solution).toBe("Wasserstoff hat 1 Proton, 0 Neutronen und 1 Elektron.");
     expect(describeTask(hydrogen, {}, "en").solution).toBe("Hydrogen has 1 proton, 0 neutrons and 1 electron.");
-    expect(reason(hydrogen, { protons: 2, neutrons: 0, electrons: 2 }, "de")).toContain("hat 1 Proton.");
+    // the message says where to look, not the number itself
+    expect(reason(hydrogen, { protons: 2, neutrons: 0, electrons: 2 }, {}, "de")).not.toContain("1 Proton");
   });
 });
 
@@ -84,8 +90,43 @@ describe("describe and about", () => {
     const english = describeTask(generate(6), {}, "en");
     expect(english.task).toContain("Carbon");
     expect(english.solution).toBe("Carbon has 6 protons, 6 neutrons and 6 electrons.");
-    expect(reason(generate(6), { protons: 6, neutrons: 6, electrons: 7 }, "en")).toContain("neutral");
+    expect(reason(generate(6), { protons: 6, neutrons: 6, electrons: 7 }, {}, "en")).toContain("neutral");
     expect(about.mistakes.length).toBeGreaterThan(0);
     expect(about.task.en).not.toBe("");
+  });
+});
+
+describe("for a tutor", () => {
+  it("gives the task once, with what sets it, and the atomic number hidden", () => {
+    for (const lang of ["de", "en"]) {
+      for (let seed = 1; seed <= 10; seed++) {
+        const task = generate(seed);
+        let text = template({}, lang);
+        const values = params(task, {}, lang);
+        for (const [name, value] of Object.entries(values)) text = text.replace(`{${name}}`, String(value));
+        expect(text).toBe(describeTask(task, {}, lang).task);
+        expect(template({}, lang)).not.toContain("{Z}");
+        expect(values["Z"]).toBe(task.protons);
+      }
+    }
+  });
+
+  it("has one answer per typical mistake, each rejected, and the mass number as neutrons among them", () => {
+    for (let seed = 1; seed <= 10; seed++) {
+      const task = generate(seed);
+      const answers = mistakes(task);
+      expect(answers).toHaveLength(about.mistakes.length);
+      for (const answer of answers) if (answer !== undefined) expect(check(task, answer)).toBe(false);
+    }
+    expect(mistakes(generate(6))[1]).toEqual({ protons: 6, neutrons: 12, electrons: 6 });
+  });
+
+  it("shows an answer as the learner says it", () => {
+    expect(show({ protons: 6, neutrons: 6, electrons: 7 }, generate(6), {}, "de")).toBe(
+      "6 Protonen, 6 Neutronen, 7 Elektronen",
+    );
+    expect(show({ protons: 1, neutrons: 0, electrons: 1 }, generate(1), {}, "en")).toBe(
+      "1 proton, 0 neutrons, 1 electron",
+    );
   });
 });

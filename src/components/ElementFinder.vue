@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, watch } from "vue";
+// The map of the 44 main-group elements, on which the learner taps the element or elements the task of the number
+// seed asks for; its logic is in ElementFinder.ts, and each block has one task type. It is the input of the task: it
+// emits the symbols marked with answer (undefined while none is), and the explainer draws "Prüfen", checks them and
+// gives the feedback with the app's message.
+import { computed, ref } from "vue";
 import { GROUPS, EDGE_COLOR, TEXT_COLOR, matrix, move, placeOf, type Direction } from "./PeriodicTable.ts";
-import { check, describe, generate, reason } from "./ElementFinder.ts";
+import { generate, taskText } from "./ElementFinder.ts";
 
 type Element = {
   symbol: string;
@@ -18,48 +22,42 @@ const props = defineProps<{
   seed: number;
   language: string;
   labels: {
-    promptName: string;
-    promptNumber: string;
-    promptPosition: string;
-    promptGroup: string;
-    promptOuter: string;
-    promptKind: string;
-    reasonName: string;
-    reasonNumber: string;
-    reasonPosition: string;
-    reasonOuter: string;
-    reasonPeriod: string;
-    reasonKind: string;
-    reasonGroup: string;
-    solutionOne: string;
-    solutionSome: string;
-    solutionAll: string;
-    kindMetal: string;
-    kindNonmetal: string;
-    check: string;
-    right: string;
+    promptName?: string;
+    promptNumber?: string;
+    promptPosition?: string;
+    promptGroup?: string;
+    promptOuter?: string;
+    promptKind?: string;
+    reasonName?: string;
+    reasonNumber?: string;
+    reasonPosition?: string;
+    reasonSwapped?: string;
+    reasonOuter?: string;
+    reasonPeriod?: string;
+    reasonKind?: string;
+    reasonGroup?: string;
+    solutionOne?: string;
+    solutionSome?: string;
+    solutionAll?: string;
+    kindMetal?: string;
+    kindNonmetal?: string;
   };
   elements: Element[];
   groups: { group: number; roman: string; name: string }[];
+  /** The one task type of the block. */
   types: ("name" | "number" | "position" | "group" | "outer" | "kind")[];
 }>();
 
-const emit = defineEmits<{ answered: [result: { correct: boolean; reason?: string }] }>();
+const emit = defineEmits<{ answer: [symbols: string[] | undefined] }>();
 
+// the task of the number the explainer gives; "Neue Aufgabe" mounts the component afresh with another
 const task = computed(() => generate(props.seed, props));
-const text = computed(() => describe(task.value, props, props.language).task);
+const text = computed(() => taskText(task.value, props));
 const grid = computed(() => matrix(props.elements));
 const marked = ref<string[]>([]);
 const focusSymbol = ref<string>(props.elements[0]?.symbol ?? "");
 const buttons = new Map<string, HTMLButtonElement>();
 const romanOf = (group: number) => props.groups.find((info) => info.group === group)?.roman ?? "";
-
-watch(
-  () => props.seed,
-  () => {
-    marked.value = [];
-  },
-);
 
 function remember(symbol: string, element: unknown) {
   if (element instanceof HTMLButtonElement) buttons.set(symbol, element);
@@ -75,6 +73,7 @@ function tap(symbol: string) {
   } else {
     marked.value = marked.value[0] === symbol ? [] : [symbol];
   }
+  emit("answer", marked.value.length === 0 ? undefined : [...marked.value]);
 }
 
 function keydown(event: KeyboardEvent, element: Element) {
@@ -87,11 +86,6 @@ function keydown(event: KeyboardEvent, element: Element) {
     focusSymbol.value = next.symbol;
     buttons.get(next.symbol)?.focus();
   }
-}
-
-function verify() {
-  const correct = check(task.value, marked.value);
-  emit("answered", correct ? { correct } : { correct, reason: reason(task.value, marked.value, props) });
 }
 </script>
 
@@ -124,9 +118,6 @@ function verify() {
         </template>
       </template>
     </div>
-    <p class="ef-check">
-      <button type="button" class="ef-check-button" @click="verify">{{ labels.check }}</button>
-    </p>
   </div>
 </template>
 
@@ -170,8 +161,7 @@ function verify() {
   background: #bfdbfe;
   border-width: 3px;
 }
-.ef-cell:focus-visible,
-.ef-check-button:focus-visible {
+.ef-cell:focus-visible {
   outline: 3px solid #1d4ed8;
   outline-offset: 2px;
 }
@@ -196,14 +186,5 @@ function verify() {
 .ef-symbol {
   font-size: 0.9375rem;
   font-weight: 700;
-}
-.ef-check {
-  margin: 0;
-}
-.ef-check-button {
-  min-height: 2.75rem;
-  padding: 0.5rem 1.25rem;
-  font: inherit;
-  cursor: pointer;
 }
 </style>

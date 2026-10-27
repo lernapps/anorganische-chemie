@@ -17,35 +17,41 @@ export interface GroupInfo {
   name: string;
 }
 
+/**
+ * The texts of a block. Each block has one task type and gives the texts it needs: the prompt and the reason of its
+ * type, the solution texts, and for `kind` the names of the kinds; reasonGroup also serves as the message when a
+ * single-element task gets no or several elements.
+ */
 export interface Labels {
-  promptName: string;
-  promptNumber: string;
-  promptPosition: string;
-  promptGroup: string;
-  promptOuter: string;
-  promptKind: string;
-  reasonName: string;
-  reasonNumber: string;
-  reasonPosition: string;
-  reasonOuter: string;
-  reasonPeriod: string;
-  reasonKind: string;
-  reasonGroup: string;
-  solutionOne: string;
-  solutionSome: string;
-  solutionAll: string;
-  kindMetal: string;
-  kindNonmetal: string;
-  check: string;
-  right: string;
+  promptName?: string;
+  promptNumber?: string;
+  promptPosition?: string;
+  promptGroup?: string;
+  promptOuter?: string;
+  promptKind?: string;
+  reasonName?: string;
+  reasonNumber?: string;
+  reasonPosition?: string;
+  /** For position: the element with period and main group the other way round. */
+  reasonSwapped?: string;
+  reasonOuter?: string;
+  reasonPeriod?: string;
+  reasonKind?: string;
+  reasonGroup?: string;
+  solutionOne?: string;
+  solutionSome?: string;
+  solutionAll?: string;
+  kindMetal?: string;
+  kindNonmetal?: string;
 }
 
 export interface Props {
-  seed: number;
+  seed?: number;
   language: string;
   labels: Labels;
   elements: Element[];
   groups: GroupInfo[];
+  /** The one task type of the block. */
   types: TaskType[];
 }
 
@@ -93,26 +99,51 @@ function wrongFor(elements: readonly Element[], target: readonly string[], start
   throw new Error("every element is a right answer");
 }
 
-/** The task of a seed: the types in turn, each with another element, group, number or period. */
+/**
+ * Where the tasks of each type start, so that the blocks of one page start with different elements: the offsets the
+ * types had when one block mixed them (5 for the second type of a page, 10 for the third).
+ */
+const START: Readonly<Record<TaskType, number>> = { name: 0, number: 5, position: 10, group: 0, outer: 5, kind: 0 };
+
+/** The one task type of a block: its `types` must name exactly one, so that every task of the block reads alike. */
+export function typeOf(props: Pick<Props, "types">): TaskType {
+  const [type, ...more] = props.types;
+  if (type === undefined || more.length > 0) {
+    throw new Error(`ElementFinder takes exactly one task type in types, not ${JSON.stringify(props.types)}`);
+  }
+  return type;
+}
+
+/** A text of the block's labels, which its task type needs. */
+function label(labels: Labels, key: keyof Labels): string {
+  const text = labels[key];
+  if (text === undefined || text.trim() === "") throw new Error(`the block's labels have no ${key}`);
+  return text;
+}
+
+/** The task of a seed: another element, group, number or period of the block's task type for each seed. */
 export function generate(seed: number, props: Pick<Props, "elements" | "types">): Task {
-  const { elements, types } = props;
-  const typeIndex = (seed - 1) % types.length;
-  const round = Math.floor((seed - 1) / types.length);
-  const type = need(types[typeIndex], "task type");
+  const { elements } = props;
+  const type = typeOf(props);
+  const round = seed - 1;
   const sorted = byNumber(elements);
-  const pick = (length: number) => (round * 7 + typeIndex * 5) % length;
+  // 7 has no factor in common with 44 elements, 8 groups, 8 numbers of outer electrons or 12 kinds and periods, so
+  // the seeds go through all of them before one comes again; the task depends on the pick alone, so that a block has
+  // as many task numbers as it has different tasks
+  let index = 0;
+  const pick = (length: number) => (index = (round * 7 + START[type]) % length);
 
   if (type === "group") {
     const groups = [...new Set(sorted.map((element) => element.group))].sort((a, b) => a - b);
     const group = need(groups[pick(groups.length)], "group");
     const target = symbolsWhere(elements, (element) => element.group === group);
-    return { type, multi: true, target, group, wrongSymbol: wrongFor(elements, target, round + 3) };
+    return { type, multi: true, target, group, wrongSymbol: wrongFor(elements, target, index + 3) };
   }
   if (type === "outer") {
     const values = [...new Set(sorted.map((element) => element.outer))].sort((a, b) => a - b);
     const n = need(values[pick(values.length)], "number of outer electrons");
     const target = symbolsWhere(elements, (element) => element.outer === n);
-    return { type, multi: false, target, n, wrongSymbol: wrongFor(elements, target, round + 5) };
+    return { type, multi: false, target, n, wrongSymbol: wrongFor(elements, target, index + 5) };
   }
   if (type === "kind") {
     const pairs: { kindId: string; period: number }[] = [];
@@ -124,7 +155,7 @@ export function generate(seed: number, props: Pick<Props, "elements" | "types">)
     }
     const { kindId, period } = need(pairs[pick(pairs.length)], "kind and period");
     const target = symbolsWhere(elements, (element) => element.kindId === kindId && element.period === period);
-    return { type, multi: false, target, kindId, period, wrongSymbol: wrongFor(elements, target, round + 7) };
+    return { type, multi: false, target, kindId, period, wrongSymbol: wrongFor(elements, target, index + 7) };
   }
   const element = need(sorted[pick(sorted.length)], "element");
   const target = [element.symbol];
@@ -162,56 +193,98 @@ const roman = (groups: readonly GroupInfo[], group: number) =>
 const groupName = (groups: readonly GroupInfo[], group: number) =>
   groups.find((info) => info.group === group)?.name ?? "";
 const find = (elements: readonly Element[], symbol: string) => elements.find((element) => element.symbol === symbol);
+/** The main group I to VIII of an IUPAC group 1, 2, 13 to 18, as a number. */
+const mainOf = (group: number) => (group <= 2 ? group : group - 10);
+/** The IUPAC group of a main group 1 to 8. */
+const groupOf = (main: number) => (main <= 2 ? main : main + 10);
 
-/** The task as the learner reads it. */
-export function taskText(task: Task, props: Pick<Props, "elements" | "groups" | "labels">): string {
+/**
+ * For a task of the type position: the element in the period the task's main group names and the main group its
+ * period names, the two numbers the other way round; undefined when there is none or it is the element asked for.
+ */
+function swapped(task: Task, elements: readonly Element[]): Element | undefined {
+  if (task.type !== "position" || task.period === undefined || task.group === undefined) return undefined;
+  const period = mainOf(task.group);
+  const group = groupOf(task.period);
+  const element = elements.find((candidate) => candidate.period === period && candidate.group === group);
+  return element === undefined || task.target.includes(element.symbol) ? undefined : element;
+}
+
+/** The props that the texts of a task need. */
+type TextProps = Pick<Props, "elements" | "groups" | "labels" | "types">;
+
+/** The prompt of each task type in the block's labels. */
+const PROMPTS: Readonly<Record<TaskType, keyof Labels>> = {
+  name: "promptName",
+  number: "promptNumber",
+  position: "promptPosition",
+  group: "promptGroup",
+  outer: "promptOuter",
+  kind: "promptKind",
+};
+
+/** The name of the asked kind, as the block's labels give it. */
+const kindName = (labels: Labels, kindId: string | undefined) =>
+  label(labels, kindId === "metall" ? "kindMetal" : "kindNonmetal");
+
+/**
+ * The task as a learner reads it, for a tutor: the prompt of the block's one task type, with {name} for what sets a
+ * task, which params gives.
+ */
+export function template(props: Pick<Props, "labels" | "types">, _lang?: string): string {
+  return label(props.labels, PROMPTS[typeOf(props)]);
+}
+
+/**
+ * What sets a task, by the names of the prompt's placeholders: the element's name, the atomic number, the period and
+ * main group, the main group and its name, the number of outer electrons, or the kind and the period. The same names
+ * for every task of a block, since a block has one task type.
+ */
+export function params(task: Task, props: TextProps, _lang?: string): Record<string, string | number> {
   const { labels, elements, groups } = props;
-  const target = find(elements, need(task.target[0], "right answer"));
   switch (task.type) {
     case "name":
-      return fill(labels.promptName, { name: target?.name ?? "" });
+      return { name: need(find(elements, need(task.symbol, "element")), "element").name };
     case "number":
-      return fill(labels.promptNumber, { n: need(task.n, "number") });
+    case "outer":
+      return { n: need(task.n, "number") };
     case "position":
-      return fill(labels.promptPosition, {
-        period: need(task.period, "period"),
-        group: roman(groups, need(task.group, "group")),
-      });
+      return { period: need(task.period, "period"), group: roman(groups, need(task.group, "group")) };
     case "group": {
       const group = need(task.group, "group");
-      return fill(labels.promptGroup, { group: roman(groups, group), groupName: groupName(groups, group) });
+      return { group: roman(groups, group), groupName: groupName(groups, group) };
     }
-    case "outer":
-      return fill(labels.promptOuter, { n: need(task.n, "number of outer electrons") });
     case "kind":
-      return fill(labels.promptKind, {
-        kind: task.kindId === "metall" ? labels.kindMetal : labels.kindNonmetal,
-        period: need(task.period, "period"),
-      });
+      return { kind: kindName(labels, task.kindId), period: need(task.period, "period") };
   }
 }
 
-/** Why an answer is wrong, the most specific reason first; empty when it is right. */
-export function reason(
-  task: Task,
-  answer: readonly string[],
-  props: Pick<Props, "elements" | "groups" | "labels">,
-): string {
-  if (check(task, answer)) return "";
+/** The task as the learner reads it. */
+export function taskText(task: Task, props: TextProps): string {
+  return fill(template(props), params(task, props));
+}
+
+/** The app's message for a wrong answer, the most specific reason first; undefined for a right one. */
+export function reason(task: Task, answer: readonly string[], props: TextProps, _lang?: string): string | undefined {
+  if (check(task, answer)) return undefined;
   const { labels, elements, groups } = props;
   const names = (symbols: readonly string[]) =>
     symbols.map((symbol) => find(elements, symbol)?.name ?? symbol).join(", ");
+  const several = (extra: readonly string[], missing: readonly string[]) =>
+    labels.reasonGroup === undefined
+      ? undefined
+      : fill(labels.reasonGroup, {
+          extra: extra.length === 0 ? "–" : names(extra),
+          missing: missing.length === 0 ? "–" : names(missing),
+        });
   if (task.type === "group") {
-    const extra = answer.filter((symbol) => !task.target.includes(symbol));
-    const missing = task.target.filter((symbol) => !answer.includes(symbol));
-    return fill(labels.reasonGroup, {
-      extra: extra.length === 0 ? "–" : names(extra),
-      missing: missing.length === 0 ? "–" : names(missing),
-    });
+    return several(
+      answer.filter((symbol) => !task.target.includes(symbol)),
+      task.target.filter((symbol) => !answer.includes(symbol)),
+    );
   }
   const tapped = find(elements, answer[0] ?? "");
-  if (answer.length !== 1 || tapped === undefined)
-    return fill(labels.reasonGroup, { extra: names(answer), missing: names(solution(task)) });
+  if (answer.length !== 1 || tapped === undefined) return several(answer, solution(task));
   const values = {
     name: tapped.name,
     symbol: tapped.symbol,
@@ -224,44 +297,65 @@ export function reason(
     wantedPeriod: task.period ?? "",
     wantedGroup: task.group === undefined ? "" : roman(groups, task.group),
     wantedName: find(elements, task.symbol ?? "")?.name ?? "",
-    wantedKind: task.kindId === "metall" ? labels.kindMetal : labels.kindNonmetal,
+    wantedKind: task.type === "kind" ? kindName(labels, task.kindId) : "",
   };
   switch (task.type) {
     case "name":
-      return fill(labels.reasonName, values);
+      return fill(label(labels, "reasonName"), values);
     case "number":
-      return fill(labels.reasonNumber, values);
+      return fill(label(labels, "reasonNumber"), values);
     case "position":
-      return fill(labels.reasonPosition, values);
+      return swapped(task, elements)?.symbol === tapped.symbol && labels.reasonSwapped !== undefined
+        ? fill(labels.reasonSwapped, values)
+        : fill(label(labels, "reasonPosition"), values);
     case "outer":
-      return fill(labels.reasonOuter, values);
+      return fill(label(labels, "reasonOuter"), values);
     case "kind":
-      return tapped.period !== task.period ? fill(labels.reasonPeriod, values) : fill(labels.reasonKind, values);
+      return tapped.period !== task.period
+        ? fill(label(labels, "reasonPeriod"), values)
+        : fill(label(labels, "reasonKind"), values);
   }
 }
 
-export function describe(task: Task, props: Props, _lang: string): { task: string; solution: string } {
-  const names = task.target
-    .map((symbol) => find(props.elements, symbol))
+/** Elements as the learner names them: "Kohlenstoff (C)", in the order of the symbols. */
+function named(elements: readonly Element[], symbols: readonly string[]): string[] {
+  return symbols
+    .map((symbol) => find(elements, symbol))
     .filter((element): element is Element => element !== undefined)
     .map((element) => `${element.name} (${element.symbol})`);
+}
+
+export function describe(task: Task, props: Props, _lang: string): { task: string; solution: string } {
+  const names = named(props.elements, task.target);
   const shown = names.length > 5 && !task.multi ? `${names.slice(0, 5).join(", ")}, …` : names.join(", ");
-  const template = task.multi
-    ? props.labels.solutionAll
-    : task.target.length > 1
-      ? props.labels.solutionSome
-      : props.labels.solutionOne;
-  return { task: taskText(task, props), solution: fill(template, { names: shown }) };
+  const template = task.multi ? "solutionAll" : task.target.length > 1 ? "solutionSome" : "solutionOne";
+  return { task: taskText(task, props), solution: fill(label(props.labels, template), { names: shown }) };
+}
+
+/**
+ * The answer of each typical mistake of about.mistakes, for a tutor: a wrong element, a group with elements missing or
+ * too many, main group and group number mixed up are each many answers; period and main group the other way round is
+ * one element, when there is one.
+ */
+export function mistakes(task: Task, props: Pick<Props, "elements">): (string[] | undefined)[] {
+  const other = swapped(task, props.elements);
+  return [undefined, undefined, undefined, other === undefined ? undefined : [other.symbol]];
+}
+
+/** An answer as the learner gives it: the elements tapped, "Kohlenstoff (C), Silicium (Si)"; "–" for none. */
+export function show(answer: readonly string[], _task: Task, props: Pick<Props, "elements">, _lang?: string): string {
+  const names = named(props.elements, answer);
+  return names.length === 0 ? "–" : names.join(", ");
 }
 
 export const about = {
   task: {
-    de: "Die Lernenden sehen eine Karte der Elemente der acht Hauptgruppen und tippen das Element oder die Elemente an, die zur Aufgabe passen: nach Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen oder Art (Metall, Nichtmetall) in einer Periode. Dann prüfen sie.",
-    en: "Learners see a map of the elements of the eight main groups and tap the element or elements that fit the task: by name, atomic number, period and main group, all elements of one main group, outer electrons, or kind (metal, non-metal) in one period. Then they check.",
+    de: "Die Lernenden sehen eine Karte der Elemente der acht Hauptgruppen und tippen das Element oder die Elemente an, die zur Aufgabe passen: nach Name, Ordnungszahl, Periode und Hauptgruppe, alle Elemente einer Hauptgruppe, Außenelektronen oder Art (Metall, Nichtmetall) in einer Periode. Jede Übung fragt nach einer dieser Arten.",
+    en: "Learners see a map of the elements of the eight main groups and tap the element or elements that fit the task: by name, atomic number, period and main group, all elements of one main group, outer electrons, or kind (metal, non-metal) in one period. Each exercise asks for one of these kinds of task.",
   },
   answer: {
-    de: "Eine Auswahl von Feldern der Karte: ein Element, oder bei der Aufgabe zu einer Hauptgruppe alle Elemente dieser Gruppe.",
-    en: "A selection of cells of the map: one element, or all elements of the group when the task asks for a main group.",
+    de: "Die Lernenden tippen auf der Karte ein Element an, bei der Aufgabe zu einer Hauptgruppe alle Elemente dieser Gruppe (ein zweites Tippen nimmt die Markierung zurück), und drücken dann „Prüfen“ unter der Karte.",
+    en: "Learners tap one element on the map, or all elements of the group when the task asks for a main group (tapping again removes the mark), and then press “Check” below the map.",
   },
   correct: {
     de: "Das angetippte Element passt zur Eigenschaft der Aufgabe (bei Außenelektronen oder Art genügt irgendein passendes Element). Bei einer Hauptgruppe müssen genau alle ihre Elemente markiert sein.",
@@ -279,6 +373,10 @@ export const about = {
     {
       de: "Gruppennummer (1 bis 18) und Hauptgruppe (I bis VIII) werden verwechselt.",
       en: "The group number (1 to 18) and the main group (I to VIII) are mixed up.",
+    },
+    {
+      de: "Periode und Hauptgruppe vertauscht: angetippt ist das Element in der Periode, die die Hauptgruppe nennt, und in der Hauptgruppe, die die Periode nennt.",
+      en: "Period and main group the other way round: the element tapped is in the period the main group names, and in the main group the period names.",
     },
   ],
 };
