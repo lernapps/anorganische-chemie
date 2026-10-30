@@ -9,8 +9,8 @@
     "prepare": "lernapps hooks"
   },
   "devDependencies": {
-    "@lernapps/app-templates": "github:lernapps/app-templates#a0d58d8922872083b30344a11ce055182f13d370",
-    "@lernapps/tooling": "github:lernapps/tooling#44d82e538b0f7a72f9af1fbb997e4270352fa32e",
+    "@lernapps/app-templates": "github:lernapps/app-templates#222341f2c9f5ad8eebff7f0fd85da286ab8fe7b7",
+    "@lernapps/tooling": "github:lernapps/tooling#7cf7e41b661f33515ae57b4b832791fefc3023e0",
     "typescript": "6.0.3",
     "vite-plus": "1.0.0",
     "vue-tsc": "3.3.11"
