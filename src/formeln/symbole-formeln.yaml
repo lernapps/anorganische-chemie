@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Symbole und Formeln
   en: Symbols and formulas
 description:
   de: Jedes Element hat ein Symbol, jede Verbindung eine Formel. So liest und schreibst du sie.
   en: Every element has a symbol, every compound a formula. This is how you read and write them.
+competencies: [symbole-der-elemente, formeln-von-verbindungen]
 blocks:
   - type: section
     id: warum

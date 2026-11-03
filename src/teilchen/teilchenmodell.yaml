@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Teilchenmodell
   en: Particle model
 description:
   de: Stoffe bestehen aus winzigen Teilchen. So erklärst du fest, flüssig und gasförmig.
   en: Substances consist of tiny particles. This is how you explain solid, liquid and gaseous.
+competencies: [teilchenmodell, aggregatzustaende-mit-teilchenmodell]
 blocks:
   - type: section
     id: warum

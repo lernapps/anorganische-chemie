@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Metalle und Nichtmetalle
   en: Metals and non-metals
 description:
   de: "Metalle, Nichtmetalle und Grenzfälle auf der Karte: so erkennst du sie an Eigenschaften und Platz."
   en: "Metals, non-metals and borderline cases on the map: this is how you recognise them by properties and place."
+competencies: [metalle-und-nichtmetalle]
 blocks:
   - type: section
     id: warum

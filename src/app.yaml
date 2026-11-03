@@ -1,13 +1,15 @@
-# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+format: 2
+strand: chemie/stoffe-und-teilchen
 title:
   de: Anorganische Chemie – Einstieg
   en: Inorganic chemistry – first steps
 intro:
   de: |
-    Woraus bestehen Stoffe? Du lernst Reinstoffe und Gemische kennen, baust Atome, liest das Periodensystem und stellst einfache Reaktionsgleichungen auf. Auf jeder Seite übst du selbst.
+    Woraus bestehen Stoffe? Du lernst Reinstoffe und Gemische kennen, baust Atome, liest das Periodensystem und schreibst Elemente und Verbindungen mit Symbolen und Formeln. Auf jeder Seite übst du selbst.
     Für die unteren Klassenstufen (Klasse 7 und 8).
   en: |
-    What are substances made of? You learn about pure substances and mixtures, build atoms, read the periodic table and write simple reaction equations. You practise on every page.
+    What are substances made of? You learn about pure substances and mixtures, build atoms, read the periodic table and write elements and compounds with symbols and formulas. You practise on every page.
     For the lower grades (grades 7 and 8).
 languages:
   - de
@@ -16,7 +18,7 @@ chapters:
   - stoffe
   - teilchen
   - periodensystem
-  - reaktionen
+  - formeln
 sources:
   - title:
       de: Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (KMK, 2004)

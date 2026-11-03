@@ -6,14 +6,15 @@ description: Use for any content work in this app - researching, writing, extend
 # Content guide of this app
 
 Explainer "Anorganische Chemie – Einstieg" (de, en) for Klasse 7/8 (assumption of the creator, not fixed by a Lehrplan).
-Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen vertieft): issue #1.
+Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen): issue #1. Die Reaktionsseiten stehen in der App
+chemie-reaktionen (Strang `chemie/chemische-reaktion`, Plan `.vibe/plans/04-reaktionen-abgeben.md`).
 
 ## Curriculum
 
 - Schulform, Land: none (creator wants no Landeslehrplan). Jahrgang: Klasse 7/8 (assumption).
 - Orientation: KMK, Bildungsstandards im Fach Chemie für den Mittleren Schulabschluss (Jahrgangsstufe 10), Beschluss
   vom 16.12.2004, https://www.kmk.org/fileadmin/Dateien/veroeffentlichungen_beschluesse/2004/2004_12_16-Bildungsstandards-Chemie.pdf.
-  Used: F 1.1–1.3, F 2.1–2.3, F 3.1, F 3.4, E 7. The standards end at Klasse 10; order and depth for Klasse 7/8 are
+  Used: F 1.1–1.3, F 2.1–2.3, F 3.1, E 7. The standards end at Klasse 10; order and depth for Klasse 7/8 are
   derived by us, not quoted from a Lehrplan.
 - The creator's own material: none. The app follows the competencies below.
 
@@ -31,10 +32,8 @@ Plan: `.vibe/plans/01-anorganische-chemie.md`. Extensions (Bindungen, Reaktionen
    - Ich kann aus dem Periodensystem Ordnungszahl und Elementsymbol ablesen.
    - Ich kann Elemente einer Gruppe oder Periode zuordnen.
    - Ich kann Metalle und Nichtmetalle unterscheiden.
-4. Kapitel `reaktionen` (Formeln und Reaktionen), KMK F 3.1, F 3.4
+4. Kapitel `formeln` (Symbole und Formeln), KMK F 3.1
    - Ich kann Elemente und einfache Verbindungen mit Symbolen und Formeln schreiben.
-   - Ich kann eine chemische Reaktion von einer physikalischen Veränderung unterscheiden.
-   - Ich kann eine einfache Reaktionsgleichung mit Atomerhaltung aufstellen.
 
 Page and exercise ids (page file, exercise id):
 - `stoffe`: `src/stoffe/reinstoffe-gemische.yaml` (`gemische-finden`, `salzwasser-reinstoff`);
@@ -44,16 +43,13 @@ Page and exercise ids (page file, exercise id):
 - `periodensystem`: `periodensystem-lesen.yaml` (`element-finden`, `ordnungszahl-finden`, `periode-hauptgruppe-finden`,
   `periode-bedeutung`); `hauptgruppen.yaml` (`hauptgruppe-finden`, `aussenelektronen-finden`, `platz-finden`,
   `hauptgruppe-brom`); `metalle-nichtmetalle.yaml` (`art-finden`, `metalle-fest`, `metall-eigenschaft`, `bor-halbmetall`).
-- `reaktionen`: `symbole-formeln.yaml` (`symbol-zuordnen`, `atome-ammoniak`, `atome-methan`); `reaktionen.yaml`
-  (`vorgang-art`, `atome-entstehen`, `sicheres-zeichen`); `reaktionsgleichungen.yaml` (`koeffizient-wasser`,
-  `koeffizient-magnesium`, `koeffizient-ammoniak`, `koeffizient-methan`, `gleichung-schritte`).
+- `formeln`: `symbole-formeln.yaml` (`symbol-zuordnen`, `atome-ammoniak`, `atome-methan`).
 
 ## Content structure
 
 - Chapter folder `src/<chapter>/` with `chapter.yaml` (title, summary, pages), listed in `src/app.yaml`.
 - Chapters and pages: `stoffe` (`reinstoffe-gemische`, `stoffeigenschaften`); `teilchen` (`teilchenmodell`, `atombau`);
-  `periodensystem` (`periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle`); `reaktionen` (`symbole-formeln`,
-  `reaktionen`, `reaktionsgleichungen`).
+  `periodensystem` (`periodensystem-lesen`, `hauptgruppen`, `metalle-nichtmetalle`); `formeln` (`symbole-formeln`).
 - Every page has the sections in this order and with these ids: `warum`, `regel`, `beispiel` (a box `example`),
   `uebung`. Titles: Warum, Regel, Beispiel, Übung (English: Why, Rule, Example, Practice). Every page has at least one
   exercise in `uebung`.
@@ -77,7 +73,7 @@ Page and exercise ids (page file, exercise id):
 - Learners are addressed with "du". Short sentences, active voice, technical terms explained at first use and as a
   `definition` block (glossary).
 - Terms: Reinstoff, Gemisch, Teilchenmodell, Atom, Proton, Neutron, Elektron, Elementsymbol, Ordnungszahl, Periode,
-  Gruppe, Metall, Nichtmetall, Verbindung, Formel, Reaktionsgleichung.
+  Gruppe, Metall, Nichtmetall, Verbindung, Formel.
 - Metall/Nichtmetall/Halbmetall: `kindId` is `metall`, `nichtmetall` or `grenzfall`; the exercise only draws clear cases, borderline
   elements (B, Si, Ge, As, Se, Sb, Te, Bi, Po, At) are shown as "Grenzfall (Halbmetall)".
 - Avoid "Molekül" before page `symbole-formeln`; avoid "Ion", "Bindung", "Elektronegativität" (later chapters, issue #1).
@@ -87,8 +83,8 @@ Page and exercise ids (page file, exercise id):
 
 - Zuordnen/Benennen: `matching` (right entries must be different) or `single-choice`; every wrong option has `info`.
   Example: `src/teilchen/teilchenmodell.yaml`, `zustand-beschreibung`. Element symbols: `generated` with
-  `answer.compare: { pairs: { left: name, right: symbol } }`, `src/reaktionen/symbole-formeln.yaml`, `symbol-zuordnen`.
-- Ordnen: `ordering` for a fixed order (`gleichung-schritte`); with data `generated` and `compare: order`
+  `answer.compare: { pairs: { left: name, right: symbol } }`, `src/formeln/symbole-formeln.yaml`, `symbol-zuordnen`.
+- Ordnen: `ordering` for a fixed order; with data `generated` and `compare: order`
   (`siedetemperatur-ordnen`: three drawn records `a`, `b`, `c` with `where` for distinct ones; a list cannot be a
   placeholder).
 - Ablesen: `generated` with `given: { e: { pick: 1, from: { data: elemente } } }` and `compare: number` or
@@ -107,13 +103,9 @@ Page and exercise ids (page file, exercise id):
   an answer. Number words avoid plural errors: the prompt says "die Zahl der Außenelektronen ist n". A new task type is one more
   entry in `ElementFinder.ts` (case in `generate`, `params`, `reason`, its prompt in `PROMPTS`), its label texts in a new block's
   `labels`, its examples, and a test.
-- Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`, `vorgang-art`).
+- Auswählen: `multiple-choice` where several options are right, every option with `info` (`gemische-finden`).
 - Zählen: `number` with `tolerance: 0` and the typical mistakes (`atome-ammoniak`, `atome-methan`).
 - Urteilen: `true-false` with the reason in `explanation` (`metalle-fest`: mercury is a liquid metal).
-- Ausgleichen: a `number` question with the equation and a blank `x` in its text (`x H₂ + O₂ → 2H₂O`, plain Unicode, see
-  "Rules learned"), e.g. `koeffizient-wasser`; the typical
-  mistake per exercise has its message. The equations are fixed in the YAML (a placeholder cannot carry a formula);
-  every equation was checked against a Wikipedia article (water, magnesium oxide, ammonia, methane).
 - Aufbauen: component `AtomBuilder` (exercise, elements 1–10): set protons, neutrons, electrons for a given element;
   checks the property, not one model solution.
 - Entdecken: component `PeriodicTable` (not an exercise), section `entdecken` of the three pages of `periodensystem`: colour map
@@ -150,10 +142,10 @@ Page and exercise ids (page file, exercise id):
 - Second explanations, opened and checked by title: Serlo Chemie (CC BY-SA 4.0), linked only, no sentences copied:
   `https://de.serlo.org/chemie/155713/was-ist-chemie`, `.../155714/grundlagenbegriffe`, `.../155706/stoffe`,
   `.../18902/stoffeigenschaften`, `.../19470/atommodelle`, `.../158240/das-periodensystem-der-elemente`,
-  `.../155738/chemische-zeichensprache`, `.../18885/chemische-reaktionen`. Serlo Chemie is marked "im Aufbau".
+  `.../155738/chemische-zeichensprache`. Serlo Chemie is marked "im Aufbau".
 - Not used: Wikibooks "Anorganische Chemie für Schüler" (licence unclear, GFDL), Bildungsserver link list.
 - Data values and facts: de.wikipedia.org articles opened on 2026-10-18 and named in the comment of each data file
-  (elements, Metalle, Halbmetalle, Nichtmetalle, Hauptgruppe, Reinstoff, Aggregatzustand, Reaktionsgleichung and the
+  (elements, Metalle, Halbmetalle, Nichtmetalle, Hauptgruppe, Reinstoff, Aggregatzustand and the
   articles of the substances in `stoffe.yaml`). Wikipedia is CC BY-SA: facts are taken, no sentences are copied; links
   point to the articles.
 

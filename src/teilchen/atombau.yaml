@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Atombau
   en: Atomic structure
 description:
   de: Atome bestehen aus Protonen, Neutronen und Elektronen. So baust du ein Atom.
   en: Atoms consist of protons, neutrons and electrons. This is how you build an atom.
+competencies: [atombau-bausteine, ordnungszahl-und-massenzahl]
 blocks:
   - type: section
     id: warum
