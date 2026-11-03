@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title:
+  de: Symbole und Formeln
+  en: Symbols and formulas
+summary:
+  de: Du schreibst Elemente und Verbindungen mit Symbolen und Formeln.
+  en: You write elements and compounds with symbols and formulas.
+pages:
+  - symbole-formeln
