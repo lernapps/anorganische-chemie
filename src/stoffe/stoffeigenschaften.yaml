@@ -1,10 +1,17 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Stoffeigenschaften
   en: Properties of substances
 description:
   de: "Aggregatzustand, Schmelz- und Siedetemperatur: Daran erkennst du Stoffe und schließt auf ihre Verwendung."
   en: "State of matter, melting and boiling point: this is how you recognise substances and infer their use."
+competencies:
+  [
+    stoffeigenschaften-beschreiben,
+    aggregatzustaende-beschreiben,
+    schmelz-und-siedetemperatur,
+    stoffe-erkennen-und-verwenden,
+  ]
 blocks:
   - type: section
     id: warum

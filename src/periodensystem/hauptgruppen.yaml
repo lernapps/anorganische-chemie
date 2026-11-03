@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Die acht Hauptgruppen
   en: The eight main groups
 description:
   de: Alle acht Hauptgruppen mit allen ihren Elementen. Die Hauptgruppe sagt, wie viele Elektronen außen sitzen.
   en: All eight main groups with all their elements. The main group tells how many electrons are in the outer shell.
+competencies: [hauptgruppen, schalenmodell]
 blocks:
   - type: section
     id: warum

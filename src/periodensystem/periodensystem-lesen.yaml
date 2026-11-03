@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Periodensystem lesen
   en: Reading the periodic table
 description:
   de: "Finde jedes Element auf der Karte: Ordnungszahl, Symbol, Periode und Gruppe."
   en: "Find every element on the map: atomic number, symbol, period and group."
+competencies: [periodensystem-lesen]
 blocks:
   - type: section
     id: warum

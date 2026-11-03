@@ -1,4 +1,6 @@
-# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+format: 2
+strand: chemie/stoffe-und-teilchen
 title:
   de: Anorganische Chemie – Einstieg
   en: Inorganic chemistry – first steps

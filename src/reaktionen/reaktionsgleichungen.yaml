@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Reaktionsgleichungen
   en: Reaction equations
 description:
   de: Eine Reaktionsgleichung zeigt, welche Stoffe reagieren. Auf beiden Seiten müssen gleich viele Atome stehen.
   en: A reaction equation shows which substances react. There must be the same number of atoms on both sides.
+competencies: [reaktionsgleichung-aufstellen, massenerhaltung]
 blocks:
   - type: section
     id: warum

@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Chemische Reaktionen
   en: Chemical reactions
 description:
   de: Bei einer chemischen Reaktion entstehen neue Stoffe. So unterscheidest du sie von einer Zustandsänderung.
   en: In a chemical reaction new substances are formed. This is how you tell it from a change of state.
+competencies: [kennzeichen-chemischer-reaktionen, reaktion-oder-zustandsaenderung]
 blocks:
   - type: section
     id: warum

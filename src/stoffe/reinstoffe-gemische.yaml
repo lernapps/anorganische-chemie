@@ -1,10 +1,11 @@
-# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v1.schema.json
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title:
   de: Reinstoffe und Gemische
   en: Pure substances and mixtures
 description:
   de: Reinstoffe bestehen aus einer einzigen Stoffart, Gemische aus mehreren. So erkennst du den Unterschied.
   en: Pure substances consist of a single kind of substance, mixtures of several. This is how you tell them apart.
+competencies: [reinstoffe-und-gemische]
 blocks:
   - type: section
     id: warum
