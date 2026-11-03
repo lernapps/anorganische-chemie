@@ -79,7 +79,7 @@
       ]
     },
     {
-      "path": "reaktionen/symbole-formeln/",
+      "path": "formeln/symbole-formeln/",
       "title": {
         "de": "Symbole und Formeln",
         "en": "Symbols and formulas"
@@ -87,28 +87,6 @@
       "competencies": [
         "symbole-der-elemente",
         "formeln-von-verbindungen"
-      ]
-    },
-    {
-      "path": "reaktionen/reaktionen/",
-      "title": {
-        "de": "Chemische Reaktionen",
-        "en": "Chemical reactions"
-      },
-      "competencies": [
-        "kennzeichen-chemischer-reaktionen",
-        "reaktion-oder-zustandsaenderung"
-      ]
-    },
-    {
-      "path": "reaktionen/reaktionsgleichungen/",
-      "title": {
-        "de": "Reaktionsgleichungen",
-        "en": "Reaction equations"
-      },
-      "competencies": [
-        "reaktionsgleichung-aufstellen",
-        "massenerhaltung"
       ]
     }
   ]
