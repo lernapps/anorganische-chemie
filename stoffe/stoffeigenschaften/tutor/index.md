@@ -90,12 +90,12 @@ Nr. | e.name | e.schmelz | e.siede | Zur Wahl | Lösung
 1 | Eisen | 1539 | 3070 | fest; flüssig; gasförmig | fest
 2 | Aluminium | 660 | 2470 | fest; flüssig; gasförmig | fest
 3 | Kupfer | 1085 | 2595 | fest; flüssig; gasförmig | fest
-4 | Quecksilber | -39 | 357 | fest; flüssig; gasförmig | flüssig
-5 | Sauerstoff | -218 | -183 | fest; flüssig; gasförmig | gasförmig
+4 | Quecksilber | −39 | 357 | fest; flüssig; gasförmig | flüssig
+5 | Sauerstoff | −218 | −183 | fest; flüssig; gasförmig | gasförmig
 6 | Kochsalz (Natriumchlorid) | 801 | 1461 | fest; flüssig; gasförmig | fest
-7 | Ethanol | -115 | 78 | fest; flüssig; gasförmig | flüssig
+7 | Ethanol | −115 | 78 | fest; flüssig; gasförmig | flüssig
 8 | Wasser | 0 | 100 | fest; flüssig; gasförmig | flüssig
-9 | Stickstoff | -210 | -196 | fest; flüssig; gasförmig | gasförmig
+9 | Stickstoff | −210 | −196 | fest; flüssig; gasförmig | gasförmig
 ```
 
 ### Aufgabe siedetemperatur-ordnen
