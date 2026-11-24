@@ -87,12 +87,12 @@ Water melts at 0 °C and boils at 100 °C. Room temperature (20 °C) lies in bet
 
 ```
 No. | e.name | e.schmelz | e.siede | Choices | Solution
-1 | Iron | 1539 | 3070 | solid; liquid; gaseous | solid
-2 | Aluminium | 660 | 2470 | solid; liquid; gaseous | solid
-3 | Copper | 1085 | 2595 | solid; liquid; gaseous | solid
+1 | Iron | 1,539 | 3,070 | solid; liquid; gaseous | solid
+2 | Aluminium | 660 | 2,470 | solid; liquid; gaseous | solid
+3 | Copper | 1,085 | 2,595 | solid; liquid; gaseous | solid
 4 | Mercury | -39 | 357 | solid; liquid; gaseous | liquid
 5 | Oxygen | -218 | -183 | solid; liquid; gaseous | gaseous
-6 | Table salt (sodium chloride) | 801 | 1461 | solid; liquid; gaseous | solid
+6 | Table salt (sodium chloride) | 801 | 1,461 | solid; liquid; gaseous | solid
 7 | Ethanol | -115 | 78 | solid; liquid; gaseous | liquid
 8 | Water | 0 | 100 | solid; liquid; gaseous | liquid
 9 | Nitrogen | -210 | -196 | solid; liquid; gaseous | gaseous
