@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@lernapps/app-templates": "0.29.2",
-    "@lernapps/tooling": "0.20.4",
+    "@lernapps/tooling": "0.20.5",
     "typescript": "6.0.3",
     "vite-plus": "1.4.0",
     "vue-tsc": "3.3.14"
